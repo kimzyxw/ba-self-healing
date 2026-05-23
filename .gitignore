@@ -1,0 +1,29 @@
+# Secrets
+*.key
+*.pem
+*kubeconfig*
+*token*
+*.crt
+*.csr
+
+# Large / generated files
+*.vmdk
+*.vmwarevm
+*.iso
+*.qcow2
+*.img
+*.tar
+*.zip
+
+# macOS
+.DS_Store
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# temporary
+tmp/
