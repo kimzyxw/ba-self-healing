@@ -1,0 +1,2 @@
+NAME            TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE   SELECTOR
+nginx-service   NodePort   10.43.173.87   <none>        80:30243/TCP   41h   app=nginx-test

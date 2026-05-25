@@ -1,0 +1,7 @@
+NAMESPACE   LAST SEEN   TYPE     REASON             OBJECT                            MESSAGE
+testapp     38m         Normal   Killing            pod/nginx-test-f8f6dcbc6-dhdxf    Stopping container nginx
+testapp     38m         Normal   Scheduled          pod/nginx-test-f8f6dcbc6-ztpzk    Successfully assigned testapp/nginx-test-f8f6dcbc6-ztpzk to k3s-w1
+testapp     38m         Normal   SuccessfulCreate   replicaset/nginx-test-f8f6dcbc6   Created pod: nginx-test-f8f6dcbc6-ztpzk
+testapp     38m         Normal   Pulled             pod/nginx-test-f8f6dcbc6-ztpzk    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     38m         Normal   Created            pod/nginx-test-f8f6dcbc6-ztpzk    Container created
+testapp     38m         Normal   Started            pod/nginx-test-f8f6dcbc6-ztpzk    Container started

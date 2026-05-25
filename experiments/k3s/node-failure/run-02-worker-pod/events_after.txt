@@ -1,0 +1,108 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                                          MESSAGE
+kube-system   23s         Warning   NodeNotReady              pod/svclb-traefik-405c6267-827kb                Node is not ready
+default       23s         Normal    NodeNotReady              node/k3s-w1                                     Node k3s-w1 status is now: NodeNotReady
+kube-system   23s         Normal    UpdatedLoadBalancer       service/traefik                                 Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.133]
+testapp       23s         Warning   NodeNotReady              pod/nginx-test-f8f6dcbc6-ztpzk                  Node is not ready
+default       74m         Normal    NodeHasSufficientMemory   node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientMemory
+default       74m         Normal    NodeHasNoDiskPressure     node/k3s-w1                                     Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       74m         Normal    NodeHasSufficientPID      node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientPID
+default       74m         Normal    NodeReady                 node/k3s-w1                                     Node k3s-w1 status is now: NodeReady
+kube-system   7s          Normal    UpdatedLoadBalancer       service/traefik                                 Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+testapp       8s          Normal    TaintManagerEviction      pod/nginx-test-f8f6dcbc6-ztpzk                  Cancelling deletion of Pod testapp/nginx-test-f8f6dcbc6-ztpzk
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w1                                     Node and Certificate Authority certificates managed by k3s are OK
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     Starting kubelet.
+default       28m         Normal    NodeHasSufficientPID      node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientPID
+default       28m         Normal    NodeReady                 node/k3s-w1                                     Node k3s-w1 status is now: NodeReady
+default       28m         Normal    NodeHasNoDiskPressure     node/k3s-w1                                     Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       28m         Normal    NodeHasSufficientMemory   node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientMemory
+default       <invalid>   Warning   Rebooted                  node/k3s-w1                                     Node k3s-w1 has been rebooted, boot id: a457d7e7-653e-40b3-92fd-33e46422d1fe
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w1                                     Updated Node Allocatable limit across pods
+monitoring    <invalid>   Normal    Started                   pod/monitoring-prometheus-node-exporter-47f25   Container started
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-827kb                Pod sandbox changed, it will be killed and re-created.
+testapp       <invalid>   Normal    Started                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container started
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+testapp       <invalid>   Normal    Created                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container created
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-f8f6dcbc6-ztpzk                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-f8f6dcbc6-ztpzk                  Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+monitoring    <invalid>   Normal    Created                   pod/monitoring-prometheus-node-exporter-47f25   Container created
+monitoring    <invalid>   Normal    Pulled                    pod/monitoring-prometheus-node-exporter-47f25   Container image "quay.io/prometheus/node-exporter:v1.11.1-distroless" already present on machine and can be accessed by the pod
+monitoring    <invalid>   Normal    SandboxChanged            pod/monitoring-prometheus-node-exporter-47f25   Pod sandbox changed, it will be killed and re-created.
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w1                                     Node and Certificate Authority certificates managed by k3s are OK
+default       19m         Normal    NodeHasSufficientMemory   node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientMemory
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     Starting kubelet.
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w1                                     Updated Node Allocatable limit across pods
+default       <invalid>   Warning   Rebooted                  node/k3s-w1                                     Node k3s-w1 has been rebooted, boot id: 0a5b7e82-e9b3-4e5d-a6ca-14a9741ef509
+default       19m         Normal    NodeReady                 node/k3s-w1                                     Node k3s-w1 status is now: NodeReady
+default       19m         Normal    NodeHasSufficientPID      node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientPID
+default       19m         Normal    NodeHasNoDiskPressure     node/k3s-w1                                     Node k3s-w1 status is now: NodeHasNoDiskPressure
+monitoring    <invalid>   Normal    Pulled                    pod/monitoring-prometheus-node-exporter-47f25   Container image "quay.io/prometheus/node-exporter:v1.11.1-distroless" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+testapp       <invalid>   Normal    Started                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container started
+testapp       <invalid>   Normal    Created                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container created
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-f8f6dcbc6-ztpzk                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-f8f6dcbc6-ztpzk                  Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-827kb                Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+monitoring    <invalid>   Normal    SandboxChanged            pod/monitoring-prometheus-node-exporter-47f25   Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+monitoring    <invalid>   Normal    Created                   pod/monitoring-prometheus-node-exporter-47f25   Container created
+monitoring    <invalid>   Normal    Started                   pod/monitoring-prometheus-node-exporter-47f25   Container started
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w1                                     Node and Certificate Authority certificates managed by k3s are OK
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     Starting kubelet.
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w1                                     Updated Node Allocatable limit across pods
+default       10m         Normal    NodeHasSufficientMemory   node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientMemory
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-827kb                Pod sandbox changed, it will be killed and re-created.
+default       10m         Normal    NodeHasNoDiskPressure     node/k3s-w1                                     Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       <invalid>   Warning   Rebooted                  node/k3s-w1                                     Node k3s-w1 has been rebooted, boot id: b9115335-3ab5-4b59-8c56-2ae79cdd3eaa
+default       10m         Normal    NodeHasSufficientPID      node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientPID
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+testapp       <invalid>   Normal    Started                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container started
+kube-system   11m         Normal    UpdatedLoadBalancer       service/traefik                                 Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+monitoring    <invalid>   Normal    Created                   pod/monitoring-prometheus-node-exporter-47f25   Container created
+testapp       <invalid>   Normal    Created                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container created
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-f8f6dcbc6-ztpzk                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-f8f6dcbc6-ztpzk                  Pod sandbox changed, it will be killed and re-created.
+monitoring    <invalid>   Normal    Pulled                    pod/monitoring-prometheus-node-exporter-47f25   Container image "quay.io/prometheus/node-exporter:v1.11.1-distroless" already present on machine and can be accessed by the pod
+monitoring    <invalid>   Normal    Started                   pod/monitoring-prometheus-node-exporter-47f25   Container started
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+monitoring    <invalid>   Normal    SandboxChanged            pod/monitoring-prometheus-node-exporter-47f25   Pod sandbox changed, it will be killed and re-created.
+default       10m         Normal    NodeReady                 node/k3s-w1                                     Node k3s-w1 status is now: NodeReady
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w1                                     Node and Certificate Authority certificates managed by k3s are OK
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     
+default       <invalid>   Normal    NodeHasSufficientPID      node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientPID
+default       <invalid>   Normal    NodeHasNoDiskPressure     node/k3s-w1                                     Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       <invalid>   Normal    NodeHasSufficientMemory   node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientMemory
+default       <invalid>   Normal    NodeReady                 node/k3s-w1                                     Node k3s-w1 status is now: NodeReady
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     Starting kubelet.
+default       <invalid>   Warning   Rebooted                  node/k3s-w1                                     Node k3s-w1 has been rebooted, boot id: 96fa82f6-44e4-43c7-82af-f8f87f5474d2
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w1                                     Updated Node Allocatable limit across pods
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+monitoring    <invalid>   Normal    Started                   pod/monitoring-prometheus-node-exporter-47f25   Container started
+monitoring    <invalid>   Normal    Created                   pod/monitoring-prometheus-node-exporter-47f25   Container created
+monitoring    <invalid>   Normal    Pulled                    pod/monitoring-prometheus-node-exporter-47f25   Container image "quay.io/prometheus/node-exporter:v1.11.1-distroless" already present on machine and can be accessed by the pod
+monitoring    <invalid>   Normal    SandboxChanged            pod/monitoring-prometheus-node-exporter-47f25   Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-827kb                Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-f8f6dcbc6-ztpzk                  Pod sandbox changed, it will be killed and re-created.
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-f8f6dcbc6-ztpzk                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    Created                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container created
+testapp       <invalid>   Normal    Started                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container started

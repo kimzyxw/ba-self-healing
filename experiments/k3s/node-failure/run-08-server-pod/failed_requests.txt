@@ -1,0 +1,13 @@
+timestamp,status_code,response_time_ms,success,error
+2026-05-25T12:52:23.603464+00:00,,2005.4,False,ConnectTimeout
+2026-05-25T12:52:29.618092+00:00,,2005.08,False,ConnectTimeout
+2026-05-25T12:52:36.636615+00:00,,2002.97,False,ConnectTimeout
+2026-05-25T12:52:40.645781+00:00,,2003.45,False,ConnectTimeout
+2026-05-25T12:52:43.649592+00:00,,2002.81,False,ConnectTimeout
+2026-05-25T12:52:46.653088+00:00,,2004.2,False,ConnectTimeout
+2026-05-25T12:52:49.658554+00:00,,2004.13,False,ConnectTimeout
+2026-05-25T12:52:52.663376+00:00,,2003.96,False,ConnectTimeout
+2026-05-25T12:52:57.677717+00:00,,2003.48,False,ConnectTimeout
+2026-05-25T12:53:01.685112+00:00,,2003.32,False,ConnectTimeout
+2026-05-25T12:53:04.688828+00:00,,2004.34,False,ConnectTimeout
+2026-05-25T12:53:07.693545+00:00,,2002.85,False,ConnectTimeout

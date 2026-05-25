@@ -1,0 +1,8 @@
+
+Während des Server-Node-Ausfalltests (Run 09) kehrte der betroffene Control-Plane-Node auch nach mehr als fünf Minuten Wartezeit nicht selbstständig in den Zustand Ready zurück.
+Der k3s-Dienst musste deshalb manuell mittels "sudo systemctl restart k3s" neu gestartet werden.
+Erst danach wurde der Node wieder erfolgreich in das Cluster integriert und erreichte erneut den Zustand Ready.
+
+Die Beobachtung trat wiederholt bei Control-Plane-Node-Ausfällen auf, während Worker-Nodes sich in den bisherigen Experimenten in der Regel ohne manuellen Eingriff wiederherstellten.
+Dies deutet auf eine höhere Empfindlichkeit der Server-/etcd-Komponenten gegenüber Node-Neustarts in der lokal virtualisierten Testumgebung hin.
+

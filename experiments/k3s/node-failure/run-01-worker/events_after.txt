@@ -1,0 +1,38 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                                          MESSAGE
+testapp       38m         Normal    SuccessfulCreate          replicaset/nginx-test-f8f6dcbc6                 Created pod: nginx-test-f8f6dcbc6-ztpzk
+testapp       38m         Normal    Scheduled                 pod/nginx-test-f8f6dcbc6-ztpzk                  Successfully assigned testapp/nginx-test-f8f6dcbc6-ztpzk to k3s-w1
+testapp       38m         Normal    Killing                   pod/nginx-test-f8f6dcbc6-dhdxf                  Stopping container nginx
+testapp       38m         Normal    Started                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container started
+testapp       38m         Normal    Created                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container created
+testapp       38m         Normal    Pulled                    pod/nginx-test-f8f6dcbc6-ztpzk                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+kube-system   26s         Warning   NodeNotReady              pod/svclb-traefik-405c6267-827kb                Node is not ready
+monitoring    26s         Warning   NodeNotReady              pod/monitoring-prometheus-node-exporter-47f25   Node is not ready
+default       26s         Normal    NodeNotReady              node/k3s-w1                                     Node k3s-w1 status is now: NodeNotReady
+kube-system   26s         Normal    UpdatedLoadBalancer       service/traefik                                 Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.133]
+testapp       26s         Warning   NodeNotReady              pod/nginx-test-f8f6dcbc6-ztpzk                  Node is not ready
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w1                                     Node and Certificate Authority certificates managed by k3s are OK
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     
+default       <invalid>   Normal    NodeHasNoDiskPressure     node/k3s-w1                                     Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       <invalid>   Normal    Starting                  node/k3s-w1                                     Starting kubelet.
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w1                                     Updated Node Allocatable limit across pods
+default       <invalid>   Normal    NodeReady                 node/k3s-w1                                     Node k3s-w1 status is now: NodeReady
+default       <invalid>   Warning   Rebooted                  node/k3s-w1                                     Node k3s-w1 has been rebooted, boot id: 90f6111f-e4c1-4051-8df3-55f80d381141
+default       <invalid>   Normal    NodeHasSufficientPID      node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientPID
+default       <invalid>   Normal    NodeHasSufficientMemory   node/k3s-w1                                     Node k3s-w1 status is now: NodeHasSufficientMemory
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-f8f6dcbc6-ztpzk                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+monitoring    <invalid>   Normal    Pulled                    pod/monitoring-prometheus-node-exporter-47f25   Container image "quay.io/prometheus/node-exporter:v1.11.1-distroless" already present on machine and can be accessed by the pod
+monitoring    <invalid>   Normal    Created                   pod/monitoring-prometheus-node-exporter-47f25   Container created
+monitoring    <invalid>   Normal    Started                   pod/monitoring-prometheus-node-exporter-47f25   Container started
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-827kb                Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-827kb                Container started
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-827kb                Container created
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-827kb                Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    Started                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container started
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-f8f6dcbc6-ztpzk                  Pod sandbox changed, it will be killed and re-created.
+monitoring    <invalid>   Normal    SandboxChanged            pod/monitoring-prometheus-node-exporter-47f25   Pod sandbox changed, it will be killed and re-created.
+testapp       <invalid>   Normal    Created                   pod/nginx-test-f8f6dcbc6-ztpzk                  Container created
+kube-system   17s         Normal    UpdatedLoadBalancer       service/traefik                                 Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+testapp       15s         Normal    TaintManagerEviction      pod/nginx-test-f8f6dcbc6-ztpzk                  Cancelling deletion of Pod testapp/nginx-test-f8f6dcbc6-ztpzk

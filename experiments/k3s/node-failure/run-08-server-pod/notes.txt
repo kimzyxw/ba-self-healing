@@ -1,0 +1,3 @@
+Während des Server-Node-Ausfalls war Grafana zeitweise nicht erreichbar.
+Prometheus lief auf dem betroffenen Node k3s-s2 und befand sich während des Ausfalls im Zustand Terminating.
+Nach Wiederherstellung von k3s-s2 wurde Prometheus neu gestartet und Grafana/Monitoring waren wieder nutzbar.

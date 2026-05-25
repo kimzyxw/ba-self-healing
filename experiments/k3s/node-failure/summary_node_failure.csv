@@ -1,0 +1,11 @@
+run,type,total,success,failed,success_rate,error_rate,recovery_seconds,pod_restarts_after,node_notready,node_ready,manual_recovery
+run-01-worker,worker,1747,1736,11,99.37,0.63,91.0,1,True,True,False
+run-02-worker-pod,worker,145,135,10,93.1,6.9,73.0,5,True,True,False
+run-03-worker-pod,worker,305,298,7,97.7,2.3,102.0,6,True,True,False
+run-04-worker-pod,worker,210,199,11,94.76,5.24,118.0,7,True,True,False
+run-05-worker-pod,worker,232,219,13,94.4,5.6,89.0,7,True,True,False
+run-06-server-pod,server,223,210,13,94.17,5.83,128.0,8,True,True,False
+run-07-server-pod,server,666,655,11,98.35,1.65,257.0,9,True,True,True
+run-08-server-pod,server,622,610,12,98.07,1.93,552.0,8,True,True,False
+run-09-server-pod,server,833,824,9,98.92,1.08,720.0,8,True,True,True
+run-10-server-pod,server,855,847,8,99.06,0.94,480.0,8,True,True,False

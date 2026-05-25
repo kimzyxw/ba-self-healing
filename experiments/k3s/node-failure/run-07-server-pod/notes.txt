@@ -1,0 +1,14 @@
+Während des Server-Node-Ausfalltests kam k3s-s3 nach dem Neustart zunächst nicht wieder in den Zustand Ready.
+In den k3s-Logs auf k3s-s3 traten x509-Zertifikatsfehler auf ("certificate has expired or is not yet valid").
+Als wahrscheinliche Ursache wurde eine fehlerhafte Systemzeit der VM identifiziert.
+Der Node musste manuell durch Zeitsynchronisation und Neustart des k3s-Dienstes wiederhergestellt werden.
+Nach dem Neustart kam k3s-s3 zunächst nicht automatisch wieder in den Zustand Ready.
+Der k3s-Dienst auf k3s-s3 zeigte x509-Fehler ("certificate has expired or is not yet valid").
+Die Systemzeit war zum Prüfzeitpunkt synchronisiert. Nach einem manuellen Neustart des k3s-Dienstes wurde k3s-s3 wieder Ready.
+Der Run wird deshalb als gültiger Server-Node-Ausfall mit manuellem Recovery-Eingriff dokumentiert.
+
+Auswertung Kurznotiz:
+Während des Server-Node-Ausfalls traten mehrere fehlgeschlagene Requests auf.
+Die Fehler äußerten sich als ConnectTimeouts.
+Nach der Wiederherstellung des Nodes wurden wieder durchgehend HTTP-200-Antworten gemessen.
+Der Run wird als gültiger Server-Node-Ausfalltest mit beobachteter Service-Unterbrechung gewertet.
