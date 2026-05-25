@@ -1,0 +1,118 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                OBJECT                                                          MESSAGE
+kube-system   56m         Normal    ScalingReplicaSet     deployment/coredns                                              Scaled up replica set coredns-5f779c8467 from 0 to 1
+kube-system   56m         Normal    Scheduled             pod/metrics-server-fdb7f6596-4q8vt                              Successfully assigned kube-system/metrics-server-fdb7f6596-4q8vt to k3s-s3
+kube-system   56m         Normal    Scheduled             pod/coredns-5f779c8467-pt87b                                    Successfully assigned kube-system/coredns-5f779c8467-pt87b to k3s-s3
+kube-system   56m         Normal    ScalingReplicaSet     deployment/traefik                                              Scaled up replica set traefik-5878496467 from 0 to 1
+kube-system   56m         Normal    Scheduled             pod/traefik-5878496467-rxrq9                                    Successfully assigned kube-system/traefik-5878496467-rxrq9 to k3s-w2
+monitoring    56m         Normal    Scheduled             pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Successfully assigned monitoring/monitoring-grafana-5ff5b8b6b7-m99sh to k3s-w2
+kube-system   56m         Normal    Pulling               pod/coredns-5f779c8467-pt87b                                    Pulling image "rancher/mirrored-coredns-coredns:1.14.3"
+monitoring    56m         Normal    Scheduled             pod/monitoring-kube-prometheus-operator-7bfb6fff69-hvhbl        Successfully assigned monitoring/monitoring-kube-prometheus-operator-7bfb6fff69-hvhbl to k3s-w2
+kube-system   56m         Normal    Pulling               pod/traefik-5878496467-rxrq9                                    Pulling image "rancher/mirrored-library-traefik:3.6.13"
+kube-system   56m         Normal    ScalingReplicaSet     deployment/metrics-server                                       Scaled up replica set metrics-server-fdb7f6596 from 0 to 1
+kube-system   56m         Normal    SuccessfulCreate      replicaset/metrics-server-fdb7f6596                             Created pod: metrics-server-fdb7f6596-4q8vt
+kube-system   56m         Normal    Pulling               pod/metrics-server-fdb7f6596-4q8vt                              Pulling image "rancher/mirrored-metrics-server:v0.8.1"
+monitoring    56m         Normal    Started               pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Container started
+monitoring    56m         Normal    Created               pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Container created
+monitoring    56m         Normal    Pulled                pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Container image "quay.io/kiwigrid/k8s-sidecar:2.7.3" already present on machine and can be accessed by the pod
+monitoring    56m         Normal    Created               pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Container created
+monitoring    56m         Normal    Started               pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Container started
+monitoring    56m         Normal    Created               pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Container created
+monitoring    56m         Normal    Pulled                pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Container image "quay.io/kiwigrid/k8s-sidecar:2.7.3" already present on machine and can be accessed by the pod
+monitoring    56m         Normal    Pulled                pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Container image "docker.io/grafana/grafana:13.0.1-security-01" already present on machine and can be accessed by the pod
+monitoring    56m         Normal    Started               pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Container started
+monitoring    56m         Normal    Pulling               pod/monitoring-kube-prometheus-operator-7bfb6fff69-hvhbl        Pulling image "quay.io/prometheus-operator/prometheus-operator:v0.90.1"
+kube-system   56m         Normal    SuccessfulCreate      replicaset/traefik-5878496467                                   Created pod: traefik-5878496467-rxrq9
+monitoring    56m         Normal    ScalingReplicaSet     deployment/monitoring-grafana                                   Scaled up replica set monitoring-grafana-5ff5b8b6b7 from 0 to 1
+monitoring    56m         Warning   Unhealthy             pod/monitoring-grafana-5ff5b8b6b7-m99sh                         Readiness probe failed: Get "http://10.42.4.9:3000/api/health": dial tcp 10.42.4.9:3000: connect: connection refused
+kube-system   56m         Normal    Killing               pod/coredns-8db54c48d-sn2qq                                     Stopping container coredns
+monitoring    56m         Normal    Started               pod/monitoring-kube-prometheus-operator-7bfb6fff69-hvhbl        Container started
+monitoring    56m         Normal    Pulled                pod/monitoring-kube-prometheus-operator-7bfb6fff69-hvhbl        Successfully pulled image "quay.io/prometheus-operator/prometheus-operator:v0.90.1" in 3.27s (3.27s including waiting). Image size: 17322964 bytes.
+monitoring    56m         Normal    Created               pod/monitoring-kube-prometheus-operator-7bfb6fff69-hvhbl        Container created
+kube-system   56m         Warning   Unhealthy             pod/metrics-server-fdb7f6596-4q8vt                              Readiness probe failed: Get "https://10.42.2.10:10250/readyz": dial tcp 10.42.2.10:10250: connect: connection refused
+kube-system   56m         Normal    Started               pod/metrics-server-fdb7f6596-4q8vt                              Container started
+kube-system   56m         Normal    Created               pod/metrics-server-fdb7f6596-4q8vt                              Container created
+kube-system   56m         Normal    Pulled                pod/metrics-server-fdb7f6596-4q8vt                              Successfully pulled image "rancher/mirrored-metrics-server:v0.8.1" in 5.563s (5.563s including waiting). Image size: 20624204 bytes.
+kube-system   56m         Normal    Killing               pod/metrics-server-786d997795-qddld                             Stopping container metrics-server
+kube-system   56m         Normal    SuccessfulCreate      replicaset/coredns-5f779c8467                                   Created pod: coredns-5f779c8467-pt87b
+kube-system   56m         Warning   Unhealthy             pod/metrics-server-fdb7f6596-4q8vt                              Readiness probe failed: HTTP probe failed with statuscode: 500
+monitoring    56m         Normal    ScalingReplicaSet     deployment/monitoring-kube-prometheus-operator                  Scaled up replica set monitoring-kube-prometheus-operator-7bfb6fff69 from 0 to 1
+kube-system   56m         Normal    Created               pod/coredns-5f779c8467-pt87b                                    Container created
+kube-system   56m         Normal    Started               pod/coredns-5f779c8467-pt87b                                    Container started
+kube-system   56m         Normal    Pulled                pod/coredns-5f779c8467-pt87b                                    Successfully pulled image "rancher/mirrored-coredns-coredns:1.14.3" in 7.472s (7.472s including waiting). Image size: 21021594 bytes.
+kube-system   56m         Normal    Started               pod/traefik-5878496467-rxrq9                                    Container started
+kube-system   56m         Normal    Created               pod/traefik-5878496467-rxrq9                                    Container created
+kube-system   56m         Normal    ScalingReplicaSet     deployment/metrics-server                                       Scaled down replica set metrics-server-786d997795 from 1 to 0
+monitoring    56m         Normal    SuccessfulCreate      replicaset/monitoring-grafana-5ff5b8b6b7                        Created pod: monitoring-grafana-5ff5b8b6b7-m99sh
+kube-system   56m         Normal    Pulled                pod/traefik-5878496467-rxrq9                                    Successfully pulled image "rancher/mirrored-library-traefik:3.6.13" in 9.111s (9.111s including waiting). Image size: 47749907 bytes.
+monitoring    56m         Normal    Killing               pod/prometheus-monitoring-kube-prometheus-prometheus-0          Stopping container config-reloader
+monitoring    56m         Normal    Scheduled             pod/monitoring-kube-state-metrics-69f7666d6d-7ktc6              Successfully assigned monitoring/monitoring-kube-state-metrics-69f7666d6d-7ktc6 to k3s-s1
+kube-system   56m         Normal    UpdatedLoadBalancer   service/traefik                                                 Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+monitoring    56m         Normal    Killing               pod/prometheus-monitoring-kube-prometheus-prometheus-0          Stopping container prometheus
+kube-system   56m         Normal    ScalingReplicaSet     deployment/coredns                                              Scaled down replica set coredns-8db54c48d from 1 to 0
+monitoring    56m         Normal    Pulling               pod/monitoring-kube-state-metrics-69f7666d6d-7ktc6              Pulling image "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.19.0"
+monitoring    56m         Normal    Pulled                pod/monitoring-kube-state-metrics-69f7666d6d-7ktc6              Successfully pulled image "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.19.0" in 1.93s (1.93s including waiting). Image size: 16909605 bytes.
+monitoring    56m         Normal    Created               pod/monitoring-kube-state-metrics-69f7666d6d-7ktc6              Container created
+monitoring    56m         Normal    SuccessfulCreate      replicaset/monitoring-kube-prometheus-operator-7bfb6fff69       Created pod: monitoring-kube-prometheus-operator-7bfb6fff69-hvhbl
+kube-system   56m         Normal    SuccessfulDelete      replicaset/coredns-8db54c48d                                    Deleted pod: coredns-8db54c48d-sn2qq
+monitoring    56m         Normal    Started               pod/monitoring-kube-state-metrics-69f7666d6d-7ktc6              Container started
+monitoring    56m         Normal    ScalingReplicaSet     deployment/monitoring-kube-state-metrics                        Scaled up replica set monitoring-kube-state-metrics-69f7666d6d from 0 to 1
+monitoring    56m         Normal    Killing               pod/monitoring-grafana-675bb54659-9d85t                         Stopping container grafana-sc-datasources
+monitoring    56m         Normal    SuccessfulDelete      replicaset/monitoring-grafana-675bb54659                        Deleted pod: monitoring-grafana-675bb54659-9d85t
+monitoring    56m         Normal    SuccessfulDelete      replicaset/monitoring-kube-prometheus-operator-6c855c6b6b       Deleted pod: monitoring-kube-prometheus-operator-6c855c6b6b-zhp9x
+monitoring    56m         Normal    Killing               pod/monitoring-kube-prometheus-operator-6c855c6b6b-zhp9x        Stopping container kube-prometheus-stack
+kube-system   56m         Normal    ScalingReplicaSet     deployment/traefik                                              Scaled down replica set traefik-9bcdbbd9 from 1 to 0
+monitoring    56m         Normal    ScalingReplicaSet     deployment/monitoring-kube-prometheus-operator                  Scaled down replica set monitoring-kube-prometheus-operator-6c855c6b6b from 1 to 0
+kube-system   56m         Normal    SuccessfulDelete      replicaset/traefik-9bcdbbd9                                     Deleted pod: traefik-9bcdbbd9-6gg4g
+kube-system   56m         Normal    Killing               pod/traefik-9bcdbbd9-6gg4g                                      Stopping container traefik
+monitoring    56m         Normal    ScalingReplicaSet     deployment/monitoring-grafana                                   Scaled down replica set monitoring-grafana-675bb54659 from 1 to 0
+kube-system   56m         Normal    SuccessfulDelete      replicaset/metrics-server-786d997795                            Deleted pod: metrics-server-786d997795-qddld
+monitoring    56m         Normal    SuccessfulCreate      replicaset/monitoring-kube-state-metrics-69f7666d6d             Created pod: monitoring-kube-state-metrics-69f7666d6d-7ktc6
+monitoring    56m         Normal    Killing               pod/monitoring-grafana-675bb54659-9d85t                         Stopping container grafana
+monitoring    56m         Normal    Killing               pod/monitoring-grafana-675bb54659-9d85t                         Stopping container grafana-sc-dashboard
+monitoring    56m         Normal    Scheduled             pod/prometheus-monitoring-kube-prometheus-prometheus-0          Successfully assigned monitoring/prometheus-monitoring-kube-prometheus-prometheus-0 to k3s-s2
+monitoring    56m         Normal    SuccessfulCreate      statefulset/prometheus-monitoring-kube-prometheus-prometheus    Create Pod prometheus-monitoring-kube-prometheus-prometheus-0 in StatefulSet prometheus-monitoring-kube-prometheus-prometheus successful
+monitoring    56m         Normal    Pulled                pod/prometheus-monitoring-kube-prometheus-prometheus-0          Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.90.1" already present on machine and can be accessed by the pod
+monitoring    56m         Normal    Created               pod/prometheus-monitoring-kube-prometheus-prometheus-0          Container created
+monitoring    56m         Normal    Started               pod/prometheus-monitoring-kube-prometheus-prometheus-0          Container started
+monitoring    56m         Normal    Pulled                pod/prometheus-monitoring-kube-prometheus-prometheus-0          Container image "quay.io/prometheus/prometheus:v3.11.3-distroless" already present on machine and can be accessed by the pod
+monitoring    56m         Normal    Started               pod/prometheus-monitoring-kube-prometheus-prometheus-0          Container started
+monitoring    56m         Normal    Created               pod/prometheus-monitoring-kube-prometheus-prometheus-0          Container created
+monitoring    56m         Normal    Started               pod/prometheus-monitoring-kube-prometheus-prometheus-0          Container started
+monitoring    56m         Normal    Pulled                pod/prometheus-monitoring-kube-prometheus-prometheus-0          Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.90.1" already present on machine and can be accessed by the pod
+monitoring    56m         Normal    Created               pod/prometheus-monitoring-kube-prometheus-prometheus-0          Container created
+monitoring    56m         Normal    SuccessfulDelete      replicaset/monitoring-kube-state-metrics-679b68bbc9             Deleted pod: monitoring-kube-state-metrics-679b68bbc9-7dpch
+monitoring    56m         Normal    Killing               pod/monitoring-kube-state-metrics-679b68bbc9-7dpch              Stopping container kube-state-metrics
+monitoring    56m         Normal    ScalingReplicaSet     deployment/monitoring-kube-state-metrics                        Scaled down replica set monitoring-kube-state-metrics-679b68bbc9 from 1 to 0
+testapp       48m         Normal    SuccessfulCreate      replicaset/nginx-test-f8f6dcbc6                                 Created pod: nginx-test-f8f6dcbc6-xrb4h
+testapp       48m         Normal    Killing               pod/nginx-test-f8f6dcbc6-66ksw                                  Stopping container nginx
+testapp       48m         Normal    Pulling               pod/nginx-test-f8f6dcbc6-xrb4h                                  Pulling image "nginx:stable"
+testapp       48m         Normal    Scheduled             pod/nginx-test-f8f6dcbc6-xrb4h                                  Successfully assigned testapp/nginx-test-f8f6dcbc6-xrb4h to k3s-s1
+testapp       48m         Normal    Started               pod/nginx-test-f8f6dcbc6-xrb4h                                  Container started
+testapp       48m         Normal    Created               pod/nginx-test-f8f6dcbc6-xrb4h                                  Container created
+testapp       48m         Normal    Pulled                pod/nginx-test-f8f6dcbc6-xrb4h                                  Successfully pulled image "nginx:stable" in 7.77s (7.77s including waiting). Image size: 61413318 bytes.
+testapp       27m         Normal    Scheduled             pod/nginx-test-f8f6dcbc6-2zdvm                                  Successfully assigned testapp/nginx-test-f8f6dcbc6-2zdvm to k3s-s3
+testapp       27m         Normal    Killing               pod/nginx-test-f8f6dcbc6-s5lq9                                  Stopping container nginx
+testapp       27m         Normal    SuccessfulCreate      replicaset/nginx-test-f8f6dcbc6                                 Created pod: nginx-test-f8f6dcbc6-2zdvm
+testapp       27m         Normal    Pulled                pod/nginx-test-f8f6dcbc6-2zdvm                                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       27m         Normal    Created               pod/nginx-test-f8f6dcbc6-2zdvm                                  Container created
+testapp       27m         Normal    Started               pod/nginx-test-f8f6dcbc6-2zdvm                                  Container started
+testapp       14m         Normal    SuccessfulCreate      replicaset/nginx-test-f8f6dcbc6                                 Created pod: nginx-test-f8f6dcbc6-6p9jw
+testapp       14m         Normal    Scheduled             pod/nginx-test-f8f6dcbc6-6p9jw                                  Successfully assigned testapp/nginx-test-f8f6dcbc6-6p9jw to k3s-s3
+testapp       14m         Normal    Killing               pod/nginx-test-f8f6dcbc6-2zdvm                                  Stopping container nginx
+testapp       14m         Normal    Created               pod/nginx-test-f8f6dcbc6-6p9jw                                  Container created
+testapp       14m         Normal    Started               pod/nginx-test-f8f6dcbc6-6p9jw                                  Container started
+testapp       14m         Normal    Pulled                pod/nginx-test-f8f6dcbc6-6p9jw                                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       6m47s       Normal    SuccessfulCreate      replicaset/nginx-test-f8f6dcbc6                                 Created pod: nginx-test-f8f6dcbc6-zgfrr
+testapp       6m47s       Normal    Killing               pod/nginx-test-f8f6dcbc6-9z944                                  Stopping container nginx
+testapp       6m46s       Normal    Scheduled             pod/nginx-test-f8f6dcbc6-zgfrr                                  Successfully assigned testapp/nginx-test-f8f6dcbc6-zgfrr to k3s-w1
+testapp       6m46s       Normal    Pulled                pod/nginx-test-f8f6dcbc6-zgfrr                                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       6m46s       Normal    Started               pod/nginx-test-f8f6dcbc6-zgfrr                                  Container started
+testapp       6m46s       Normal    Created               pod/nginx-test-f8f6dcbc6-zgfrr                                  Container created
+testapp       20s         Normal    Scheduled             pod/nginx-test-f8f6dcbc6-4qc8w                                  Successfully assigned testapp/nginx-test-f8f6dcbc6-4qc8w to k3s-s1
+testapp       20s         Normal    Killing               pod/nginx-test-f8f6dcbc6-xrb4h                                  Stopping container nginx
+testapp       20s         Normal    Started               pod/nginx-test-f8f6dcbc6-4qc8w                                  Container started
+testapp       20s         Normal    Created               pod/nginx-test-f8f6dcbc6-4qc8w                                  Container created
+testapp       20s         Normal    Pulled                pod/nginx-test-f8f6dcbc6-4qc8w                                  Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       20s         Normal    SuccessfulCreate      replicaset/nginx-test-f8f6dcbc6                                 Created pod: nginx-test-f8f6dcbc6-4qc8w
+default       3s          Normal    ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-k3s-s2-1779624001-db39c9   Snapshot etcd-snapshot-k3s-s2-1779624001 saved on k3s-s2
+default       1s          Normal    ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-k3s-s1-1779624003-4f3780   Snapshot etcd-snapshot-k3s-s1-1779624003 saved on k3s-s1
