@@ -125,3 +125,33 @@ RUN=03
 ...
 RUN=10
 ```
+
+## Validierung der Messdaten
+
+Nach Abschluss aller 10 Testläufe wurde geprüft, ob:
+
+- alle erwarteten Dateien vorhanden sind
+- für jeden Lauf eine requests.csv erzeugt wurde
+- Start-, Fehler- und Endzeitstempel vorhanden sind
+- während der Messung kontinuierlich HTTP-Antworten empfangen wurden
+
+Verwendete Prüfkommandos:
+
+```bash
+for i in {01..10}; do
+  BASE=~/ba-self-healing/experiments/k3s/pod-failure/run-$i
+  echo "=== run-$i ==="
+  ls $BASE/requests.csv $BASE/fault_time.txt \
+     $BASE/test_start_time.txt $BASE/test_end_time.txt >/dev/null \
+     && echo "OK files"
+done
+```
+
+```bash
+for i in {01..10}; do
+  BASE=~/ba-self-healing/experiments/k3s/pod-failure/run-$i
+  echo "=== run-$i ==="
+  awk -F',' 'NR>1 {total++; if ($2=="200") ok++; else fail++}
+  END {print "total="total, "ok="ok, "fail="fail}' $BASE/requests.csv
+done
+```
