@@ -1,0 +1,79 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                               MESSAGE
+testapp       60m         Normal    Killing                   pod/nginx-test-54db47f9bb-dqjkd      Stopping container nginx
+testapp       60m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb     Created pod: nginx-test-54db47f9bb-k79vg
+testapp       60m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-k79vg      Successfully assigned testapp/nginx-test-54db47f9bb-k79vg to k3s-s3
+testapp       60m         Normal    Pulled                    pod/nginx-test-54db47f9bb-k79vg      Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       60m         Normal    Created                   pod/nginx-test-54db47f9bb-k79vg      Container created
+testapp       60m         Normal    Started                   pod/nginx-test-54db47f9bb-k79vg      Container started
+testapp       56m         Normal    Killing                   pod/nginx-test-54db47f9bb-k79vg      Stopping container nginx
+testapp       56m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-hqknx      Successfully assigned testapp/nginx-test-54db47f9bb-hqknx to k3s-s2
+testapp       56m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb     Created pod: nginx-test-54db47f9bb-hqknx
+testapp       56m         Normal    Pulled                    pod/nginx-test-54db47f9bb-hqknx      Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       56m         Normal    Created                   pod/nginx-test-54db47f9bb-hqknx      Container created
+testapp       56m         Normal    Started                   pod/nginx-test-54db47f9bb-hqknx      Container started
+testapp       54m         Normal    Started                   pod/nginx-test-54db47f9bb-m8ksb      Container started
+testapp       54m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-m8ksb      Successfully assigned testapp/nginx-test-54db47f9bb-m8ksb to k3s-s3
+testapp       54m         Normal    Pulled                    pod/nginx-test-54db47f9bb-m8ksb      Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       54m         Normal    Created                   pod/nginx-test-54db47f9bb-m8ksb      Container created
+testapp       54m         Normal    Killing                   pod/nginx-test-54db47f9bb-z4kvn      Stopping container nginx
+testapp       54m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb     Created pod: nginx-test-54db47f9bb-m8ksb
+testapp       52m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-m2gdp      Successfully assigned testapp/nginx-test-54db47f9bb-m2gdp to k3s-w2
+testapp       52m         Normal    Pulled                    pod/nginx-test-54db47f9bb-m2gdp      Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       52m         Normal    Created                   pod/nginx-test-54db47f9bb-m2gdp      Container created
+testapp       52m         Normal    Started                   pod/nginx-test-54db47f9bb-m2gdp      Container started
+testapp       52m         Normal    Killing                   pod/nginx-test-54db47f9bb-d9xnl      Stopping container nginx
+testapp       52m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb     Created pod: nginx-test-54db47f9bb-m2gdp
+testapp       49m         Normal    Started                   pod/nginx-test-54db47f9bb-kpwrt      Container started
+testapp       49m         Normal    Pulled                    pod/nginx-test-54db47f9bb-kpwrt      Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       40m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb     (combined from similar events): Created pod: nginx-test-54db47f9bb-pdhgn
+testapp       49m         Normal    Killing                   pod/nginx-test-54db47f9bb-m2gdp      Stopping container nginx
+testapp       49m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-kpwrt      Successfully assigned testapp/nginx-test-54db47f9bb-kpwrt to k3s-s1
+testapp       49m         Normal    Created                   pod/nginx-test-54db47f9bb-kpwrt      Container created
+testapp       46m         Normal    Created                   pod/nginx-test-54db47f9bb-jnrwm      Container created
+testapp       46m         Normal    Started                   pod/nginx-test-54db47f9bb-jnrwm      Container started
+testapp       46m         Normal    Killing                   pod/nginx-test-54db47f9bb-m8ksb      Stopping container nginx
+testapp       46m         Normal    Pulled                    pod/nginx-test-54db47f9bb-jnrwm      Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       46m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-jnrwm      Successfully assigned testapp/nginx-test-54db47f9bb-jnrwm to k3s-w2
+testapp       43m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-4xzff      Successfully assigned testapp/nginx-test-54db47f9bb-4xzff to k3s-s3
+testapp       43m         Normal    Pulled                    pod/nginx-test-54db47f9bb-4xzff      Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       43m         Normal    Created                   pod/nginx-test-54db47f9bb-4xzff      Container created
+testapp       43m         Normal    Started                   pod/nginx-test-54db47f9bb-4xzff      Container started
+testapp       43m         Normal    Killing                   pod/nginx-test-54db47f9bb-hqknx      Stopping container nginx
+testapp       40m         Normal    Killing                   pod/nginx-test-54db47f9bb-kpwrt      Stopping container nginx
+testapp       40m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-pdhgn      Successfully assigned testapp/nginx-test-54db47f9bb-pdhgn to k3s-s2
+testapp       40m         Normal    Started                   pod/nginx-test-54db47f9bb-pdhgn      Container started
+testapp       40m         Normal    Pulled                    pod/nginx-test-54db47f9bb-pdhgn      Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       40m         Normal    Created                   pod/nginx-test-54db47f9bb-pdhgn      Container created
+kube-system   6m15s       Warning   NodeNotReady              pod/metrics-server-fdb7f6596-dzkgl   Node is not ready
+kube-system   6m15s       Warning   NodeNotReady              pod/svclb-traefik-405c6267-827kb     Node is not ready
+default       6m15s       Normal    NodeNotReady              node/k3s-w1                          Node k3s-w1 status is now: NodeNotReady
+kube-system   6m15s       Warning   NodeNotReady              pod/coredns-5f779c8467-qjnnf         Node is not ready
+kube-system   6m15s       Normal    UpdatedLoadBalancer       service/traefik                      Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.133]
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w1                          Node and Certificate Authority certificates managed by k3s are OK
+default       <invalid>   Normal    Starting                  node/k3s-w1                          
+default       <invalid>   Normal    NodeReady                 node/k3s-w1                          Node k3s-w1 status is now: NodeReady
+default       <invalid>   Normal    NodeHasSufficientPID      node/k3s-w1                          Node k3s-w1 status is now: NodeHasSufficientPID
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w1                          Updated Node Allocatable limit across pods
+default       <invalid>   Normal    Starting                  node/k3s-w1                          Starting kubelet.
+default       <invalid>   Normal    NodeHasNoDiskPressure     node/k3s-w1                          Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       <invalid>   Normal    NodeHasSufficientMemory   node/k3s-w1                          Node k3s-w1 status is now: NodeHasSufficientMemory
+default       <invalid>   Warning   Rebooted                  node/k3s-w1                          Node k3s-w1 has been rebooted, boot id: 210853d3-99a7-4c93-99c6-41fecbcf7a97
+kube-system   <invalid>   Normal    SandboxChanged            pod/metrics-server-fdb7f6596-dzkgl   Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    SandboxChanged            pod/coredns-5f779c8467-qjnnf         Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-827kb     Pod sandbox changed, it will be killed and re-created.
+kube-system   4m20s       Normal    TaintManagerEviction      pod/coredns-5f779c8467-qjnnf         Cancelling deletion of Pod kube-system/coredns-5f779c8467-qjnnf
+kube-system   4m20s       Normal    TaintManagerEviction      pod/metrics-server-fdb7f6596-dzkgl   Cancelling deletion of Pod kube-system/metrics-server-fdb7f6596-dzkgl
+kube-system   4m18s       Normal    Started                   pod/metrics-server-fdb7f6596-dzkgl   Container started
+kube-system   4m18s       Normal    Pulled                    pod/svclb-traefik-405c6267-827kb     Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   4m18s       Normal    Pulled                    pod/metrics-server-fdb7f6596-dzkgl   Container image "rancher/mirrored-metrics-server:v0.8.1" already present on machine and can be accessed by the pod
+kube-system   4m18s       Normal    Created                   pod/metrics-server-fdb7f6596-dzkgl   Container created
+kube-system   4m18s       Normal    Created                   pod/coredns-5f779c8467-qjnnf         Container created
+kube-system   4m18s       Normal    Started                   pod/svclb-traefik-405c6267-827kb     Container started
+kube-system   4m18s       Normal    Created                   pod/svclb-traefik-405c6267-827kb     Container created
+kube-system   4m18s       Normal    Started                   pod/coredns-5f779c8467-qjnnf         Container started
+kube-system   4m18s       Normal    Pulled                    pod/svclb-traefik-405c6267-827kb     Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   4m18s       Normal    Pulled                    pod/coredns-5f779c8467-qjnnf         Container image "rancher/mirrored-coredns-coredns:1.14.3" already present on machine and can be accessed by the pod
+kube-system   4m18s       Normal    Started                   pod/svclb-traefik-405c6267-827kb     Container started
+kube-system   4m18s       Normal    Created                   pod/svclb-traefik-405c6267-827kb     Container created
+kube-system   4m17s       Normal    UpdatedLoadBalancer       service/traefik                      Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+kube-system   4m4s        Warning   Unhealthy                 pod/metrics-server-fdb7f6596-dzkgl   Readiness probe failed: HTTP probe failed with statuscode: 500

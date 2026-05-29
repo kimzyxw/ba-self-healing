@@ -1,0 +1,180 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                             MESSAGE
+kube-system   38s         Warning   NodeNotReady              pod/svclb-traefik-405c6267-kxgqx   Node is not ready
+testapp       36m         Warning   NodeNotReady              pod/nginx-test-54db47f9bb-jnrwm    Node is not ready
+kube-system   4m32s       Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+default       38s         Normal    NodeNotReady              node/k3s-w2                        Node k3s-w2 status is now: NodeNotReady
+kube-system   6m8s        Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132]
+kube-system   4m33s       Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132]
+testapp       36m         Normal    TaintManagerEviction      pod/nginx-test-54db47f9bb-jnrwm    Cancelling deletion of Pod testapp/nginx-test-54db47f9bb-jnrwm
+kube-system   3m28s       Normal    TaintManagerEviction      pod/traefik-5878496467-rxrq9       Cancelling deletion of Pod kube-system/traefik-5878496467-rxrq9
+kube-system   4m32s       Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w2                        Node and Certificate Authority certificates managed by k3s are OK
+default       <invalid>   Normal    Starting                  node/k3s-w2                        
+default       36m         Normal    NodeReady                 node/k3s-w2                        Node k3s-w2 status is now: NodeReady
+default       36m         Normal    NodeHasNoDiskPressure     node/k3s-w2                        Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       36m         Normal    NodeHasSufficientPID      node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientPID
+default       <invalid>   Normal    Starting                  node/k3s-w2                        Starting kubelet.
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w2                        Updated Node Allocatable limit across pods
+default       <invalid>   Warning   Rebooted                  node/k3s-w2                        Node k3s-w2 has been rebooted, boot id: 13ab7f0f-c2b0-4c4c-9b4c-9b0fea69b034
+default       36m         Normal    NodeHasSufficientMemory   node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientMemory
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-54db47f9bb-jnrwm    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    Created                   pod/nginx-test-54db47f9bb-jnrwm    Container created
+testapp       <invalid>   Normal    Started                   pod/nginx-test-54db47f9bb-jnrwm    Container started
+kube-system   <invalid>   Normal    SandboxChanged            pod/traefik-5878496467-rxrq9       Pod sandbox changed, it will be killed and re-created.
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-54db47f9bb-jnrwm    Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   <invalid>   Normal    Started                   pod/traefik-5878496467-rxrq9       Container started
+kube-system   <invalid>   Normal    Pulled                    pod/traefik-5878496467-rxrq9       Container image "rancher/mirrored-library-traefik:3.6.13" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-kxgqx   Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Created                   pod/traefik-5878496467-rxrq9       Container created
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+testapp       34m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-gjzvf
+testapp       34m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-gjzvf    Successfully assigned testapp/nginx-test-54db47f9bb-gjzvf to k3s-s1
+testapp       34m         Normal    Killing                   pod/nginx-test-54db47f9bb-jnrwm    Stopping container nginx
+testapp       34m         Normal    Started                   pod/nginx-test-54db47f9bb-gjzvf    Container started
+testapp       34m         Normal    Created                   pod/nginx-test-54db47f9bb-gjzvf    Container created
+testapp       34m         Normal    Pulled                    pod/nginx-test-54db47f9bb-gjzvf    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       34m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-wndrd
+testapp       34m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-wndrd    Successfully assigned testapp/nginx-test-54db47f9bb-wndrd to k3s-w2
+testapp       34m         Normal    Pulled                    pod/nginx-test-54db47f9bb-wndrd    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       34m         Normal    Created                   pod/nginx-test-54db47f9bb-wndrd    Container created
+testapp       34m         Normal    Started                   pod/nginx-test-54db47f9bb-wndrd    Container started
+testapp       34m         Normal    Killing                   pod/nginx-test-54db47f9bb-4xzff    Stopping container nginx
+testapp       33m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-vs4n4    Successfully assigned testapp/nginx-test-54db47f9bb-vs4n4 to k3s-s3
+testapp       33m         Normal    Killing                   pod/nginx-test-54db47f9bb-pdhgn    Stopping container nginx
+testapp       33m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-vs4n4
+testapp       33m         Normal    Pulled                    pod/nginx-test-54db47f9bb-vs4n4    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       33m         Normal    Created                   pod/nginx-test-54db47f9bb-vs4n4    Container created
+testapp       33m         Normal    Started                   pod/nginx-test-54db47f9bb-vs4n4    Container started
+testapp       33m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-jx7wh
+testapp       33m         Normal    Created                   pod/nginx-test-54db47f9bb-jx7wh    Container created
+testapp       33m         Normal    Started                   pod/nginx-test-54db47f9bb-jx7wh    Container started
+testapp       33m         Normal    Pulled                    pod/nginx-test-54db47f9bb-jx7wh    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       33m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-jx7wh    Successfully assigned testapp/nginx-test-54db47f9bb-jx7wh to k3s-s2
+testapp       33m         Normal    Killing                   pod/nginx-test-54db47f9bb-gjzvf    Stopping container nginx
+testapp       32m         Normal    Started                   pod/nginx-test-54db47f9bb-87vb6    Container started
+testapp       32m         Normal    Pulled                    pod/nginx-test-54db47f9bb-87vb6    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       32m         Normal    Created                   pod/nginx-test-54db47f9bb-87vb6    Container created
+testapp       32m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-87vb6    Successfully assigned testapp/nginx-test-54db47f9bb-87vb6 to k3s-s1
+testapp       32m         Normal    Killing                   pod/nginx-test-54db47f9bb-jx7wh    Stopping container nginx
+testapp       32m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-87vb6
+testapp       32m         Normal    Killing                   pod/nginx-test-54db47f9bb-vs4n4    Stopping container nginx
+testapp       32m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-dz7mc    Successfully assigned testapp/nginx-test-54db47f9bb-dz7mc to k3s-s2
+testapp       32m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-dz7mc
+testapp       32m         Normal    Pulled                    pod/nginx-test-54db47f9bb-dz7mc    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       32m         Normal    Created                   pod/nginx-test-54db47f9bb-dz7mc    Container created
+testapp       32m         Normal    Started                   pod/nginx-test-54db47f9bb-dz7mc    Container started
+testapp       31m         Normal    Created                   pod/nginx-test-54db47f9bb-szr5w    Container created
+testapp       31m         Normal    Killing                   pod/nginx-test-54db47f9bb-dz7mc    Stopping container nginx
+testapp       31m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-szr5w
+testapp       31m         Normal    Started                   pod/nginx-test-54db47f9bb-szr5w    Container started
+testapp       31m         Normal    Pulled                    pod/nginx-test-54db47f9bb-szr5w    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       31m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-szr5w    Successfully assigned testapp/nginx-test-54db47f9bb-szr5w to k3s-s3
+testapp       31m         Normal    Scheduled                 pod/nginx-test-54db47f9bb-4hv7l    Successfully assigned testapp/nginx-test-54db47f9bb-4hv7l to k3s-s2
+testapp       31m         Normal    Killing                   pod/nginx-test-54db47f9bb-87vb6    Stopping container nginx
+testapp       31m         Normal    SuccessfulCreate          replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-4hv7l
+testapp       31m         Normal    Pulled                    pod/nginx-test-54db47f9bb-4hv7l    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       31m         Normal    Started                   pod/nginx-test-54db47f9bb-4hv7l    Container started
+testapp       31m         Normal    Created                   pod/nginx-test-54db47f9bb-4hv7l    Container created
+testapp       38s         Warning   NodeNotReady              pod/nginx-test-54db47f9bb-wndrd    Node is not ready
+default       <invalid>   Normal    Starting                  node/k3s-w2                        
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w2                        Node and Certificate Authority certificates managed by k3s are OK
+default       <invalid>   Normal    Starting                  node/k3s-w2                        Starting kubelet.
+default       22m         Normal    NodeReady                 node/k3s-w2                        Node k3s-w2 status is now: NodeReady
+default       22m         Normal    NodeHasSufficientPID      node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientPID
+default       22m         Normal    NodeHasNoDiskPressure     node/k3s-w2                        Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       22m         Normal    NodeHasSufficientMemory   node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientMemory
+default       <invalid>   Warning   Rebooted                  node/k3s-w2                        Node k3s-w2 has been rebooted, boot id: 415aaf54-1fad-4c38-a52b-c4b353cab458
+testapp       3m28s       Normal    TaintManagerEviction      pod/nginx-test-54db47f9bb-wndrd    Cancelling deletion of Pod testapp/nginx-test-54db47f9bb-wndrd
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w2                        Updated Node Allocatable limit across pods
+kube-system   <invalid>   Normal    Pulled                    pod/traefik-5878496467-rxrq9       Container image "rancher/mirrored-library-traefik:3.6.13" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-54db47f9bb-wndrd    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    Started                   pod/nginx-test-54db47f9bb-wndrd    Container started
+testapp       <invalid>   Normal    Created                   pod/nginx-test-54db47f9bb-wndrd    Container created
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-54db47f9bb-wndrd    Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-kxgqx   Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   <invalid>   Normal    SandboxChanged            pod/traefik-5878496467-rxrq9       Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Started                   pod/traefik-5878496467-rxrq9       Container started
+kube-system   <invalid>   Normal    Created                   pod/traefik-5878496467-rxrq9       Container created
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w2                        Node and Certificate Authority certificates managed by k3s are OK
+default       <invalid>   Normal    Starting                  node/k3s-w2                        
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w2                        Updated Node Allocatable limit across pods
+default       <invalid>   Normal    Starting                  node/k3s-w2                        Starting kubelet.
+default       <invalid>   Warning   Rebooted                  node/k3s-w2                        Node k3s-w2 has been rebooted, boot id: c1d21ca2-3f35-40c8-ad8c-b4dc1f1323ef
+default       14m         Normal    NodeHasSufficientMemory   node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientMemory
+default       14m         Normal    NodeHasNoDiskPressure     node/k3s-w2                        Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       14m         Normal    NodeHasSufficientPID      node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientPID
+default       14m         Normal    NodeReady                 node/k3s-w2                        Node k3s-w2 status is now: NodeReady
+testapp       <invalid>   Normal    Created                   pod/nginx-test-54db47f9bb-wndrd    Container created
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started
+testapp       <invalid>   Normal    Started                   pod/nginx-test-54db47f9bb-wndrd    Container started
+kube-system   <invalid>   Normal    SandboxChanged            pod/traefik-5878496467-rxrq9       Pod sandbox changed, it will be killed and re-created.
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-54db47f9bb-wndrd    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-54db47f9bb-wndrd    Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/traefik-5878496467-rxrq9       Container created
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-kxgqx   Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Pulled                    pod/traefik-5878496467-rxrq9       Container image "rancher/mirrored-library-traefik:3.6.13" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Started                   pod/traefik-5878496467-rxrq9       Container started
+default       <invalid>   Normal    Starting                  node/k3s-w2                        
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w2                        Node and Certificate Authority certificates managed by k3s are OK
+default       9m          Normal    NodeHasSufficientPID      node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientPID
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w2                        Updated Node Allocatable limit across pods
+default       <invalid>   Normal    Starting                  node/k3s-w2                        Starting kubelet.
+default       <invalid>   Warning   Rebooted                  node/k3s-w2                        Node k3s-w2 has been rebooted, boot id: 4839ce6c-ee02-469c-9e9e-5604ae8fdb04
+default       9m          Normal    NodeHasSufficientMemory   node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientMemory
+default       9m          Normal    NodeHasNoDiskPressure     node/k3s-w2                        Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       9m          Normal    NodeReady                 node/k3s-w2                        Node k3s-w2 status is now: NodeReady
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-kxgqx   Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Pulled                    pod/traefik-5878496467-rxrq9       Container image "rancher/mirrored-library-traefik:3.6.13" already present on machine and can be accessed by the pod
+testapp       <invalid>   Normal    Created                   pod/nginx-test-54db47f9bb-wndrd    Container created
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-54db47f9bb-wndrd    Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/traefik-5878496467-rxrq9       Container created
+kube-system   <invalid>   Normal    SandboxChanged            pod/traefik-5878496467-rxrq9       Pod sandbox changed, it will be killed and re-created.
+testapp       <invalid>   Normal    Started                   pod/nginx-test-54db47f9bb-wndrd    Container started
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-54db47f9bb-wndrd    Container image "nginx:stable" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   <invalid>   Normal    Started                   pod/traefik-5878496467-rxrq9       Container started
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+default       <invalid>   Normal    Starting                  node/k3s-w2                        
+default       <invalid>   Normal    CertificateExpirationOK   node/k3s-w2                        Node and Certificate Authority certificates managed by k3s are OK
+default       3m33s       Normal    NodeHasSufficientPID      node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientPID
+default       3m33s       Normal    NodeHasNoDiskPressure     node/k3s-w2                        Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       3m33s       Normal    NodeHasSufficientMemory   node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientMemory
+default       3m33s       Normal    NodeReady                 node/k3s-w2                        Node k3s-w2 status is now: NodeReady
+default       <invalid>   Warning   Rebooted                  node/k3s-w2                        Node k3s-w2 has been rebooted, boot id: f030e91d-7fa1-4ff8-ba75-70e32576415e
+default       <invalid>   Normal    NodeAllocatableEnforced   node/k3s-w2                        Updated Node Allocatable limit across pods
+default       <invalid>   Normal    Starting                  node/k3s-w2                        Starting kubelet.
+testapp       <invalid>   Normal    SandboxChanged            pod/nginx-test-54db47f9bb-wndrd    Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   <invalid>   Normal    Created                   pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   <invalid>   Normal    Pulled                    pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-405c6267-kxgqx   Pod sandbox changed, it will be killed and re-created.
+kube-system   <invalid>   Normal    SandboxChanged            pod/traefik-5878496467-rxrq9       Pod sandbox changed, it will be killed and re-created.
+testapp       <invalid>   Normal    Started                   pod/nginx-test-54db47f9bb-wndrd    Container started
+testapp       <invalid>   Normal    Created                   pod/nginx-test-54db47f9bb-wndrd    Container created
+kube-system   <invalid>   Normal    Started                   pod/traefik-5878496467-rxrq9       Container started
+testapp       <invalid>   Normal    Pulled                    pod/nginx-test-54db47f9bb-wndrd    Container image "nginx:stable" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Pulled                    pod/traefik-5878496467-rxrq9       Container image "rancher/mirrored-library-traefik:3.6.13" already present on machine and can be accessed by the pod
+kube-system   <invalid>   Normal    Created                   pod/traefik-5878496467-rxrq9       Container created
+kube-system   <invalid>   Normal    Started                   pod/svclb-traefik-405c6267-kxgqx   Container started

@@ -1,0 +1,58 @@
+NAMESPACE   LAST SEEN   TYPE     REASON             OBJECT                             MESSAGE
+testapp     59m         Normal   Scheduled          pod/nginx-test-54db47f9bb-d9xnl    Successfully assigned testapp/nginx-test-54db47f9bb-d9xnl to k3s-s1
+testapp     59m         Normal   Killing            pod/nginx-test-54db47f9bb-zzmbf    Stopping container nginx
+testapp     59m         Normal   SuccessfulCreate   replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-d9xnl
+testapp     59m         Normal   Pulled             pod/nginx-test-54db47f9bb-d9xnl    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     59m         Normal   Created            pod/nginx-test-54db47f9bb-d9xnl    Container created
+testapp     59m         Normal   Started            pod/nginx-test-54db47f9bb-d9xnl    Container started
+testapp     56m         Normal   SuccessfulCreate   replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-z4kvn
+testapp     56m         Normal   Started            pod/nginx-test-54db47f9bb-z4kvn    Container started
+testapp     56m         Normal   Killing            pod/nginx-test-54db47f9bb-fkzpk    Stopping container nginx
+testapp     56m         Normal   Scheduled          pod/nginx-test-54db47f9bb-z4kvn    Successfully assigned testapp/nginx-test-54db47f9bb-z4kvn to k3s-w2
+testapp     56m         Normal   Pulled             pod/nginx-test-54db47f9bb-z4kvn    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     56m         Normal   Created            pod/nginx-test-54db47f9bb-z4kvn    Container created
+testapp     52m         Normal   Killing            pod/nginx-test-54db47f9bb-dqjkd    Stopping container nginx
+testapp     52m         Normal   Scheduled          pod/nginx-test-54db47f9bb-k79vg    Successfully assigned testapp/nginx-test-54db47f9bb-k79vg to k3s-s3
+testapp     52m         Normal   SuccessfulCreate   replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-k79vg
+testapp     52m         Normal   Pulled             pod/nginx-test-54db47f9bb-k79vg    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     52m         Normal   Created            pod/nginx-test-54db47f9bb-k79vg    Container created
+testapp     52m         Normal   Started            pod/nginx-test-54db47f9bb-k79vg    Container started
+testapp     48m         Normal   Started            pod/nginx-test-54db47f9bb-hqknx    Container started
+testapp     48m         Normal   SuccessfulCreate   replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-hqknx
+testapp     48m         Normal   Killing            pod/nginx-test-54db47f9bb-k79vg    Stopping container nginx
+testapp     48m         Normal   Created            pod/nginx-test-54db47f9bb-hqknx    Container created
+testapp     48m         Normal   Pulled             pod/nginx-test-54db47f9bb-hqknx    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     48m         Normal   Scheduled          pod/nginx-test-54db47f9bb-hqknx    Successfully assigned testapp/nginx-test-54db47f9bb-hqknx to k3s-s2
+testapp     46m         Normal   Created            pod/nginx-test-54db47f9bb-m8ksb    Container created
+testapp     46m         Normal   SuccessfulCreate   replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-m8ksb
+testapp     46m         Normal   Scheduled          pod/nginx-test-54db47f9bb-m8ksb    Successfully assigned testapp/nginx-test-54db47f9bb-m8ksb to k3s-s3
+testapp     46m         Normal   Killing            pod/nginx-test-54db47f9bb-z4kvn    Stopping container nginx
+testapp     46m         Normal   Pulled             pod/nginx-test-54db47f9bb-m8ksb    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     46m         Normal   Started            pod/nginx-test-54db47f9bb-m8ksb    Container started
+testapp     43m         Normal   Killing            pod/nginx-test-54db47f9bb-d9xnl    Stopping container nginx
+testapp     43m         Normal   Pulled             pod/nginx-test-54db47f9bb-m2gdp    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     43m         Normal   Created            pod/nginx-test-54db47f9bb-m2gdp    Container created
+testapp     43m         Normal   Started            pod/nginx-test-54db47f9bb-m2gdp    Container started
+testapp     43m         Normal   Scheduled          pod/nginx-test-54db47f9bb-m2gdp    Successfully assigned testapp/nginx-test-54db47f9bb-m2gdp to k3s-w2
+testapp     43m         Normal   SuccessfulCreate   replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-m2gdp
+testapp     41m         Normal   Started            pod/nginx-test-54db47f9bb-kpwrt    Container started
+testapp     32m         Normal   SuccessfulCreate   replicaset/nginx-test-54db47f9bb   (combined from similar events): Created pod: nginx-test-54db47f9bb-pdhgn
+testapp     41m         Normal   Killing            pod/nginx-test-54db47f9bb-m2gdp    Stopping container nginx
+testapp     41m         Normal   Created            pod/nginx-test-54db47f9bb-kpwrt    Container created
+testapp     41m         Normal   Pulled             pod/nginx-test-54db47f9bb-kpwrt    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     41m         Normal   Scheduled          pod/nginx-test-54db47f9bb-kpwrt    Successfully assigned testapp/nginx-test-54db47f9bb-kpwrt to k3s-s1
+testapp     38m         Normal   Started            pod/nginx-test-54db47f9bb-jnrwm    Container started
+testapp     38m         Normal   Killing            pod/nginx-test-54db47f9bb-m8ksb    Stopping container nginx
+testapp     38m         Normal   Scheduled          pod/nginx-test-54db47f9bb-jnrwm    Successfully assigned testapp/nginx-test-54db47f9bb-jnrwm to k3s-w2
+testapp     38m         Normal   Pulled             pod/nginx-test-54db47f9bb-jnrwm    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     38m         Normal   Created            pod/nginx-test-54db47f9bb-jnrwm    Container created
+testapp     35m         Normal   Started            pod/nginx-test-54db47f9bb-4xzff    Container started
+testapp     35m         Normal   Killing            pod/nginx-test-54db47f9bb-hqknx    Stopping container nginx
+testapp     35m         Normal   Created            pod/nginx-test-54db47f9bb-4xzff    Container created
+testapp     35m         Normal   Pulled             pod/nginx-test-54db47f9bb-4xzff    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     35m         Normal   Scheduled          pod/nginx-test-54db47f9bb-4xzff    Successfully assigned testapp/nginx-test-54db47f9bb-4xzff to k3s-s3
+testapp     32m         Normal   Killing            pod/nginx-test-54db47f9bb-kpwrt    Stopping container nginx
+testapp     32m         Normal   Started            pod/nginx-test-54db47f9bb-pdhgn    Container started
+testapp     32m         Normal   Created            pod/nginx-test-54db47f9bb-pdhgn    Container created
+testapp     32m         Normal   Pulled             pod/nginx-test-54db47f9bb-pdhgn    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp     32m         Normal   Scheduled          pod/nginx-test-54db47f9bb-pdhgn    Successfully assigned testapp/nginx-test-54db47f9bb-pdhgn to k3s-s2
