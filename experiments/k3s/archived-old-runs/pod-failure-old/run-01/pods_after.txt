@@ -1,0 +1,24 @@
+NAMESPACE     NAME                                                   READY   STATUS      RESTARTS            AGE     IP                NODE     NOMINATED NODE   READINESS GATES
+kube-system   coredns-5f779c8467-pt87b                               1/1     Running     0                   9m42s   10.42.2.9         k3s-s3   <none>           <none>
+kube-system   helm-install-traefik-crd-4pncg                         0/1     Completed   0                   19h     <none>            k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-hz2v5                             0/1     Completed   2                   19h     <none>            k3s-s1   <none>           <none>
+kube-system   local-path-provisioner-5d9d9885bc-8znkr                1/1     Running     1 (53m ago)         19h     10.42.0.12        k3s-s1   <none>           <none>
+kube-system   metrics-server-fdb7f6596-4q8vt                         1/1     Running     0                   9m42s   10.42.2.10        k3s-s3   <none>           <none>
+kube-system   svclb-traefik-405c6267-827kb                           2/2     Running     2 (<invalid> ago)   19h     10.42.3.7         k3s-w1   <none>           <none>
+kube-system   svclb-traefik-405c6267-kxgqx                           2/2     Running     2 (<invalid> ago)   19h     10.42.4.5         k3s-w2   <none>           <none>
+kube-system   svclb-traefik-405c6267-psxjl                           2/2     Running     2 (53m ago)         19h     10.42.0.13        k3s-s1   <none>           <none>
+kube-system   svclb-traefik-405c6267-qjd7p                           2/2     Running     2 (53m ago)         19h     10.42.1.8         k3s-s2   <none>           <none>
+kube-system   svclb-traefik-405c6267-zltz2                           2/2     Running     2 (<invalid> ago)   19h     10.42.2.7         k3s-s3   <none>           <none>
+kube-system   traefik-5878496467-rxrq9                               1/1     Running     0                   9m42s   10.42.4.7         k3s-w2   <none>           <none>
+monitoring    monitoring-grafana-5ff5b8b6b7-m99sh                    3/3     Running     0                   9m41s   10.42.4.9         k3s-w2   <none>           <none>
+monitoring    monitoring-kube-prometheus-operator-7bfb6fff69-hvhbl   1/1     Running     0                   9m41s   10.42.4.8         k3s-w2   <none>           <none>
+monitoring    monitoring-kube-state-metrics-69f7666d6d-7ktc6         1/1     Running     0                   9m31s   10.42.0.14        k3s-s1   <none>           <none>
+monitoring    monitoring-prometheus-node-exporter-47f25              0/1     Running     1 (<invalid> ago)   18h     192.168.228.132   k3s-w1   <none>           <none>
+monitoring    monitoring-prometheus-node-exporter-gbkqb              0/1     Running     1 (<invalid> ago)   18h     192.168.228.133   k3s-w2   <none>           <none>
+monitoring    monitoring-prometheus-node-exporter-gqphl              0/1     Running     1 (53m ago)         18h     192.168.228.129   k3s-s1   <none>           <none>
+monitoring    monitoring-prometheus-node-exporter-s482s              0/1     Running     1 (<invalid> ago)   18h     192.168.228.131   k3s-s3   <none>           <none>
+monitoring    monitoring-prometheus-node-exporter-wpfzj              0/1     Running     2 (53m ago)         18h     192.168.228.130   k3s-s2   <none>           <none>
+monitoring    prometheus-monitoring-kube-prometheus-prometheus-0     2/2     Running     0                   9m27s   10.42.1.9         k3s-s2   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-9z944                             1/1     Running     1 (<invalid> ago)   18h     10.42.3.9         k3s-w1   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-s5lq9                             1/1     Running     1 (<invalid> ago)   18h     10.42.2.8         k3s-s3   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-xrb4h                             1/1     Running     0                   103s    10.42.0.15        k3s-s1   <none>           <none>

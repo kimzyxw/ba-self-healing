@@ -1,0 +1,4 @@
+NAME                          READY   STATUS    RESTARTS   AGE     IP           NODE     NOMINATED NODE   READINESS GATES
+nginx-test-54db47f9bb-hqknx   1/1     Running   0          6m8s    10.42.1.17   k3s-s2   <none>           <none>
+nginx-test-54db47f9bb-m2gdp   1/1     Running   0          87s     10.42.4.12   k3s-w2   <none>           <none>
+nginx-test-54db47f9bb-m8ksb   1/1     Running   0          3m42s   10.42.2.23   k3s-s3   <none>           <none>

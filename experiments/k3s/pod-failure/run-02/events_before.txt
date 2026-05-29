@@ -1,0 +1,43 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                OBJECT                             MESSAGE
+default       54m         Warning   SystemOOM             node/k3s-s2                        System OOM encountered, victim process: prometheus, pid: 79922
+kube-system   52m         Normal    UpdatedLoadBalancer   service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+default       33m         Warning   SystemOOM             node/k3s-s2                        System OOM encountered, victim process: prometheus, pid: 81454
+default       28m         Warning   SystemOOM             node/k3s-s2                        System OOM encountered, victim process: prometheus, pid: 82301
+default       23m         Warning   SystemOOM             node/k3s-s2                        System OOM encountered, victim process: prometheus, pid: 82527
+default       19m         Warning   SystemOOM             node/k3s-s2                        System OOM encountered, victim process: prometheus, pid: 82754
+default       13m         Warning   SystemOOM             node/k3s-s2                        System OOM encountered, victim process: prometheus, pid: 82928
+testapp       6m30s       Normal    Scheduled             pod/nginx-test-54db47f9bb-dqjkd    Successfully assigned testapp/nginx-test-54db47f9bb-dqjkd to k3s-s2
+testapp       6m30s       Normal    SuccessfulCreate      replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-dqjkd
+testapp       6m30s       Normal    ScalingReplicaSet     deployment/nginx-test              Scaled up replica set nginx-test-54db47f9bb from 0 to 1
+testapp       6m26s       Normal    Pulling               pod/nginx-test-54db47f9bb-dqjkd    Pulling image "nginx:stable"
+testapp       6m18s       Normal    ScalingReplicaSet     deployment/nginx-test              Scaled down replica set nginx-test-f8f6dcbc6 from 3 to 2
+testapp       6m18s       Normal    Scheduled             pod/nginx-test-54db47f9bb-zzmbf    Successfully assigned testapp/nginx-test-54db47f9bb-zzmbf to k3s-w2
+testapp       6m18s       Normal    Pulled                pod/nginx-test-54db47f9bb-dqjkd    Successfully pulled image "nginx:stable" in 7.873s (7.873s including waiting). Image size: 61413318 bytes.
+testapp       6m18s       Normal    Created               pod/nginx-test-54db47f9bb-dqjkd    Container created
+testapp       6m18s       Normal    Started               pod/nginx-test-54db47f9bb-dqjkd    Container started
+testapp       6m18s       Normal    Killing               pod/nginx-test-f8f6dcbc6-ztpzk     Stopping container nginx
+testapp       6m18s       Normal    ScalingReplicaSet     deployment/nginx-test              Scaled up replica set nginx-test-54db47f9bb from 1 to 2
+testapp       6m18s       Normal    SuccessfulCreate      replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-zzmbf
+testapp       6m18s       Normal    SuccessfulDelete      replicaset/nginx-test-f8f6dcbc6    Deleted pod: nginx-test-f8f6dcbc6-ztpzk
+testapp       6m14s       Normal    Pulling               pod/nginx-test-54db47f9bb-zzmbf    Pulling image "nginx:stable"
+testapp       6m7s        Normal    Pulled                pod/nginx-test-54db47f9bb-zzmbf    Successfully pulled image "nginx:stable" in 7.312s (7.312s including waiting). Image size: 61413318 bytes.
+testapp       6m7s        Normal    Created               pod/nginx-test-54db47f9bb-zzmbf    Container created
+testapp       6m7s        Normal    Started               pod/nginx-test-54db47f9bb-zzmbf    Container started
+testapp       6m6s        Normal    SuccessfulDelete      replicaset/nginx-test-f8f6dcbc6    Deleted pod: nginx-test-f8f6dcbc6-9tl64
+testapp       6m6s        Normal    Scheduled             pod/nginx-test-54db47f9bb-fkzpk    Successfully assigned testapp/nginx-test-54db47f9bb-fkzpk to k3s-s3
+testapp       6m6s        Normal    ScalingReplicaSet     deployment/nginx-test              Scaled down replica set nginx-test-f8f6dcbc6 from 2 to 1
+testapp       6m6s        Normal    ScalingReplicaSet     deployment/nginx-test              Scaled up replica set nginx-test-54db47f9bb from 2 to 3
+testapp       6m6s        Normal    SuccessfulCreate      replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-fkzpk
+testapp       6m6s        Normal    Killing               pod/nginx-test-f8f6dcbc6-9tl64     Stopping container nginx
+testapp       6m2s        Normal    Killing               pod/nginx-test-f8f6dcbc6-4qc8w     Stopping container nginx
+testapp       6m2s        Normal    Started               pod/nginx-test-54db47f9bb-fkzpk    Container started
+testapp       6m2s        Normal    Created               pod/nginx-test-54db47f9bb-fkzpk    Container created
+testapp       6m2s        Normal    SuccessfulDelete      replicaset/nginx-test-f8f6dcbc6    Deleted pod: nginx-test-f8f6dcbc6-4qc8w
+testapp       6m2s        Normal    Pulled                pod/nginx-test-54db47f9bb-fkzpk    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       6m2s        Normal    ScalingReplicaSet     deployment/nginx-test              Scaled down replica set nginx-test-f8f6dcbc6 from 1 to 0
+testapp       2m24s       Normal    SuccessfulCreate      replicaset/nginx-test-54db47f9bb   Created pod: nginx-test-54db47f9bb-d9xnl
+testapp       2m24s       Normal    Killing               pod/nginx-test-54db47f9bb-zzmbf    Stopping container nginx
+testapp       2m24s       Normal    Scheduled             pod/nginx-test-54db47f9bb-d9xnl    Successfully assigned testapp/nginx-test-54db47f9bb-d9xnl to k3s-s1
+testapp       2m20s       Normal    Started               pod/nginx-test-54db47f9bb-d9xnl    Container started
+testapp       2m20s       Normal    Created               pod/nginx-test-54db47f9bb-d9xnl    Container created
+testapp       2m20s       Normal    Pulled                pod/nginx-test-54db47f9bb-d9xnl    Container image "nginx:stable" already present on machine and can be accessed by the pod
