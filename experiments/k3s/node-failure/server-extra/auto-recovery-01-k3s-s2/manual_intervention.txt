@@ -1,0 +1,1 @@
+sudo systemctl restart k3s on k3s-s2 after extended waiting period

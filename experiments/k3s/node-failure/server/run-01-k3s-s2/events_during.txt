@@ -1,0 +1,67 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                         OBJECT                             MESSAGE
+kube-system   19h         Warning   NodeNotReady                   pod/svclb-traefik-405c6267-kxgqx   Node is not ready
+default       19h         Normal    NodeNotReady                   node/k3s-w2                        Node k3s-w2 status is now: NodeNotReady
+kube-system   17h         Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+kube-system   19h         Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132]
+kube-system   19h         Normal    TaintManagerEviction           pod/traefik-5878496467-rxrq9       Cancelling deletion of Pod kube-system/traefik-5878496467-rxrq9
+testapp       19h         Warning   NodeNotReady                   pod/nginx-test-54db47f9bb-wndrd    Node is not ready
+testapp       19h         Normal    TaintManagerEviction           pod/nginx-test-54db47f9bb-wndrd    Cancelling deletion of Pod testapp/nginx-test-54db47f9bb-wndrd
+default       17h         Normal    CertificateExpirationOK        node/k3s-w2                        Node and Certificate Authority certificates managed by k3s are OK
+default       17h         Normal    Starting                       node/k3s-w2                        
+default       17h         Normal    Starting                       node/k3s-w2                        Starting kubelet.
+default       19h         Normal    NodeReady                      node/k3s-w2                        Node k3s-w2 status is now: NodeReady
+default       19h         Normal    NodeHasSufficientPID           node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientPID
+default       19h         Normal    NodeHasNoDiskPressure          node/k3s-w2                        Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       19h         Normal    NodeHasSufficientMemory        node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientMemory
+default       17h         Warning   Rebooted                       node/k3s-w2                        Node k3s-w2 has been rebooted, boot id: 23e23a0f-923b-4a7b-8f4a-587ac9722148
+default       17h         Normal    NodeAllocatableEnforced        node/k3s-w2                        Updated Node Allocatable limit across pods
+kube-system   17h         Normal    Pulled                         pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   17h         Normal    Started                        pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   17h         Normal    Started                        pod/svclb-traefik-405c6267-kxgqx   Container started
+kube-system   17h         Normal    SandboxChanged                 pod/svclb-traefik-405c6267-kxgqx   Pod sandbox changed, it will be killed and re-created.
+kube-system   17h         Normal    Pulled                         pod/svclb-traefik-405c6267-kxgqx   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   17h         Normal    Created                        pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   17h         Normal    Created                        pod/svclb-traefik-405c6267-kxgqx   Container created
+kube-system   17h         Normal    Pulled                         pod/traefik-5878496467-rxrq9       Container image "rancher/mirrored-library-traefik:3.6.13" already present on machine and can be accessed by the pod
+testapp       17h         Normal    SandboxChanged                 pod/nginx-test-54db47f9bb-wndrd    Pod sandbox changed, it will be killed and re-created.
+kube-system   17h         Normal    Created                        pod/traefik-5878496467-rxrq9       Container created
+testapp       17h         Normal    Started                        pod/nginx-test-54db47f9bb-wndrd    Container started
+testapp       17h         Normal    Created                        pod/nginx-test-54db47f9bb-wndrd    Container created
+testapp       17h         Normal    Pulled                         pod/nginx-test-54db47f9bb-wndrd    Container image "nginx:stable" already present on machine and can be accessed by the pod
+kube-system   17h         Normal    SandboxChanged                 pod/traefik-5878496467-rxrq9       Pod sandbox changed, it will be killed and re-created.
+kube-system   17h         Normal    Started                        pod/traefik-5878496467-rxrq9       Container started
+testapp       4m40s       Normal    Started                        pod/nginx-test-7976d45f7d-jx5bm    Container started
+testapp       4m40s       Warning   ReplicaSetCreateError          deployment/nginx-test              Failed to create new replica set "nginx-test-7976d45f7d": Unauthorized
+testapp       4m40s       Normal    ScalingReplicaSet              deployment/nginx-test              Scaled up replica set nginx-test-7976d45f7d from 0 to 1
+testapp       4m40s       Normal    Created                        pod/nginx-test-7976d45f7d-jx5bm    Container created
+testapp       4m40s       Warning   FailedCreate                   replicaset/nginx-test-7976d45f7d   Error creating: Unauthorized
+testapp       4m40s       Normal    SuccessfulCreate               replicaset/nginx-test-7976d45f7d   Created pod: nginx-test-7976d45f7d-jx5bm
+testapp       4m40s       Normal    Scheduled                      pod/nginx-test-7976d45f7d-jx5bm    Successfully assigned testapp/nginx-test-7976d45f7d-jx5bm to k3s-s1
+testapp       4m40s       Normal    Pulled                         pod/nginx-test-7976d45f7d-jx5bm    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       4m39s       Warning   FailedToUpdateEndpointSlices   service/nginx-service              Error updating Endpoint Slices for Service testapp/nginx-service: failed to update nginx-service-frpd6 EndpointSlice for Service testapp/nginx-service: Unauthorized
+testapp       4m39s       Normal    SuccessfulDelete               replicaset/nginx-test-54db47f9bb   Deleted pod: nginx-test-54db47f9bb-wndrd
+testapp       4m39s       Normal    ScalingReplicaSet              deployment/nginx-test              Scaled up replica set nginx-test-7976d45f7d from 1 to 2
+testapp       4m38s       Normal    Scheduled                      pod/nginx-test-7976d45f7d-82g9t    Successfully assigned testapp/nginx-test-7976d45f7d-82g9t to k3s-s2
+testapp       4m39s       Normal    Pulled                         pod/nginx-test-7976d45f7d-82g9t    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       4m39s       Normal    Created                        pod/nginx-test-7976d45f7d-82g9t    Container created
+testapp       4m39s       Normal    Started                        pod/nginx-test-7976d45f7d-82g9t    Container started
+testapp       4m39s       Normal    ScalingReplicaSet              deployment/nginx-test              Scaled down replica set nginx-test-54db47f9bb from 3 to 2
+testapp       4m39s       Normal    SuccessfulCreate               replicaset/nginx-test-7976d45f7d   Created pod: nginx-test-7976d45f7d-82g9t
+testapp       4m39s       Warning   FailedToUpdateEndpoint         endpoints/nginx-service            Failed to update endpoint testapp/nginx-service: Unauthorized
+testapp       4m39s       Normal    Killing                        pod/nginx-test-54db47f9bb-wndrd    Stopping container nginx
+testapp       4m38s       Normal    SuccessfulCreate               replicaset/nginx-test-7976d45f7d   Created pod: nginx-test-7976d45f7d-jvhkm
+testapp       4m37s       Normal    Scheduled                      pod/nginx-test-7976d45f7d-jvhkm    Successfully assigned testapp/nginx-test-7976d45f7d-jvhkm to k3s-w2
+testapp       4m38s       Normal    Created                        pod/nginx-test-7976d45f7d-jvhkm    Container created
+testapp       4m38s       Normal    ScalingReplicaSet              deployment/nginx-test              Scaled up replica set nginx-test-7976d45f7d from 2 to 3
+testapp       4m38s       Normal    Killing                        pod/nginx-test-54db47f9bb-4hv7l    Stopping container nginx
+testapp       4m38s       Normal    Pulled                         pod/nginx-test-7976d45f7d-jvhkm    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       4m38s       Normal    ScalingReplicaSet              deployment/nginx-test              Scaled down replica set nginx-test-54db47f9bb from 2 to 1
+testapp       4m38s       Normal    Started                        pod/nginx-test-7976d45f7d-jvhkm    Container started
+testapp       4m38s       Normal    SuccessfulDelete               replicaset/nginx-test-54db47f9bb   Deleted pod: nginx-test-54db47f9bb-4hv7l
+testapp       4m37s       Normal    SuccessfulDelete               replicaset/nginx-test-54db47f9bb   Deleted pod: nginx-test-54db47f9bb-szr5w
+testapp       4m37s       Normal    Killing                        pod/nginx-test-54db47f9bb-szr5w    Stopping container nginx
+testapp       4m37s       Normal    ScalingReplicaSet              deployment/nginx-test              Scaled down replica set nginx-test-54db47f9bb from 1 to 0
+default       45s         Normal    NodeNotReady                   node/k3s-s2                        Node k3s-s2 status is now: NodeNotReady
+kube-system   45s         Warning   NodeNotReady                   pod/svclb-traefik-405c6267-qjd7p   Node is not ready
+testapp       45s         Warning   NodeNotReady                   pod/nginx-test-7976d45f7d-82g9t    Node is not ready
+kube-system   45s         Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.131 192.168.228.132 192.168.228.133]

@@ -1,0 +1,261 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                           OBJECT                             MESSAGE
+default       10m         Normal    NodeNotReady                     node/k3s-s2                        Node k3s-s2 status is now: NodeNotReady
+kube-system   10m         Warning   NodeNotReady                     pod/svclb-traefik-405c6267-qjd7p   Node is not ready
+kube-system   13s         Warning   NodeNotReady                     pod/svclb-traefik-405c6267-zltz2   Node is not ready
+kube-system   13s         Normal    UpdatedLoadBalancer              service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.132 192.168.228.133]
+default       13s         Normal    NodeNotReady                     node/k3s-s3                        Node k3s-s3 status is now: NodeNotReady
+kube-system   15m         Normal    UpdatedLoadBalancer              service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+kube-system   137m        Normal    LeaderElection                   lease/kube-scheduler               k3s-s3_d8775e4b-0f56-4cf8-8b43-4113cba17447 became leader
+kube-system   10m         Normal    UpdatedLoadBalancer              service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.131 192.168.228.132 192.168.228.133]
+testapp       136m        Warning   NodeNotReady                     pod/nginx-test-7976d45f7d-tcl7h    Node is not ready
+testapp       131m        Normal    Scheduled                        pod/nginx-test-7976d45f7d-98bxn    Successfully assigned testapp/nginx-test-7976d45f7d-98bxn to k3s-s3
+testapp       131m        Normal    SuccessfulCreate                 replicaset/nginx-test-7976d45f7d   Created pod: nginx-test-7976d45f7d-98bxn
+testapp       131m        Normal    TaintManagerEviction             pod/nginx-test-7976d45f7d-tcl7h    Marking for deletion Pod testapp/nginx-test-7976d45f7d-tcl7h
+testapp       131m        Normal    Created                          pod/nginx-test-7976d45f7d-98bxn    Container created
+testapp       131m        Normal    Started                          pod/nginx-test-7976d45f7d-98bxn    Container started
+testapp       131m        Normal    Pulled                           pod/nginx-test-7976d45f7d-98bxn    Container image "nginx:stable" already present on machine and can be accessed by the pod
+default       129m        Normal    Starting                         node/k3s-s2                        
+default       129m        Normal    Starting                         node/k3s-s2                        Starting kubelet.
+default       129m        Normal    CertificateExpirationOK          node/k3s-s2                        Node and Certificate Authority certificates managed by k3s are OK
+default       129m        Normal    NodeHasSufficientPID             node/k3s-s2                        Node k3s-s2 status is now: NodeHasSufficientPID
+default       129m        Normal    NodeHasNoDiskPressure            node/k3s-s2                        Node k3s-s2 status is now: NodeHasNoDiskPressure
+default       129m        Normal    NodeHasSufficientMemory          node/k3s-s2                        Node k3s-s2 status is now: NodeHasSufficientMemory
+testapp       129m        Warning   FailedMount                      pod/nginx-test-7976d45f7d-tcl7h    MountVolume.SetUp failed for volume "kube-api-access-g9jwf" : object "testapp"/"kube-root-ca.crt" not registered
+default       129m        Normal    NodeReady                        node/k3s-s2                        Node k3s-s2 status is now: NodeReady
+default       129m        Normal    NodeAllocatableEnforced          node/k3s-s2                        Updated Node Allocatable limit across pods
+kube-system   129m        Warning   FailedCreatePodSandBox           pod/svclb-traefik-405c6267-qjd7p   Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "b302eec890177e696545183cd238640455058fdf480264be06c813b3512dd4d9": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.
+default       129m        Warning   Rebooted                         node/k3s-s2                        Node k3s-s2 has been rebooted, boot id: 954d5a58-e080-47aa-bb56-4717c46e448f
+kube-system   129m        Normal    SandboxChanged                   pod/svclb-traefik-405c6267-qjd7p   Pod sandbox changed, it will be killed and re-created.
+kube-system   129m        Normal    AppliedManifest                  addon/metrics-apiservice           Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/coredns                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/rolebindings                 Applying manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/rolebindings                 Applied manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/local-storage                Applying manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/local-storage                Applied manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/metrics-server-service       Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/traefik                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/metrics-apiservice           Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/auth-reader                  Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/auth-reader                  Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/auth-delegator               Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/auth-delegator               Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/metrics-server-deployment    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/coredns                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/runtimes                     Applied manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/runtimes                     Applying manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/metrics-server-service       Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/metrics-server-deployment    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/resource-reader              Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/aggregated-metrics-reader    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/aggregated-metrics-reader    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/ccm                          Applied manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/ccm                          Applying manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   129m        Normal    ApplyingManifest                 addon/resource-reader              Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   129m        Normal    AppliedManifest                  addon/traefik                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+default       129m        Normal    NodePasswordValidationComplete   node/k3s-s2                        Deferred node password secret validation complete
+kube-system   129m        Normal    Started                          pod/svclb-traefik-405c6267-qjd7p   Container started
+kube-system   129m        Normal    Created                          pod/svclb-traefik-405c6267-qjd7p   Container created
+kube-system   129m        Normal    Pulled                           pod/svclb-traefik-405c6267-qjd7p   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   129m        Normal    Pulled                           pod/svclb-traefik-405c6267-qjd7p   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   129m        Normal    Created                          pod/svclb-traefik-405c6267-qjd7p   Container created
+kube-system   129m        Normal    Started                          pod/svclb-traefik-405c6267-qjd7p   Container started
+kube-system   5m38s       Normal    UpdatedLoadBalancer              service/traefik                    Updated LoadBalancer with new IPs: [192.168.228.129 192.168.228.131 192.168.228.132 192.168.228.133] -> [192.168.228.129 192.168.228.130 192.168.228.131 192.168.228.132 192.168.228.133]
+kube-system   124m        Normal    LeaderElection                   lease/kube-scheduler               k3s-s1_e7871819-b4f0-4247-a680-40b3b55bcb33 became leader
+testapp       124m        Warning   NodeNotReady                     pod/nginx-test-7976d45f7d-98bxn    Node is not ready
+testapp       119m        Normal    Scheduled                        pod/nginx-test-7976d45f7d-wkw5b    Successfully assigned testapp/nginx-test-7976d45f7d-wkw5b to k3s-s2
+testapp       119m        Normal    Pulled                           pod/nginx-test-7976d45f7d-wkw5b    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       119m        Normal    Created                          pod/nginx-test-7976d45f7d-wkw5b    Container created
+testapp       119m        Normal    SuccessfulCreate                 replicaset/nginx-test-7976d45f7d   Created pod: nginx-test-7976d45f7d-wkw5b
+testapp       119m        Normal    TaintManagerEviction             pod/nginx-test-7976d45f7d-98bxn    Marking for deletion Pod testapp/nginx-test-7976d45f7d-98bxn
+testapp       119m        Normal    Started                          pod/nginx-test-7976d45f7d-wkw5b    Container started
+default       118m        Normal    NodeAllocatableEnforced          node/k3s-s3                        Updated Node Allocatable limit across pods
+default       118m        Warning   Rebooted                         node/k3s-s3                        Node k3s-s3 has been rebooted, boot id: 510a6838-f460-4a82-b0ac-f76cab56410b
+default       118m        Normal    NodeReady                        node/k3s-s3                        Node k3s-s3 status is now: NodeReady
+default       118m        Normal    CertificateExpirationOK          node/k3s-s3                        Node and Certificate Authority certificates managed by k3s are OK
+default       118m        Normal    Starting                         node/k3s-s3                        Starting kubelet.
+default       118m        Normal    NodeHasSufficientMemory          node/k3s-s3                        Node k3s-s3 status is now: NodeHasSufficientMemory
+default       118m        Normal    NodeHasNoDiskPressure            node/k3s-s3                        Node k3s-s3 status is now: NodeHasNoDiskPressure
+default       118m        Normal    Starting                         node/k3s-s3                        
+default       118m        Normal    NodeHasSufficientPID             node/k3s-s3                        Node k3s-s3 status is now: NodeHasSufficientPID
+kube-system   118m        Normal    AppliedManifest                  addon/local-storage                Applied manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/local-storage                Applying manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+testapp       118m        Warning   FailedMount                      pod/nginx-test-7976d45f7d-98bxn    MountVolume.SetUp failed for volume "kube-api-access-bkqq7" : object "testapp"/"kube-root-ca.crt" not registered
+kube-system   118m        Normal    SandboxChanged                   pod/svclb-traefik-405c6267-zltz2   Pod sandbox changed, it will be killed and re-created.
+kube-system   118m        Normal    ApplyingManifest                 addon/coredns                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/aggregated-metrics-reader    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/ccm                          Applying manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/ccm                          Applied manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   118m        Warning   FailedCreatePodSandBox           pod/svclb-traefik-405c6267-zltz2   Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "482e19fbcda4cfc1e095949267b6cfabdca700107bf4790ba0ac6fdbf5c8f4c9": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.
+default       118m        Normal    NodePasswordValidationComplete   node/k3s-s3                        Deferred node password secret validation complete
+kube-system   118m        Normal    AppliedManifest                  addon/coredns                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/metrics-apiservice           Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/auth-delegator               Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/traefik                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/runtimes                     Applying manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/runtimes                     Applied manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/rolebindings                 Applying manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/resource-reader              Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/metrics-apiservice           Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/resource-reader              Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/metrics-server-service       Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/auth-delegator               Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/aggregated-metrics-reader    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/metrics-server-service       Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/rolebindings                 Applied manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/metrics-server-deployment    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/metrics-server-deployment    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   118m        Normal    ApplyingManifest                 addon/auth-reader                  Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/auth-reader                  Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   118m        Normal    AppliedManifest                  addon/traefik                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   118m        Normal    Pulled                           pod/svclb-traefik-405c6267-zltz2   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   118m        Normal    Created                          pod/svclb-traefik-405c6267-zltz2   Container created
+kube-system   118m        Normal    Started                          pod/svclb-traefik-405c6267-zltz2   Container started
+kube-system   118m        Normal    Pulled                           pod/svclb-traefik-405c6267-zltz2   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   118m        Normal    Started                          pod/svclb-traefik-405c6267-zltz2   Container started
+kube-system   118m        Normal    Created                          pod/svclb-traefik-405c6267-zltz2   Container created
+testapp       10m         Warning   NodeNotReady                     pod/nginx-test-7976d45f7d-wkw5b    Node is not ready
+default       111m        Normal    NodeHasNoDiskPressure            node/k3s-s2                        Node k3s-s2 status is now: NodeHasNoDiskPressure
+default       111m        Normal    CertificateExpirationOK          node/k3s-s2                        Node and Certificate Authority certificates managed by k3s are OK
+default       111m        Normal    Starting                         node/k3s-s2                        Starting kubelet.
+default       111m        Normal    NodeHasSufficientMemory          node/k3s-s2                        Node k3s-s2 status is now: NodeHasSufficientMemory
+default       111m        Normal    NodeHasSufficientPID             node/k3s-s2                        Node k3s-s2 status is now: NodeHasSufficientPID
+default       111m        Normal    Starting                         node/k3s-s2                        
+default       111m        Normal    NodeAllocatableEnforced          node/k3s-s2                        Updated Node Allocatable limit across pods
+default       111m        Normal    NodeReady                        node/k3s-s2                        Node k3s-s2 status is now: NodeReady
+default       111m        Warning   Rebooted                         node/k3s-s2                        Node k3s-s2 has been rebooted, boot id: 77c2ffea-8a20-4b04-8244-5bfb24e28ea5
+testapp       111m        Warning   FailedCreatePodSandBox           pod/nginx-test-7976d45f7d-wkw5b    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "92c4ca31096f52935ffb4c5b3c0c92a9523e6fdf4e0199168b5a9cf8816ee6fb": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.
+testapp       111m        Normal    SandboxChanged                   pod/nginx-test-7976d45f7d-wkw5b    Pod sandbox changed, it will be killed and re-created.
+kube-system   111m        Normal    ApplyingManifest                 addon/local-storage                Applying manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+default       111m        Normal    NodePasswordValidationComplete   node/k3s-s2                        Deferred node password secret validation complete
+kube-system   111m        Warning   FailedCreatePodSandBox           pod/svclb-traefik-405c6267-qjd7p   Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "752e302dbf3ba070fe24fd4e7d1eba3edfbecf8979ba097bfa0782ff16fa5547": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.
+kube-system   111m        Normal    ApplyingManifest                 addon/ccm                          Applying manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/ccm                          Applied manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/coredns                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/coredns                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   111m        Normal    SandboxChanged                   pod/svclb-traefik-405c6267-qjd7p   Pod sandbox changed, it will be killed and re-created.
+kube-system   111m        Normal    ApplyingManifest                 addon/traefik                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/auth-delegator               Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/metrics-server-deployment    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/metrics-apiservice           Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/metrics-server-service       Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/metrics-server-service       Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/metrics-apiservice           Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/runtimes                     Applied manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/runtimes                     Applying manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/aggregated-metrics-reader    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/rolebindings                 Applied manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/local-storage                Applied manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/rolebindings                 Applying manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/auth-reader                  Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/resource-reader              Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/resource-reader              Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/aggregated-metrics-reader    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/auth-delegator               Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/metrics-server-deployment    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   111m        Normal    ApplyingManifest                 addon/auth-reader                  Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   111m        Normal    AppliedManifest                  addon/traefik                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+testapp       5m53s       Normal    TaintManagerEviction             pod/nginx-test-7976d45f7d-wkw5b    Cancelling deletion of Pod testapp/nginx-test-7976d45f7d-wkw5b
+testapp       111m        Normal    Created                          pod/nginx-test-7976d45f7d-wkw5b    Container created
+testapp       111m        Normal    Started                          pod/nginx-test-7976d45f7d-wkw5b    Container started
+testapp       111m        Normal    Pulled                           pod/nginx-test-7976d45f7d-wkw5b    Container image "nginx:stable" already present on machine and can be accessed by the pod
+kube-system   111m        Normal    Created                          pod/svclb-traefik-405c6267-qjd7p   Container created
+kube-system   111m        Normal    Pulled                           pod/svclb-traefik-405c6267-qjd7p   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   111m        Normal    Created                          pod/svclb-traefik-405c6267-qjd7p   Container created
+kube-system   111m        Normal    Started                          pod/svclb-traefik-405c6267-qjd7p   Container started
+kube-system   111m        Normal    Pulled                           pod/svclb-traefik-405c6267-qjd7p   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   111m        Normal    Started                          pod/svclb-traefik-405c6267-qjd7p   Container started
+default       15m         Normal    Starting                         node/k3s-s3                        Starting kubelet.
+default       15m         Normal    Starting                         node/k3s-s3                        
+default       15m         Normal    NodeHasSufficientPID             node/k3s-s3                        Node k3s-s3 status is now: NodeHasSufficientPID
+default       15m         Normal    NodeHasNoDiskPressure            node/k3s-s3                        Node k3s-s3 status is now: NodeHasNoDiskPressure
+default       15m         Normal    CertificateExpirationOK          node/k3s-s3                        Node and Certificate Authority certificates managed by k3s are OK
+default       15m         Normal    NodeHasSufficientMemory          node/k3s-s3                        Node k3s-s3 status is now: NodeHasSufficientMemory
+default       15m         Normal    NodeAllocatableEnforced          node/k3s-s3                        Updated Node Allocatable limit across pods
+kube-system   15m         Normal    SandboxChanged                   pod/svclb-traefik-405c6267-zltz2   Pod sandbox changed, it will be killed and re-created.
+default       15m         Warning   Rebooted                         node/k3s-s3                        Node k3s-s3 has been rebooted, boot id: 38df2254-aeed-4a7b-aebd-07af23ded00e
+default       15m         Normal    NodeReady                        node/k3s-s3                        Node k3s-s3 status is now: NodeReady
+kube-system   15m         Warning   FailedCreatePodSandBox           pod/svclb-traefik-405c6267-zltz2   Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "5f20a318a09c975db338f37640c9cc8f2bbeb34b21b4cf37134d088b793407cb": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.
+kube-system   15m         Normal    ApplyingManifest                 addon/metrics-server-deployment    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/auth-delegator               Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/coredns                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/runtimes                     Applied manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/runtimes                     Applying manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/ccm                          Applied manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/local-storage                Applying manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/rolebindings                 Applied manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/rolebindings                 Applying manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/local-storage                Applied manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/ccm                          Applying manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/resource-reader              Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/resource-reader              Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+default       15m         Normal    NodePasswordValidationComplete   node/k3s-s3                        Deferred node password secret validation complete
+kube-system   15m         Normal    ApplyingManifest                 addon/aggregated-metrics-reader    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/aggregated-metrics-reader    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/traefik                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/metrics-apiservice           Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/metrics-apiservice           Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/metrics-server-deployment    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/auth-delegator               Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/coredns                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/auth-reader                  Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/metrics-server-service       Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   15m         Normal    ApplyingManifest                 addon/metrics-server-service       Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/auth-reader                  Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   15m         Normal    AppliedManifest                  addon/traefik                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   15m         Normal    Pulled                           pod/svclb-traefik-405c6267-zltz2   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   15m         Normal    Started                          pod/svclb-traefik-405c6267-zltz2   Container started
+kube-system   15m         Normal    Created                          pod/svclb-traefik-405c6267-zltz2   Container created
+kube-system   15m         Normal    Created                          pod/svclb-traefik-405c6267-zltz2   Container created
+kube-system   15m         Normal    Started                          pod/svclb-traefik-405c6267-zltz2   Container started
+kube-system   15m         Normal    Pulled                           pod/svclb-traefik-405c6267-zltz2   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+testapp       10m         Warning   FailedToUpdateEndpoint           endpoints/nginx-service            Failed to update endpoint testapp/nginx-service: Unauthorized
+testapp       10m         Warning   FailedToUpdateEndpointSlices     service/nginx-service              Error updating Endpoint Slices for Service testapp/nginx-service: failed to update nginx-service-frpd6 EndpointSlice for Service testapp/nginx-service: Unauthorized
+default       5m54s       Warning   Rebooted                         node/k3s-s2                        Node k3s-s2 has been rebooted, boot id: 76e92e27-9cfc-470d-a1ed-12a68cb144d4
+default       5m54s       Normal    NodeReady                        node/k3s-s2                        Node k3s-s2 status is now: NodeReady
+default       5m54s       Normal    NodeAllocatableEnforced          node/k3s-s2                        Updated Node Allocatable limit across pods
+default       5m54s       Normal    NodeHasSufficientPID             node/k3s-s2                        Node k3s-s2 status is now: NodeHasSufficientPID
+default       5m54s       Normal    Starting                         node/k3s-s2                        
+default       5m54s       Normal    NodeHasNoDiskPressure            node/k3s-s2                        Node k3s-s2 status is now: NodeHasNoDiskPressure
+default       5m54s       Normal    NodeHasSufficientMemory          node/k3s-s2                        Node k3s-s2 status is now: NodeHasSufficientMemory
+default       5m54s       Normal    Starting                         node/k3s-s2                        Starting kubelet.
+default       5m54s       Normal    CertificateExpirationOK          node/k3s-s2                        Node and Certificate Authority certificates managed by k3s are OK
+kube-system   5m53s       Normal    AppliedManifest                  addon/auth-delegator               Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/metrics-server-service       Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   5m53s       Normal    AppliedManifest                  addon/ccm                          Applied manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/ccm                          Applying manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   5m53s       Normal    AppliedManifest                  addon/coredns                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/local-storage                Applying manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   5m53s       Normal    AppliedManifest                  addon/local-storage                Applied manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/metrics-apiservice           Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+testapp       5m53s       Warning   FailedCreatePodSandBox           pod/nginx-test-7976d45f7d-wkw5b    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "3a31845702e4343a4fcfc544df952fb6b4efd6d05d4f6bd5524a8d4932614087": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.
+testapp       5m41s       Normal    SandboxChanged                   pod/nginx-test-7976d45f7d-wkw5b    Pod sandbox changed, it will be killed and re-created.
+kube-system   5m53s       Normal    AppliedManifest                  addon/metrics-apiservice           Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/metrics-server-deployment    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   5m53s       Normal    AppliedManifest                  addon/auth-reader                  Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/auth-reader                  Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   5m53s       Normal    AppliedManifest                  addon/metrics-server-deployment    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/resource-reader              Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   5m53s       Normal    AppliedManifest                  addon/metrics-server-service       Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/auth-delegator               Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/coredns                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   5m38s       Normal    SandboxChanged                   pod/svclb-traefik-405c6267-qjd7p   Pod sandbox changed, it will be killed and re-created.
+kube-system   5m53s       Normal    AppliedManifest                  addon/aggregated-metrics-reader    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   5m53s       Normal    ApplyingManifest                 addon/aggregated-metrics-reader    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+default       5m53s       Normal    NodePasswordValidationComplete   node/k3s-s2                        Deferred node password secret validation complete
+kube-system   5m53s       Warning   FailedCreatePodSandBox           pod/svclb-traefik-405c6267-qjd7p   Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "64c9e1f33b446aaf24809acc10a4685327e3219b62733b5aab951ae19708bb80": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.
+kube-system   5m52s       Normal    AppliedManifest                  addon/resource-reader              Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   5m52s       Normal    ApplyingManifest                 addon/runtimes                     Applying manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   5m52s       Normal    AppliedManifest                  addon/rolebindings                 Applied manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   5m52s       Normal    ApplyingManifest                 addon/traefik                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   5m52s       Normal    AppliedManifest                  addon/runtimes                     Applied manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   5m52s       Normal    ApplyingManifest                 addon/rolebindings                 Applying manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   5m51s       Normal    AppliedManifest                  addon/traefik                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+testapp       5m41s       Normal    Created                          pod/nginx-test-7976d45f7d-wkw5b    Container created
+testapp       5m41s       Normal    Pulled                           pod/nginx-test-7976d45f7d-wkw5b    Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       5m41s       Normal    Started                          pod/nginx-test-7976d45f7d-wkw5b    Container started
+kube-system   5m38s       Normal    Started                          pod/svclb-traefik-405c6267-qjd7p   Container started
+kube-system   5m38s       Normal    Created                          pod/svclb-traefik-405c6267-qjd7p   Container created
+kube-system   5m38s       Normal    Pulled                           pod/svclb-traefik-405c6267-qjd7p   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   5m38s       Normal    Created                          pod/svclb-traefik-405c6267-qjd7p   Container created
+kube-system   5m38s       Normal    Started                          pod/svclb-traefik-405c6267-qjd7p   Container started
+kube-system   5m38s       Normal    Pulled                           pod/svclb-traefik-405c6267-qjd7p   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod

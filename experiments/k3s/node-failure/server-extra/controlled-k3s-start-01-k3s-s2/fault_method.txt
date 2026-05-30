@@ -1,0 +1,1 @@
+VM powered off; k3s disabled before reboot; k3s started manually after time sync check

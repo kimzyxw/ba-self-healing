@@ -1,0 +1,176 @@
+2026-05-30T13:21:44+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:22:14+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:22:44+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:23:14+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:23:44+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:24:14+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:24:44+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:25:14+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:25:44+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:26:14+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:26:44+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:27:14+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:27:44+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:28:14+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:28:44+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:29:14+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:29:44+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:30:15+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:30:45+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:31:15+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:31:45+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---
+2026-05-30T13:32:15+00:00
+NAME     STATUS     ROLES                AGE     VERSION
+k3s-s1   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s2   NotReady   control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-s3   Ready      control-plane,etcd   6d21h   v1.35.5+k3s1
+k3s-w1   Ready      <none>               6d21h   v1.35.5+k3s1
+k3s-w2   Ready      <none>               6d21h   v1.35.5+k3s1
+---

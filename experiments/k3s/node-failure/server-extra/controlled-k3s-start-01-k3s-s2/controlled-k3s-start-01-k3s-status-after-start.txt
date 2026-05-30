@@ -1,0 +1,26 @@
+● k3s.service - Lightweight Kubernetes
+     Loaded: loaded (/etc/systemd/system/k3s.service; disabled; preset: enabled)
+     Active: active (running) since Sat 2026-05-30 14:23:34 UTC; 90ms ago
+ Invocation: 3224ee29134f4033aee12e411de19110
+       Docs: https://k3s.io
+    Process: 2125 ExecStartPre=/sbin/modprobe br_netfilter (code=exited, status=0/SUCCESS)
+    Process: 2129 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 2131 (k3s-server)
+      Tasks: 26
+     Memory: 896.3M (peak: 919.1M)
+        CPU: 10.581s
+     CGroup: /system.slice/k3s.service
+             ├─2131 "/usr/local/bin/k3s server"
+             ├─2150 "containerd "
+             └─2210 /usr/sbin/nft -f -
+
+Mai 30 14:23:34 k3s-s2 systemd[1]: Started k3s.service - Lightweight Kubernetes.
+Mai 30 14:23:34 k3s-s2 k3s[2131]: time="2026-05-30T14:23:34Z" level=info msg="Waiting for untainted node"
+Mai 30 14:23:34 k3s-s2 k3s[2131]: time="2026-05-30T14:23:34Z" level=info msg="Creating k3s-supervisor event broadcaster"
+Mai 30 14:23:34 k3s-s2 k3s[2131]: I0530 14:23:34.699691    2131 dynamic_cafile_content.go:161] "Starting controller" name="client-ca-bundle::/var/lib/rancher/k3s/agent/client-ca.crt"
+Mai 30 14:23:34 k3s-s2 k3s[2131]: time="2026-05-30T14:23:34Z" level=info msg="Event occurred" apiVersion= fieldPath= kind=Node logger=k3s message="Node and Certificate Authority certificates managed by k3s are OK" object=k3s-s2 reason=CertificateExpirationOK type=Normal
+Mai 30 14:23:34 k3s-s2 k3s[2131]: I0530 14:23:34.769320    2131 controllermanager.go:189] "Starting" version="v1.35.5+k3s1"
+Mai 30 14:23:34 k3s-s2 k3s[2131]: I0530 14:23:34.769331    2131 controllermanager.go:191] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+Mai 30 14:23:34 k3s-s2 k3s[2131]: I0530 14:23:34.776079    2131 server.go:1414] "Using cgroup driver setting received from the CRI runtime" cgroupDriver="systemd"
+Mai 30 14:23:34 k3s-s2 k3s[2131]: I0530 14:23:34.778319    2131 server.go:771] "--cgroups-per-qos enabled, but --cgroup-root was not specified.  Defaulting to /"
+Mai 30 14:23:34 k3s-s2 k3s[2131]: I0530 14:23:34.778388    2131 server.go:832] "NoSwap is set due to memorySwapBehavior not specified" memorySwapBehavior="" FailSwapOn=false

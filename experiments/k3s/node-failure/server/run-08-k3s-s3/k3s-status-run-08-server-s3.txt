@@ -1,0 +1,26 @@
+● k3s.service - Lightweight Kubernetes
+     Loaded: loaded (/etc/systemd/system/k3s.service; enabled; preset: enabled)
+     Active: activating (start) since Sat 2026-05-30 14:31:34 UTC; 1h 56min left
+        Job: 351
+ Invocation: a9ad8289c77f4cd9b77ddcff9a42e0c0
+       Docs: https://k3s.io
+    Process: 1412 ExecStartPre=/sbin/modprobe br_netfilter (code=exited, status=0/SUCCESS)
+    Process: 1430 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 1479 (k3s-server)
+      Tasks: 21
+     Memory: 892.2M (peak: 972.7M)
+        CPU: 3min 41.781s
+     CGroup: /system.slice/k3s.service
+             ├─1479 "/usr/local/bin/k3s server"
+             └─1832 "containerd "
+
+Mai 30 12:34:53 k3s-s3 k3s[1479]: E0530 12:34:53.506248    1479 authentication.go:75] "Unable to authenticate the request" err="[x509: certificate has expired or is not yet valid: current time 2026-05-30T12:34:53Z is before 2026-05-30T13:31:35Z, verifying certificate SN=2340495124504043886, SKID=, AKID=B5:18:70:8E:96:B5:BA:2E:5F:E5:A3:53:36:6D:B4:ED:22:51:4C:A9 failed: x509: certificate has expired or is not yet valid: current time 2026-05-30T12:34:53Z is before 2026-05-30T13:31:35Z]"
+Mai 30 12:34:55 k3s-s3 k3s[1479]: E0530 12:34:55.506062    1479 authentication.go:75] "Unable to authenticate the request" err="[x509: certificate has expired or is not yet valid: current time 2026-05-30T12:34:55Z is before 2026-05-30T13:31:35Z, verifying certificate SN=2340495124504043886, SKID=, AKID=B5:18:70:8E:96:B5:BA:2E:5F:E5:A3:53:36:6D:B4:ED:22:51:4C:A9 failed: x509: certificate has expired or is not yet valid: current time 2026-05-30T12:34:55Z is before 2026-05-30T13:31:35Z]"
+Mai 30 12:34:56 k3s-s3 k3s[1479]: time="2026-05-30T12:34:56Z" level=error msg="Sending HTTP/1.1 502 response to 127.0.0.1:59166: dial tcp 10.42.3.32:10250: connect: connection refused"
+Mai 30 12:34:56 k3s-s3 k3s[1479]: time="2026-05-30T12:34:56Z" level=error msg="Sending HTTP/1.1 502 response to 127.0.0.1:59214: dial tcp 10.42.3.32:10250: connect: connection refused"
+Mai 30 12:34:56 k3s-s3 k3s[1479]: time="2026-05-30T12:34:56Z" level=error msg="Sending HTTP/1.1 502 response to 127.0.0.1:59216: dial tcp 10.42.3.32:10250: connect: connection refused"
+Mai 30 12:34:56 k3s-s3 k3s[1479]: time="2026-05-30T12:34:56Z" level=error msg="Sending HTTP/1.1 502 response to 127.0.0.1:59180: dial tcp 10.42.3.32:10250: connect: connection refused"
+Mai 30 12:34:56 k3s-s3 k3s[1479]: time="2026-05-30T12:34:56Z" level=error msg="Sending HTTP/1.1 502 response to 127.0.0.1:59188: dial tcp 10.42.3.32:10250: connect: connection refused"
+Mai 30 12:34:56 k3s-s3 k3s[1479]: time="2026-05-30T12:34:56Z" level=error msg="Sending HTTP/1.1 502 response to 127.0.0.1:59202: dial tcp 10.42.3.32:10250: connect: connection refused"
+Mai 30 12:34:56 k3s-s3 k3s[1479]: E0530 12:34:56.881439    1479 remote_available_controller.go:462] "Unhandled Error" err="v1beta1.metrics.k8s.io failed with: Operation cannot be fulfilled on apiservices.apiregistration.k8s.io \"v1beta1.metrics.k8s.io\": the object has been modified; please apply your changes to the latest version and try again" logger="UnhandledError"
+Mai 30 12:34:57 k3s-s3 k3s[1479]: E0530 12:34:57.517672    1479 authentication.go:75] "Unable to authenticate the request" err="[x509: certificate has expired or is not yet valid: current time 2026-05-30T12:34:57Z is before 2026-05-30T13:31:35Z, verifying certificate SN=2340495124504043886, SKID=, AKID=B5:18:70:8E:96:B5:BA:2E:5F:E5:A3:53:36:6D:B4:ED:22:51:4C:A9 failed: x509: certificate has expired or is not yet valid: current time 2026-05-30T12:34:57Z is before 2026-05-30T13:31:35Z]"

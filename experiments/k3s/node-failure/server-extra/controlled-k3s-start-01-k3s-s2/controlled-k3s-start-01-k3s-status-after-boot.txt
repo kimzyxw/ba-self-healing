@@ -1,0 +1,4 @@
+○ k3s.service - Lightweight Kubernetes
+     Loaded: loaded (/etc/systemd/system/k3s.service; disabled; preset: enabled)
+     Active: inactive (dead)
+       Docs: https://k3s.io

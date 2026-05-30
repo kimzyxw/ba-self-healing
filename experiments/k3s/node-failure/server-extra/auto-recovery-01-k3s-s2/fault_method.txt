@@ -1,0 +1,1 @@
+VM manually powered off in VMware Fusion and manually restarted; extended waiting time, no manual restart initially
