@@ -1,0 +1,15 @@
+NAMESPACE     NAME                                      READY   STATUS      RESTARTS             AGE     IP           NODE     NOMINATED NODE   READINESS GATES
+kube-system   coredns-5458f768bc-kttzt                  1/1     Running     0                    8m21s   10.42.2.37   k3s-s3   <none>           <none>
+kube-system   helm-install-traefik-crd-4pncg            0/1     Completed   0                    7d4h    <none>       k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-hz2v5                0/1     Completed   2                    7d4h    <none>       k3s-s1   <none>           <none>
+kube-system   local-path-provisioner-5d9d9885bc-8znkr   1/1     Running     2 (<invalid> ago)    7d4h    10.42.0.25   k3s-s1   <none>           <none>
+kube-system   metrics-server-fbb9d9f84-fc9d8            1/1     Running     0                    8m21s   10.42.2.38   k3s-s3   <none>           <none>
+kube-system   svclb-traefik-405c6267-827kb              2/2     Running     22 (<invalid> ago)   7d4h    10.42.3.35   k3s-w1   <none>           <none>
+kube-system   svclb-traefik-405c6267-kxgqx              2/2     Running     22 (<invalid> ago)   7d4h    10.42.4.44   k3s-w2   <none>           <none>
+kube-system   svclb-traefik-405c6267-psxjl              2/2     Running     4 (<invalid> ago)    7d4h    10.42.0.23   k3s-s1   <none>           <none>
+kube-system   svclb-traefik-405c6267-qjd7p              2/2     Running     24 (<invalid> ago)   7d4h    10.42.1.38   k3s-s2   <none>           <none>
+kube-system   svclb-traefik-405c6267-zltz2              2/2     Running     20 (18m ago)         7d4h    10.42.2.36   k3s-s3   <none>           <none>
+kube-system   traefik-7cdc8dbfb7-tzj5z                  1/1     Running     0                    8m21s   10.42.3.38   k3s-w1   <none>           <none>
+testapp       nginx-test-6874bbc78f-cdkw4               1/1     Running     1 (<invalid> ago)    42m     10.42.4.45   k3s-w2   <none>           <none>
+testapp       nginx-test-6874bbc78f-qrczp               1/1     Running     1 (19m ago)          42m     10.42.0.24   k3s-s1   <none>           <none>
+testapp       nginx-test-6874bbc78f-s2vqv               1/1     Running     1 (19m ago)          42m     10.42.1.39   k3s-s2   <none>           <none>
