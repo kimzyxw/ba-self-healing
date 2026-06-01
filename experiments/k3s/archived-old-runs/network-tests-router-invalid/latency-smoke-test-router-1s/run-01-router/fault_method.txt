@@ -1,0 +1,1 @@
+tc netem delay 1s for 60 seconds on router interface ens256

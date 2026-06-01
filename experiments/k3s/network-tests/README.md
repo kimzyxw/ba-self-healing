@@ -1,4 +1,66 @@
-# K3s – Latenztests
+# Verworfenes Testszenario: Latenzsimulation über Router-VM
+
+## Ziel
+
+Ziel des Tests war die Untersuchung des Verhaltens eines hochverfügbaren K3s-Clusters unter erhöhter Netzwerkverzögerung. Die Latenz sollte mithilfe von `tc netem` auf einer dedizierten Router-VM simuliert werden. Das Testszenario orientierte sich an dem in der Vorarbeit von Sebastian Heiden beschriebenen Ansatz, bei dem Netzwerkstörungen zentral über eine Router- bzw. Bridge-VM erzeugt werden.
+
+## Testaufbau
+
+Der Cluster bestand aus drei Server-Knoten (`k3s-s1` bis `k3s-s3`) und zwei Worker-Knoten (`k3s-w1`, `k3s-w2`). Zusätzlich wurde eine Router-VM betrieben.
+
+Alle Knoten befanden sich im VMware-Netzwerk `192.168.228.0/24`. Die Testanwendung wurde über einen Kubernetes NodePort bereitgestellt und mittels eines Python-Monitoringskripts kontinuierlich abgefragt.
+
+Die Latenz wurde auf der Router-VM mittels `tc netem delay` auf dem Interface `ens256` erzeugt.
+
+## Durchgeführte Tests
+
+Es wurden zehn vollständige Testläufe des Szenarios `latency-1s-30min` durchgeführt.
+
+Jeder Testlauf bestand aus:
+
+* 5 Minuten Baseline-Messung
+* 30 Minuten simulierte Latenz
+* 5 Minuten Nachlauf
+
+Die Störung wurde erfolgreich auf der Router-VM gesetzt und nach Ablauf des Zeitfensters wieder entfernt. Sämtliche Messdaten wurden vollständig aufgezeichnet.
+
+## Beobachtungen
+
+Alle zehn Testläufe wurden technisch erfolgreich abgeschlossen.
+
+Die Auswertung zeigte:
+
+* Alle Testdateien wurden erzeugt.
+* Pro Durchlauf wurden ca. 2400 HTTP-Anfragen aufgezeichnet.
+* Es traten keine fehlgeschlagenen Requests auf.
+* Kein Cluster-Knoten wechselte in den Status `NotReady`.
+* Die gemessenen Antwortzeiten lagen weiterhin im Bereich von wenigen Millisekunden.
+
+Die erwartete zusätzliche Latenz von einer Sekunde konnte in den Messdaten nicht beobachtet werden.
+
+## Ursachenanalyse
+
+Zur Validierung wurde die Latenz manuell auf der Router-VM aktiviert und anschließend ein direkter HTTP-Test durchgeführt.
+
+Trotz aktivierter Latenz betrug die gemessene Antwortzeit weiterhin nur wenige Millisekunden.
+
+Eine Analyse der Netzwerktopologie ergab, dass sich sowohl die K3s-Knoten als auch der Hostsystem-Zugriff im selben VMware-Bridge-Netz (`192.168.228.0/24`) befanden.
+
+Dadurch wurde der Netzwerkverkehr direkt zwischen den beteiligten Systemen übertragen, ohne die Router-VM zu durchlaufen. Die auf der Router-VM konfigurierte Latenz beeinflusste den tatsächlich genutzten Kommunikationspfad daher nicht.
+
+## Bewertung
+
+Die Testdurchführung selbst war erfolgreich und reproduzierbar. Die erzeugte Netzwerkstörung wirkte jedoch nicht auf den gemessenen Datenpfad.
+
+Die Messergebnisse erlauben daher keine Aussage über das Verhalten des Clusters unter erhöhter Netzwerklatenz.
+
+Aus diesem Grund werden die Ergebnisse dieses Testblocks nicht in die spätere Evaluation übernommen und als verworfener Vorversuch archiviert.
+
+## Konsequenzen für die weiteren Versuche
+
+Für die Wiederholung der Netzwerktests sind Anpassungen der Netzwerktopologie erforderlich, also der Neuaufbau des Clusters in einer Architektur, bei der der relevante Datenverkehr zwingend über die Router-VM geleitet wird.
+
+# ursprünglich geplantes Szenario: K3s – Latenztests
 
 ## Vorbedingungen
 
