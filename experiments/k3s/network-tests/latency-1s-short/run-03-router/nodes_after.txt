@@ -1,0 +1,6 @@
+NAME     STATUS   ROLES                AGE   VERSION        INTERNAL-IP    EXTERNAL-IP   OS-IMAGE           KERNEL-VERSION     CONTAINER-RUNTIME
+k3s-s1   Ready    control-plane,etcd   22h   v1.35.5+k3s1   10.10.10.129   <none>        Ubuntu 26.04 LTS   7.0.0-22-generic   containerd://2.2.3-k3s1
+k3s-s2   Ready    control-plane,etcd   22h   v1.35.5+k3s1   10.10.10.130   <none>        Ubuntu 26.04 LTS   7.0.0-22-generic   containerd://2.2.3-k3s1
+k3s-s3   Ready    control-plane,etcd   22h   v1.35.5+k3s1   10.10.10.131   <none>        Ubuntu 26.04 LTS   7.0.0-15-generic   containerd://2.2.3-k3s1
+k3s-w1   Ready    <none>               22h   v1.35.5+k3s1   10.10.20.129   <none>        Ubuntu 26.04 LTS   7.0.0-22-generic   containerd://2.2.3-k3s1
+k3s-w2   Ready    <none>               22h   v1.35.5+k3s1   10.10.20.130   <none>        Ubuntu 26.04 LTS   7.0.0-22-generic   containerd://2.2.3-k3s1

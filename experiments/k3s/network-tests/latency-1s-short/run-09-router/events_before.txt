@@ -1,0 +1,4 @@
+NAMESPACE   LAST SEEN   TYPE     REASON                OBJECT                                                          MESSAGE
+default     23m         Normal   ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-k3s-s3-1780475603-52f87b   Snapshot etcd-snapshot-k3s-s3-1780475603 saved on k3s-s3
+default     23m         Normal   ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-k3s-s1-1780475604-3565e3   Snapshot etcd-snapshot-k3s-s1-1780475604 saved on k3s-s1
+default     23m         Normal   ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-k3s-s2-1780475604-7091de   Snapshot etcd-snapshot-k3s-s2-1780475604 saved on k3s-s2
