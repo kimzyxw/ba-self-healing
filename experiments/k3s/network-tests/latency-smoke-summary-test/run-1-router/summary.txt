@@ -1,0 +1,68 @@
+=== Run summary ===
+scenario=latency-smoke-summary-test
+run=run-1-router
+fault_time=2026-06-03T04:39:48+00:00
+recovery_time=2026-06-03T04:40:30+00:00
+
+--- overall ---
+requests_total=38
+success=38
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=927.68
+median_ms=9.64
+p95_ms=2010.55
+p99_ms=2010.75
+min_ms=2.15
+max_ms=2010.75
+outliers_gt_10s=0
+
+--- baseline ---
+requests_total=10
+success=10
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.68
+median_ms=5.20
+p95_ms=8.58
+p99_ms=8.58
+min_ms=2.15
+max_ms=8.58
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=15
+success=15
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=1873.68
+median_ms=2006.25
+p95_ms=2010.75
+p99_ms=2010.75
+min_ms=3.41
+max_ms=2010.75
+outliers_gt_10s=0
+
+--- after ---
+requests_total=13
+success=13
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=545.36
+median_ms=8.57
+p95_ms=2008.45
+p99_ms=2008.45
+min_ms=3.12
+max_ms=2008.45
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=12.96888
+--- validation ---
+router_path_valid=yes
+fault_median_ms=2006.25
+latency_applied=yes

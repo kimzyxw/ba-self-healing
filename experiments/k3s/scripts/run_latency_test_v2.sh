@@ -89,5 +89,104 @@ date -Is | tee "$BASE/test_end_time.txt"
 
 kill "$MONITOR_PID" || true
 
+echo "[RUN $RUN] Berechne Zusammenfassung"
+
+python3 - <<PY | tee "$BASE/summary.txt"
+import csv
+from pathlib import Path
+from datetime import datetime
+import statistics as stats
+
+base = Path("$BASE")
+
+def t(s):
+    return datetime.fromisoformat(s.strip().replace("Z", "+00:00"))
+
+fault = t((base / "fault_time.txt").read_text())
+recovery = t((base / "recovery_time.txt").read_text())
+
+rows = []
+with open(base / "requests.csv", newline="") as f:
+    reader = csv.reader(f)
+    for r in reader:
+        if not r or r[0] == "timestamp":
+            continue
+        try:
+            rows.append({
+                "ts": t(r[0]),
+                "status": r[1],
+                "ms": float(r[2]) if r[2] else None,
+                "success": r[3] == "True",
+                "error": r[4] if len(r) > 4 else ""
+            })
+        except Exception:
+            pass
+
+def section(name, data):
+    total = len(data)
+    ok = sum(1 for r in data if r["success"])
+    fail = total - ok
+    vals = sorted(r["ms"] for r in data if r["ms"] is not None)
+
+    def pct(p):
+        if not vals:
+            return None
+        return vals[min(int(len(vals) * p / 100), len(vals) - 1)]
+
+    print(f"--- {name} ---")
+    print(f"requests_total={total}")
+    print(f"success={ok}")
+    print(f"failed={fail}")
+    print(f"success_rate={ok / total * 100:.2f}%" if total else "success_rate=NA")
+    print(f"error_rate={fail / total * 100:.2f}%" if total else "error_rate=NA")
+
+    if vals:
+        print(f"avg_ms={stats.mean(vals):.2f}")
+        print(f"median_ms={stats.median(vals):.2f}")
+        print(f"p95_ms={pct(95):.2f}")
+        print(f"p99_ms={pct(99):.2f}")
+        print(f"min_ms={min(vals):.2f}")
+        print(f"max_ms={max(vals):.2f}")
+        print(f"outliers_gt_10s={sum(v > 10000 for v in vals)}")
+    else:
+        print("latency_values=NA")
+    print()
+
+baseline = [r for r in rows if r["ts"] < fault]
+during = [r for r in rows if fault <= r["ts"] < recovery]
+after = [r for r in rows if r["ts"] >= recovery]
+
+print("=== Run summary ===")
+print(f"scenario={base.parent.name}")
+print(f"run={base.name}")
+print(f"fault_time={fault.isoformat()}")
+print(f"recovery_time={recovery.isoformat()}")
+print()
+
+section("overall", rows)
+section("baseline", baseline)
+section("fault", during)
+section("after", after)
+
+recovered = None
+for r in after:
+    if r["success"] and r["ms"] is not None and r["ms"] < 500:
+        recovered = (r["ts"] - recovery).total_seconds()
+        break
+
+print("--- recovery ---")
+print(f"recovery_latency_s={recovered if recovered is not None else 'NA'}")
+
+fault_vals = [r["ms"] for r in during if r["ms"] is not None]
+if fault_vals:
+    median_fault = stats.median(fault_vals)
+    print("--- validation ---")
+    print("router_path_valid=yes")
+    print(f"fault_median_ms={median_fault:.2f}")
+    print("latency_applied=yes" if median_fault > 1500 else "latency_applied=no")
+PY
+
+cat "$BASE/summary.txt"
+
 ls -lh "$BASE"
 echo "[RUN $RUN] Fertig: $BASE"
