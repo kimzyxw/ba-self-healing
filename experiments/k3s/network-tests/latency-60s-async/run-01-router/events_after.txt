@@ -1,0 +1,19 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                             MESSAGE
+default       35m         Normal    NodeNotReady              node/k3s-w1                        Node k3s-w1 status is now: NodeNotReady
+kube-system   35m         Warning   NodeNotReady              pod/svclb-traefik-62730cbd-lsd77   Node is not ready
+kube-system   35m         Warning   NodeNotReady              pod/svclb-traefik-62730cbd-9gn4t   Node is not ready
+default       35m         Normal    NodeNotReady              node/k3s-w2                        Node k3s-w2 status is now: NodeNotReady
+default       7m54s       Normal    NodeReady                 node/k3s-w2                        Node k3s-w2 status is now: NodeReady
+default       7m54s       Normal    NodeHasSufficientMemory   node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientMemory
+default       7m54s       Normal    NodeHasNoDiskPressure     node/k3s-w2                        Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       7m54s       Normal    NodeHasSufficientPID      node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientPID
+kube-system   8m1s        Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130]
+kube-system   8m          Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]
+default       8m1s        Normal    NodeHasNoDiskPressure     node/k3s-w1                        Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       8m1s        Normal    NodeHasSufficientPID      node/k3s-w1                        Node k3s-w1 status is now: NodeHasSufficientPID
+default       8m1s        Normal    NodeReady                 node/k3s-w1                        Node k3s-w1 status is now: NodeReady
+default       8m1s        Normal    NodeHasSufficientMemory   node/k3s-w1                        Node k3s-w1 status is now: NodeHasSufficientMemory
+kube-system   53m         Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130]
+kube-system   53m         Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131]
+kube-system   35m         Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131]
+kube-system   35m         Normal    UpdatedLoadBalancer       service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131]
