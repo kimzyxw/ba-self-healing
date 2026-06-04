@@ -1,49 +1,55 @@
 #!/usr/bin/env python3
-
-import csv
-import time
 import argparse
-import requests
+import csv
 from datetime import datetime, timezone
-
-def now_iso():
-    return datetime.now(timezone.utc).isoformat()
+import requests
+import time
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--url", required=True)
 parser.add_argument("--output", required=True)
 parser.add_argument("--interval", type=float, default=1.0)
-parser.add_argument("--timeout", type=float, default=2.0)
-parser.add_argument("--duration", type=int, default=0)
+parser.add_argument("--timeout", type=float, default=180.0)
 args = parser.parse_args()
-
-start = time.time()
 
 with open(args.output, "w", newline="") as f:
     writer = csv.writer(f)
-    writer.writerow(["timestamp", "status_code", "response_time_ms", "success", "error"])
+    writer.writerow([
+        "request_start_time",
+        "request_end_time",
+        "status_code",
+        "duration_ms",
+        "success",
+        "error"
+    ])
+    f.flush()
 
     while True:
-        if args.duration > 0 and time.time() - start >= args.duration:
-            break
-
-        timestamp = now_iso()
+        start = datetime.now(timezone.utc)
         status_code = ""
-        response_time_ms = ""
         success = False
         error = ""
 
-        request_start = time.time()
         try:
             response = requests.get(args.url, timeout=args.timeout)
-            response_time_ms = round((time.time() - request_start) * 1000, 2)
             status_code = response.status_code
-            success = 200 <= response.status_code < 400
+            success = response.ok
         except Exception as e:
-            response_time_ms = round((time.time() - request_start) * 1000, 2)
             error = type(e).__name__
 
-        writer.writerow([timestamp, status_code, response_time_ms, success, error])
+        end = datetime.now(timezone.utc)
+        duration_ms = (end - start).total_seconds() * 1000
+
+        writer.writerow([
+            start.isoformat(),
+            end.isoformat(),
+            status_code,
+            round(duration_ms, 2),
+            success,
+            error
+        ])
         f.flush()
 
-        time.sleep(args.interval)
+        elapsed = (datetime.now(timezone.utc) - start).total_seconds()
+        sleep_time = max(0, args.interval - elapsed)
+        time.sleep(sleep_time)

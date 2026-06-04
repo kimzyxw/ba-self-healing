@@ -8,7 +8,7 @@ RUN="$4"
 BASELINE="${5:-300}"
 AFTER="${6:-300}"
 
-ROUTER_NAT="10.10.10.128"
+ROUTER_NAT="172.16.41.129"
 ROUTER_IFACE="ens256"
 
 S1="10.10.10.129"
@@ -61,7 +61,7 @@ python3 ~/ba-self-healing/experiments/k3s/scripts/request_monitor.py \
   --url "$URL" \
   --output "$BASE/requests.csv" \
   --interval 1 \
-  --timeout 10 &
+  --timeout 180 &
 MONITOR_PID=$!
 
 echo "[RUN $RUN] Vorlauf läuft ${BASELINE}s"
@@ -113,11 +113,12 @@ with open(base / "requests.csv", newline="") as f:
             continue
         try:
             rows.append({
-                "ts": t(r[0]),
-                "status": r[1],
-                "ms": float(r[2]) if r[2] else None,
-                "success": r[3] == "True",
-                "error": r[4] if len(r) > 4 else ""
+		"start": t(r[0]),
+		"end": t(r[1]),
+		"status": r[2],
+		"ms": float(r[3]) if r[3] else None,
+		"success": r[4] == "True",
+		"error": r[5] if len(r) > 5 else ""
             })
         except Exception:
             pass
@@ -152,9 +153,9 @@ def section(name, data):
         print("latency_values=NA")
     print()
 
-baseline = [r for r in rows if r["ts"] < fault]
-during = [r for r in rows if fault <= r["ts"] < recovery]
-after = [r for r in rows if r["ts"] >= recovery]
+baseline = [r for r in rows if r["start"] < fault]
+during = [r for r in rows if fault <= r["start"] < recovery]
+after = [r for r in rows if r["start"] >= recovery]
 
 print("=== Run summary ===")
 print(f"scenario={base.parent.name}")
@@ -171,7 +172,7 @@ section("after", after)
 recovered = None
 for r in after:
     if r["success"] and r["ms"] is not None and r["ms"] < 500:
-        recovered = (r["ts"] - recovery).total_seconds()
+        recovered = (r["end"] - recovery).total_seconds()
         break
 
 print("--- recovery ---")

@@ -1,0 +1,24 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                         OBJECT                             MESSAGE
+default       16m         Normal    NodeNotReady                   node/k3s-w2                        Node k3s-w2 status is now: NodeNotReady
+kube-system   16m         Warning   NodeNotReady                   pod/svclb-traefik-62730cbd-lsd77   Node is not ready
+kube-system   16m         Warning   NodeNotReady                   pod/svclb-traefik-62730cbd-9gn4t   Node is not ready
+default       16m         Normal    NodeNotReady                   node/k3s-w1                        Node k3s-w1 status is now: NodeNotReady
+testapp       64m         Warning   FailedToUpdateEndpointSlices   service/nginx-test                 Error updating Endpoint Slices for Service testapp/nginx-test: failed to update nginx-test-5g5q9 EndpointSlice for Service testapp/nginx-test: Unauthorized
+default       8m51s       Normal    NodeHasSufficientMemory        node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientMemory
+default       8m51s       Normal    NodeHasSufficientPID           node/k3s-w2                        Node k3s-w2 status is now: NodeHasSufficientPID
+default       8m51s       Normal    NodeReady                      node/k3s-w2                        Node k3s-w2 status is now: NodeReady
+testapp       64m         Normal    Killing                        pod/nginx-test-6ff8854996-gwkm4    Stopping container nginx
+default       8m51s       Normal    NodeHasNoDiskPressure          node/k3s-w2                        Node k3s-w2 status is now: NodeHasNoDiskPressure
+testapp       66m         Warning   FailedMount                    pod/nginx-test-6ff8854996-gwkm4    MountVolume.SetUp failed for volume "kube-api-access-4fm5p" : failed to fetch token: Post "https://127.0.0.1:6444/api/v1/namespaces/testapp/serviceaccounts/default/token": net/http: TLS handshake timeout
+kube-system   8m46s       Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130]
+kube-system   8m44s       Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]
+testapp       64m         Normal    Killing                        pod/nginx-test-6ff8854996-gvhsw    Stopping container nginx
+testapp       66m         Warning   FailedMount                    pod/nginx-test-6ff8854996-gvhsw    MountVolume.SetUp failed for volume "kube-api-access-t9kwc" : failed to fetch token: Post "https://127.0.0.1:6444/api/v1/namespaces/testapp/serviceaccounts/default/token": net/http: TLS handshake timeout
+default       8m52s       Normal    NodeReady                      node/k3s-w1                        Node k3s-w1 status is now: NodeReady
+default       8m52s       Normal    NodeHasSufficientPID           node/k3s-w1                        Node k3s-w1 status is now: NodeHasSufficientPID
+default       8m52s       Normal    NodeHasSufficientMemory        node/k3s-w1                        Node k3s-w1 status is now: NodeHasSufficientMemory
+default       8m52s       Normal    NodeHasNoDiskPressure          node/k3s-w1                        Node k3s-w1 status is now: NodeHasNoDiskPressure
+kube-system   16m         Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130]
+kube-system   16m         Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131]
+kube-system   24m         Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129]
+kube-system   24m         Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]

@@ -1,0 +1,22 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                                                          MESSAGE
+default       39m         Normal    NodeNotReady              node/k3s-w1                                                     Node k3s-w1 status is now: NodeNotReady
+kube-system   39m         Warning   NodeNotReady              pod/svclb-traefik-62730cbd-lsd77                                Node is not ready
+kube-system   39m         Warning   NodeNotReady              pod/svclb-traefik-62730cbd-9gn4t                                Node is not ready
+default       39m         Normal    NodeNotReady              node/k3s-w2                                                     Node k3s-w2 status is now: NodeNotReady
+default       26m         Normal    NodeReady                 node/k3s-w2                                                     Node k3s-w2 status is now: NodeReady
+default       26m         Normal    NodeHasNoDiskPressure     node/k3s-w2                                                     Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       26m         Normal    NodeHasSufficientPID      node/k3s-w2                                                     Node k3s-w2 status is now: NodeHasSufficientPID
+default       26m         Normal    NodeHasSufficientMemory   node/k3s-w2                                                     Node k3s-w2 status is now: NodeHasSufficientMemory
+kube-system   26m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130]
+kube-system   26m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]
+default       26m         Normal    NodeHasNoDiskPressure     node/k3s-w1                                                     Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       26m         Normal    NodeReady                 node/k3s-w1                                                     Node k3s-w1 status is now: NodeReady
+default       26m         Normal    NodeHasSufficientMemory   node/k3s-w1                                                     Node k3s-w1 status is now: NodeHasSufficientMemory
+default       26m         Normal    NodeHasSufficientPID      node/k3s-w1                                                     Node k3s-w1 status is now: NodeHasSufficientPID
+kube-system   71m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131]
+kube-system   71m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131]
+default       108m        Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-k3s-s3-1780491416-b8421b   Snapshot etcd-snapshot-k3s-s3-1780491416 saved on k3s-s3
+default       108m        Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-k3s-s2-1780491416-2546af   Snapshot etcd-snapshot-k3s-s2-1780491416 saved on k3s-s2
+default       108m        Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-k3s-s1-1780491416-940a08   Snapshot etcd-snapshot-k3s-s1-1780491416 saved on k3s-s1
+kube-system   39m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130]
+kube-system   39m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131]
