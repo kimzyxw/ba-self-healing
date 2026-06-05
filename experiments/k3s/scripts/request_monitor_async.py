@@ -11,7 +11,7 @@ parser.add_argument("--output", required=True)
 parser.add_argument("--interval", type=float, default=1.0)
 parser.add_argument("--timeout", type=float, default=180.0)
 parser.add_argument("--duration", type=float, required=True)
-parser.add_argument("--max-in-flight", type=int, default=1000)
+parser.add_argument("--max-in-flight", type=int, default=10)
 args = parser.parse_args()
 
 
@@ -19,40 +19,37 @@ def now():
     return datetime.now(timezone.utc)
 
 
-async def fetch(session, writer, f, sem, request_id):
-    async with sem:
-        start = now()
-        status_code = ""
-        success = False
-        error = ""
+async def fetch(session, writer, f, request_id):
+    start = now()
+    status_code = ""
+    success = False
+    error = ""
 
-        try:
-            async with session.get(args.url) as response:
-                status_code = response.status
-                await response.read()
-                success = 200 <= response.status < 400
-        except Exception as e:
-            error = type(e).__name__
+    try:
+        async with session.get(args.url) as response:
+            status_code = response.status
+            await response.read()
+            success = 200 <= response.status < 400
+    except Exception as e:
+        error = type(e).__name__
 
-        end = now()
-        duration_ms = (end - start).total_seconds() * 1000
+    end = now()
+    duration_ms = (end - start).total_seconds() * 1000
 
-        writer.writerow([
-            request_id,
-            start.isoformat(),
-            end.isoformat(),
-            status_code,
-            round(duration_ms, 2),
-            success,
-            error
-        ])
-        f.flush()
-
+    writer.writerow([
+        request_id,
+        start.isoformat(),
+        end.isoformat(),
+        status_code,
+        round(duration_ms, 2),
+        success,
+        error
+    ])
+    f.flush()
 
 async def main():
     timeout = aiohttp.ClientTimeout(total=args.timeout)
-    sem = asyncio.Semaphore(args.max_in_flight)
-    tasks = []
+    active_tasks = set()
 
     with open(args.output, "w", newline="") as f:
         writer = csv.writer(f)
@@ -72,13 +69,22 @@ async def main():
             request_id = 0
 
             while (now() - start_time).total_seconds() < args.duration:
+                while len(active_tasks) >= args.max_in_flight:
+                    done, active_tasks = await asyncio.wait(
+                        active_tasks,
+                        return_when=asyncio.FIRST_COMPLETED
+                    )
+
                 request_id += 1
-                task = asyncio.create_task(fetch(session, writer, f, sem, request_id))
-                tasks.append(task)
+                task = asyncio.create_task(
+                    fetch(session, writer, f, request_id)
+                )
+                active_tasks.add(task)
+
                 await asyncio.sleep(args.interval)
 
-            await asyncio.gather(*tasks)
-
+            if active_tasks:
+                await asyncio.gather(*active_tasks, return_exceptions=True)
 
 if __name__ == "__main__":
     asyncio.run(main())

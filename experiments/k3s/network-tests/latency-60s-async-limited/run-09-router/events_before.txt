@@ -1,0 +1,23 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                                                          MESSAGE
+kube-system   25m         Warning   NodeNotReady              pod/svclb-traefik-62730cbd-9gn4t                                Node is not ready
+default       25m         Normal    NodeNotReady              node/k3s-w2                                                     Node k3s-w2 status is now: NodeNotReady
+default       25m         Normal    NodeNotReady              node/k3s-w1                                                     Node k3s-w1 status is now: NodeNotReady
+kube-system   25m         Warning   NodeNotReady              pod/svclb-traefik-62730cbd-lsd77                                Node is not ready
+default       4m2s        Normal    NodeHasSufficientMemory   node/k3s-w1                                                     Node k3s-w1 status is now: NodeHasSufficientMemory
+default       4m2s        Normal    NodeHasNoDiskPressure     node/k3s-w1                                                     Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       4m2s        Normal    NodeHasSufficientPID      node/k3s-w1                                                     Node k3s-w1 status is now: NodeHasSufficientPID
+default       4m2s        Normal    NodeReady                 node/k3s-w1                                                     Node k3s-w1 status is now: NodeReady
+default       4m2s        Normal    NodeHasSufficientMemory   node/k3s-w2                                                     Node k3s-w2 status is now: NodeHasSufficientMemory
+default       4m2s        Normal    NodeHasNoDiskPressure     node/k3s-w2                                                     Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       4m2s        Normal    NodeHasSufficientPID      node/k3s-w2                                                     Node k3s-w2 status is now: NodeHasSufficientPID
+default       4m2s        Normal    NodeReady                 node/k3s-w2                                                     Node k3s-w2 status is now: NodeReady
+kube-system   32m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130]
+kube-system   32m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]
+kube-system   3m55s       Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]
+kube-system   25m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129]
+kube-system   147m        Normal    UpdatedLoadBalancer       service/traefik                                                 (combined from similar events): Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129]
+kube-system   25m         Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129] -> [10.10.10.129 10.10.10.130 10.10.10.131]
+default       143m        Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-k3s-s3-1780664845-d8834d   Snapshot etcd-snapshot-k3s-s3-1780664845 saved on k3s-s3
+default       143m        Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-k3s-s1-1780664846-b013ca   Snapshot etcd-snapshot-k3s-s1-1780664846 saved on k3s-s1
+default       143m        Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-k3s-s2-1780664847-273c42   Snapshot etcd-snapshot-k3s-s2-1780664847 saved on k3s-s2
+kube-system   3m55s       Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129]
