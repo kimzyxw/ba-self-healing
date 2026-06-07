@@ -1,0 +1,11 @@
+NAMESPACE     LAST SEEN   TYPE     REASON                    OBJECT            MESSAGE
+kube-system   4m1s        Normal   UpdatedLoadBalancer       service/traefik   Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129]
+kube-system   4m1s        Normal   UpdatedLoadBalancer       service/traefik   Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]
+default       3m55s       Normal   NodeHasSufficientMemory   node/k3s-w1       Node k3s-w1 status is now: NodeHasSufficientMemory
+default       3m55s       Normal   NodeHasNoDiskPressure     node/k3s-w1       Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       3m55s       Normal   NodeHasSufficientPID      node/k3s-w1       Node k3s-w1 status is now: NodeHasSufficientPID
+default       3m55s       Normal   NodeReady                 node/k3s-w1       Node k3s-w1 status is now: NodeReady
+default       3m52s       Normal   NodeHasSufficientMemory   node/k3s-w2       Node k3s-w2 status is now: NodeHasSufficientMemory
+default       3m52s       Normal   NodeHasNoDiskPressure     node/k3s-w2       Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       3m52s       Normal   NodeHasSufficientPID      node/k3s-w2       Node k3s-w2 status is now: NodeHasSufficientPID
+default       3m52s       Normal   NodeReady                 node/k3s-w2       Node k3s-w2 status is now: NodeReady

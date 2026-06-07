@@ -1,0 +1,62 @@
+=== Run summary ===
+scenario=latency-30min-async-limited
+run=run-08-router
+fault_time=2026-06-07T02:21:40+00:00
+recovery_time=2026-06-07T05:49:42+00:00
+
+--- overall ---
+requests_total=1597
+success=180
+failed=1417
+success_rate=11.27%
+error_rate=88.73%
+avg_ms=9424.79
+median_ms=1112.48
+p95_ms=3112.86
+p99_ms=71016.68
+min_ms=1.14
+max_ms=1996762.68
+outliers_gt_10s=65
+
+--- baseline ---
+requests_total=179
+success=179
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.13
+median_ms=3.02
+p95_ms=5.21
+p99_ms=9.74
+min_ms=1.14
+max_ms=12.42
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=1418
+success=1
+failed=1417
+success_rate=0.07%
+error_rate=99.93%
+avg_ms=10614.13
+median_ms=1605.35
+p95_ms=5240.00
+p99_ms=71082.32
+min_ms=3.13
+max_ms=1996762.68
+outliers_gt_10s=65
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+fault_median_ms=1605.35
+latency_applied=yes
