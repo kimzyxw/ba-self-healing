@@ -63,6 +63,9 @@ kubectl get events -A --sort-by=.metadata.creationTimestamp > "$BASE/events_befo
 
 TOTAL_SECONDS=$((BASELINE + DURATION + AFTER))
 
+echo "[RUN $RUN] Starte Request-Monitor für ${TOTAL_SECONDS}s"
+date -Is | tee "$BASE/monitor_start_time.txt"
+
 python3 experiments/k3s/scripts/request_monitor_async.py \
   --url "$URL" \
   --output "$BASE/requests.csv" \
