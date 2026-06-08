@@ -69,7 +69,7 @@ python3 experiments/k3s/scripts/request_monitor_async.py \
   --interval 1 \
   --timeout "$TIMEOUT" \
   --duration "$TOTAL_SECONDS" \
-  --max-in-flight 2000 &
+  --max-in-flight "$MAX_IN_FLIGHT" &
 
 MONITOR_PID=$!
 
