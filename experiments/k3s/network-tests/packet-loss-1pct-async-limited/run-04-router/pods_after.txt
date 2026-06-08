@@ -1,0 +1,15 @@
+NAMESPACE     NAME                                      READY   STATUS      RESTARTS        AGE    IP           NODE     NOMINATED NODE   READINESS GATES
+kube-system   coredns-8db54c48d-8dqw5                   1/1     Running     1 (2d23h ago)   6d2h   10.42.0.11   k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-97f2x                0/1     Completed   2               6d2h   <none>       k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-crd-fqjpv            0/1     Completed   0               6d2h   <none>       k3s-s1   <none>           <none>
+kube-system   local-path-provisioner-5d9d9885bc-jmntn   1/1     Running     1 (2d23h ago)   6d2h   10.42.0.14   k3s-s1   <none>           <none>
+kube-system   metrics-server-786d997795-25d2t           1/1     Running     1 (2d23h ago)   6d2h   10.42.0.13   k3s-s1   <none>           <none>
+kube-system   svclb-traefik-62730cbd-9gn4t              2/2     Running     2 (3d1h ago)    6d2h   10.42.4.4    k3s-w2   <none>           <none>
+kube-system   svclb-traefik-62730cbd-hrw2d              2/2     Running     2 (3d1h ago)    6d2h   10.42.1.5    k3s-s2   <none>           <none>
+kube-system   svclb-traefik-62730cbd-jg7vg              2/2     Running     2 (3d1h ago)    6d2h   10.42.2.5    k3s-s3   <none>           <none>
+kube-system   svclb-traefik-62730cbd-lsd77              2/2     Running     2 (3d1h ago)    6d2h   10.42.3.4    k3s-w1   <none>           <none>
+kube-system   svclb-traefik-62730cbd-w2n6k              2/2     Running     2 (2d23h ago)   6d2h   10.42.0.15   k3s-s1   <none>           <none>
+kube-system   traefik-9bcdbbd9-pvq5g                    1/1     Running     1 (2d23h ago)   6d2h   10.42.0.10   k3s-s1   <none>           <none>
+testapp       nginx-test-6ff8854996-9jhn4               1/1     Running     1 (3d1h ago)    5d1h   10.42.1.4    k3s-s2   <none>           <none>
+testapp       nginx-test-6ff8854996-hvv5k               1/1     Running     1 (2d23h ago)   5d1h   10.42.0.12   k3s-s1   <none>           <none>
+testapp       nginx-test-6ff8854996-mtrfm               1/1     Running     1 (3d1h ago)    6d2h   10.42.2.4    k3s-s3   <none>           <none>

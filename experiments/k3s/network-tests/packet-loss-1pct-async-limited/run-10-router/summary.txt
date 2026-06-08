@@ -1,0 +1,55 @@
+=== Run summary ===
+scenario=packet-loss-1pct-async-limited
+run=run-10-router
+fault_time=2026-06-08T13:30:32+00:00
+recovery_time=2026-06-08T13:40:32+00:00
+
+--- overall ---
+requests_total=89
+success=89
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.17
+median_ms=3.32
+p95_ms=5.25
+p99_ms=7.93
+min_ms=1.27
+max_ms=7.93
+timeouts=0
+
+--- baseline ---
+requests_total=89
+success=89
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.17
+median_ms=3.32
+p95_ms=5.25
+p99_ms=7.93
+min_ms=1.27
+max_ms=7.93
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes
