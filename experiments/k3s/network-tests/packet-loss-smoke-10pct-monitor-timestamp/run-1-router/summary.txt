@@ -1,0 +1,67 @@
+=== Run summary ===
+scenario=packet-loss-smoke-10pct-monitor-timestamp
+run=run-1-router
+fault_time=2026-06-08T14:08:20+00:00
+recovery_time=2026-06-08T14:10:20+00:00
+
+--- overall ---
+requests_total=240
+success=240
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=14.23
+median_ms=2.98
+p95_ms=7.07
+p99_ms=417.65
+min_ms=0.99
+max_ms=617.61
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.50
+median_ms=2.09
+p95_ms=4.02
+p99_ms=6.22
+min_ms=0.99
+max_ms=6.22
+timeouts=0
+
+--- fault ---
+requests_total=120
+success=120
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=25.82
+median_ms=3.60
+p95_ms=211.43
+p99_ms=420.01
+min_ms=1.18
+max_ms=617.61
+timeouts=0
+
+--- after ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.77
+median_ms=2.31
+p95_ms=4.85
+p99_ms=7.26
+min_ms=1.07
+max_ms=7.26
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.620172
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes

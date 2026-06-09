@@ -1,0 +1,67 @@
+=== Run summary ===
+scenario=packet-loss-10pct-async-limited
+run=run-03-router
+fault_time=2026-06-08T15:09:45+00:00
+recovery_time=2026-06-08T15:19:45+00:00
+
+--- overall ---
+requests_total=959
+success=959
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=20.31
+median_ms=3.59
+p95_ms=209.67
+p99_ms=216.29
+min_ms=0.80
+max_ms=1667.65
+timeouts=0
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.38
+median_ms=3.69
+p95_ms=5.19
+p99_ms=6.53
+min_ms=1.07
+max_ms=6.65
+timeouts=0
+
+--- fault ---
+requests_total=599
+success=599
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=30.59
+median_ms=3.69
+p95_ms=212.87
+p99_ms=420.71
+min_ms=0.80
+max_ms=1667.65
+timeouts=0
+
+--- after ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.01
+median_ms=2.96
+p95_ms=4.98
+p99_ms=7.09
+min_ms=0.98
+max_ms=7.55
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.758177
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes
