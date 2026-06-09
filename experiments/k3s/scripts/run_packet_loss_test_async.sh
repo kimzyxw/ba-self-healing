@@ -61,7 +61,7 @@ kubectl get nodes -o wide > "$BASE/nodes_before.txt"
 kubectl get pods -A -o wide > "$BASE/pods_before.txt"
 kubectl get events -A --sort-by=.metadata.creationTimestamp > "$BASE/events_before.txt"
 
-TOTAL_SECONDS=$((BASELINE + DURATION + AFTER))
+TOTAL_SECONDS=$((BASELINE + DURATION + AFTER + 60))
 
 echo "[RUN $RUN] Starte Request-Monitor für ${TOTAL_SECONDS}s"
 date -Is | tee "$BASE/monitor_start_time.txt"
@@ -79,18 +79,24 @@ MONITOR_PID=$!
 echo "[RUN $RUN] Vorlauf läuft ${BASELINE}s"
 sleep "$BASELINE"
 
-echo "[RUN $RUN] Starte Router-gesteuerten Paketverlust: $LOSS für ${DURATION}s"
+echo "[RUN $RUN] Starte Router-gesteuerten Paketverlust mit zusätzlichem Safety-Cleanup: $LOSS für ${DURATION}s"
 date -Is | tee "$BASE/fault_time.txt"
 
 ROUTER_FAULT_LOG="/tmp/packet-loss-${SCENARIO}-run-${RUN}.log"
+S1_CLEANUP_LOG="$BASE/s1_safety_cleanup.log"
 
+# Vorher sicherstellen, dass keine alte netem-Regel aktiv ist
+ssh kim@$ROUTER_NAT "sudo tc qdisc del dev $ROUTER_IFACE root || true"
+ssh kim@$ROUTER_NAT "tc qdisc show dev $ROUTER_IFACE" | tee "$BASE/tc_before_fault.txt"
+
+# Router setzt die Störung und versucht sie selbst wieder zu entfernen
 ssh kim@$ROUTER_NAT "nohup bash -c '
   echo fault_start=\$(date -Is)
   sudo tc qdisc replace dev $ROUTER_IFACE root netem loss $LOSS
   tc qdisc show dev $ROUTER_IFACE
   sleep $DURATION
   sudo tc qdisc del dev $ROUTER_IFACE root || true
-  echo fault_end=\$(date -Is)
+  echo router_cleanup_time=\$(date -Is)
   tc qdisc show dev $ROUTER_IFACE
 ' > $ROUTER_FAULT_LOG 2>&1 &"
 
@@ -98,9 +104,20 @@ sleep 2
 
 ssh kim@$ROUTER_NAT "tc qdisc show dev $ROUTER_IFACE" | tee "$BASE/tc_during.txt"
 
+echo "[RUN $RUN] Fault läuft ${DURATION}s"
 sleep "$DURATION"
 
-echo "[RUN $RUN] Paketverlust sollte durch Router-Job entfernt sein"
+echo "[RUN $RUN] Erzwinge zusätzliches Cleanup von s1 über Router-NAT"
+{
+  echo "s1_cleanup_start=$(date -Is)"
+  timeout 30 ssh \
+    -o ConnectTimeout=10 \
+    -o ServerAliveInterval=5 \
+    -o ServerAliveCountMax=2 \
+    kim@$ROUTER_NAT "sudo tc qdisc del dev $ROUTER_IFACE root || true"
+  echo "s1_cleanup_end=$(date -Is)"
+} > "$S1_CLEANUP_LOG" 2>&1 || true
+
 date -Is | tee "$BASE/recovery_time.txt"
 
 sleep 5
