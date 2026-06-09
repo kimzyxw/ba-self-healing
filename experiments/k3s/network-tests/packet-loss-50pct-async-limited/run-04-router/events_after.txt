@@ -1,0 +1,12 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                                                          MESSAGE
+default       117m        Normal    NodeNotReady              node/k3s-w2                                                     Node k3s-w2 status is now: NodeNotReady
+kube-system   117m        Warning   NodeNotReady              pod/svclb-traefik-62730cbd-9gn4t                                Node is not ready
+kube-system   117m        Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129]
+default       116m        Normal    NodeHasSufficientMemory   node/k3s-w2                                                     Node k3s-w2 status is now: NodeHasSufficientMemory
+kube-system   116m        Normal    UpdatedLoadBalancer       service/traefik                                                 Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]
+default       116m        Normal    NodeHasNoDiskPressure     node/k3s-w2                                                     Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       116m        Normal    NodeHasSufficientPID      node/k3s-w2                                                     Node k3s-w2 status is now: NodeHasSufficientPID
+default       116m        Normal    NodeReady                 node/k3s-w2                                                     Node k3s-w2 status is now: NodeReady
+default       48m         Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-k3s-s1-1780991796-24c574   Snapshot etcd-snapshot-k3s-s1-1780991796 saved on k3s-s1
+default       48m         Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-k3s-s2-1780991800-5ef417   Snapshot etcd-snapshot-k3s-s2-1780991800 saved on k3s-s2
+default       48m         Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-k3s-s3-1780991799-a5ea81   Snapshot etcd-snapshot-k3s-s3-1780991799 saved on k3s-s3

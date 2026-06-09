@@ -1,0 +1,14 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                                MESSAGE
+kube-system   120m        Warning   Unhealthy                 pod/metrics-server-786d997795-25d2t   Liveness probe failed: Get "https://10.42.0.13:10250/livez": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+kube-system   120m        Warning   Unhealthy                 pod/coredns-8db54c48d-8dqw5           Readiness probe failed: Get "http://10.42.0.11:8181/ready": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+kube-system   120m        Warning   Unhealthy                 pod/coredns-8db54c48d-8dqw5           Liveness probe failed: Get "http://10.42.0.11:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+kube-system   120m        Warning   Unhealthy                 pod/metrics-server-786d997795-25d2t   Readiness probe failed: Get "https://10.42.0.13:10250/readyz": context deadline exceeded
+kube-system   120m        Warning   Unhealthy                 pod/metrics-server-786d997795-25d2t   Readiness probe failed: Get "https://10.42.0.13:10250/readyz": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+default       42m         Normal    NodeNotReady              node/k3s-w2                           Node k3s-w2 status is now: NodeNotReady
+kube-system   42m         Warning   NodeNotReady              pod/svclb-traefik-62730cbd-9gn4t      Node is not ready
+kube-system   42m         Normal    UpdatedLoadBalancer       service/traefik                       Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129]
+default       41m         Normal    NodeHasSufficientMemory   node/k3s-w2                           Node k3s-w2 status is now: NodeHasSufficientMemory
+kube-system   41m         Normal    UpdatedLoadBalancer       service/traefik                       Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]
+default       41m         Normal    NodeHasNoDiskPressure     node/k3s-w2                           Node k3s-w2 status is now: NodeHasNoDiskPressure
+default       41m         Normal    NodeHasSufficientPID      node/k3s-w2                           Node k3s-w2 status is now: NodeHasSufficientPID
+default       41m         Normal    NodeReady                 node/k3s-w2                           Node k3s-w2 status is now: NodeReady
