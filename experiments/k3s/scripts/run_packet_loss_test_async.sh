@@ -79,17 +79,34 @@ MONITOR_PID=$!
 echo "[RUN $RUN] Vorlauf läuft ${BASELINE}s"
 sleep "$BASELINE"
 
-echo "[RUN $RUN] Setze Paketverlust: $LOSS"
+echo "[RUN $RUN] Starte Router-gesteuerten Paketverlust: $LOSS für ${DURATION}s"
 date -Is | tee "$BASE/fault_time.txt"
-ssh kim@$ROUTER_NAT "sudo tc qdisc replace dev $ROUTER_IFACE root netem loss $LOSS"
+
+ROUTER_FAULT_LOG="/tmp/packet-loss-${SCENARIO}-run-${RUN}.log"
+
+ssh kim@$ROUTER_NAT "nohup bash -c '
+  echo fault_start=\$(date -Is)
+  sudo tc qdisc replace dev $ROUTER_IFACE root netem loss $LOSS
+  tc qdisc show dev $ROUTER_IFACE
+  sleep $DURATION
+  sudo tc qdisc del dev $ROUTER_IFACE root || true
+  echo fault_end=\$(date -Is)
+  tc qdisc show dev $ROUTER_IFACE
+' > $ROUTER_FAULT_LOG 2>&1 &"
+
+sleep 2
+
 ssh kim@$ROUTER_NAT "tc qdisc show dev $ROUTER_IFACE" | tee "$BASE/tc_during.txt"
 
 sleep "$DURATION"
 
-echo "[RUN $RUN] Entferne Paketverlust"
+echo "[RUN $RUN] Paketverlust sollte durch Router-Job entfernt sein"
 date -Is | tee "$BASE/recovery_time.txt"
-ssh kim@$ROUTER_NAT "sudo tc qdisc del dev $ROUTER_IFACE root || true"
+
+sleep 5
+
 ssh kim@$ROUTER_NAT "tc qdisc show dev $ROUTER_IFACE" | tee "$BASE/tc_after.txt"
+ssh kim@$ROUTER_NAT "cat $ROUTER_FAULT_LOG" > "$BASE/router_fault_job.log" || true
 
 echo "[RUN $RUN] Nachlauf läuft ${AFTER}s"
 sleep "$AFTER"
