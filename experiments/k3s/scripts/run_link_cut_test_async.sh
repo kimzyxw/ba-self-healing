@@ -60,7 +60,8 @@ kubectl get nodes -o wide > "$BASE/nodes_before.txt"
 kubectl get pods -A -o wide > "$BASE/pods_before.txt"
 kubectl get events -A --sort-by=.metadata.creationTimestamp > "$BASE/events_before.txt"
 
-TOTAL_SECONDS=$((BASELINE + DURATION + AFTER + 60))
+MONITOR_BUFFER=1800
+TOTAL_SECONDS=$((BASELINE + DURATION + AFTER + MONITOR_BUFFER))
 
 echo "[RUN $RUN] Starte Request-Monitor für ${TOTAL_SECONDS}s"
 date -Is | tee "$BASE/monitor_start_time.txt"
@@ -129,7 +130,15 @@ kubectl get pods -A -o wide > "$BASE/pods_after.txt"
 kubectl get events -A --sort-by=.metadata.creationTimestamp > "$BASE/events_after.txt"
 date -Is | tee "$BASE/test_end_time.txt"
 
-wait "$MONITOR_PID" || true
+echo "[RUN $RUN] Stoppe Request-Monitor nach geplantem Testende"
+date -Is | tee "$BASE/monitor_stop_time.txt"
+
+if kill -0 "$MONITOR_PID" 2>/dev/null; then
+  kill "$MONITOR_PID" 2>/dev/null || true
+  wait "$MONITOR_PID" || true
+else
+  echo "[RUN $RUN] Request-Monitor war bereits beendet" | tee "$BASE/monitor_already_finished.txt"
+fi
 
 echo "[RUN $RUN] Berechne Zusammenfassung"
 
