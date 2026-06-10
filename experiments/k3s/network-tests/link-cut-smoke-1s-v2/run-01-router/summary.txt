@@ -1,0 +1,67 @@
+=== Run summary ===
+scenario=link-cut-smoke-1s-v2
+run=run-01-router
+fault_time=2026-06-10T08:30:25+00:00
+recovery_time=2026-06-10T08:30:28+00:00
+
+--- overall ---
+requests_total=181
+success=181
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.28
+median_ms=2.65
+p95_ms=4.99
+p99_ms=8.76
+min_ms=1.11
+max_ms=418.36
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.13
+median_ms=2.79
+p95_ms=5.39
+p99_ms=8.76
+min_ms=1.33
+max_ms=8.76
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=140.53
+median_ms=1.91
+p95_ms=418.36
+p99_ms=418.36
+min_ms=1.31
+max_ms=418.36
+timeouts=0
+
+--- after ---
+requests_total=118
+success=118
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.94
+median_ms=2.65
+p95_ms=4.64
+p99_ms=5.79
+min_ms=1.11
+max_ms=6.13
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.195398
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
