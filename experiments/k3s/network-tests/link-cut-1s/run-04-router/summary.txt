@@ -1,0 +1,55 @@
+=== Run summary ===
+scenario=link-cut-1s
+run=run-04-router
+fault_time=2026-06-10T09:36:11+00:00
+recovery_time=2026-06-10T09:36:15+00:00
+
+--- overall ---
+requests_total=107
+success=107
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.07
+median_ms=3.18
+p95_ms=4.97
+p99_ms=6.65
+min_ms=0.96
+max_ms=7.22
+timeouts=0
+
+--- baseline ---
+requests_total=107
+success=107
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.07
+median_ms=3.18
+p95_ms=4.97
+p99_ms=6.65
+min_ms=0.96
+max_ms=7.22
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
