@@ -1,0 +1,67 @@
+=== Run summary ===
+scenario=link-cut-smoke-monitor-stop
+run=run-01-router
+fault_time=2026-06-10T12:59:38+00:00
+recovery_time=2026-06-10T12:59:41+00:00
+
+--- overall ---
+requests_total=129
+success=129
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=6.06
+median_ms=2.69
+p95_ms=4.82
+p99_ms=5.65
+min_ms=0.97
+max_ms=419.76
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.94
+median_ms=2.82
+p95_ms=4.86
+p99_ms=5.65
+min_ms=1.14
+max_ms=5.65
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=141.57
+median_ms=3.76
+p95_ms=419.76
+p99_ms=419.76
+min_ms=1.18
+max_ms=419.76
+timeouts=0
+
+--- after ---
+requests_total=66
+success=66
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.73
+median_ms=2.20
+p95_ms=4.77
+p99_ms=5.19
+min_ms=0.97
+max_ms=5.19
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.24936
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
