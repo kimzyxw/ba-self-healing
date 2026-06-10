@@ -1,0 +1,67 @@
+=== Run summary ===
+scenario=packet-loss-100pct-safety-cleanup
+run=run-10-router
+fault_time=2026-06-09T23:25:11+00:00
+recovery_time=2026-06-09T23:35:14+00:00
+
+--- overall ---
+requests_total=989
+success=420
+failed=569
+success_rate=42.47%
+error_rate=57.53%
+avg_ms=1508.24
+median_ms=94.88
+p95_ms=3086.29
+p99_ms=35698.04
+min_ms=0.85
+max_ms=300198.30
+timeouts=1
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.96
+median_ms=3.13
+p95_ms=4.74
+p99_ms=5.37
+min_ms=1.06
+max_ms=11.40
+timeouts=0
+
+--- fault ---
+requests_total=572
+success=3
+failed=569
+success_rate=0.52%
+error_rate=99.48%
+avg_ms=2605.53
+median_ms=1390.21
+p95_ms=3099.90
+p99_ms=37702.18
+min_ms=1.01
+max_ms=300198.30
+timeouts=1
+
+--- after ---
+requests_total=237
+success=237
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.19
+median_ms=3.52
+p95_ms=4.82
+p99_ms=5.56
+min_ms=0.85
+max_ms=7.17
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.760295
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes

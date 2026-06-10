@@ -1,0 +1,1 @@
+qdisc netem 8050: root refcnt 2 limit 1000 loss 100% seed 16250904960370208612

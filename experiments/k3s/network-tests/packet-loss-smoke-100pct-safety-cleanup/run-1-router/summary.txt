@@ -1,0 +1,67 @@
+=== Run summary ===
+scenario=packet-loss-smoke-100pct-safety-cleanup
+run=run-1-router
+fault_time=2026-06-09T18:58:56+00:00
+recovery_time=2026-06-09T19:00:59+00:00
+
+--- overall ---
+requests_total=275
+success=182
+failed=93
+success_rate=66.18%
+error_rate=33.82%
+avg_ms=2462.85
+median_ms=3.97
+p95_ms=3072.86
+p99_ms=69203.57
+min_ms=0.88
+max_ms=131025.74
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.94
+median_ms=2.75
+p95_ms=4.87
+p99_ms=5.63
+min_ms=1.03
+max_ms=5.63
+timeouts=0
+
+--- fault ---
+requests_total=98
+success=5
+failed=93
+success_rate=5.10%
+error_rate=94.90%
+avg_ms=6905.64
+median_ms=1923.49
+p95_ms=39018.51
+p99_ms=131025.74
+min_ms=1.11
+max_ms=131025.74
+timeouts=0
+
+--- after ---
+requests_total=117
+success=117
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.03
+median_ms=2.73
+p95_ms=4.94
+p99_ms=5.29
+min_ms=0.88
+max_ms=6.21
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.974032
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes
