@@ -1,0 +1,26 @@
+● k3s-agent.service - Lightweight Kubernetes
+     Loaded: loaded (/etc/systemd/system/k3s-agent.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-06-11 07:29:50 UTC; 2min 9s ago
+ Invocation: b15808c132e3401ea2bbcab8164bec28
+       Docs: https://k3s.io
+    Process: 244910 ExecStartPre=/sbin/modprobe br_netfilter (code=exited, status=0/SUCCESS)
+    Process: 244912 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 244913 (k3s-agent)
+      Tasks: 33
+     Memory: 273.6M (peak: 294.3M)
+        CPU: 2.255s
+     CGroup: /system.slice/k3s-agent.service
+             ├─  2396 /var/lib/rancher/k3s/data/d6009aa3ed5f31c336bc36d62c2fae11611a36bb43490003b16f337da9eed49c/bin/containerd-shim-runc-v2 -namespace k8s.io -id 904c8c58e6706d106e8cc6b175efb22c58613ab5ec6fd48ae975b0e89039c060 -address /run/k3s/containerd/containerd.sock
+             ├─244913 "/usr/local/bin/k3s agent"
+             └─244929 "containerd "
+
+Jun 11 07:29:50 k3s-w1 k3s[244913]: time="2026-06-11T07:29:50Z" level=info msg="Tunnel authorizer set Kubelet Port 0.0.0.0:10250"
+Jun 11 07:29:50 k3s-w1 k3s[244913]: time="2026-06-11T07:29:50Z" level=info msg="Starting network policy controller version v2.6.3-k3s1, built on 2026-05-20T11:15:10Z, go1.25.9"
+Jun 11 07:29:50 k3s-w1 k3s[244913]: time="2026-06-11T07:29:50Z" level=info msg="k3s agent is up and running"
+Jun 11 07:29:50 k3s-w1 k3s[244913]: I0611 07:29:50.223922  244913 network_policy_controller.go:164] Starting network policy controller
+Jun 11 07:29:50 k3s-w1 systemd[1]: Started k3s-agent.service - Lightweight Kubernetes.
+Jun 11 07:29:50 k3s-w1 k3s[244913]: I0611 07:29:50.243140  244913 network_policy_controller.go:179] Starting network policy controller full sync goroutine
+Jun 11 07:29:50 k3s-w1 k3s[244913]: I0611 07:29:50.444970  244913 apiserver.go:52] "Watching apiserver"
+Jun 11 07:29:50 k3s-w1 k3s[244913]: I0611 07:29:50.549858  244913 desired_state_of_world_populator.go:154] "Finished populating initial desired state of world"
+Jun 11 07:30:49 k3s-w1 k3s[244913]: time="2026-06-11T07:30:49Z" level=info msg="Server 10.10.10.130:6443@PREFERRED->HEALTHY from successful health check"
+Jun 11 07:30:49 k3s-w1 k3s[244913]: time="2026-06-11T07:30:49Z" level=info msg="Server 10.10.10.131:6443@PREFERRED->HEALTHY from successful health check"

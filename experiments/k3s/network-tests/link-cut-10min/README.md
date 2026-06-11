@@ -133,3 +133,8 @@ Die gespeicherten Events enthielten keine `NotReady`-Einträge, obwohl der absch
 Der zehnminütige Verbindungsabbruch führte zu einer deutlichen Nichtverfügbarkeit der Anwendung während der Fault-Phase. Die Fault Success Rate lag in den auswertbaren Läufen nur noch bei ungefähr 0.42 % bis 1.11 %, während Baseline und Nachlauf jeweils stabil bei 100 % lagen.
 
 Kubernetes zeigte in den gespeicherten Event-Dateien keine Pod-bezogenen Self-Healing-Maßnahmen wie Neustarts oder Rescheduling. Nach Abschluss des Experiments war jedoch `k3s-w1` im Zustand `NotReady`, obwohl das Router-Interface wieder aktiv war. Damit zeigt das 10min-Szenario eine deutlich stärkere Wirkung als die kürzeren Link-Cuts: Die Anwendung fällt während der Unterbrechung nahezu vollständig aus, und es können Nachwirkungen auf Node-Ebene auftreten.
+
+
+
+
+Nach Abschluss des 10min-Szenarios blieb k3s-w1 zunächst im Zustand NotReady. Ursache war, dass der Worker die K3s-Server auf Port 6443 nicht mehr erreichen konnte. Nach erneutem Setzen der Routen, Aktivieren der Router-Interfaces und Neustart des k3s-agent war der Cluster wieder vollständig Ready.

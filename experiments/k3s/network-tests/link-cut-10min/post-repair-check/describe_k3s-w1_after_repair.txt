@@ -1,0 +1,91 @@
+Name:               k3s-w1
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=k3s-w1
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=k3s
+Annotations:        alpha.kubernetes.io/provided-node-ip: 10.10.20.129
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"12:af:81:05:32:a9"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 172.16.41.133
+                    k3s.io/hostname: k3s-w1
+                    k3s.io/internal-ip: 10.10.20.129
+                    k3s.io/node-args: ["agent","--node-ip","10.10.20.129"]
+                    k3s.io/node-config-hash: K77ONESANOMCPDYNG2HCDA3JVF6DNDWBFQJIZLUKEL2TE6XOSDRQ====
+                    k3s.io/node-env: {"K3S_TOKEN":"********","K3S_URL":"https://10.10.10.129:6443"}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Tue, 02 Jun 2026 08:36:39 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  k3s-w1
+  AcquireTime:     <unset>
+  RenewTime:       Thu, 11 Jun 2026 07:31:52 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Thu, 11 Jun 2026 07:29:49 +0000   Thu, 11 Jun 2026 07:27:02 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Thu, 11 Jun 2026 07:29:49 +0000   Thu, 11 Jun 2026 07:27:02 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Thu, 11 Jun 2026 07:29:49 +0000   Thu, 11 Jun 2026 07:27:02 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Thu, 11 Jun 2026 07:29:49 +0000   Thu, 11 Jun 2026 07:27:02 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  10.10.20.129
+  Hostname:    k3s-w1
+Capacity:
+  cpu:                2
+  ephemeral-storage:  10218772Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665456Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  9940821394
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665456Ki
+  pods:               110
+System Info:
+  Machine ID:                 a6c14817b2284677944cef1efeffd7aa
+  System UUID:                ed674d56-b186-4725-555b-b074b6737c82
+  Boot ID:                    70fc8c3f-5ceb-4e86-8180-54b1f20885d8
+  Kernel Version:             7.0.0-22-generic
+  OS Image:                   Ubuntu 26.04 LTS
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  containerd://2.2.3-k3s1
+  Kubelet Version:            v1.35.5+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.3.0/24
+PodCIDRs:                     10.42.3.0/24
+ProviderID:                   k3s://k3s-w1
+Non-terminated Pods:          (1 in total)
+  Namespace                   Name                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                            ------------  ----------  ---------------  -------------  ---
+  kube-system                 svclb-traefik-62730cbd-lsd77    0 (0%)        0 (0%)      0 (0%)           0 (0%)         8d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests  Limits
+  --------           --------  ------
+  cpu                0 (0%)    0 (0%)
+  memory             0 (0%)    0 (0%)
+  ephemeral-storage  0 (0%)    0 (0%)
+  hugepages-1Gi      0 (0%)    0 (0%)
+  hugepages-2Mi      0 (0%)    0 (0%)
+  hugepages-32Mi     0 (0%)    0 (0%)
+  hugepages-64Ki     0 (0%)    0 (0%)
+Events:
+  Type    Reason                   Age                   From              Message
+  ----    ------                   ----                  ----              -------
+  Normal  NodeNotReady             30m (x68 over 5d22h)  node-controller   Node k3s-w1 status is now: NodeNotReady
+  Normal  CertificateExpirationOK  4m58s                 k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
+  Normal  CertificateExpirationOK  2m12s                 k3s-cert-monitor  Node and Certificate Authority certificates managed by k3s are OK
