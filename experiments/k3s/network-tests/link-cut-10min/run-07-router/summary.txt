@@ -1,0 +1,67 @@
+=== Run summary ===
+scenario=link-cut-10min
+run=run-07-router
+fault_time=2026-06-10T20:07:16+00:00
+recovery_time=2026-06-10T20:17:19+00:00
+
+--- overall ---
+requests_total=906
+success=371
+failed=535
+success_rate=40.95%
+error_rate=59.05%
+avg_ms=1932.54
+median_ms=490.03
+p95_ms=2912.33
+p99_ms=68101.51
+min_ms=0.81
+max_ms=300355.44
+timeouts=1
+
+--- baseline ---
+requests_total=179
+success=179
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.06
+median_ms=3.36
+p95_ms=4.93
+p99_ms=5.91
+min_ms=0.92
+max_ms=6.95
+timeouts=0
+
+--- fault ---
+requests_total=541
+success=6
+failed=535
+success_rate=1.11%
+error_rate=98.89%
+avg_ms=3234.28
+median_ms=1570.52
+p95_ms=3019.85
+p99_ms=69168.37
+min_ms=0.81
+max_ms=300355.44
+timeouts=1
+
+--- after ---
+requests_total=186
+success=186
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.19
+median_ms=3.42
+p95_ms=4.88
+p99_ms=5.86
+min_ms=1.01
+max_ms=6.29
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.595268
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
