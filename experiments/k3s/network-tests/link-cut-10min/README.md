@@ -97,7 +97,7 @@ Damit unterscheidet sich das 10min-Szenario deutlich vom 1s- und 1min-Szenario. 
 ## Kubernetes-Events und Clusterzustand
 
 In den gespeicherten Kubernetes-Events wurden keine `NodeNotReady`-Events gefunden. Ebenso traten keine Hinweise auf `Killing`, `BackOff` oder `Failed` auf.
-
+Bei der anschließenden manuellen Prüfung des Worker-Knotens `k3s-w1` zeigte `kubectl describe node k3s-w1` jedoch `NodeNotReady`-Events sowie den Zustand `NodeStatusUnknown`. Der K3s-Agent-Prozess lief zwar weiterhin, konnte aber den Node-Status nicht mehr erfolgreich aktualisieren. In den Agent-Logs traten unter anderem `TLS handshake timeout`, `context deadline exceeded` und Fehler beim Aktualisieren der Node-Lease auf. Damit deutet der 10min-Verbindungsabbruch auf mögliche Nachwirkungen auf Node-Ebene hin, auch wenn diese nicht vollständig in den pro Run gespeicherten Event-Snapshots abgebildet wurden.
 Damit wurden in den Event-Logs keine sichtbaren Self-Healing-Aktivitäten auf Pod-Ebene dokumentiert. Insbesondere wurden keine Pods neu gestartet und keine Pods verschoben.
 
 Nach Abschluss des Experiments war das Router-Interface `ens256` wieder aktiv. Der Clusterzustand zeigte jedoch, dass `k3s-w1` nach den Tests im Zustand `NotReady` war, während die Control-Plane-Nodes und `k3s-w2` `Ready` waren. Die NGINX-Pods liefen weiterhin auf den Server-Nodes und befanden sich im Zustand `Running`.
