@@ -10,7 +10,7 @@ AFTER="${6:-180}"
 TIMEOUT="${7:-300}"
 MAX_IN_FLIGHT="${8:-10}"
 
-LOG=~/ba-self-healing/experiments/k3s/network-tests/$SCENARIO/scenario-run.log
+LOG=~/ba-self-healing/experiments/k3s/packet-loss-tests/$SCENARIO/scenario-run.log
 mkdir -p "$(dirname "$LOG")"
 
 echo "Scenario $SCENARIO started at $(date -Is)" | tee "$LOG"

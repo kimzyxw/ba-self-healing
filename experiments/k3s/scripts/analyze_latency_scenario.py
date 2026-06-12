@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 import statistics as stats
 
-SCENARIO = Path("experiments/k3s/network-tests/latency-1s")
+SCENARIO = Path("experiments/k3s/latency-tests/latency-1s")
 THRESHOLD_RECOVERED_MS = 500.0
 
 def parse_time(s):

@@ -5,7 +5,7 @@ from datetime import datetime
 from collections import Counter
 import statistics as stats
 
-SCENARIO = Path("experiments/k3s/network-tests/latency-1min-short")
+SCENARIO = Path("experiments/k3s/latency-tests/latency-1min-short")
 OUT = SCENARIO / "README.md"
 
 def t(s):

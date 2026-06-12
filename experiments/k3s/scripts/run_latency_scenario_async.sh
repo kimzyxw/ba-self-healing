@@ -9,7 +9,7 @@ BASELINE="${5:-300}"
 AFTER="${6:-300}"
 TIMEOUT="${7:-300}"
 
-LOG=~/ba-self-healing/experiments/k3s/network-tests/$SCENARIO/scenario-run.log
+LOG=~/ba-self-healing/experiments/k3s/latency-tests/$SCENARIO/scenario-run.log
 mkdir -p "$(dirname "$LOG")"
 
 echo "Scenario $SCENARIO started at $(date -Is)" | tee "$LOG"

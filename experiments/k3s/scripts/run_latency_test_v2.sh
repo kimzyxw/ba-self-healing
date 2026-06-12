@@ -20,7 +20,7 @@ W2="10.10.20.130"
 NODEPORT="31783"
 URL="http://${W1}:${NODEPORT}"
 
-BASE=~/ba-self-healing/experiments/k3s/network-tests/$SCENARIO/run-$RUN-router
+BASE=~/ba-self-healing/experiments/k3s/latency-tests/$SCENARIO/run-$RUN-router
 mkdir -p "$BASE"
 
 echo "[RUN $RUN] Starte $SCENARIO"

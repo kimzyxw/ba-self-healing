@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import datetime
 import re
 
-SCENARIO = Path("experiments/k3s/network-tests/latency-30min-async-limited")
+SCENARIO = Path("experiments/k3s/latency-tests/latency-30min-async-limited")
 OUT = SCENARIO / "README.md"
 
 CRITICAL_EVENT_PATTERNS = [

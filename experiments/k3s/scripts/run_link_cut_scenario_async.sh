@@ -9,7 +9,7 @@ AFTER="${5:-180}"
 TIMEOUT="${6:-300}"
 MAX_IN_FLIGHT="${7:-10}"
 
-BASE=~/ba-self-healing/experiments/k3s/network-tests/$SCENARIO
+BASE=~/ba-self-healing/experiments/k3s/link-cut-tests/$SCENARIO
 mkdir -p "$BASE"
 
 LOG="$BASE/scenario-run.log"

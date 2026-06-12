@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import datetime
 from collections import Counter
 
-SCENARIO = Path("experiments/k3s/network-tests/latency-10min-async-limited")
+SCENARIO = Path("experiments/k3s/latency-tests/latency-10min-async-limited")
 OUT = SCENARIO / "README.md"
 
 def t(s):
