@@ -1,0 +1,4 @@
+fault_start=2026-06-09T13:49:36+00:00
+qdisc netem 8043: root refcnt 2 limit 1000 loss 70% seed 7575646971521236899
+fault_end=2026-06-09T13:59:36+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 

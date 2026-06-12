@@ -1,0 +1,184 @@
+Scenario latency-smoke-summary-test started at 2026-06-03T04:39:36+00:00
+=== Starting latency-smoke-summary-test run-1 at 2026-06-03T04:39:36+00:00 ===
+[RUN 1] Starte latency-smoke-summary-test
+2026-06-03T04:39:36+00:00
+[RUN 1] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 1] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.245 ms  0.203 ms  0.196 ms
+ 2  10.10.20.129 (10.10.20.129)  0.889 ms  0.963 ms  0.942 ms
+No resources found
+[RUN 1] Vorlauf läuft 10s
+[RUN 1] Setze Latenz: 1s
+2026-06-03T04:39:48+00:00
+qdisc netem 8010: root refcnt 2 limit 1000 delay 1s seed 17726804815091386514
+[RUN 1] Entferne Latenz
+2026-06-03T04:40:30+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 1] Nachlauf läuft 10s
+No resources found
+2026-06-03T04:40:51+00:00
+[RUN 1] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-smoke-summary-test
+run=run-1-router
+fault_time=2026-06-03T04:39:48+00:00
+recovery_time=2026-06-03T04:40:30+00:00
+
+--- overall ---
+requests_total=38
+success=38
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=927.68
+median_ms=9.64
+p95_ms=2010.55
+p99_ms=2010.75
+min_ms=2.15
+max_ms=2010.75
+outliers_gt_10s=0
+
+--- baseline ---
+requests_total=10
+success=10
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.68
+median_ms=5.20
+p95_ms=8.58
+p99_ms=8.58
+min_ms=2.15
+max_ms=8.58
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=15
+success=15
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=1873.68
+median_ms=2006.25
+p95_ms=2010.75
+p99_ms=2010.75
+min_ms=3.41
+max_ms=2010.75
+outliers_gt_10s=0
+
+--- after ---
+requests_total=13
+success=13
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=545.36
+median_ms=8.57
+p95_ms=2008.45
+p99_ms=2008.45
+min_ms=3.12
+max_ms=2008.45
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=12.96888
+--- validation ---
+router_path_valid=yes
+fault_median_ms=2006.25
+latency_applied=yes
+=== Run summary ===
+scenario=latency-smoke-summary-test
+run=run-1-router
+fault_time=2026-06-03T04:39:48+00:00
+recovery_time=2026-06-03T04:40:30+00:00
+
+--- overall ---
+requests_total=38
+success=38
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=927.68
+median_ms=9.64
+p95_ms=2010.55
+p99_ms=2010.75
+min_ms=2.15
+max_ms=2010.75
+outliers_gt_10s=0
+
+--- baseline ---
+requests_total=10
+success=10
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.68
+median_ms=5.20
+p95_ms=8.58
+p99_ms=8.58
+min_ms=2.15
+max_ms=8.58
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=15
+success=15
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=1873.68
+median_ms=2006.25
+p95_ms=2010.75
+p99_ms=2010.75
+min_ms=3.41
+max_ms=2010.75
+outliers_gt_10s=0
+
+--- after ---
+requests_total=13
+success=13
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=545.36
+median_ms=8.57
+p95_ms=2008.45
+p99_ms=2008.45
+min_ms=3.12
+max_ms=2008.45
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=12.96888
+--- validation ---
+router_path_valid=yes
+fault_median_ms=2006.25
+latency_applied=yes
+total 80K
+-rw-rw-r-- 1 kim kim    7 Jun  3 04:39 affected_interface.txt
+-rw-rw-r-- 1 kim kim    3 Jun  3 04:39 after_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  3 04:39 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  3 04:39 delay.txt
+-rw-rw-r-- 1 kim kim    3 Jun  3 04:39 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun  3 04:40 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun  3 04:39 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 04:39 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 04:39 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 04:40 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 04:39 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 04:40 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 04:39 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 04:40 recovery_time.txt
+-rw-rw-r-- 1 kim kim 2.0K Jun  3 04:40 requests.csv
+-rw-rw-r-- 1 kim kim   27 Jun  3 04:39 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 04:40 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 04:40 tc_after.txt
+-rw-rw-r-- 1 kim kim   78 Jun  3 04:40 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 04:40 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 04:39 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 04:39 traceroute_before.txt
+[RUN 1] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-smoke-summary-test/run-1-router
+=== Finished latency-smoke-summary-test run-1 at 2026-06-03T04:40:51+00:00 ===
+Scenario latency-smoke-summary-test finished at 2026-06-03T04:41:51+00:00

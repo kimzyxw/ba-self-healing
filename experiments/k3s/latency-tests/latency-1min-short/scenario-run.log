@@ -1,0 +1,1802 @@
+Scenario latency-1min-short started at 2026-06-03T12:25:44+00:00
+=== Starting latency-1min-short run-01 at 2026-06-03T12:25:44+00:00 ===
+[RUN 01] Starte latency-1min-short
+2026-06-03T12:25:44+00:00
+[RUN 01] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 01] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.483 ms  0.450 ms  0.433 ms
+ 2  10.10.20.129 (10.10.20.129)  0.851 ms  0.830 ms  0.814 ms
+[RUN 01] Vorlauf läuft 180s
+[RUN 01] Setze Latenz: 60s
+2026-06-03T12:28:46+00:00
+qdisc netem 8020: root refcnt 2 limit 1000 delay 60s seed 16541546281835041127
+[RUN 01] Entferne Latenz
+2026-06-03T12:38:46+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 01] Nachlauf läuft 180s
+2026-06-03T12:41:47+00:00
+[RUN 01] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-01-router
+fault_time=2026-06-03T12:28:46+00:00
+recovery_time=2026-06-03T12:38:46+00:00
+
+--- overall ---
+requests_total=274
+success=253
+failed=21
+success_rate=92.34%
+error_rate=7.66%
+avg_ms=2588.09
+median_ms=4.08
+p95_ms=3071.34
+p99_ms=124925.34
+min_ms=1.85
+max_ms=311257.68
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=4.39
+median_ms=3.92
+p95_ms=7.78
+p99_ms=11.39
+min_ms=1.97
+max_ms=12.43
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=22
+success=1
+failed=21
+success_rate=4.55%
+error_rate=95.45%
+avg_ms=32179.57
+median_ms=3071.59
+p95_ms=182849.99
+p99_ms=311257.68
+min_ms=1.85
+max_ms=311257.68
+outliers_gt_10s=4
+
+--- after ---
+requests_total=72
+success=72
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.52
+median_ms=4.88
+p95_ms=8.85
+p99_ms=13.53
+min_ms=2.89
+max_ms=13.53
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=109.550074
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.59
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-01-router
+fault_time=2026-06-03T12:28:46+00:00
+recovery_time=2026-06-03T12:38:46+00:00
+
+--- overall ---
+requests_total=274
+success=253
+failed=21
+success_rate=92.34%
+error_rate=7.66%
+avg_ms=2588.09
+median_ms=4.08
+p95_ms=3071.34
+p99_ms=124925.34
+min_ms=1.85
+max_ms=311257.68
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=4.39
+median_ms=3.92
+p95_ms=7.78
+p99_ms=11.39
+min_ms=1.97
+max_ms=12.43
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=22
+success=1
+failed=21
+success_rate=4.55%
+error_rate=95.45%
+avg_ms=32179.57
+median_ms=3071.59
+p95_ms=182849.99
+p99_ms=311257.68
+min_ms=1.85
+max_ms=311257.68
+outliers_gt_10s=4
+
+--- after ---
+requests_total=72
+success=72
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.52
+median_ms=4.88
+p95_ms=8.85
+p99_ms=13.53
+min_ms=2.89
+max_ms=13.53
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=109.550074
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.59
+latency_applied=yes
+total 108K
+-rw-rw-r-- 1 kim kim    7 Jun  3 12:25 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 12:25 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 12:25 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 12:25 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 12:25 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 3.7K Jun  3 12:41 events_after.txt
+-rw-rw-r-- 1 kim kim 3.7K Jun  3 12:25 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 12:28 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 12:25 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 12:41 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 12:25 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 12:41 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 12:25 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 12:38 recovery_time.txt
+-rw-rw-r-- 1 kim kim  23K Jun  3 12:41 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 12:25 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 12:41 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 12:38 tc_after.txt
+-rw-rw-r-- 1 kim kim   79 Jun  3 12:28 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 12:41 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 12:25 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 12:25 traceroute_before.txt
+[RUN 01] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-01-router
+=== Finished latency-1min-short run-01 at 2026-06-03T12:41:47+00:00 ===
+=== Starting latency-1min-short run-02 at 2026-06-03T12:42:47+00:00 ===
+[RUN 02] Starte latency-1min-short
+2026-06-03T12:42:47+00:00
+[RUN 02] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 02] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.282 ms  0.455 ms  0.414 ms
+ 2  10.10.20.129 (10.10.20.129)  0.748 ms  0.735 ms  0.721 ms
+[RUN 02] Vorlauf läuft 180s
+[RUN 02] Setze Latenz: 60s
+2026-06-03T12:45:49+00:00
+qdisc netem 8021: root refcnt 2 limit 1000 delay 60s seed 12030071826449522302
+[RUN 02] Entferne Latenz
+2026-06-03T12:57:29+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 02] Nachlauf läuft 180s
+2026-06-03T13:00:30+00:00
+[RUN 02] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-02-router
+fault_time=2026-06-03T12:45:49+00:00
+recovery_time=2026-06-03T12:57:29+00:00
+
+--- overall ---
+requests_total=331
+success=311
+failed=20
+success_rate=93.96%
+error_rate=6.04%
+avg_ms=2275.63
+median_ms=4.51
+p95_ms=3071.29
+p99_ms=39003.90
+min_ms=1.76
+max_ms=295570.08
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.27
+median_ms=4.46
+p95_ms=9.23
+p99_ms=14.57
+min_ms=1.76
+max_ms=14.99
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=22
+success=2
+failed=20
+success_rate=9.09%
+error_rate=90.91%
+avg_ms=34163.74
+median_ms=3071.93
+p95_ms=233541.87
+p99_ms=295570.08
+min_ms=2.41
+max_ms=295570.08
+outliers_gt_10s=4
+
+--- after ---
+requests_total=129
+success=129
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.28
+median_ms=4.18
+p95_ms=10.07
+p99_ms=12.51
+min_ms=2.24
+max_ms=12.82
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=53.20094
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.93
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-02-router
+fault_time=2026-06-03T12:45:49+00:00
+recovery_time=2026-06-03T12:57:29+00:00
+
+--- overall ---
+requests_total=331
+success=311
+failed=20
+success_rate=93.96%
+error_rate=6.04%
+avg_ms=2275.63
+median_ms=4.51
+p95_ms=3071.29
+p99_ms=39003.90
+min_ms=1.76
+max_ms=295570.08
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.27
+median_ms=4.46
+p95_ms=9.23
+p99_ms=14.57
+min_ms=1.76
+max_ms=14.99
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=22
+success=2
+failed=20
+success_rate=9.09%
+error_rate=90.91%
+avg_ms=34163.74
+median_ms=3071.93
+p95_ms=233541.87
+p99_ms=295570.08
+min_ms=2.41
+max_ms=295570.08
+outliers_gt_10s=4
+
+--- after ---
+requests_total=129
+success=129
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.28
+median_ms=4.18
+p95_ms=10.07
+p99_ms=12.51
+min_ms=2.24
+max_ms=12.82
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=53.20094
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.93
+latency_applied=yes
+total 116K
+-rw-rw-r-- 1 kim kim    7 Jun  3 12:42 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 12:42 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 12:42 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 12:42 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 12:42 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 4.8K Jun  3 13:00 events_after.txt
+-rw-rw-r-- 1 kim kim 3.7K Jun  3 12:42 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 12:45 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 12:42 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 13:00 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 12:42 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 13:00 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 12:42 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 12:57 recovery_time.txt
+-rw-rw-r-- 1 kim kim  27K Jun  3 13:00 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 12:42 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 13:00 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 12:57 tc_after.txt
+-rw-rw-r-- 1 kim kim   79 Jun  3 12:45 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:00 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 12:42 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 12:42 traceroute_before.txt
+[RUN 02] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-02-router
+=== Finished latency-1min-short run-02 at 2026-06-03T13:00:30+00:00 ===
+=== Starting latency-1min-short run-03 at 2026-06-03T13:01:30+00:00 ===
+[RUN 03] Starte latency-1min-short
+2026-06-03T13:01:30+00:00
+[RUN 03] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 03] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.679 ms  0.647 ms  0.629 ms
+ 2  10.10.20.129 (10.10.20.129)  1.684 ms  1.666 ms  1.720 ms
+[RUN 03] Vorlauf läuft 180s
+[RUN 03] Setze Latenz: 60s
+2026-06-03T13:10:08+00:00
+qdisc netem 8022: root refcnt 2 limit 1000 delay 60s seed 4340635443960953331
+[RUN 03] Entferne Latenz
+2026-06-03T13:20:09+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 03] Nachlauf läuft 180s
+2026-06-03T13:23:09+00:00
+[RUN 03] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-03-router
+fault_time=2026-06-03T13:10:08+00:00
+recovery_time=2026-06-03T13:20:09+00:00
+
+--- overall ---
+requests_total=349
+success=346
+failed=3
+success_rate=99.14%
+error_rate=0.86%
+avg_ms=1769.24
+median_ms=4.18
+p95_ms=9.35
+p99_ms=17.45
+min_ms=1.73
+max_ms=243148.71
+outliers_gt_10s=3
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.07
+median_ms=4.09
+p95_ms=9.35
+p99_ms=11.20
+min_ms=1.94
+max_ms=17.45
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=4
+success=1
+failed=3
+success_rate=25.00%
+error_rate=75.00%
+avg_ms=153926.51
+median_ms=186277.06
+p95_ms=243148.71
+p99_ms=243148.71
+min_ms=3.19
+max_ms=243148.71
+outliers_gt_10s=3
+
+--- after ---
+requests_total=165
+success=165
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.12
+median_ms=4.26
+p95_ms=8.70
+p99_ms=11.65
+min_ms=1.73
+max_ms=12.24
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=16.513291
+--- validation ---
+router_path_valid=yes
+fault_median_ms=186277.06
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-03-router
+fault_time=2026-06-03T13:10:08+00:00
+recovery_time=2026-06-03T13:20:09+00:00
+
+--- overall ---
+requests_total=349
+success=346
+failed=3
+success_rate=99.14%
+error_rate=0.86%
+avg_ms=1769.24
+median_ms=4.18
+p95_ms=9.35
+p99_ms=17.45
+min_ms=1.73
+max_ms=243148.71
+outliers_gt_10s=3
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.07
+median_ms=4.09
+p95_ms=9.35
+p99_ms=11.20
+min_ms=1.94
+max_ms=17.45
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=4
+success=1
+failed=3
+success_rate=25.00%
+error_rate=75.00%
+avg_ms=153926.51
+median_ms=186277.06
+p95_ms=243148.71
+p99_ms=243148.71
+min_ms=3.19
+max_ms=243148.71
+outliers_gt_10s=3
+
+--- after ---
+requests_total=165
+success=165
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.12
+median_ms=4.26
+p95_ms=8.70
+p99_ms=11.65
+min_ms=1.73
+max_ms=12.24
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=16.513291
+--- validation ---
+router_path_valid=yes
+fault_median_ms=186277.06
+latency_applied=yes
+total 124K
+-rw-rw-r-- 1 kim kim    7 Jun  3 13:01 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:01 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:01 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:01 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:01 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 4.2K Jun  3 13:23 events_after.txt
+-rw-rw-r-- 1 kim kim 4.8K Jun  3 13:01 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:10 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:01 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 13:23 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 13:01 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 13:23 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 13:01 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:20 recovery_time.txt
+-rw-rw-r-- 1 kim kim  29K Jun  3 13:23 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 13:01 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 13:23 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 13:20 tc_after.txt
+-rw-rw-r-- 1 kim kim   78 Jun  3 13:10 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:23 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:01 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 13:01 traceroute_before.txt
+[RUN 03] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-03-router
+=== Finished latency-1min-short run-03 at 2026-06-03T13:23:09+00:00 ===
+=== Starting latency-1min-short run-04 at 2026-06-03T13:24:09+00:00 ===
+[RUN 04] Starte latency-1min-short
+2026-06-03T13:24:09+00:00
+[RUN 04] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 04] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.306 ms  0.533 ms  0.506 ms
+ 2  10.10.20.129 (10.10.20.129)  0.796 ms  0.904 ms  0.881 ms
+[RUN 04] Vorlauf läuft 180s
+[RUN 04] Setze Latenz: 60s
+2026-06-03T13:33:12+00:00
+qdisc netem 8023: root refcnt 2 limit 1000 delay 60s seed 5939344052754978540
+[RUN 04] Entferne Latenz
+2026-06-03T13:43:12+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 04] Nachlauf läuft 180s
+2026-06-03T13:46:13+00:00
+[RUN 04] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-04-router
+fault_time=2026-06-03T13:33:12+00:00
+recovery_time=2026-06-03T13:43:12+00:00
+
+--- overall ---
+requests_total=360
+success=355
+failed=5
+success_rate=98.61%
+error_rate=1.39%
+avg_ms=1692.48
+median_ms=5.25
+p95_ms=9.78
+p99_ms=3072.69
+min_ms=1.74
+max_ms=292225.94
+outliers_gt_10s=3
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.05
+median_ms=4.08
+p95_ms=8.73
+p99_ms=11.40
+min_ms=1.74
+max_ms=13.66
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=7
+success=2
+failed=5
+success_rate=28.57%
+error_rate=71.43%
+avg_ms=86755.77
+median_ms=3072.69
+p95_ms=292225.94
+p99_ms=292225.94
+min_ms=4.71
+max_ms=292225.94
+outliers_gt_10s=3
+
+--- after ---
+requests_total=173
+success=173
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=6.33
+median_ms=6.74
+p95_ms=9.65
+p99_ms=10.78
+min_ms=2.36
+max_ms=12.73
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=8.648614
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3072.69
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-04-router
+fault_time=2026-06-03T13:33:12+00:00
+recovery_time=2026-06-03T13:43:12+00:00
+
+--- overall ---
+requests_total=360
+success=355
+failed=5
+success_rate=98.61%
+error_rate=1.39%
+avg_ms=1692.48
+median_ms=5.25
+p95_ms=9.78
+p99_ms=3072.69
+min_ms=1.74
+max_ms=292225.94
+outliers_gt_10s=3
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.05
+median_ms=4.08
+p95_ms=8.73
+p99_ms=11.40
+min_ms=1.74
+max_ms=13.66
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=7
+success=2
+failed=5
+success_rate=28.57%
+error_rate=71.43%
+avg_ms=86755.77
+median_ms=3072.69
+p95_ms=292225.94
+p99_ms=292225.94
+min_ms=4.71
+max_ms=292225.94
+outliers_gt_10s=3
+
+--- after ---
+requests_total=173
+success=173
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=6.33
+median_ms=6.74
+p95_ms=9.65
+p99_ms=10.78
+min_ms=2.36
+max_ms=12.73
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=8.648614
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3072.69
+latency_applied=yes
+total 124K
+-rw-rw-r-- 1 kim kim    7 Jun  3 13:24 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:24 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:24 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:24 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:24 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 3.7K Jun  3 13:46 events_after.txt
+-rw-rw-r-- 1 kim kim 4.2K Jun  3 13:24 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:33 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:24 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 13:46 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 13:24 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 13:46 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 13:24 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:43 recovery_time.txt
+-rw-rw-r-- 1 kim kim  29K Jun  3 13:46 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 13:24 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 13:46 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 13:43 tc_after.txt
+-rw-rw-r-- 1 kim kim   78 Jun  3 13:33 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:46 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:24 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 13:24 traceroute_before.txt
+[RUN 04] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-04-router
+=== Finished latency-1min-short run-04 at 2026-06-03T13:46:13+00:00 ===
+=== Starting latency-1min-short run-05 at 2026-06-03T13:47:13+00:00 ===
+[RUN 05] Starte latency-1min-short
+2026-06-03T13:47:13+00:00
+[RUN 05] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 05] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.146 ms  0.413 ms  0.435 ms
+ 2  10.10.20.129 (10.10.20.129)  0.796 ms  0.877 ms  0.861 ms
+[RUN 05] Vorlauf läuft 180s
+[RUN 05] Setze Latenz: 60s
+2026-06-03T14:05:37+00:00
+qdisc netem 8024: root refcnt 2 limit 1000 delay 60s seed 2440599106901068075
+[RUN 05] Entferne Latenz
+2026-06-03T14:19:16+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 05] Nachlauf läuft 180s
+2026-06-03T14:37:17+00:00
+[RUN 05] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-05-router
+fault_time=2026-06-03T14:05:37+00:00
+recovery_time=2026-06-03T14:19:16+00:00
+
+--- overall ---
+requests_total=314
+success=301
+failed=13
+success_rate=95.86%
+error_rate=4.14%
+avg_ms=2805.57
+median_ms=4.70
+p95_ms=11.15
+p99_ms=70416.67
+min_ms=1.41
+max_ms=342815.88
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.21
+median_ms=4.21
+p95_ms=9.44
+p99_ms=10.70
+min_ms=1.85
+max_ms=13.40
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=14
+success=1
+failed=13
+success_rate=7.14%
+error_rate=92.86%
+avg_ms=62808.23
+median_ms=3072.09
+p95_ms=342815.88
+p99_ms=342815.88
+min_ms=2.98
+max_ms=342815.88
+outliers_gt_10s=4
+
+--- after ---
+requests_total=120
+success=120
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.78
+median_ms=5.52
+p95_ms=9.54
+p99_ms=11.15
+min_ms=1.41
+max_ms=11.50
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=61.720902
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3072.09
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-05-router
+fault_time=2026-06-03T14:05:37+00:00
+recovery_time=2026-06-03T14:19:16+00:00
+
+--- overall ---
+requests_total=314
+success=301
+failed=13
+success_rate=95.86%
+error_rate=4.14%
+avg_ms=2805.57
+median_ms=4.70
+p95_ms=11.15
+p99_ms=70416.67
+min_ms=1.41
+max_ms=342815.88
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.21
+median_ms=4.21
+p95_ms=9.44
+p99_ms=10.70
+min_ms=1.85
+max_ms=13.40
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=14
+success=1
+failed=13
+success_rate=7.14%
+error_rate=92.86%
+avg_ms=62808.23
+median_ms=3072.09
+p95_ms=342815.88
+p99_ms=342815.88
+min_ms=2.98
+max_ms=342815.88
+outliers_gt_10s=4
+
+--- after ---
+requests_total=120
+success=120
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.78
+median_ms=5.52
+p95_ms=9.54
+p99_ms=11.15
+min_ms=1.41
+max_ms=11.50
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=61.720902
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3072.09
+latency_applied=yes
+total 116K
+-rw-rw-r-- 1 kim kim    7 Jun  3 13:47 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:47 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:47 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:47 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 13:47 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 4.2K Jun  3 14:37 events_after.txt
+-rw-rw-r-- 1 kim kim 3.7K Jun  3 13:47 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 14:05 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:47 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 14:37 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 13:47 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 14:37 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 13:47 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 14:19 recovery_time.txt
+-rw-rw-r-- 1 kim kim  26K Jun  3 14:37 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 13:47 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 14:37 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 14:19 tc_after.txt
+-rw-rw-r-- 1 kim kim   78 Jun  3 14:05 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 14:37 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 13:47 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 13:47 traceroute_before.txt
+[RUN 05] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-05-router
+=== Finished latency-1min-short run-05 at 2026-06-03T14:37:17+00:00 ===
+=== Starting latency-1min-short run-06 at 2026-06-03T14:45:38+00:00 ===
+[RUN 06] Starte latency-1min-short
+2026-06-03T14:45:38+00:00
+[RUN 06] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 06] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.318 ms  0.284 ms  0.259 ms
+ 2  10.10.20.129 (10.10.20.129)  0.485 ms  0.716 ms  0.686 ms
+[RUN 06] Vorlauf läuft 180s
+[RUN 06] Setze Latenz: 60s
+2026-06-03T15:03:49+00:00
+qdisc netem 8025: root refcnt 2 limit 1000 delay 60s seed 13122609528865241919
+[RUN 06] Entferne Latenz
+2026-06-03T15:30:16+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 06] Nachlauf läuft 180s
+2026-06-03T15:48:34+00:00
+[RUN 06] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-06-router
+fault_time=2026-06-03T15:03:49+00:00
+recovery_time=2026-06-03T15:30:16+00:00
+
+--- overall ---
+requests_total=338
+success=328
+failed=10
+success_rate=97.04%
+error_rate=2.96%
+avg_ms=4798.50
+median_ms=4.58
+p95_ms=10.45
+p99_ms=12607.63
+min_ms=1.76
+max_ms=1227176.88
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=4.67
+median_ms=3.87
+p95_ms=8.47
+p99_ms=11.94
+min_ms=1.76
+max_ms=12.02
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=11
+success=1
+failed=10
+success_rate=9.09%
+error_rate=90.91%
+avg_ms=147285.37
+median_ms=3071.97
+p95_ms=1227176.88
+p99_ms=1227176.88
+min_ms=2.34
+max_ms=1227176.88
+outliers_gt_10s=4
+
+--- after ---
+requests_total=147
+success=147
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=6.23
+median_ms=6.36
+p95_ms=9.63
+p99_ms=12.45
+min_ms=1.82
+max_ms=15.68
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=34.357078
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.97
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-06-router
+fault_time=2026-06-03T15:03:49+00:00
+recovery_time=2026-06-03T15:30:16+00:00
+
+--- overall ---
+requests_total=338
+success=328
+failed=10
+success_rate=97.04%
+error_rate=2.96%
+avg_ms=4798.50
+median_ms=4.58
+p95_ms=10.45
+p99_ms=12607.63
+min_ms=1.76
+max_ms=1227176.88
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=4.67
+median_ms=3.87
+p95_ms=8.47
+p99_ms=11.94
+min_ms=1.76
+max_ms=12.02
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=11
+success=1
+failed=10
+success_rate=9.09%
+error_rate=90.91%
+avg_ms=147285.37
+median_ms=3071.97
+p95_ms=1227176.88
+p99_ms=1227176.88
+min_ms=2.34
+max_ms=1227176.88
+outliers_gt_10s=4
+
+--- after ---
+requests_total=147
+success=147
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=6.23
+median_ms=6.36
+p95_ms=9.63
+p99_ms=12.45
+min_ms=1.82
+max_ms=15.68
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=34.357078
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.97
+latency_applied=yes
+total 120K
+-rw-rw-r-- 1 kim kim    7 Jun  3 14:45 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 14:45 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 14:45 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 14:45 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 14:45 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 3.2K Jun  3 15:48 events_after.txt
+-rw-rw-r-- 1 kim kim 4.2K Jun  3 14:45 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 15:03 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 14:45 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 15:48 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 14:45 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 15:48 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 14:45 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 15:30 recovery_time.txt
+-rw-rw-r-- 1 kim kim  28K Jun  3 15:48 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 14:45 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 15:48 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 15:30 tc_after.txt
+-rw-rw-r-- 1 kim kim   79 Jun  3 15:03 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 15:48 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 14:45 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 14:45 traceroute_before.txt
+[RUN 06] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-06-router
+=== Finished latency-1min-short run-06 at 2026-06-03T15:48:34+00:00 ===
+=== Starting latency-1min-short run-07 at 2026-06-03T15:49:34+00:00 ===
+[RUN 07] Starte latency-1min-short
+2026-06-03T15:49:34+00:00
+[RUN 07] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 07] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.194 ms  0.590 ms  0.572 ms
+ 2  10.10.20.129 (10.10.20.129)  1.046 ms  1.034 ms  1.014 ms
+[RUN 07] Vorlauf läuft 180s
+[RUN 07] Setze Latenz: 60s
+2026-06-03T16:08:44+00:00
+qdisc netem 8026: root refcnt 2 limit 1000 delay 60s seed 17179073967431002673
+[RUN 07] Entferne Latenz
+2026-06-03T16:41:35+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 07] Nachlauf läuft 180s
+2026-06-03T16:49:02+00:00
+[RUN 07] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-07-router
+fault_time=2026-06-03T16:08:44+00:00
+recovery_time=2026-06-03T16:41:35+00:00
+
+--- overall ---
+requests_total=328
+success=313
+failed=15
+success_rate=95.43%
+error_rate=4.57%
+avg_ms=6235.49
+median_ms=5.15
+p95_ms=10.39
+p99_ms=3073.01
+min_ms=1.81
+max_ms=1636944.29
+outliers_gt_10s=3
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.17
+median_ms=4.62
+p95_ms=8.93
+p99_ms=10.18
+min_ms=1.81
+max_ms=12.31
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=16
+success=1
+failed=15
+success_rate=6.25%
+error_rate=93.75%
+avg_ms=127722.33
+median_ms=3071.30
+p95_ms=1636944.29
+p99_ms=1636944.29
+min_ms=6.00
+max_ms=1636944.29
+outliers_gt_10s=3
+
+--- after ---
+requests_total=132
+success=132
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.69
+median_ms=5.37
+p95_ms=8.82
+p99_ms=9.45
+min_ms=2.84
+max_ms=10.39
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=74.288837
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.30
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-07-router
+fault_time=2026-06-03T16:08:44+00:00
+recovery_time=2026-06-03T16:41:35+00:00
+
+--- overall ---
+requests_total=328
+success=313
+failed=15
+success_rate=95.43%
+error_rate=4.57%
+avg_ms=6235.49
+median_ms=5.15
+p95_ms=10.39
+p99_ms=3073.01
+min_ms=1.81
+max_ms=1636944.29
+outliers_gt_10s=3
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.17
+median_ms=4.62
+p95_ms=8.93
+p99_ms=10.18
+min_ms=1.81
+max_ms=12.31
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=16
+success=1
+failed=15
+success_rate=6.25%
+error_rate=93.75%
+avg_ms=127722.33
+median_ms=3071.30
+p95_ms=1636944.29
+p99_ms=1636944.29
+min_ms=6.00
+max_ms=1636944.29
+outliers_gt_10s=3
+
+--- after ---
+requests_total=132
+success=132
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.69
+median_ms=5.37
+p95_ms=8.82
+p99_ms=9.45
+min_ms=2.84
+max_ms=10.39
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=74.288837
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.30
+latency_applied=yes
+total 116K
+-rw-rw-r-- 1 kim kim    7 Jun  3 15:49 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 15:49 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 15:49 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 15:49 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 15:49 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 3.0K Jun  3 16:49 events_after.txt
+-rw-rw-r-- 1 kim kim 3.2K Jun  3 15:49 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 16:08 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 15:49 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 16:49 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 15:49 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 16:49 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 15:49 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 16:41 recovery_time.txt
+-rw-rw-r-- 1 kim kim  27K Jun  3 16:49 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 15:49 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 16:49 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 16:41 tc_after.txt
+-rw-rw-r-- 1 kim kim   79 Jun  3 16:08 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 16:49 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 15:49 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 15:49 traceroute_before.txt
+[RUN 07] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-07-router
+=== Finished latency-1min-short run-07 at 2026-06-03T16:49:02+00:00 ===
+=== Starting latency-1min-short run-08 at 2026-06-03T16:50:02+00:00 ===
+[RUN 08] Starte latency-1min-short
+2026-06-03T16:50:02+00:00
+[RUN 08] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 08] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.333 ms  0.292 ms  0.340 ms
+ 2  10.10.20.129 (10.10.20.129)  0.881 ms  0.863 ms  0.844 ms
+[RUN 08] Vorlauf läuft 180s
+[RUN 08] Setze Latenz: 60s
+2026-06-03T16:53:04+00:00
+qdisc netem 8027: root refcnt 2 limit 1000 delay 60s seed 10766219808820824095
+[RUN 08] Entferne Latenz
+2026-06-03T17:03:04+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 08] Nachlauf läuft 180s
+2026-06-03T17:06:05+00:00
+[RUN 08] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-08-router
+fault_time=2026-06-03T16:53:04+00:00
+recovery_time=2026-06-03T17:03:04+00:00
+
+--- overall ---
+requests_total=250
+success=230
+failed=20
+success_rate=92.00%
+error_rate=8.00%
+avg_ms=2935.05
+median_ms=5.26
+p95_ms=3071.67
+p99_ms=120348.49
+min_ms=2.04
+max_ms=315351.11
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.46
+median_ms=4.91
+p95_ms=9.29
+p99_ms=11.17
+min_ms=2.04
+max_ms=13.20
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=23
+success=3
+failed=20
+success_rate=13.04%
+error_rate=86.96%
+avg_ms=31847.88
+median_ms=3071.74
+p95_ms=125469.89
+p99_ms=315351.11
+min_ms=2.53
+max_ms=315351.11
+outliers_gt_10s=4
+
+--- after ---
+requests_total=47
+success=47
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.92
+median_ms=5.19
+p95_ms=9.95
+p99_ms=13.36
+min_ms=2.41
+max_ms=13.36
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=135.2069
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.74
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-08-router
+fault_time=2026-06-03T16:53:04+00:00
+recovery_time=2026-06-03T17:03:04+00:00
+
+--- overall ---
+requests_total=250
+success=230
+failed=20
+success_rate=92.00%
+error_rate=8.00%
+avg_ms=2935.05
+median_ms=5.26
+p95_ms=3071.67
+p99_ms=120348.49
+min_ms=2.04
+max_ms=315351.11
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.46
+median_ms=4.91
+p95_ms=9.29
+p99_ms=11.17
+min_ms=2.04
+max_ms=13.20
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=23
+success=3
+failed=20
+success_rate=13.04%
+error_rate=86.96%
+avg_ms=31847.88
+median_ms=3071.74
+p95_ms=125469.89
+p99_ms=315351.11
+min_ms=2.53
+max_ms=315351.11
+outliers_gt_10s=4
+
+--- after ---
+requests_total=47
+success=47
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.92
+median_ms=5.19
+p95_ms=9.95
+p99_ms=13.36
+min_ms=2.41
+max_ms=13.36
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=135.2069
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.74
+latency_applied=yes
+total 112K
+-rw-rw-r-- 1 kim kim    7 Jun  3 16:50 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 16:50 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 16:50 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 16:50 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 16:50 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 3.2K Jun  3 17:06 events_after.txt
+-rw-rw-r-- 1 kim kim 3.0K Jun  3 16:50 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 16:53 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 16:50 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 17:06 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 16:50 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 17:06 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 16:50 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:03 recovery_time.txt
+-rw-rw-r-- 1 kim kim  21K Jun  3 17:06 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 16:50 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 17:06 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 17:03 tc_after.txt
+-rw-rw-r-- 1 kim kim   79 Jun  3 16:53 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:06 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 16:50 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 16:50 traceroute_before.txt
+[RUN 08] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-08-router
+=== Finished latency-1min-short run-08 at 2026-06-03T17:06:05+00:00 ===
+=== Starting latency-1min-short run-09 at 2026-06-03T17:07:05+00:00 ===
+[RUN 09] Starte latency-1min-short
+2026-06-03T17:07:05+00:00
+[RUN 09] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 09] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.469 ms  0.438 ms  0.424 ms
+ 2  10.10.20.129 (10.10.20.129)  0.982 ms  0.968 ms  0.954 ms
+[RUN 09] Vorlauf läuft 180s
+[RUN 09] Setze Latenz: 60s
+2026-06-03T17:10:07+00:00
+qdisc netem 8028: root refcnt 2 limit 1000 delay 60s seed 14819960995024221911
+[RUN 09] Entferne Latenz
+2026-06-03T17:20:07+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 09] Nachlauf läuft 180s
+2026-06-03T17:23:08+00:00
+[RUN 09] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-09-router
+fault_time=2026-06-03T17:10:07+00:00
+recovery_time=2026-06-03T17:20:07+00:00
+
+--- overall ---
+requests_total=373
+success=348
+failed=25
+success_rate=93.30%
+error_rate=6.70%
+avg_ms=1652.84
+median_ms=4.99
+p95_ms=3071.04
+p99_ms=37490.52
+min_ms=1.85
+max_ms=319319.47
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.85
+median_ms=5.29
+p95_ms=10.00
+p99_ms=16.83
+min_ms=1.85
+max_ms=17.31
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=28
+success=3
+failed=25
+success_rate=10.71%
+error_rate=89.29%
+avg_ms=21951.02
+median_ms=3071.66
+p95_ms=122076.59
+p99_ms=319319.47
+min_ms=2.31
+max_ms=319319.47
+outliers_gt_10s=4
+
+--- after ---
+requests_total=165
+success=165
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.02
+median_ms=4.05
+p95_ms=8.80
+p99_ms=10.03
+min_ms=2.11
+max_ms=12.67
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=16.566109
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.66
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-09-router
+fault_time=2026-06-03T17:10:07+00:00
+recovery_time=2026-06-03T17:20:07+00:00
+
+--- overall ---
+requests_total=373
+success=348
+failed=25
+success_rate=93.30%
+error_rate=6.70%
+avg_ms=1652.84
+median_ms=4.99
+p95_ms=3071.04
+p99_ms=37490.52
+min_ms=1.85
+max_ms=319319.47
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.85
+median_ms=5.29
+p95_ms=10.00
+p99_ms=16.83
+min_ms=1.85
+max_ms=17.31
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=28
+success=3
+failed=25
+success_rate=10.71%
+error_rate=89.29%
+avg_ms=21951.02
+median_ms=3071.66
+p95_ms=122076.59
+p99_ms=319319.47
+min_ms=2.31
+max_ms=319319.47
+outliers_gt_10s=4
+
+--- after ---
+requests_total=165
+success=165
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.02
+median_ms=4.05
+p95_ms=8.80
+p99_ms=10.03
+min_ms=2.11
+max_ms=12.67
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=16.566109
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.66
+latency_applied=yes
+total 116K
+-rw-rw-r-- 1 kim kim    7 Jun  3 17:07 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 17:07 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 17:07 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 17:07 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 17:07 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 3.2K Jun  3 17:23 events_after.txt
+-rw-rw-r-- 1 kim kim 3.2K Jun  3 17:07 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:10 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:07 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 17:23 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 17:07 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 17:23 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 17:07 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:20 recovery_time.txt
+-rw-rw-r-- 1 kim kim  31K Jun  3 17:23 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 17:07 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 17:23 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 17:20 tc_after.txt
+-rw-rw-r-- 1 kim kim   79 Jun  3 17:10 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:23 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:07 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 17:07 traceroute_before.txt
+[RUN 09] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-09-router
+=== Finished latency-1min-short run-09 at 2026-06-03T17:23:08+00:00 ===
+=== Starting latency-1min-short run-10 at 2026-06-03T17:24:08+00:00 ===
+[RUN 10] Starte latency-1min-short
+2026-06-03T17:24:08+00:00
+[RUN 10] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 10] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.321 ms  0.288 ms  0.330 ms
+ 2  10.10.20.129 (10.10.20.129)  0.657 ms  0.785 ms  0.767 ms
+[RUN 10] Vorlauf läuft 180s
+[RUN 10] Setze Latenz: 60s
+2026-06-03T17:27:10+00:00
+qdisc netem 8029: root refcnt 2 limit 1000 delay 60s seed 6628100697050537633
+[RUN 10] Entferne Latenz
+2026-06-03T17:37:10+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 10] Nachlauf läuft 180s
+2026-06-03T17:40:11+00:00
+[RUN 10] Berechne Zusammenfassung
+=== Run summary ===
+scenario=latency-1min-short
+run=run-10-router
+fault_time=2026-06-03T17:27:10+00:00
+recovery_time=2026-06-03T17:37:10+00:00
+
+--- overall ---
+requests_total=375
+success=362
+failed=13
+success_rate=96.53%
+error_rate=3.47%
+avg_ms=1604.57
+median_ms=4.47
+p95_ms=10.75
+p99_ms=37806.99
+min_ms=1.44
+max_ms=240074.61
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.21
+median_ms=4.13
+p95_ms=9.05
+p99_ms=11.16
+min_ms=1.89
+max_ms=11.65
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=15
+success=2
+failed=13
+success_rate=13.33%
+error_rate=86.67%
+avg_ms=39990.43
+median_ms=3071.87
+p95_ms=240074.61
+p99_ms=240074.61
+min_ms=2.11
+max_ms=240074.61
+outliers_gt_10s=4
+
+--- after ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.11
+median_ms=4.22
+p95_ms=8.72
+p99_ms=11.00
+min_ms=1.44
+max_ms=11.93
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=1.173566
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.87
+latency_applied=yes
+=== Run summary ===
+scenario=latency-1min-short
+run=run-10-router
+fault_time=2026-06-03T17:27:10+00:00
+recovery_time=2026-06-03T17:37:10+00:00
+
+--- overall ---
+requests_total=375
+success=362
+failed=13
+success_rate=96.53%
+error_rate=3.47%
+avg_ms=1604.57
+median_ms=4.47
+p95_ms=10.75
+p99_ms=37806.99
+min_ms=1.44
+max_ms=240074.61
+outliers_gt_10s=4
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.21
+median_ms=4.13
+p95_ms=9.05
+p99_ms=11.16
+min_ms=1.89
+max_ms=11.65
+outliers_gt_10s=0
+
+--- fault ---
+requests_total=15
+success=2
+failed=13
+success_rate=13.33%
+error_rate=86.67%
+avg_ms=39990.43
+median_ms=3071.87
+p95_ms=240074.61
+p99_ms=240074.61
+min_ms=2.11
+max_ms=240074.61
+outliers_gt_10s=4
+
+--- after ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=5.11
+median_ms=4.22
+p95_ms=8.72
+p99_ms=11.00
+min_ms=1.44
+max_ms=11.93
+outliers_gt_10s=0
+
+--- recovery ---
+recovery_latency_s=1.173566
+--- validation ---
+router_path_valid=yes
+fault_median_ms=3071.87
+latency_applied=yes
+total 116K
+-rw-rw-r-- 1 kim kim    7 Jun  3 17:24 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 17:24 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 17:24 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 17:24 delay.txt
+-rw-rw-r-- 1 kim kim    4 Jun  3 17:24 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 3.7K Jun  3 17:40 events_after.txt
+-rw-rw-r-- 1 kim kim 3.2K Jun  3 17:24 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:27 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:24 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 17:40 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  3 17:24 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 17:40 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  3 17:24 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:37 recovery_time.txt
+-rw-rw-r-- 1 kim kim  31K Jun  3 17:40 requests.csv
+-rw-rw-r-- 1 kim kim   19 Jun  3 17:24 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  3 17:40 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  3 17:37 tc_after.txt
+-rw-rw-r-- 1 kim kim   78 Jun  3 17:27 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:40 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  3 17:24 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  3 17:24 traceroute_before.txt
+[RUN 10] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-1min-short/run-10-router
+=== Finished latency-1min-short run-10 at 2026-06-03T17:40:11+00:00 ===
+Scenario latency-1min-short finished at 2026-06-03T17:41:11+00:00

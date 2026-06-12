@@ -1,0 +1,192 @@
+Scenario link-cut-smoke-monitor-stop started at 2026-06-10T12:58:35+00:00
+=== Starting link-cut-smoke-monitor-stop run-01 at 2026-06-10T12:58:35+00:00 ===
+[RUN 01] Starte link-cut-smoke-monitor-stop
+2026-06-10T12:58:35+00:00
+[RUN 01] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 01] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.218 ms  0.273 ms  0.251 ms
+ 2  10.10.20.129 (10.10.20.129)  0.747 ms  0.730 ms  0.708 ms
+No resources found
+[RUN 01] Starte Request-Monitor für 1921s
+2026-06-10T12:58:38+00:00
+[RUN 01] Vorlauf läuft 60s
+[RUN 01] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T12:59:38+00:00
+[RUN 01] Verbindungsabbruch läuft 1s
+[RUN 01] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T12:59:41+00:00
+[RUN 01] Nachlauf läuft 60s
+No resources found
+2026-06-10T13:00:47+00:00
+[RUN 01] Stoppe Request-Monitor nach geplantem Testende
+2026-06-10T13:00:47+00:00
+[RUN 01] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-smoke-monitor-stop
+run=run-01-router
+fault_time=2026-06-10T12:59:38+00:00
+recovery_time=2026-06-10T12:59:41+00:00
+
+--- overall ---
+requests_total=129
+success=129
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=6.06
+median_ms=2.69
+p95_ms=4.82
+p99_ms=5.65
+min_ms=0.97
+max_ms=419.76
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.94
+median_ms=2.82
+p95_ms=4.86
+p99_ms=5.65
+min_ms=1.14
+max_ms=5.65
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=141.57
+median_ms=3.76
+p95_ms=419.76
+p99_ms=419.76
+min_ms=1.18
+max_ms=419.76
+timeouts=0
+
+--- after ---
+requests_total=66
+success=66
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.73
+median_ms=2.20
+p95_ms=4.77
+p99_ms=5.19
+min_ms=0.97
+max_ms=5.19
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.24936
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-smoke-monitor-stop
+run=run-01-router
+fault_time=2026-06-10T12:59:38+00:00
+recovery_time=2026-06-10T12:59:41+00:00
+
+--- overall ---
+requests_total=129
+success=129
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=6.06
+median_ms=2.69
+p95_ms=4.82
+p99_ms=5.65
+min_ms=0.97
+max_ms=419.76
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.94
+median_ms=2.82
+p95_ms=4.86
+p99_ms=5.65
+min_ms=1.14
+max_ms=5.65
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=141.57
+median_ms=3.76
+p95_ms=419.76
+p99_ms=419.76
+min_ms=1.18
+max_ms=419.76
+timeouts=0
+
+--- after ---
+requests_total=66
+success=66
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.73
+median_ms=2.20
+p95_ms=4.77
+p99_ms=5.19
+min_ms=0.97
+max_ms=5.19
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.24936
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 116K
+-rw-rw-r-- 1 kim kim    7 Jun 10 12:58 affected_interface.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 12:58 after_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 12:58 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 12:58 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 13:00 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 12:58 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 12:59 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 12:58 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 12:59 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 12:59 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 12:59 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 12:58 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 12:58 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 13:00 monitor_stop_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 12:58 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 13:00 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 12:58 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 13:00 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 12:58 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 12:59 recovery_time.txt
+-rw-rw-r-- 1 kim kim  11K Jun 10 13:00 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 12:59 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 12:59 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   28 Jun 10 12:58 scenario.txt
+-rw-rw-r-- 1 kim kim  982 Jun 10 13:00 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 13:00 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 12:58 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 12:58 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 12:58 traceroute_before.txt
+[RUN 01] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-smoke-monitor-stop/run-01-router
+=== Finished link-cut-smoke-monitor-stop run-01 at 2026-06-10T13:00:47+00:00 ===
+Scenario link-cut-smoke-monitor-stop finished at 2026-06-10T13:01:47+00:00

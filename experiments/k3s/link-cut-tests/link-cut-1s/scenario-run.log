@@ -1,0 +1,1773 @@
+Scenario link-cut-1s started at 2026-06-10T08:37:24+00:00
+=== Starting link-cut-1s run-01 at 2026-06-10T08:37:24+00:00 ===
+[RUN 01] Starte link-cut-1s
+2026-06-10T08:37:24+00:00
+[RUN 01] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 01] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.318 ms  0.566 ms  0.544 ms
+ 2  10.10.20.129 (10.10.20.129)  0.825 ms  0.781 ms  0.849 ms
+[RUN 01] Starte Request-Monitor für 421s
+2026-06-10T08:37:26+00:00
+[RUN 01] Vorlauf läuft 180s
+[RUN 01] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T08:40:26+00:00
+[RUN 01] Verbindungsabbruch läuft 1s
+[RUN 01] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T08:40:29+00:00
+[RUN 01] Nachlauf läuft 180s
+2026-06-10T08:43:35+00:00
+[RUN 01] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-01-router
+fault_time=2026-06-10T08:40:26+00:00
+recovery_time=2026-06-10T08:40:29+00:00
+
+--- overall ---
+requests_total=421
+success=421
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.32
+median_ms=2.56
+p95_ms=4.87
+p99_ms=7.40
+min_ms=0.83
+max_ms=209.11
+timeouts=0
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.74
+median_ms=2.16
+p95_ms=5.33
+p99_ms=7.42
+min_ms=0.83
+max_ms=9.39
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=71.28
+median_ms=3.71
+p95_ms=209.11
+p99_ms=209.11
+min_ms=1.03
+max_ms=209.11
+timeouts=0
+
+--- after ---
+requests_total=238
+success=238
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.90
+median_ms=3.05
+p95_ms=4.33
+p99_ms=5.10
+min_ms=1.02
+max_ms=9.19
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.595425
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-01-router
+fault_time=2026-06-10T08:40:26+00:00
+recovery_time=2026-06-10T08:40:29+00:00
+
+--- overall ---
+requests_total=421
+success=421
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.32
+median_ms=2.56
+p95_ms=4.87
+p99_ms=7.40
+min_ms=0.83
+max_ms=209.11
+timeouts=0
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.74
+median_ms=2.16
+p95_ms=5.33
+p99_ms=7.42
+min_ms=0.83
+max_ms=9.39
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=71.28
+median_ms=3.71
+p95_ms=209.11
+p99_ms=209.11
+min_ms=1.03
+max_ms=209.11
+timeouts=0
+
+--- after ---
+requests_total=238
+success=238
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.90
+median_ms=3.05
+p95_ms=4.33
+p99_ms=5.10
+min_ms=1.02
+max_ms=9.19
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.595425
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 148K
+-rw-rw-r-- 1 kim kim    7 Jun 10 08:37 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 08:37 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 08:37 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 08:37 duration_seconds.txt
+-rw-rw-r-- 1 kim kim  931 Jun 10 08:43 events_after.txt
+-rw-rw-r-- 1 kim kim  931 Jun 10 08:37 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:40 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 08:37 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 08:40 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 08:40 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 08:40 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 08:37 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:37 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:37 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 08:43 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 08:37 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 08:43 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 08:37 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:40 recovery_time.txt
+-rw-rw-r-- 1 kim kim  36K Jun 10 08:44 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 08:40 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 08:40 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 08:37 scenario.txt
+-rw-rw-r-- 1 kim kim  970 Jun 10 08:44 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:43 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:37 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 08:37 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 08:37 traceroute_before.txt
+[RUN 01] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-01-router
+=== Finished link-cut-1s run-01 at 2026-06-10T08:44:28+00:00 ===
+=== Starting link-cut-1s run-02 at 2026-06-10T08:45:28+00:00 ===
+[RUN 02] Starte link-cut-1s
+2026-06-10T08:45:28+00:00
+[RUN 02] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 02] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.141 ms  0.148 ms  0.211 ms
+ 2  10.10.20.129 (10.10.20.129)  0.453 ms  0.467 ms  0.681 ms
+[RUN 02] Starte Request-Monitor für 421s
+2026-06-10T08:45:30+00:00
+[RUN 02] Vorlauf läuft 180s
+[RUN 02] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T08:48:30+00:00
+[RUN 02] Verbindungsabbruch läuft 1s
+[RUN 02] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T08:48:33+00:00
+[RUN 02] Nachlauf läuft 180s
+No resources found
+2026-06-10T09:11:41+00:00
+[RUN 02] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-02-router
+fault_time=2026-06-10T08:48:30+00:00
+recovery_time=2026-06-10T08:48:33+00:00
+
+--- overall ---
+requests_total=296
+success=296
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.60
+median_ms=3.00
+p95_ms=4.29
+p99_ms=5.64
+min_ms=0.85
+max_ms=204.94
+timeouts=0
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.87
+median_ms=2.95
+p95_ms=3.88
+p99_ms=5.21
+min_ms=1.33
+max_ms=5.24
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=69.77
+median_ms=3.20
+p95_ms=204.94
+p99_ms=204.94
+min_ms=1.16
+max_ms=204.94
+timeouts=0
+
+--- after ---
+requests_total=113
+success=113
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.01
+median_ms=3.32
+p95_ms=4.67
+p99_ms=5.64
+min_ms=0.85
+max_ms=6.11
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.506742
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-02-router
+fault_time=2026-06-10T08:48:30+00:00
+recovery_time=2026-06-10T08:48:33+00:00
+
+--- overall ---
+requests_total=296
+success=296
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.60
+median_ms=3.00
+p95_ms=4.29
+p99_ms=5.64
+min_ms=0.85
+max_ms=204.94
+timeouts=0
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.87
+median_ms=2.95
+p95_ms=3.88
+p99_ms=5.21
+min_ms=1.33
+max_ms=5.24
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=69.77
+median_ms=3.20
+p95_ms=204.94
+p99_ms=204.94
+min_ms=1.16
+max_ms=204.94
+timeouts=0
+
+--- after ---
+requests_total=113
+success=113
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.01
+median_ms=3.32
+p95_ms=4.67
+p99_ms=5.64
+min_ms=0.85
+max_ms=6.11
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.506742
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 136K
+-rw-rw-r-- 1 kim kim    7 Jun 10 08:45 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 08:45 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 08:45 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 08:45 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 09:11 events_after.txt
+-rw-rw-r-- 1 kim kim  931 Jun 10 08:45 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:48 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 08:45 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 08:48 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 08:48 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 08:48 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 08:45 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:45 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:45 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 09:11 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 08:45 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 09:11 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 08:45 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:48 recovery_time.txt
+-rw-rw-r-- 1 kim kim  25K Jun 10 08:50 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 08:48 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 08:48 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 08:45 scenario.txt
+-rw-rw-r-- 1 kim kim  970 Jun 10 09:11 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:11 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 08:45 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 08:45 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 08:45 traceroute_before.txt
+[RUN 02] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-02-router
+=== Finished link-cut-1s run-02 at 2026-06-10T09:11:41+00:00 ===
+=== Starting link-cut-1s run-03 at 2026-06-10T09:12:41+00:00 ===
+[RUN 03] Starte link-cut-1s
+2026-06-10T09:12:41+00:00
+[RUN 03] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 03] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.596 ms  0.564 ms  0.545 ms
+ 2  10.10.20.129 (10.10.20.129)  1.193 ms  1.286 ms  1.271 ms
+No resources found
+[RUN 03] Starte Request-Monitor für 421s
+2026-06-10T09:12:43+00:00
+[RUN 03] Vorlauf läuft 180s
+[RUN 03] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T09:15:43+00:00
+[RUN 03] Verbindungsabbruch läuft 1s
+[RUN 03] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T09:15:47+00:00
+[RUN 03] Nachlauf läuft 180s
+No resources found
+2026-06-10T09:18:52+00:00
+[RUN 03] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-03-router
+fault_time=2026-06-10T09:15:43+00:00
+recovery_time=2026-06-10T09:15:47+00:00
+
+--- overall ---
+requests_total=421
+success=421
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.46
+median_ms=2.98
+p95_ms=4.13
+p99_ms=6.12
+min_ms=0.97
+max_ms=209.93
+timeouts=0
+
+--- baseline ---
+requests_total=179
+success=179
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.96
+median_ms=2.96
+p95_ms=4.35
+p99_ms=6.12
+min_ms=1.04
+max_ms=6.59
+timeouts=0
+
+--- fault ---
+requests_total=4
+success=4
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=54.50
+median_ms=3.52
+p95_ms=209.93
+p99_ms=209.93
+min_ms=1.01
+max_ms=209.93
+timeouts=0
+
+--- after ---
+requests_total=238
+success=238
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.98
+median_ms=2.98
+p95_ms=3.81
+p99_ms=4.93
+min_ms=0.97
+max_ms=17.05
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.018425
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-03-router
+fault_time=2026-06-10T09:15:43+00:00
+recovery_time=2026-06-10T09:15:47+00:00
+
+--- overall ---
+requests_total=421
+success=421
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.46
+median_ms=2.98
+p95_ms=4.13
+p99_ms=6.12
+min_ms=0.97
+max_ms=209.93
+timeouts=0
+
+--- baseline ---
+requests_total=179
+success=179
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.96
+median_ms=2.96
+p95_ms=4.35
+p99_ms=6.12
+min_ms=1.04
+max_ms=6.59
+timeouts=0
+
+--- fault ---
+requests_total=4
+success=4
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=54.50
+median_ms=3.52
+p95_ms=209.93
+p99_ms=209.93
+min_ms=1.01
+max_ms=209.93
+timeouts=0
+
+--- after ---
+requests_total=238
+success=238
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.98
+median_ms=2.98
+p95_ms=3.81
+p99_ms=4.93
+min_ms=0.97
+max_ms=17.05
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.018425
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 140K
+-rw-rw-r-- 1 kim kim    7 Jun 10 09:12 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 09:12 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 09:12 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 09:12 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 09:18 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 09:12 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:15 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 09:12 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 09:15 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 09:15 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 09:15 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 09:12 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:12 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:12 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 09:18 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 09:12 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 09:18 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 09:12 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:15 recovery_time.txt
+-rw-rw-r-- 1 kim kim  36K Jun 10 09:19 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 09:15 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 09:15 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 09:12 scenario.txt
+-rw-rw-r-- 1 kim kim  971 Jun 10 09:19 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:18 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:12 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 09:12 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 09:12 traceroute_before.txt
+[RUN 03] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-03-router
+=== Finished link-cut-1s run-03 at 2026-06-10T09:19:45+00:00 ===
+=== Starting link-cut-1s run-04 at 2026-06-10T09:26:01+00:00 ===
+[RUN 04] Starte link-cut-1s
+2026-06-10T09:26:01+00:00
+[RUN 04] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 04] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.221 ms  0.373 ms  0.358 ms
+ 2  10.10.20.129 (10.10.20.129)  0.899 ms  0.884 ms  0.871 ms
+No resources found
+[RUN 04] Starte Request-Monitor für 421s
+2026-06-10T09:26:02+00:00
+[RUN 04] Vorlauf läuft 180s
+[RUN 04] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T09:36:11+00:00
+[RUN 04] Verbindungsabbruch läuft 1s
+[RUN 04] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T09:36:15+00:00
+[RUN 04] Nachlauf läuft 180s
+No resources found
+2026-06-10T09:53:49+00:00
+[RUN 04] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-04-router
+fault_time=2026-06-10T09:36:11+00:00
+recovery_time=2026-06-10T09:36:15+00:00
+
+--- overall ---
+requests_total=107
+success=107
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.07
+median_ms=3.18
+p95_ms=4.97
+p99_ms=6.65
+min_ms=0.96
+max_ms=7.22
+timeouts=0
+
+--- baseline ---
+requests_total=107
+success=107
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.07
+median_ms=3.18
+p95_ms=4.97
+p99_ms=6.65
+min_ms=0.96
+max_ms=7.22
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-04-router
+fault_time=2026-06-10T09:36:11+00:00
+recovery_time=2026-06-10T09:36:15+00:00
+
+--- overall ---
+requests_total=107
+success=107
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.07
+median_ms=3.18
+p95_ms=4.97
+p99_ms=6.65
+min_ms=0.96
+max_ms=7.22
+timeouts=0
+
+--- baseline ---
+requests_total=107
+success=107
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.07
+median_ms=3.18
+p95_ms=4.97
+p99_ms=6.65
+min_ms=0.96
+max_ms=7.22
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 112K
+-rw-rw-r-- 1 kim kim    7 Jun 10 09:26 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 09:26 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 09:26 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 09:26 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 09:53 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 09:26 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:36 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 09:26 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 09:36 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 09:36 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 09:36 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 09:26 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:26 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:26 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 09:53 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 09:26 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 09:53 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 09:26 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:36 recovery_time.txt
+-rw-rw-r-- 1 kim kim 9.0K Jun 10 09:33 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 09:36 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 09:36 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 09:26 scenario.txt
+-rw-rw-r-- 1 kim kim  799 Jun 10 09:53 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:53 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:26 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 09:26 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 09:26 traceroute_before.txt
+[RUN 04] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-04-router
+=== Finished link-cut-1s run-04 at 2026-06-10T09:53:49+00:00 ===
+=== Starting link-cut-1s run-05 at 2026-06-10T09:54:49+00:00 ===
+[RUN 05] Starte link-cut-1s
+2026-06-10T09:54:49+00:00
+[RUN 05] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 05] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.186 ms  0.156 ms  0.252 ms
+ 2  10.10.20.129 (10.10.20.129)  0.567 ms  0.591 ms  0.657 ms
+No resources found
+[RUN 05] Starte Request-Monitor für 421s
+2026-06-10T09:54:51+00:00
+[RUN 05] Vorlauf läuft 180s
+[RUN 05] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T09:57:51+00:00
+[RUN 05] Verbindungsabbruch läuft 1s
+[RUN 05] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T09:57:54+00:00
+[RUN 05] Nachlauf läuft 180s
+No resources found
+2026-06-10T10:01:00+00:00
+[RUN 05] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-05-router
+fault_time=2026-06-10T09:57:51+00:00
+recovery_time=2026-06-10T09:57:54+00:00
+
+--- overall ---
+requests_total=421
+success=421
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.63
+median_ms=3.35
+p95_ms=4.90
+p99_ms=6.00
+min_ms=0.84
+max_ms=212.21
+timeouts=0
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.92
+median_ms=3.11
+p95_ms=4.65
+p99_ms=5.38
+min_ms=0.84
+max_ms=5.81
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=71.63
+median_ms=1.72
+p95_ms=212.21
+p99_ms=212.21
+min_ms=0.95
+max_ms=212.21
+timeouts=0
+
+--- after ---
+requests_total=238
+success=238
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.31
+median_ms=3.51
+p95_ms=5.15
+p99_ms=6.03
+min_ms=0.98
+max_ms=9.74
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.467112
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-05-router
+fault_time=2026-06-10T09:57:51+00:00
+recovery_time=2026-06-10T09:57:54+00:00
+
+--- overall ---
+requests_total=421
+success=421
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.63
+median_ms=3.35
+p95_ms=4.90
+p99_ms=6.00
+min_ms=0.84
+max_ms=212.21
+timeouts=0
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.92
+median_ms=3.11
+p95_ms=4.65
+p99_ms=5.38
+min_ms=0.84
+max_ms=5.81
+timeouts=0
+
+--- fault ---
+requests_total=3
+success=3
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=71.63
+median_ms=1.72
+p95_ms=212.21
+p99_ms=212.21
+min_ms=0.95
+max_ms=212.21
+timeouts=0
+
+--- after ---
+requests_total=238
+success=238
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.31
+median_ms=3.51
+p95_ms=5.15
+p99_ms=6.03
+min_ms=0.98
+max_ms=9.74
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.467112
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 140K
+-rw-rw-r-- 1 kim kim    7 Jun 10 09:54 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 09:54 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 09:54 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 09:54 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 10:01 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 09:54 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:57 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 09:54 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 09:57 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 09:57 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 09:57 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 09:54 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:54 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:54 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 10:01 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 09:54 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 10:01 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 09:54 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:57 recovery_time.txt
+-rw-rw-r-- 1 kim kim  36K Jun 10 10:01 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 09:58 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 09:57 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 09:54 scenario.txt
+-rw-rw-r-- 1 kim kim  970 Jun 10 10:01 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:01 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 09:54 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 09:54 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 09:54 traceroute_before.txt
+[RUN 05] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-05-router
+=== Finished link-cut-1s run-05 at 2026-06-10T10:01:52+00:00 ===
+=== Starting link-cut-1s run-06 at 2026-06-10T10:08:43+00:00 ===
+[RUN 06] Starte link-cut-1s
+2026-06-10T10:08:43+00:00
+[RUN 06] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 06] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.457 ms  0.472 ms  0.453 ms
+ 2  10.10.20.129 (10.10.20.129)  0.910 ms  0.967 ms  0.997 ms
+No resources found
+[RUN 06] Starte Request-Monitor für 421s
+2026-06-10T10:08:45+00:00
+[RUN 06] Vorlauf läuft 180s
+[RUN 06] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T10:30:44+00:00
+[RUN 06] Verbindungsabbruch läuft 1s
+[RUN 06] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T10:30:48+00:00
+[RUN 06] Nachlauf läuft 180s
+No resources found
+2026-06-10T10:51:41+00:00
+[RUN 06] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-06-router
+fault_time=2026-06-10T10:30:44+00:00
+recovery_time=2026-06-10T10:30:48+00:00
+
+--- overall ---
+requests_total=26
+success=26
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.79
+median_ms=1.94
+p95_ms=4.60
+p99_ms=12.07
+min_ms=0.88
+max_ms=12.07
+timeouts=0
+
+--- baseline ---
+requests_total=26
+success=26
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.79
+median_ms=1.94
+p95_ms=4.60
+p99_ms=12.07
+min_ms=0.88
+max_ms=12.07
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-06-router
+fault_time=2026-06-10T10:30:44+00:00
+recovery_time=2026-06-10T10:30:48+00:00
+
+--- overall ---
+requests_total=26
+success=26
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.79
+median_ms=1.94
+p95_ms=4.60
+p99_ms=12.07
+min_ms=0.88
+max_ms=12.07
+timeouts=0
+
+--- baseline ---
+requests_total=26
+success=26
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.79
+median_ms=1.94
+p95_ms=4.60
+p99_ms=12.07
+min_ms=0.88
+max_ms=12.07
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 104K
+-rw-rw-r-- 1 kim kim    7 Jun 10 10:08 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 10:08 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 10:08 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 10:08 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 10:51 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 10:08 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:30 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 10:08 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 10:30 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 10:30 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 10:30 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 10:08 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:08 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:08 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 10:51 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 10:08 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 10:51 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 10:08 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:30 recovery_time.txt
+-rw-rw-r-- 1 kim kim 2.3K Jun 10 10:09 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 10:30 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 10:30 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 10:08 scenario.txt
+-rw-rw-r-- 1 kim kim  799 Jun 10 10:51 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:51 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:08 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 10:08 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 10:08 traceroute_before.txt
+[RUN 06] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-06-router
+=== Finished link-cut-1s run-06 at 2026-06-10T10:51:41+00:00 ===
+=== Starting link-cut-1s run-07 at 2026-06-10T10:55:08+00:00 ===
+[RUN 07] Starte link-cut-1s
+2026-06-10T10:55:08+00:00
+[RUN 07] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 07] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.405 ms  0.379 ms  0.360 ms
+ 2  10.10.20.129 (10.10.20.129)  0.913 ms  0.963 ms  1.026 ms
+No resources found
+[RUN 07] Starte Request-Monitor für 421s
+2026-06-10T10:55:10+00:00
+[RUN 07] Vorlauf läuft 180s
+[RUN 07] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T10:58:10+00:00
+[RUN 07] Verbindungsabbruch läuft 1s
+[RUN 07] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T10:58:14+00:00
+[RUN 07] Nachlauf läuft 180s
+No resources found
+2026-06-10T11:01:19+00:00
+[RUN 07] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-07-router
+fault_time=2026-06-10T10:58:10+00:00
+recovery_time=2026-06-10T10:58:14+00:00
+
+--- overall ---
+requests_total=421
+success=421
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.46
+median_ms=2.70
+p95_ms=5.01
+p99_ms=6.27
+min_ms=0.96
+max_ms=206.20
+timeouts=0
+
+--- baseline ---
+requests_total=179
+success=179
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.92
+median_ms=2.31
+p95_ms=4.88
+p99_ms=6.19
+min_ms=1.02
+max_ms=8.09
+timeouts=0
+
+--- fault ---
+requests_total=4
+success=4
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=52.92
+median_ms=2.26
+p95_ms=206.20
+p99_ms=206.20
+min_ms=0.96
+max_ms=206.20
+timeouts=0
+
+--- after ---
+requests_total=238
+success=238
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.03
+median_ms=2.99
+p95_ms=5.17
+p99_ms=6.27
+min_ms=1.05
+max_ms=11.43
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.024445
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-07-router
+fault_time=2026-06-10T10:58:10+00:00
+recovery_time=2026-06-10T10:58:14+00:00
+
+--- overall ---
+requests_total=421
+success=421
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.46
+median_ms=2.70
+p95_ms=5.01
+p99_ms=6.27
+min_ms=0.96
+max_ms=206.20
+timeouts=0
+
+--- baseline ---
+requests_total=179
+success=179
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.92
+median_ms=2.31
+p95_ms=4.88
+p99_ms=6.19
+min_ms=1.02
+max_ms=8.09
+timeouts=0
+
+--- fault ---
+requests_total=4
+success=4
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=52.92
+median_ms=2.26
+p95_ms=206.20
+p99_ms=206.20
+min_ms=0.96
+max_ms=206.20
+timeouts=0
+
+--- after ---
+requests_total=238
+success=238
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.03
+median_ms=2.99
+p95_ms=5.17
+p99_ms=6.27
+min_ms=1.05
+max_ms=11.43
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.024445
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 140K
+-rw-rw-r-- 1 kim kim    7 Jun 10 10:55 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 10:55 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 10:55 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 10:55 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 11:01 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 10:55 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:58 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 10:55 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 10:58 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 10:58 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 10:58 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 10:55 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:55 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:55 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 11:01 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 10:55 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 11:01 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 10:55 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:58 recovery_time.txt
+-rw-rw-r-- 1 kim kim  36K Jun 10 11:02 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 10:58 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 10:58 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 10:55 scenario.txt
+-rw-rw-r-- 1 kim kim  971 Jun 10 11:02 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:01 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 10:55 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 10:55 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 10:55 traceroute_before.txt
+[RUN 07] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-07-router
+=== Finished link-cut-1s run-07 at 2026-06-10T11:02:12+00:00 ===
+=== Starting link-cut-1s run-08 at 2026-06-10T11:03:12+00:00 ===
+[RUN 08] Starte link-cut-1s
+2026-06-10T11:03:12+00:00
+[RUN 08] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 08] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.334 ms  0.307 ms  0.291 ms
+ 2  10.10.20.129 (10.10.20.129)  0.717 ms  0.667 ms  0.640 ms
+No resources found
+[RUN 08] Starte Request-Monitor für 421s
+2026-06-10T11:03:14+00:00
+[RUN 08] Vorlauf läuft 180s
+[RUN 08] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T11:26:51+00:00
+[RUN 08] Verbindungsabbruch läuft 1s
+[RUN 08] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T11:26:54+00:00
+[RUN 08] Nachlauf läuft 180s
+No resources found
+2026-06-10T11:30:00+00:00
+[RUN 08] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-08-router
+fault_time=2026-06-10T11:26:51+00:00
+recovery_time=2026-06-10T11:26:54+00:00
+
+--- overall ---
+requests_total=131
+success=131
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.88
+median_ms=3.09
+p95_ms=4.50
+p99_ms=5.10
+min_ms=0.81
+max_ms=5.28
+timeouts=0
+
+--- baseline ---
+requests_total=131
+success=131
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.88
+median_ms=3.09
+p95_ms=4.50
+p99_ms=5.10
+min_ms=0.81
+max_ms=5.28
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-08-router
+fault_time=2026-06-10T11:26:51+00:00
+recovery_time=2026-06-10T11:26:54+00:00
+
+--- overall ---
+requests_total=131
+success=131
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.88
+median_ms=3.09
+p95_ms=4.50
+p99_ms=5.10
+min_ms=0.81
+max_ms=5.28
+timeouts=0
+
+--- baseline ---
+requests_total=131
+success=131
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.88
+median_ms=3.09
+p95_ms=4.50
+p99_ms=5.10
+min_ms=0.81
+max_ms=5.28
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 112K
+-rw-rw-r-- 1 kim kim    7 Jun 10 11:03 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 11:03 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 11:03 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 11:03 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 11:30 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 11:03 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:26 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 11:03 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 11:27 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 11:26 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 11:26 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 11:03 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:03 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:03 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 11:30 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 11:03 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 11:30 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 11:03 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:26 recovery_time.txt
+-rw-rw-r-- 1 kim kim  11K Jun 10 11:05 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 11:27 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 11:26 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 11:03 scenario.txt
+-rw-rw-r-- 1 kim kim  799 Jun 10 11:30 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:30 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:03 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 11:03 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 11:03 traceroute_before.txt
+[RUN 08] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-08-router
+=== Finished link-cut-1s run-08 at 2026-06-10T11:30:00+00:00 ===
+=== Starting link-cut-1s run-09 at 2026-06-10T11:31:00+00:00 ===
+[RUN 09] Starte link-cut-1s
+2026-06-10T11:31:00+00:00
+[RUN 09] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 09] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.263 ms  0.227 ms  0.208 ms
+ 2  10.10.20.129 (10.10.20.129)  0.595 ms  0.474 ms  0.701 ms
+No resources found
+[RUN 09] Starte Request-Monitor für 421s
+2026-06-10T11:31:02+00:00
+[RUN 09] Vorlauf läuft 180s
+[RUN 09] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T11:34:02+00:00
+[RUN 09] Verbindungsabbruch läuft 1s
+[RUN 09] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T11:34:06+00:00
+[RUN 09] Nachlauf läuft 180s
+No resources found
+2026-06-10T11:41:15+00:00
+[RUN 09] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-09-router
+fault_time=2026-06-10T11:34:02+00:00
+recovery_time=2026-06-10T11:34:06+00:00
+
+--- overall ---
+requests_total=360
+success=360
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.61
+median_ms=3.30
+p95_ms=4.78
+p99_ms=5.87
+min_ms=0.94
+max_ms=206.44
+timeouts=0
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.94
+median_ms=3.07
+p95_ms=4.55
+p99_ms=5.28
+min_ms=0.94
+max_ms=5.57
+timeouts=0
+
+--- fault ---
+requests_total=4
+success=4
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=53.27
+median_ms=2.75
+p95_ms=206.44
+p99_ms=206.44
+min_ms=1.13
+max_ms=206.44
+timeouts=0
+
+--- after ---
+requests_total=176
+success=176
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.18
+median_ms=3.43
+p95_ms=4.82
+p99_ms=5.96
+min_ms=1.13
+max_ms=6.81
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.743823
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-09-router
+fault_time=2026-06-10T11:34:02+00:00
+recovery_time=2026-06-10T11:34:06+00:00
+
+--- overall ---
+requests_total=360
+success=360
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.61
+median_ms=3.30
+p95_ms=4.78
+p99_ms=5.87
+min_ms=0.94
+max_ms=206.44
+timeouts=0
+
+--- baseline ---
+requests_total=180
+success=180
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.94
+median_ms=3.07
+p95_ms=4.55
+p99_ms=5.28
+min_ms=0.94
+max_ms=5.57
+timeouts=0
+
+--- fault ---
+requests_total=4
+success=4
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=53.27
+median_ms=2.75
+p95_ms=206.44
+p99_ms=206.44
+min_ms=1.13
+max_ms=206.44
+timeouts=0
+
+--- after ---
+requests_total=176
+success=176
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.18
+median_ms=3.43
+p95_ms=4.82
+p99_ms=5.96
+min_ms=1.13
+max_ms=6.81
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.743823
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 136K
+-rw-rw-r-- 1 kim kim    7 Jun 10 11:31 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 11:31 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 11:31 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 11:31 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 11:41 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 11:31 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:34 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 11:31 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 11:34 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 11:34 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 11:34 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 11:31 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:31 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:31 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 11:41 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 11:31 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 11:41 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 11:31 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:34 recovery_time.txt
+-rw-rw-r-- 1 kim kim  31K Jun 10 11:37 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 11:34 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 11:34 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 11:31 scenario.txt
+-rw-rw-r-- 1 kim kim  970 Jun 10 11:41 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:41 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:31 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 11:31 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 11:31 traceroute_before.txt
+[RUN 09] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-09-router
+=== Finished link-cut-1s run-09 at 2026-06-10T11:41:15+00:00 ===
+=== Starting link-cut-1s run-10 at 2026-06-10T11:43:53+00:00 ===
+[RUN 10] Starte link-cut-1s
+2026-06-10T11:43:53+00:00
+[RUN 10] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 10] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.181 ms  0.439 ms  0.424 ms
+ 2  10.10.20.129 (10.10.20.129)  0.905 ms  0.930 ms  0.974 ms
+No resources found
+[RUN 10] Starte Request-Monitor für 421s
+2026-06-10T11:43:55+00:00
+[RUN 10] Vorlauf läuft 180s
+[RUN 10] Starte Verbindungsabbruch auf Router-Interface ens256 für 1s
+2026-06-10T12:02:34+00:00
+[RUN 10] Verbindungsabbruch läuft 1s
+[RUN 10] Erzwinge zusätzliches Interface-Up von s1 über Router-NAT
+2026-06-10T12:02:38+00:00
+[RUN 10] Nachlauf läuft 180s
+No resources found
+2026-06-10T12:05:44+00:00
+[RUN 10] Berechne Zusammenfassung
+=== Run summary ===
+scenario=link-cut-1s
+run=run-10-router
+fault_time=2026-06-10T12:02:34+00:00
+recovery_time=2026-06-10T12:02:38+00:00
+
+--- overall ---
+requests_total=49
+success=49
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.03
+median_ms=2.24
+p95_ms=5.27
+p99_ms=10.07
+min_ms=1.00
+max_ms=10.07
+timeouts=0
+
+--- baseline ---
+requests_total=49
+success=49
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.03
+median_ms=2.24
+p95_ms=5.27
+p99_ms=10.07
+min_ms=1.00
+max_ms=10.07
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+=== Run summary ===
+scenario=link-cut-1s
+run=run-10-router
+fault_time=2026-06-10T12:02:34+00:00
+recovery_time=2026-06-10T12:02:38+00:00
+
+--- overall ---
+requests_total=49
+success=49
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.03
+median_ms=2.24
+p95_ms=5.27
+p99_ms=10.07
+min_ms=1.00
+max_ms=10.07
+timeouts=0
+
+--- baseline ---
+requests_total=49
+success=49
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.03
+median_ms=2.24
+p95_ms=5.27
+p99_ms=10.07
+min_ms=1.00
+max_ms=10.07
+timeouts=0
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+link_cut_applied=yes
+total 108K
+-rw-rw-r-- 1 kim kim    7 Jun 10 11:43 affected_interface.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 11:43 after_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 11:43 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    2 Jun 10 11:43 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 12:05 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun 10 11:43 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 12:02 fault_time.txt
+-rw-rw-r-- 1 kim kim   16 Jun 10 11:43 fault_type.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 12:02 interface_after_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 12:02 interface_before_fault.txt
+-rw-rw-r-- 1 kim kim  218 Jun 10 12:02 interface_during_fault.txt
+-rw-rw-r-- 1 kim kim    3 Jun 10 11:43 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:43 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:43 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 12:05 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun 10 11:43 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 12:05 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun 10 11:43 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 12:02 recovery_time.txt
+-rw-rw-r-- 1 kim kim 4.2K Jun 10 11:44 requests.csv
+-rw-rw-r-- 1 kim kim  511 Jun 10 12:02 router_fault_job.log
+-rw-rw-r-- 1 kim kim   86 Jun 10 12:02 s1_interface_recovery.log
+-rw-rw-r-- 1 kim kim   12 Jun 10 11:43 scenario.txt
+-rw-rw-r-- 1 kim kim  799 Jun 10 12:05 summary.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 12:05 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun 10 11:43 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun 10 11:43 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun 10 11:43 traceroute_before.txt
+[RUN 10] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/link-cut-1s/run-10-router
+=== Finished link-cut-1s run-10 at 2026-06-10T12:05:44+00:00 ===
+Scenario link-cut-1s finished at 2026-06-10T12:06:44+00:00

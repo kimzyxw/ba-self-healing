@@ -1,0 +1,187 @@
+Scenario packet-loss-smoke-10pct-monitor-timestamp started at 2026-06-08T14:07:18+00:00
+=== Starting packet-loss-smoke-10pct-monitor-timestamp run-1 at 2026-06-08T14:07:18+00:00 ===
+[RUN 1] Starte packet-loss-smoke-10pct-monitor-timestamp
+2026-06-08T14:07:18+00:00
+[RUN 1] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 1] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.624 ms  0.596 ms  0.583 ms
+ 2  10.10.20.129 (10.10.20.129)  1.012 ms  1.000 ms  0.972 ms
+No resources found
+[RUN 1] Starte Request-Monitor für 240s
+2026-06-08T14:07:20+00:00
+[RUN 1] Vorlauf läuft 60s
+[RUN 1] Setze Paketverlust: 10%
+2026-06-08T14:08:20+00:00
+qdisc netem 802c: root refcnt 2 limit 1000 loss 10% seed 7316835274455602798
+[RUN 1] Entferne Paketverlust
+2026-06-08T14:10:20+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 1] Nachlauf läuft 60s
+No resources found
+2026-06-08T14:11:21+00:00
+[RUN 1] Berechne Zusammenfassung
+=== Run summary ===
+scenario=packet-loss-smoke-10pct-monitor-timestamp
+run=run-1-router
+fault_time=2026-06-08T14:08:20+00:00
+recovery_time=2026-06-08T14:10:20+00:00
+
+--- overall ---
+requests_total=240
+success=240
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=14.23
+median_ms=2.98
+p95_ms=7.07
+p99_ms=417.65
+min_ms=0.99
+max_ms=617.61
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.50
+median_ms=2.09
+p95_ms=4.02
+p99_ms=6.22
+min_ms=0.99
+max_ms=6.22
+timeouts=0
+
+--- fault ---
+requests_total=120
+success=120
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=25.82
+median_ms=3.60
+p95_ms=211.43
+p99_ms=420.01
+min_ms=1.18
+max_ms=617.61
+timeouts=0
+
+--- after ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.77
+median_ms=2.31
+p95_ms=4.85
+p99_ms=7.26
+min_ms=1.07
+max_ms=7.26
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.620172
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes
+=== Run summary ===
+scenario=packet-loss-smoke-10pct-monitor-timestamp
+run=run-1-router
+fault_time=2026-06-08T14:08:20+00:00
+recovery_time=2026-06-08T14:10:20+00:00
+
+--- overall ---
+requests_total=240
+success=240
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=14.23
+median_ms=2.98
+p95_ms=7.07
+p99_ms=417.65
+min_ms=0.99
+max_ms=617.61
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.50
+median_ms=2.09
+p95_ms=4.02
+p99_ms=6.22
+min_ms=0.99
+max_ms=6.22
+timeouts=0
+
+--- fault ---
+requests_total=120
+success=120
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=25.82
+median_ms=3.60
+p95_ms=211.43
+p99_ms=420.01
+min_ms=1.18
+max_ms=617.61
+timeouts=0
+
+--- after ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.77
+median_ms=2.31
+p95_ms=4.85
+p99_ms=7.26
+min_ms=1.07
+max_ms=7.26
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.620172
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes
+total 112K
+-rw-rw-r-- 1 kim kim    7 Jun  8 14:07 affected_interface.txt
+-rw-rw-r-- 1 kim kim    3 Jun  8 14:07 after_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  8 14:07 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  8 14:07 duration_seconds.txt
+-rw-rw-r-- 1 kim kim    0 Jun  8 14:11 events_after.txt
+-rw-rw-r-- 1 kim kim    0 Jun  8 14:07 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  8 14:08 fault_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun  8 14:07 loss.txt
+-rw-rw-r-- 1 kim kim    3 Jun  8 14:07 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun  8 14:07 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  8 14:07 monitored_url.txt
+-rw-rw-r-- 1 kim kim  906 Jun  8 14:11 nodes_after.txt
+-rw-rw-r-- 1 kim kim  906 Jun  8 14:07 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun  8 14:11 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun  8 14:07 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  8 14:10 recovery_time.txt
+-rw-rw-r-- 1 kim kim  21K Jun  8 14:11 requests.csv
+-rw-rw-r-- 1 kim kim   42 Jun  8 14:07 scenario.txt
+-rw-rw-r-- 1 kim kim 1005 Jun  8 14:11 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  8 14:10 tc_after.txt
+-rw-rw-r-- 1 kim kim   77 Jun  8 14:08 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  8 14:11 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  8 14:07 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun  8 14:07 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun  8 14:07 traceroute_before.txt
+[RUN 1] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/packet-loss-smoke-10pct-monitor-timestamp/run-1-router
+=== Finished packet-loss-smoke-10pct-monitor-timestamp run-1 at 2026-06-08T14:11:21+00:00 ===
+Scenario packet-loss-smoke-10pct-monitor-timestamp finished at 2026-06-08T14:12:21+00:00

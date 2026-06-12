@@ -1,0 +1,4 @@
+fault_start=2026-06-09T21:45:02+00:00
+qdisc netem 8053: root refcnt 2 limit 1000 loss 100% seed 10771492733515164627
+router_cleanup_time=2026-06-09T21:55:02+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 

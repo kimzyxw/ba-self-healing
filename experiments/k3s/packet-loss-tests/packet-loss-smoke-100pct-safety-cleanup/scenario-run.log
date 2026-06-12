@@ -1,0 +1,191 @@
+Scenario packet-loss-smoke-100pct-safety-cleanup started at 2026-06-09T18:57:54+00:00
+=== Starting packet-loss-smoke-100pct-safety-cleanup run-1 at 2026-06-09T18:57:54+00:00 ===
+[RUN 1] Starte packet-loss-smoke-100pct-safety-cleanup
+2026-06-09T18:57:54+00:00
+[RUN 1] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 1] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.410 ms  0.360 ms  0.376 ms
+ 2  10.10.20.129 (10.10.20.129)  0.966 ms  0.938 ms  0.923 ms
+[RUN 1] Starte Request-Monitor für 300s
+2026-06-09T18:57:56+00:00
+[RUN 1] Vorlauf läuft 60s
+[RUN 1] Starte Router-gesteuerten Paketverlust mit zusätzlichem Safety-Cleanup: 100% für 120s
+2026-06-09T18:58:56+00:00
+Error: Cannot delete qdisc with handle of zero.
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+qdisc netem 804c: root refcnt 2 limit 1000 loss 100% seed 3474326302135196967
+[RUN 1] Fault läuft 120s
+[RUN 1] Erzwinge zusätzliches Cleanup von s1 über Router-NAT
+2026-06-09T19:00:59+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 1] Nachlauf läuft 60s
+2026-06-09T19:02:05+00:00
+[RUN 1] Berechne Zusammenfassung
+=== Run summary ===
+scenario=packet-loss-smoke-100pct-safety-cleanup
+run=run-1-router
+fault_time=2026-06-09T18:58:56+00:00
+recovery_time=2026-06-09T19:00:59+00:00
+
+--- overall ---
+requests_total=275
+success=182
+failed=93
+success_rate=66.18%
+error_rate=33.82%
+avg_ms=2462.85
+median_ms=3.97
+p95_ms=3072.86
+p99_ms=69203.57
+min_ms=0.88
+max_ms=131025.74
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.94
+median_ms=2.75
+p95_ms=4.87
+p99_ms=5.63
+min_ms=1.03
+max_ms=5.63
+timeouts=0
+
+--- fault ---
+requests_total=98
+success=5
+failed=93
+success_rate=5.10%
+error_rate=94.90%
+avg_ms=6905.64
+median_ms=1923.49
+p95_ms=39018.51
+p99_ms=131025.74
+min_ms=1.11
+max_ms=131025.74
+timeouts=0
+
+--- after ---
+requests_total=117
+success=117
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.03
+median_ms=2.73
+p95_ms=4.94
+p99_ms=5.29
+min_ms=0.88
+max_ms=6.21
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.974032
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes
+=== Run summary ===
+scenario=packet-loss-smoke-100pct-safety-cleanup
+run=run-1-router
+fault_time=2026-06-09T18:58:56+00:00
+recovery_time=2026-06-09T19:00:59+00:00
+
+--- overall ---
+requests_total=275
+success=182
+failed=93
+success_rate=66.18%
+error_rate=33.82%
+avg_ms=2462.85
+median_ms=3.97
+p95_ms=3072.86
+p99_ms=69203.57
+min_ms=0.88
+max_ms=131025.74
+timeouts=0
+
+--- baseline ---
+requests_total=60
+success=60
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.94
+median_ms=2.75
+p95_ms=4.87
+p99_ms=5.63
+min_ms=1.03
+max_ms=5.63
+timeouts=0
+
+--- fault ---
+requests_total=98
+success=5
+failed=93
+success_rate=5.10%
+error_rate=94.90%
+avg_ms=6905.64
+median_ms=1923.49
+p95_ms=39018.51
+p99_ms=131025.74
+min_ms=1.11
+max_ms=131025.74
+timeouts=0
+
+--- after ---
+requests_total=117
+success=117
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=3.03
+median_ms=2.73
+p95_ms=4.94
+p99_ms=5.29
+min_ms=0.88
+max_ms=6.21
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.974032
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes
+total 136K
+-rw-rw-r-- 1 kim kim    7 Jun  9 18:57 affected_interface.txt
+-rw-rw-r-- 1 kim kim    3 Jun  9 18:57 after_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  9 18:57 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    4 Jun  9 18:57 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 3.0K Jun  9 19:02 events_after.txt
+-rw-rw-r-- 1 kim kim 2.6K Jun  9 18:57 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  9 18:58 fault_time.txt
+-rw-rw-r-- 1 kim kim    5 Jun  9 18:57 loss.txt
+-rw-rw-r-- 1 kim kim    3 Jun  9 18:57 max_in_flight.txt
+-rw-rw-r-- 1 kim kim   26 Jun  9 18:57 monitor_start_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  9 18:57 monitored_url.txt
+-rw-rw-r-- 1 kim kim  912 Jun  9 19:02 nodes_after.txt
+-rw-rw-r-- 1 kim kim  912 Jun  9 18:57 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun  9 19:02 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.2K Jun  9 18:57 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  9 19:00 recovery_time.txt
+-rw-rw-r-- 1 kim kim  25K Jun  9 19:02 requests.csv
+-rw-rw-r-- 1 kim kim  294 Jun  9 19:01 router_fault_job.log
+-rw-rw-r-- 1 kim kim  132 Jun  9 19:00 s1_safety_cleanup.log
+-rw-rw-r-- 1 kim kim   40 Jun  9 18:57 scenario.txt
+-rw-rw-r-- 1 kim kim 1.1K Jun  9 19:02 summary.txt
+-rw-rw-r-- 1 kim kim  132 Jun  9 19:01 tc_after.txt
+-rw-rw-r-- 1 kim kim  132 Jun  9 18:58 tc_before_fault.txt
+-rw-rw-r-- 1 kim kim   78 Jun  9 18:58 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  9 19:02 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  9 18:57 test_start_time.txt
+-rw-rw-r-- 1 kim kim    4 Jun  9 18:57 timeout_seconds.txt
+-rw-rw-r-- 1 kim kim  196 Jun  9 18:57 traceroute_before.txt
+[RUN 1] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/packet-loss-smoke-100pct-safety-cleanup/run-1-router
+=== Finished packet-loss-smoke-100pct-safety-cleanup run-1 at 2026-06-09T19:02:57+00:00 ===
+Scenario packet-loss-smoke-100pct-safety-cleanup finished at 2026-06-09T19:03:57+00:00

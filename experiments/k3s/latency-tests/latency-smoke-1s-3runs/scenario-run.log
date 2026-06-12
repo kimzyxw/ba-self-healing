@@ -1,0 +1,128 @@
+Scenario latency-smoke-1s-3runs started at 2026-06-02T09:46:17+00:00
+=== Starting latency-smoke-1s-3runs run-1 at 2026-06-02T09:46:17+00:00 ===
+[RUN 1] Starte latency-smoke-1s-3runs
+2026-06-02T09:46:17+00:00
+[RUN 1] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 1] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.338 ms  0.399 ms  0.456 ms
+ 2  10.10.20.129 (10.10.20.129)  0.736 ms  0.779 ms  0.845 ms
+[RUN 1] Vorlauf läuft 30s
+[RUN 1] Setze Latenz: 1s
+2026-06-02T09:46:48+00:00
+qdisc netem 8003: root refcnt 2 limit 1000 delay 1s seed 15442394297912092021
+[RUN 1] Entferne Latenz
+2026-06-02T09:48:00+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 1] Nachlauf läuft 30s
+2026-06-02T09:48:40+00:00
+total 88K
+-rw-rw-r-- 1 kim kim    7 Jun  2 09:46 affected_interface.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:46 after_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:46 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:46 delay.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:46 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 1.7K Jun  2 09:48 events_after.txt
+-rw-rw-r-- 1 kim kim 1.7K Jun  2 09:46 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:46 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:46 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  2 09:48 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  2 09:46 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  2 09:48 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  2 09:46 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:48 recovery_time.txt
+-rw-rw-r-- 1 kim kim 4.4K Jun  2 09:48 requests.csv
+-rw-rw-r-- 1 kim kim   23 Jun  2 09:46 scenario.txt
+-rw-rw-r-- 1 kim kim  132 Jun  2 09:48 tc_after.txt
+-rw-rw-r-- 1 kim kim   78 Jun  2 09:47 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:48 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:46 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  2 09:46 traceroute_before.txt
+[RUN 1] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-smoke-1s-3runs/run-1-router
+=== Finished latency-smoke-1s-3runs run-1 at 2026-06-02T09:48:40+00:00 ===
+=== Starting latency-smoke-1s-3runs run-2 at 2026-06-02T09:49:40+00:00 ===
+[RUN 2] Starte latency-smoke-1s-3runs
+2026-06-02T09:49:40+00:00
+[RUN 2] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 2] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.397 ms  0.373 ms  0.357 ms
+ 2  10.10.20.129 (10.10.20.129)  0.814 ms  0.803 ms  0.791 ms
+[RUN 2] Vorlauf läuft 30s
+[RUN 2] Setze Latenz: 1s
+2026-06-02T09:50:12+00:00
+qdisc netem 8004: root refcnt 2 limit 1000 delay 1s seed 14347536658247026436
+[RUN 2] Entferne Latenz
+2026-06-02T09:51:25+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 2] Nachlauf läuft 30s
+2026-06-02T09:52:05+00:00
+total 88K
+-rw-rw-r-- 1 kim kim    7 Jun  2 09:49 affected_interface.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:49 after_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:49 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:49 delay.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:49 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 1.7K Jun  2 09:52 events_after.txt
+-rw-rw-r-- 1 kim kim 1.7K Jun  2 09:49 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:50 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:49 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  2 09:52 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  2 09:49 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  2 09:52 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  2 09:49 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:51 recovery_time.txt
+-rw-rw-r-- 1 kim kim 4.4K Jun  2 09:52 requests.csv
+-rw-rw-r-- 1 kim kim   23 Jun  2 09:49 scenario.txt
+-rw-rw-r-- 1 kim kim  132 Jun  2 09:51 tc_after.txt
+-rw-rw-r-- 1 kim kim   78 Jun  2 09:50 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:52 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:49 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  2 09:49 traceroute_before.txt
+[RUN 2] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-smoke-1s-3runs/run-2-router
+=== Finished latency-smoke-1s-3runs run-2 at 2026-06-02T09:52:05+00:00 ===
+=== Starting latency-smoke-1s-3runs run-3 at 2026-06-02T09:53:05+00:00 ===
+[RUN 3] Starte latency-smoke-1s-3runs
+2026-06-02T09:53:05+00:00
+[RUN 3] Setze Routen und aktiviere ip_forward
+net.ipv4.ip_forward = 1
+[RUN 3] Validiere Routerpfad
+traceroute to 10.10.20.129 (10.10.20.129), 30 hops max, 60 byte packets
+ 1  10.10.10.128 (10.10.10.128)  0.334 ms  0.809 ms  0.791 ms
+ 2  10.10.20.129 (10.10.20.129)  1.374 ms  1.357 ms  1.270 ms
+[RUN 3] Vorlauf läuft 30s
+[RUN 3] Setze Latenz: 1s
+2026-06-02T09:53:37+00:00
+qdisc netem 8005: root refcnt 2 limit 1000 delay 1s seed 258912099525633201
+[RUN 3] Entferne Latenz
+2026-06-02T09:54:49+00:00
+qdisc fq_codel 0: root refcnt 2 limit 10240p flows 1024 quantum 1514 target 5ms interval 100ms memory_limit 32Mb ecn drop_batch 64 
+[RUN 3] Nachlauf läuft 30s
+2026-06-02T09:55:30+00:00
+total 88K
+-rw-rw-r-- 1 kim kim    7 Jun  2 09:53 affected_interface.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:53 after_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:53 baseline_seconds.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:53 delay.txt
+-rw-rw-r-- 1 kim kim    3 Jun  2 09:53 duration_seconds.txt
+-rw-rw-r-- 1 kim kim 1.7K Jun  2 09:55 events_after.txt
+-rw-rw-r-- 1 kim kim 1.7K Jun  2 09:53 events_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:53 fault_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:53 monitored_url.txt
+-rw-rw-r-- 1 kim kim  900 Jun  2 09:55 nodes_after.txt
+-rw-rw-r-- 1 kim kim  900 Jun  2 09:53 nodes_before.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  2 09:55 pods_after.txt
+-rw-rw-r-- 1 kim kim 2.1K Jun  2 09:53 pods_before.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:54 recovery_time.txt
+-rw-rw-r-- 1 kim kim 4.3K Jun  2 09:55 requests.csv
+-rw-rw-r-- 1 kim kim   23 Jun  2 09:53 scenario.txt
+-rw-rw-r-- 1 kim kim  132 Jun  2 09:54 tc_after.txt
+-rw-rw-r-- 1 kim kim   76 Jun  2 09:53 tc_during.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:55 test_end_time.txt
+-rw-rw-r-- 1 kim kim   26 Jun  2 09:53 test_start_time.txt
+-rw-rw-r-- 1 kim kim  196 Jun  2 09:53 traceroute_before.txt
+[RUN 3] Fertig: /home/kim/ba-self-healing/experiments/k3s/network-tests/latency-smoke-1s-3runs/run-3-router
+=== Finished latency-smoke-1s-3runs run-3 at 2026-06-02T09:55:30+00:00 ===
+Scenario latency-smoke-1s-3runs finished at 2026-06-02T09:56:30+00:00

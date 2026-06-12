@@ -1,0 +1,10 @@
+fault_start=2026-06-10T19:15:47+00:00
+4: ens256: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
+    link/ether 00:0c:29:e3:06:9e brd ff:ff:ff:ff:ff:ff
+    altname enp26s0
+    altname enx000c29e3069e
+router_recovery_time=2026-06-10T19:25:47+00:00
+4: ens256: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 00:0c:29:e3:06:9e brd ff:ff:ff:ff:ff:ff
+    altname enp26s0
+    altname enx000c29e3069e

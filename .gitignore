@@ -27,3 +27,6 @@
 
 # temporary
 tmp/
+
+# Keep experiment logs for reproducibility
+latency-60s-async 60s 600 10 180 180 300*/*.log
