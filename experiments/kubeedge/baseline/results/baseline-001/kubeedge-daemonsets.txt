@@ -1,0 +1,4 @@
+NAME                     DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR                   AGE
+cloud-iptables-manager   3         3         3       3            3           <none>                          25h
+edge-eclipse-mosquitto   2         2         2       2            2           <none>                          25h
+edgemesh-agent           2         2         2       2            2           node-role.kubernetes.io/edge=   22m

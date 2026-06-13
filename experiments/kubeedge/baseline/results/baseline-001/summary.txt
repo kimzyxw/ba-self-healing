@@ -1,0 +1,11 @@
+KubeEdge baseline measurement
+
+total_requests=180
+successful_requests=180
+failed_requests=0
+success_rate_percent=100.00
+median_duration_ms=1.31
+p95_duration_ms=2.74
+min_duration_ms=0.75
+max_duration_ms=4.19
+errors={}
