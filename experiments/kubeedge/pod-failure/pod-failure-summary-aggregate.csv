@@ -1,0 +1,2 @@
+runs_counted,requests_total,success,failed,success_rate_pct,error_rate_pct,median_ms,p95_ms,min_ms,max_ms,recovery_min_s,recovery_median_s,recovery_mean_s,recovery_max_s,runs_excluded
+10,1800,1800,0,100.00,0.00,2.47,5.99,0.78,92.92,1.00,3.50,3.40,6.00,run-06

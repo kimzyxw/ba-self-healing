@@ -1,0 +1,5 @@
+LAST SEEN   TYPE      REASON                 OBJECT                                MESSAGE
+2m          Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-w99cg    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-w99cg to e2
+56m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-jrklm    Node is not ready
+55m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-jrklm    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-jrklm
+2m1s        Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-w99cg

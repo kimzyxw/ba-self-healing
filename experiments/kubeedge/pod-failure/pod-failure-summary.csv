@@ -1,0 +1,12 @@
+run,requests,success,failed,success_rate_pct,error_rate_pct,median_ms,p95_ms,min_ms,max_ms,errors,recovery_seconds,deleted_pod,complete_180_requests,pods_after_running_ready,included_in_regular_evaluation
+run-01,180,180,0,100.00,0.00,2.81,6.07,1.19,23.80,{},3.0,nginx-testapp-5c8f4cb9d7-rl42k,yes,yes,yes
+run-02,180,180,0,100.00,0.00,2.21,5.55,0.89,58.16,{},2.0,nginx-testapp-5c8f4cb9d7-4rctb,yes,yes,yes
+run-03,180,180,0,100.00,0.00,2.10,4.27,1.11,53.76,{},6.0,nginx-testapp-5c8f4cb9d7-542xd,yes,yes,yes
+run-04,180,180,0,100.00,0.00,2.25,5.37,1.29,59.57,{},1.0,nginx-testapp-5c8f4cb9d7-jvk9x,yes,yes,yes
+run-05,180,180,0,100.00,0.00,2.56,6.50,1.02,54.94,{},5.0,nginx-testapp-5c8f4cb9d7-s8twc,yes,yes,yes
+run-06,62,62,0,100.00,0.00,2.60,5.14,1.46,5.90,{},1.0,nginx-testapp-5c8f4cb9d7-sd5k6,no,yes,no
+run-07,180,180,0,100.00,0.00,2.52,5.86,0.78,62.26,{},6.0,nginx-testapp-5c8f4cb9d7-56q8h,yes,yes,yes
+run-08,180,180,0,100.00,0.00,2.72,4.67,1.34,44.16,{},1.0,nginx-testapp-5c8f4cb9d7-scgd2,yes,yes,yes
+run-09,180,180,0,100.00,0.00,2.46,4.37,1.16,40.48,{},4.0,nginx-testapp-5c8f4cb9d7-79mc4,yes,yes,yes
+run-10,180,180,0,100.00,0.00,2.33,5.44,1.32,36.19,{},4.0,nginx-testapp-5c8f4cb9d7-m7t5q,yes,yes,yes
+run-11,180,180,0,100.00,0.00,2.75,7.03,1.27,92.92,{},2.0,nginx-testapp-5c8f4cb9d7-9jxsv,yes,yes,yes

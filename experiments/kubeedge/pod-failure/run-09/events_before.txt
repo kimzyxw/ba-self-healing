@@ -1,0 +1,24 @@
+LAST SEEN   TYPE      REASON                         OBJECT                                MESSAGE
+40m         Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-4rctb    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-4rctb to e1
+36m         Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-542xd    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-542xd to e1
+7m34s       Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-56q8h    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-56q8h to e1
+2m30s       Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-79mc4    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-79mc4 to e1
+33m         Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-jvk9x    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-jvk9x to e1
+29m         Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-s8twc    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-s8twc to e1
+6m1s        Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-scgd2    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-scgd2 to e1
+26m         Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-sd5k6    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-sd5k6 to e1
+46m         Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-v6974    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-v6974 to e2
+63m         Normal    Scheduled                      pod/nginx-testapp-5c8f4cb9d7-w99cg    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-w99cg to e2
+63m         Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-w99cg
+46m         Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-v6974
+40m         Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-4rctb
+36m         Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-542xd
+33m         Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-jvk9x
+29m         Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-s8twc
+26m         Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-sd5k6
+7m34s       Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-56q8h
+6m1s        Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-scgd2
+2m30s       Warning   FailedCreate                   replicaset/nginx-testapp-5c8f4cb9d7   Error creating: Unauthorized
+2m30s       Normal    SuccessfulCreate               replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-79mc4
+2m30s       Warning   FailedToUpdateEndpoint         endpoints/nginx-testapp               Failed to update endpoint testapp/nginx-testapp: Unauthorized
+2m30s       Warning   FailedToUpdateEndpointSlices   service/nginx-testapp                 Error updating Endpoint Slices for Service testapp/nginx-testapp: failed to update nginx-testapp-bf62d EndpointSlice for Service testapp/nginx-testapp: Unauthorized

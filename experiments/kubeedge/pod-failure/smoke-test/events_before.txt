@@ -1,0 +1,3 @@
+LAST SEEN   TYPE      REASON                 OBJECT                               MESSAGE
+52m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-jrklm   Node is not ready
+52m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-jrklm   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-jrklm
