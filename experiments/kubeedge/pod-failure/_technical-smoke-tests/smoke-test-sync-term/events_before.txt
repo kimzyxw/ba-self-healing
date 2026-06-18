@@ -1,0 +1,3 @@
+NAMESPACE   LAST SEEN   TYPE     REASON             OBJECT                                MESSAGE
+testapp     41m         Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-644rv    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-644rv to e1
+testapp     41m         Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-644rv
