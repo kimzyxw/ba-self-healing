@@ -1,0 +1,526 @@
+KubeEdge node failure scenario 'edge' started at 2026-06-15T15:29:51+00:00
+Base directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge
+Runs: 10
+Start run: 1
+Sleep between runs: 60s
+Service: edgecore.service
+==================================================
+Starting edge run-01-e1 at 2026-06-15T15:29:51+00:00
+Target: e1 (10.10.20.131)
+==================================================
+[2026-06-15T15:29:51+00:00] [edge/e1] KubeEdge node failure test
+[2026-06-15T15:29:51+00:00] [edge/e1] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-01-e1
+[2026-06-15T15:29:51+00:00] [edge/e1] Target node: e1
+[2026-06-15T15:29:51+00:00] [edge/e1] Target IP: 10.10.20.131
+[2026-06-15T15:29:51+00:00] [edge/e1] Service: edgecore.service
+[2026-06-15T15:29:51+00:00] [edge/e1] URL: http://10.10.20.131:30080
+[2026-06-15T15:29:51+00:00] [edge/e1] Pre-fault seconds: 180
+[2026-06-15T15:29:51+00:00] [edge/e1] Fault seconds: 300
+[2026-06-15T15:29:51+00:00] [edge/e1] Post-fault seconds: 180
+[2026-06-15T15:29:51+00:00] [edge/e1] Total monitor duration: 660
+[2026-06-15T15:29:51+00:00] [edge/e1] Timeout: 2
+[2026-06-15T15:29:51+00:00] [edge/e1] Max in flight: 10
+[2026-06-15T15:29:51+00:00] [edge/e1] Checking remote sudo/systemctl access
+[2026-06-15T15:29:51+00:00] [edge/e1] Capturing cluster state before fault
+[2026-06-15T15:29:52+00:00] [edge/e1] Starting request monitor
+[2026-06-15T15:29:52+00:00] [edge/e1] Pre-fault phase running for 180s
+[2026-06-15T15:32:52+00:00] [edge/e1] Stopping edgecore.service on e1
+[2026-06-15T15:32:52+00:00] [edge/e1] Capturing cluster state during fault
+[2026-06-15T15:33:02+00:00] [edge/e1] Fault phase running for 300s
+[2026-06-15T15:38:02+00:00] [edge/e1] Starting edgecore.service on e1
+[2026-06-15T15:38:03+00:00] [edge/e1] Waiting for target service to become active
+[2026-06-15T15:38:03+00:00] [edge/e1] Service active again
+[2026-06-15T15:38:03+00:00] [edge/e1] Waiting for Kubernetes node e1 to be Ready
+[2026-06-15T15:38:04+00:00] [edge/e1] Node e1 is Ready
+[2026-06-15T15:38:04+00:00] [edge/e1] Post-fault phase running for 180s
+[2026-06-15T15:41:04+00:00] [edge/e1] Capturing cluster state after recovery
+[2026-06-15T15:41:04+00:00] [edge/e1] Waiting for request monitor to finish
+[2026-06-15T15:41:04+00:00] [edge/e1] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e1
+target_ip=10.10.20.131
+service=edgecore.service
+requests_total=659
+success=659
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=2.63
+median_ms=1.94
+p95_ms=3.90
+min_ms=0.78
+max_ms=135.09
+service_recovery_seconds=311.00
+node_recovery_seconds=312.00
+[2026-06-15T15:41:04+00:00] [edge/e1] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-01-e1
+Finished edge run-01-e1 at 2026-06-15T15:41:04+00:00
+Waiting 60s before next run...
+==================================================
+Starting edge run-02-e2 at 2026-06-15T15:42:57+00:00
+Target: e2 (10.10.20.132)
+==================================================
+[2026-06-15T15:42:57+00:00] [edge/e2] KubeEdge node failure test
+[2026-06-15T15:42:57+00:00] [edge/e2] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-02-e2
+[2026-06-15T15:42:57+00:00] [edge/e2] Target node: e2
+[2026-06-15T15:42:57+00:00] [edge/e2] Target IP: 10.10.20.132
+[2026-06-15T15:42:57+00:00] [edge/e2] Service: edgecore.service
+[2026-06-15T15:42:57+00:00] [edge/e2] URL: http://10.10.20.131:30080
+[2026-06-15T15:42:57+00:00] [edge/e2] Pre-fault seconds: 180
+[2026-06-15T15:42:57+00:00] [edge/e2] Fault seconds: 300
+[2026-06-15T15:42:57+00:00] [edge/e2] Post-fault seconds: 180
+[2026-06-15T15:42:57+00:00] [edge/e2] Total monitor duration: 660
+[2026-06-15T15:42:57+00:00] [edge/e2] Timeout: 2
+[2026-06-15T15:42:57+00:00] [edge/e2] Max in flight: 10
+[2026-06-15T15:42:57+00:00] [edge/e2] Checking remote sudo/systemctl access
+[2026-06-15T15:42:57+00:00] [edge/e2] Capturing cluster state before fault
+[2026-06-15T15:42:57+00:00] [edge/e2] Starting request monitor
+[2026-06-15T15:42:57+00:00] [edge/e2] Pre-fault phase running for 180s
+[2026-06-15T15:45:57+00:00] [edge/e2] Stopping edgecore.service on e2
+[2026-06-15T15:45:58+00:00] [edge/e2] Capturing cluster state during fault
+[2026-06-15T15:46:08+00:00] [edge/e2] Fault phase running for 300s
+[2026-06-15T15:51:08+00:00] [edge/e2] Starting edgecore.service on e2
+[2026-06-15T15:51:08+00:00] [edge/e2] Waiting for target service to become active
+[2026-06-15T15:51:08+00:00] [edge/e2] Service active again
+[2026-06-15T15:51:08+00:00] [edge/e2] Waiting for Kubernetes node e2 to be Ready
+[2026-06-15T15:51:10+00:00] [edge/e2] Node e2 is Ready
+[2026-06-15T15:51:10+00:00] [edge/e2] Post-fault phase running for 180s
+[2026-06-15T15:55:54+00:00] [edge/e2] Capturing cluster state after recovery
+[2026-06-15T15:55:55+00:00] [edge/e2] Waiting for request monitor to finish
+[2026-06-15T15:55:55+00:00] [edge/e2] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e2
+target_ip=10.10.20.132
+service=edgecore.service
+requests_total=641
+success=641
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=3.55
+median_ms=2.72
+p95_ms=5.50
+min_ms=1.03
+max_ms=170.25
+service_recovery_seconds=311.00
+node_recovery_seconds=313.00
+[2026-06-15T15:55:55+00:00] [edge/e2] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-02-e2
+Finished edge run-02-e2 at 2026-06-15T15:55:55+00:00
+Waiting 60s before next run...
+==================================================
+Starting edge run-03-e1 at 2026-06-15T16:11:53+00:00
+Target: e1 (10.10.20.131)
+==================================================
+[2026-06-15T16:11:53+00:00] [edge/e1] KubeEdge node failure test
+[2026-06-15T16:11:53+00:00] [edge/e1] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-03-e1
+[2026-06-15T16:11:53+00:00] [edge/e1] Target node: e1
+[2026-06-15T16:11:53+00:00] [edge/e1] Target IP: 10.10.20.131
+[2026-06-15T16:11:53+00:00] [edge/e1] Service: edgecore.service
+[2026-06-15T16:11:53+00:00] [edge/e1] URL: http://10.10.20.131:30080
+[2026-06-15T16:11:53+00:00] [edge/e1] Pre-fault seconds: 180
+[2026-06-15T16:11:53+00:00] [edge/e1] Fault seconds: 300
+[2026-06-15T16:11:53+00:00] [edge/e1] Post-fault seconds: 180
+[2026-06-15T16:11:53+00:00] [edge/e1] Total monitor duration: 660
+[2026-06-15T16:11:53+00:00] [edge/e1] Timeout: 2
+[2026-06-15T16:11:53+00:00] [edge/e1] Max in flight: 10
+[2026-06-15T16:11:53+00:00] [edge/e1] Checking remote sudo/systemctl access
+[2026-06-15T16:11:54+00:00] [edge/e1] Capturing cluster state before fault
+[2026-06-15T16:11:54+00:00] [edge/e1] Starting request monitor
+[2026-06-15T16:11:54+00:00] [edge/e1] Pre-fault phase running for 180s
+[2026-06-15T16:14:54+00:00] [edge/e1] Stopping edgecore.service on e1
+[2026-06-15T16:14:54+00:00] [edge/e1] Capturing cluster state during fault
+[2026-06-15T16:15:05+00:00] [edge/e1] Fault phase running for 300s
+[2026-06-15T16:20:05+00:00] [edge/e1] Starting edgecore.service on e1
+[2026-06-15T16:20:05+00:00] [edge/e1] Waiting for target service to become active
+[2026-06-15T16:20:05+00:00] [edge/e1] Service active again
+[2026-06-15T16:20:05+00:00] [edge/e1] Waiting for Kubernetes node e1 to be Ready
+[2026-06-15T16:20:06+00:00] [edge/e1] Node e1 is Ready
+[2026-06-15T16:20:06+00:00] [edge/e1] Post-fault phase running for 180s
+[2026-06-15T16:35:10+00:00] [edge/e1] Capturing cluster state after recovery
+[2026-06-15T16:35:11+00:00] [edge/e1] Waiting for request monitor to finish
+[2026-06-15T16:35:11+00:00] [edge/e1] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e1
+target_ip=10.10.20.131
+service=edgecore.service
+requests_total=627
+success=627
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=3.79
+median_ms=2.67
+p95_ms=5.48
+min_ms=1.03
+max_ms=110.99
+service_recovery_seconds=311.00
+node_recovery_seconds=312.00
+[2026-06-15T16:35:11+00:00] [edge/e1] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-03-e1
+Finished edge run-03-e1 at 2026-06-15T16:35:11+00:00
+Waiting 60s before next run...
+==================================================
+Starting edge run-04-e2 at 2026-06-15T16:36:11+00:00
+Target: e2 (10.10.20.132)
+==================================================
+[2026-06-15T16:36:11+00:00] [edge/e2] KubeEdge node failure test
+[2026-06-15T16:36:11+00:00] [edge/e2] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-04-e2
+[2026-06-15T16:36:11+00:00] [edge/e2] Target node: e2
+[2026-06-15T16:36:11+00:00] [edge/e2] Target IP: 10.10.20.132
+[2026-06-15T16:36:11+00:00] [edge/e2] Service: edgecore.service
+[2026-06-15T16:36:11+00:00] [edge/e2] URL: http://10.10.20.131:30080
+[2026-06-15T16:36:11+00:00] [edge/e2] Pre-fault seconds: 180
+[2026-06-15T16:36:11+00:00] [edge/e2] Fault seconds: 300
+[2026-06-15T16:36:11+00:00] [edge/e2] Post-fault seconds: 180
+[2026-06-15T16:36:11+00:00] [edge/e2] Total monitor duration: 660
+[2026-06-15T16:36:11+00:00] [edge/e2] Timeout: 2
+[2026-06-15T16:36:11+00:00] [edge/e2] Max in flight: 10
+[2026-06-15T16:36:11+00:00] [edge/e2] Checking remote sudo/systemctl access
+[2026-06-15T16:36:11+00:00] [edge/e2] Capturing cluster state before fault
+[2026-06-15T16:36:12+00:00] [edge/e2] Starting request monitor
+[2026-06-15T16:36:12+00:00] [edge/e2] Pre-fault phase running for 180s
+[2026-06-15T16:39:12+00:00] [edge/e2] Stopping edgecore.service on e2
+[2026-06-15T16:39:12+00:00] [edge/e2] Capturing cluster state during fault
+[2026-06-15T16:39:22+00:00] [edge/e2] Fault phase running for 300s
+[2026-06-15T16:44:22+00:00] [edge/e2] Starting edgecore.service on e2
+[2026-06-15T16:44:23+00:00] [edge/e2] Waiting for target service to become active
+[2026-06-15T16:44:23+00:00] [edge/e2] Service active again
+[2026-06-15T16:44:23+00:00] [edge/e2] Waiting for Kubernetes node e2 to be Ready
+[2026-06-15T16:44:24+00:00] [edge/e2] Node e2 is Ready
+[2026-06-15T16:44:24+00:00] [edge/e2] Post-fault phase running for 180s
+[2026-06-15T17:03:14+00:00] [edge/e2] Capturing cluster state after recovery
+[2026-06-15T17:03:14+00:00] [edge/e2] Waiting for request monitor to finish
+[2026-06-15T17:03:14+00:00] [edge/e2] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e2
+target_ip=10.10.20.132
+service=edgecore.service
+requests_total=614
+success=614
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=2.61
+median_ms=1.88
+p95_ms=4.07
+min_ms=0.72
+max_ms=125.49
+service_recovery_seconds=311.00
+node_recovery_seconds=312.00
+[2026-06-15T17:03:14+00:00] [edge/e2] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-04-e2
+Finished edge run-04-e2 at 2026-06-15T17:03:14+00:00
+Waiting 60s before next run...
+==================================================
+Starting edge run-05-e1 at 2026-06-15T17:12:36+00:00
+Target: e1 (10.10.20.131)
+==================================================
+[2026-06-15T17:12:36+00:00] [edge/e1] KubeEdge node failure test
+[2026-06-15T17:12:36+00:00] [edge/e1] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-05-e1
+[2026-06-15T17:12:36+00:00] [edge/e1] Target node: e1
+[2026-06-15T17:12:36+00:00] [edge/e1] Target IP: 10.10.20.131
+[2026-06-15T17:12:36+00:00] [edge/e1] Service: edgecore.service
+[2026-06-15T17:12:36+00:00] [edge/e1] URL: http://10.10.20.131:30080
+[2026-06-15T17:12:36+00:00] [edge/e1] Pre-fault seconds: 180
+[2026-06-15T17:12:36+00:00] [edge/e1] Fault seconds: 300
+[2026-06-15T17:12:36+00:00] [edge/e1] Post-fault seconds: 180
+[2026-06-15T17:12:36+00:00] [edge/e1] Total monitor duration: 660
+[2026-06-15T17:12:36+00:00] [edge/e1] Timeout: 2
+[2026-06-15T17:12:36+00:00] [edge/e1] Max in flight: 10
+[2026-06-15T17:12:36+00:00] [edge/e1] Checking remote sudo/systemctl access
+[2026-06-15T17:12:36+00:00] [edge/e1] Capturing cluster state before fault
+[2026-06-15T17:12:36+00:00] [edge/e1] Starting request monitor
+[2026-06-15T17:12:36+00:00] [edge/e1] Pre-fault phase running for 180s
+[2026-06-15T17:15:36+00:00] [edge/e1] Stopping edgecore.service on e1
+[2026-06-15T17:15:37+00:00] [edge/e1] Capturing cluster state during fault
+[2026-06-15T17:15:47+00:00] [edge/e1] Fault phase running for 300s
+[2026-06-15T17:20:47+00:00] [edge/e1] Starting edgecore.service on e1
+[2026-06-15T17:20:47+00:00] [edge/e1] Waiting for target service to become active
+[2026-06-15T17:20:47+00:00] [edge/e1] Service active again
+[2026-06-15T17:20:47+00:00] [edge/e1] Waiting for Kubernetes node e1 to be Ready
+[2026-06-15T17:20:47+00:00] [edge/e1] Node e1 is Ready
+[2026-06-15T17:20:47+00:00] [edge/e1] Post-fault phase running for 180s
+[2026-06-15T17:40:54+00:00] [edge/e1] Capturing cluster state after recovery
+[2026-06-15T17:40:55+00:00] [edge/e1] Waiting for request monitor to finish
+[2026-06-15T17:40:55+00:00] [edge/e1] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e1
+target_ip=10.10.20.131
+service=edgecore.service
+requests_total=601
+success=601
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=3.71
+median_ms=2.56
+p95_ms=6.20
+min_ms=1.11
+max_ms=106.17
+service_recovery_seconds=311.00
+node_recovery_seconds=311.00
+[2026-06-15T17:40:55+00:00] [edge/e1] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-05-e1
+Finished edge run-05-e1 at 2026-06-15T17:40:55+00:00
+Waiting 60s before next run...
+==================================================
+Starting edge run-06-e2 at 2026-06-15T17:41:55+00:00
+Target: e2 (10.10.20.132)
+==================================================
+[2026-06-15T17:41:55+00:00] [edge/e2] KubeEdge node failure test
+[2026-06-15T17:41:55+00:00] [edge/e2] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-06-e2
+[2026-06-15T17:41:55+00:00] [edge/e2] Target node: e2
+[2026-06-15T17:41:55+00:00] [edge/e2] Target IP: 10.10.20.132
+[2026-06-15T17:41:55+00:00] [edge/e2] Service: edgecore.service
+[2026-06-15T17:41:55+00:00] [edge/e2] URL: http://10.10.20.131:30080
+[2026-06-15T17:41:55+00:00] [edge/e2] Pre-fault seconds: 180
+[2026-06-15T17:41:55+00:00] [edge/e2] Fault seconds: 300
+[2026-06-15T17:41:55+00:00] [edge/e2] Post-fault seconds: 180
+[2026-06-15T17:41:55+00:00] [edge/e2] Total monitor duration: 660
+[2026-06-15T17:41:55+00:00] [edge/e2] Timeout: 2
+[2026-06-15T17:41:55+00:00] [edge/e2] Max in flight: 10
+[2026-06-15T17:41:55+00:00] [edge/e2] Checking remote sudo/systemctl access
+[2026-06-15T17:41:55+00:00] [edge/e2] Capturing cluster state before fault
+[2026-06-15T17:41:55+00:00] [edge/e2] Starting request monitor
+[2026-06-15T17:41:55+00:00] [edge/e2] Pre-fault phase running for 180s
+[2026-06-15T17:44:55+00:00] [edge/e2] Stopping edgecore.service on e2
+[2026-06-15T17:44:56+00:00] [edge/e2] Capturing cluster state during fault
+[2026-06-15T17:45:06+00:00] [edge/e2] Fault phase running for 300s
+[2026-06-15T17:50:06+00:00] [edge/e2] Starting edgecore.service on e2
+[2026-06-15T17:50:06+00:00] [edge/e2] Waiting for target service to become active
+[2026-06-15T17:50:06+00:00] [edge/e2] Service active again
+[2026-06-15T17:50:06+00:00] [edge/e2] Waiting for Kubernetes node e2 to be Ready
+[2026-06-15T17:50:06+00:00] [edge/e2] Node e2 is Ready
+[2026-06-15T17:50:06+00:00] [edge/e2] Post-fault phase running for 180s
+[2026-06-15T18:00:29+00:00] [edge/e2] Capturing cluster state after recovery
+[2026-06-15T18:00:30+00:00] [edge/e2] Waiting for request monitor to finish
+[2026-06-15T18:00:30+00:00] [edge/e2] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e2
+target_ip=10.10.20.132
+service=edgecore.service
+requests_total=589
+success=589
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=3.70
+median_ms=2.53
+p95_ms=5.92
+min_ms=1.14
+max_ms=67.38
+service_recovery_seconds=311.00
+node_recovery_seconds=311.00
+[2026-06-15T18:00:30+00:00] [edge/e2] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-06-e2
+Finished edge run-06-e2 at 2026-06-15T18:00:30+00:00
+Waiting 60s before next run...
+==================================================
+Starting edge run-07-e1 at 2026-06-15T18:01:47+00:00
+Target: e1 (10.10.20.131)
+==================================================
+[2026-06-15T18:01:47+00:00] [edge/e1] KubeEdge node failure test
+[2026-06-15T18:01:47+00:00] [edge/e1] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-07-e1
+[2026-06-15T18:01:47+00:00] [edge/e1] Target node: e1
+[2026-06-15T18:01:47+00:00] [edge/e1] Target IP: 10.10.20.131
+[2026-06-15T18:01:47+00:00] [edge/e1] Service: edgecore.service
+[2026-06-15T18:01:47+00:00] [edge/e1] URL: http://10.10.20.131:30080
+[2026-06-15T18:01:47+00:00] [edge/e1] Pre-fault seconds: 180
+[2026-06-15T18:01:47+00:00] [edge/e1] Fault seconds: 300
+[2026-06-15T18:01:47+00:00] [edge/e1] Post-fault seconds: 180
+[2026-06-15T18:01:47+00:00] [edge/e1] Total monitor duration: 660
+[2026-06-15T18:01:47+00:00] [edge/e1] Timeout: 2
+[2026-06-15T18:01:47+00:00] [edge/e1] Max in flight: 10
+[2026-06-15T18:01:47+00:00] [edge/e1] Checking remote sudo/systemctl access
+[2026-06-15T18:01:47+00:00] [edge/e1] Capturing cluster state before fault
+[2026-06-15T18:01:47+00:00] [edge/e1] Starting request monitor
+[2026-06-15T18:01:47+00:00] [edge/e1] Pre-fault phase running for 180s
+[2026-06-15T18:25:50+00:00] [edge/e1] Stopping edgecore.service on e1
+[2026-06-15T18:25:51+00:00] [edge/e1] Capturing cluster state during fault
+[2026-06-15T18:26:01+00:00] [edge/e1] Fault phase running for 300s
+[2026-06-15T19:33:12+00:00] [edge/e1] Starting edgecore.service on e1
+[2026-06-15T19:33:13+00:00] [edge/e1] Waiting for target service to become active
+[2026-06-15T19:33:13+00:00] [edge/e1] Service active again
+[2026-06-15T19:33:13+00:00] [edge/e1] Waiting for Kubernetes node e1 to be Ready
+[2026-06-15T19:33:14+00:00] [edge/e1] Node e1 is Ready
+[2026-06-15T19:33:14+00:00] [edge/e1] Post-fault phase running for 180s
+[2026-06-15T20:07:34+00:00] [edge/e1] Capturing cluster state after recovery
+[2026-06-15T20:07:34+00:00] [edge/e1] Waiting for request monitor to finish
+[2026-06-15T20:07:34+00:00] [edge/e1] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e1
+target_ip=10.10.20.131
+service=edgecore.service
+requests_total=37
+success=37
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=1.93
+median_ms=1.75
+p95_ms=3.27
+min_ms=1.03
+max_ms=3.82
+service_recovery_seconds=4043.00
+node_recovery_seconds=4044.00
+[2026-06-15T20:07:34+00:00] [edge/e1] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-07-e1
+Finished edge run-07-e1 at 2026-06-15T20:07:34+00:00
+Waiting 60s before next run...
+==================================================
+Starting edge run-08-e2 at 2026-06-15T20:23:33+00:00
+Target: e2 (10.10.20.132)
+==================================================
+[2026-06-15T20:23:33+00:00] [edge/e2] KubeEdge node failure test
+[2026-06-15T20:23:33+00:00] [edge/e2] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-08-e2
+[2026-06-15T20:23:33+00:00] [edge/e2] Target node: e2
+[2026-06-15T20:23:33+00:00] [edge/e2] Target IP: 10.10.20.132
+[2026-06-15T20:23:33+00:00] [edge/e2] Service: edgecore.service
+[2026-06-15T20:23:33+00:00] [edge/e2] URL: http://10.10.20.131:30080
+[2026-06-15T20:23:33+00:00] [edge/e2] Pre-fault seconds: 180
+[2026-06-15T20:23:33+00:00] [edge/e2] Fault seconds: 300
+[2026-06-15T20:23:33+00:00] [edge/e2] Post-fault seconds: 180
+[2026-06-15T20:23:33+00:00] [edge/e2] Total monitor duration: 660
+[2026-06-15T20:23:33+00:00] [edge/e2] Timeout: 2
+[2026-06-15T20:23:33+00:00] [edge/e2] Max in flight: 10
+[2026-06-15T20:23:33+00:00] [edge/e2] Checking remote sudo/systemctl access
+[2026-06-15T20:23:33+00:00] [edge/e2] Capturing cluster state before fault
+[2026-06-15T20:23:33+00:00] [edge/e2] Starting request monitor
+[2026-06-15T20:23:33+00:00] [edge/e2] Pre-fault phase running for 180s
+[2026-06-15T21:21:11+00:00] [edge/e2] Stopping edgecore.service on e2
+[2026-06-15T21:21:12+00:00] [edge/e2] Capturing cluster state during fault
+[2026-06-15T21:21:22+00:00] [edge/e2] Fault phase running for 300s
+[2026-06-15T22:50:13+00:00] [edge/e2] Starting edgecore.service on e2
+[2026-06-15T22:50:14+00:00] [edge/e2] Waiting for target service to become active
+[2026-06-15T22:50:14+00:00] [edge/e2] Service active again
+[2026-06-15T22:50:14+00:00] [edge/e2] Waiting for Kubernetes node e2 to be Ready
+[2026-06-15T22:50:15+00:00] [edge/e2] Node e2 is Ready
+[2026-06-15T22:50:15+00:00] [edge/e2] Post-fault phase running for 180s
+[2026-06-15T23:39:15+00:00] [edge/e2] Capturing cluster state after recovery
+[2026-06-15T23:39:15+00:00] [edge/e2] Waiting for request monitor to finish
+[2026-06-15T23:39:15+00:00] [edge/e2] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e2
+target_ip=10.10.20.132
+service=edgecore.service
+requests_total=24
+success=24
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=2.65
+median_ms=2.13
+p95_ms=5.45
+min_ms=1.25
+max_ms=5.92
+service_recovery_seconds=5343.00
+node_recovery_seconds=5344.00
+[2026-06-15T23:39:15+00:00] [edge/e2] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-08-e2
+Finished edge run-08-e2 at 2026-06-15T23:39:15+00:00
+Waiting 60s before next run...
+==================================================
+Starting edge run-09-e1 at 2026-06-15T23:57:22+00:00
+Target: e1 (10.10.20.131)
+==================================================
+[2026-06-15T23:57:22+00:00] [edge/e1] KubeEdge node failure test
+[2026-06-15T23:57:22+00:00] [edge/e1] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-09-e1
+[2026-06-15T23:57:22+00:00] [edge/e1] Target node: e1
+[2026-06-15T23:57:22+00:00] [edge/e1] Target IP: 10.10.20.131
+[2026-06-15T23:57:22+00:00] [edge/e1] Service: edgecore.service
+[2026-06-15T23:57:22+00:00] [edge/e1] URL: http://10.10.20.131:30080
+[2026-06-15T23:57:22+00:00] [edge/e1] Pre-fault seconds: 180
+[2026-06-15T23:57:22+00:00] [edge/e1] Fault seconds: 300
+[2026-06-15T23:57:22+00:00] [edge/e1] Post-fault seconds: 180
+[2026-06-15T23:57:22+00:00] [edge/e1] Total monitor duration: 660
+[2026-06-15T23:57:22+00:00] [edge/e1] Timeout: 2
+[2026-06-15T23:57:22+00:00] [edge/e1] Max in flight: 10
+[2026-06-15T23:57:22+00:00] [edge/e1] Checking remote sudo/systemctl access
+[2026-06-15T23:57:22+00:00] [edge/e1] Capturing cluster state before fault
+[2026-06-15T23:57:22+00:00] [edge/e1] Starting request monitor
+[2026-06-15T23:57:22+00:00] [edge/e1] Pre-fault phase running for 180s
+[2026-06-16T01:02:48+00:00] [edge/e1] Stopping edgecore.service on e1
+[2026-06-16T01:02:48+00:00] [edge/e1] Capturing cluster state during fault
+[2026-06-16T01:20:13+00:00] [edge/e1] Fault phase running for 300s
+[2026-06-16T03:01:01+00:00] [edge/e1] Starting edgecore.service on e1
+[2026-06-16T03:01:02+00:00] [edge/e1] Waiting for target service to become active
+[2026-06-16T03:01:02+00:00] [edge/e1] Service active again
+[2026-06-16T03:01:02+00:00] [edge/e1] Waiting for Kubernetes node e1 to be Ready
+[2026-06-16T03:01:03+00:00] [edge/e1] Node e1 is Ready
+[2026-06-16T03:01:03+00:00] [edge/e1] Post-fault phase running for 180s
+[2026-06-16T03:47:29+00:00] [edge/e1] Capturing cluster state after recovery
+[2026-06-16T03:47:30+00:00] [edge/e1] Waiting for request monitor to finish
+[2026-06-16T03:47:30+00:00] [edge/e1] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e1
+target_ip=10.10.20.131
+service=edgecore.service
+requests_total=11
+success=11
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=3.21
+median_ms=2.58
+p95_ms=6.84
+min_ms=1.46
+max_ms=8.88
+service_recovery_seconds=7094.00
+node_recovery_seconds=7095.00
+[2026-06-16T03:47:30+00:00] [edge/e1] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-09-e1
+Finished edge run-09-e1 at 2026-06-16T03:47:30+00:00
+Waiting 60s before next run...
+==================================================
+Starting edge run-10-e2 at 2026-06-16T04:02:00+00:00
+Target: e2 (10.10.20.132)
+==================================================
+[2026-06-16T04:02:00+00:00] [edge/e2] KubeEdge node failure test
+[2026-06-16T04:02:00+00:00] [edge/e2] Run directory: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-10-e2
+[2026-06-16T04:02:00+00:00] [edge/e2] Target node: e2
+[2026-06-16T04:02:00+00:00] [edge/e2] Target IP: 10.10.20.132
+[2026-06-16T04:02:00+00:00] [edge/e2] Service: edgecore.service
+[2026-06-16T04:02:00+00:00] [edge/e2] URL: http://10.10.20.131:30080
+[2026-06-16T04:02:00+00:00] [edge/e2] Pre-fault seconds: 180
+[2026-06-16T04:02:00+00:00] [edge/e2] Fault seconds: 300
+[2026-06-16T04:02:00+00:00] [edge/e2] Post-fault seconds: 180
+[2026-06-16T04:02:00+00:00] [edge/e2] Total monitor duration: 660
+[2026-06-16T04:02:00+00:00] [edge/e2] Timeout: 2
+[2026-06-16T04:02:00+00:00] [edge/e2] Max in flight: 10
+[2026-06-16T04:02:00+00:00] [edge/e2] Checking remote sudo/systemctl access
+[2026-06-16T04:02:00+00:00] [edge/e2] Capturing cluster state before fault
+[2026-06-16T04:02:01+00:00] [edge/e2] Starting request monitor
+[2026-06-16T04:02:01+00:00] [edge/e2] Pre-fault phase running for 180s
+[2026-06-16T04:44:03+00:00] [edge/e2] Stopping edgecore.service on e2
+[2026-06-16T04:44:03+00:00] [edge/e2] Capturing cluster state during fault
+[2026-06-16T04:44:13+00:00] [edge/e2] Fault phase running for 300s
+[2026-06-16T05:52:08+00:00] [edge/e2] Starting edgecore.service on e2
+[2026-06-16T05:52:08+00:00] [edge/e2] Waiting for target service to become active
+[2026-06-16T05:52:08+00:00] [edge/e2] Service active again
+[2026-06-16T05:52:08+00:00] [edge/e2] Waiting for Kubernetes node e2 to be Ready
+[2026-06-16T05:52:08+00:00] [edge/e2] Node e2 is Ready
+[2026-06-16T05:52:08+00:00] [edge/e2] Post-fault phase running for 180s
+[2026-06-16T06:02:56+00:00] [edge/e2] Capturing cluster state after recovery
+[2026-06-16T06:02:57+00:00] [edge/e2] Waiting for request monitor to finish
+[2026-06-16T06:02:57+00:00] [edge/e2] Computing run summary
+=== Run summary ===
+scenario=edge
+target_node=e2
+target_ip=10.10.20.132
+service=edgecore.service
+requests_total=57
+success=57
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=2.78
+median_ms=2.76
+p95_ms=4.61
+min_ms=1.03
+max_ms=5.77
+service_recovery_seconds=4085.00
+node_recovery_seconds=4085.00
+[2026-06-16T06:02:57+00:00] [edge/e2] Run finished: /home/kim/ba-self-healing/experiments/kubeedge/node-failure/edge/run-10-e2
+Finished edge run-10-e2 at 2026-06-16T06:02:57+00:00
+KubeEdge node failure scenario 'edge' finished at 2026-06-16T06:02:57+00:00
