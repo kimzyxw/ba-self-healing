@@ -1,0 +1,13 @@
+NAMESPACE   LAST SEEN   TYPE      REASON                 OBJECT                               MESSAGE
+default     23m         Normal    NodeNotReady           node/e1                              Node e1 status is now: NodeNotReady
+kubeedge    23m         Warning   NodeNotReady           pod/edge-eclipse-mosquitto-szthb     Node is not ready
+kubeedge    23m         Warning   NodeNotReady           pod/edgemesh-agent-x8vtd             Node is not ready
+testapp     23m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-2hs8b   Node is not ready
+testapp     19m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-2hs8b   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-2hs8b
+default     52m         Normal    NodeNotReady           node/e2                              Node e2 status is now: NodeNotReady
+kubeedge    52m         Warning   NodeNotReady           pod/edge-eclipse-mosquitto-7l5gz     Node is not ready
+kubeedge    52m         Warning   NodeNotReady           pod/edgemesh-agent-wmrc8             Node is not ready
+testapp     52m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-v6974   Node is not ready
+testapp     52m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-w99cg   Node is not ready
+testapp     48m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-v6974   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-v6974
+testapp     48m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-w99cg   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-w99cg

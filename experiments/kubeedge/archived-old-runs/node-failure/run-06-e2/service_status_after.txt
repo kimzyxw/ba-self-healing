@@ -1,0 +1,21 @@
+● edgecore.service
+     Loaded: loaded (/etc/systemd/system/edgecore.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-06-15 17:50:06 UTC; 10min ago
+ Invocation: 0864f0061d8d4b2589cb38f52cf020f8
+   Main PID: 221766 (edgecore)
+      Tasks: 12 (limit: 951)
+     Memory: 51M (peak: 51.3M)
+        CPU: 1.801s
+     CGroup: /system.slice/edgecore.service
+             └─221766 /usr/local/bin/edgecore
+
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.425609  221766 process.go:323] DMIModule health 1781546246 is old, and begin restart
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.425700  221766 process.go:323] MemModule health 1781546246 is old, and begin restart
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.425728  221766 process.go:323] TwinModule health 1781546246 is old, and begin restart
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.425737  221766 process.go:323] DeviceModule health 1781546246 is old, and begin restart
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.425745  221766 process.go:323] CommModule health 1781546246 is old, and begin restart
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.425803  221766 dmiworker.go:68] dmi worker start
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.426542  221766 dmiworker.go:219] success to init device model info from db
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.426890  221766 dmiworker.go:240] success to init device info from db
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.427026  221766 dmiworker.go:260] success to init device mapper info from db
+Jun 15 18:00:29 e2 edgecore[221766]: I0615 18:00:29.427074  221766 server_others.go:13] init uds socket: /etc/kubeedge/dmi.sock

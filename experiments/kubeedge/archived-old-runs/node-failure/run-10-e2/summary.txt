@@ -1,0 +1,17 @@
+=== Run summary ===
+scenario=edge
+target_node=e2
+target_ip=10.10.20.132
+service=edgecore.service
+requests_total=57
+success=57
+failed=0
+success_rate_pct=100.00
+error_rate_pct=0.00
+avg_ms=2.78
+median_ms=2.76
+p95_ms=4.61
+min_ms=1.03
+max_ms=5.77
+service_recovery_seconds=4085.00
+node_recovery_seconds=4085.00

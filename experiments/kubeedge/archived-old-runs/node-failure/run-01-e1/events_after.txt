@@ -1,0 +1,8 @@
+NAMESPACE   LAST SEEN   TYPE      REASON                 OBJECT                                MESSAGE
+testapp     55m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-2hs8b    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-2hs8b to e1
+testapp     55m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-2hs8b
+default     7m23s       Normal    NodeNotReady           node/e1                               Node e1 status is now: NodeNotReady
+kubeedge    7m23s       Warning   NodeNotReady           pod/edge-eclipse-mosquitto-szthb      Node is not ready
+kubeedge    7m23s       Warning   NodeNotReady           pod/edgemesh-agent-x8vtd              Node is not ready
+testapp     7m23s       Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-2hs8b    Node is not ready
+testapp     2m58s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-2hs8b    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-2hs8b

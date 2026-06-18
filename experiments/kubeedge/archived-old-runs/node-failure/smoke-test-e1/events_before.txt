@@ -1,0 +1,4 @@
+NAMESPACE     LAST SEEN   TYPE     REASON                OBJECT                                MESSAGE
+kube-system   51m         Normal   UpdatedLoadBalancer   service/traefik                       Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.134 10.10.10.135]
+testapp       35m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-2hs8b    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-2hs8b to e1
+testapp       35m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-2hs8b

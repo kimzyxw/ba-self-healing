@@ -1,0 +1,21 @@
+● edgecore.service
+     Loaded: loaded (/etc/systemd/system/edgecore.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-06-16 05:52:08 UTC; 10min ago
+ Invocation: 369dd9659d6045829baead9fbcd2263d
+   Main PID: 228775 (edgecore)
+      Tasks: 12 (limit: 951)
+     Memory: 49.2M (peak: 52M)
+        CPU: 7.882s
+     CGroup: /system.slice/edgecore.service
+             └─228775 /usr/local/bin/edgecore
+
+Jun 16 06:00:42 e2 edgecore[228775]: I0616 06:00:42.523464  228775 watcher.go:230] start watching, rev:0
+Jun 16 06:00:42 e2 edgecore[228775]: I0616 06:00:42.523478  228775 imitator.go:176] /v1, Resource=endpoints,,
+Jun 16 06:00:42 e2 edgecore[228775]: W0616 06:00:42.524241  228775 watcher.go:188] get 6 obj in key /core/v1/endpoints/null/null
+Jun 16 06:00:42 e2 edgecore[228775]: I0616 06:00:42.528178  228775 watcher.go:200] get storage revision:310705
+Jun 16 06:00:53 e2 edgecore[228775]: I0616 06:00:53.590894  228775 storage.go:233] [metaserver/reststorage] successfully apply for a watch listener (/api/v1/services) through cloud
+Jun 16 06:00:53 e2 edgecore[228775]: W0616 06:00:53.590991  228775 watcher.go:93] base storage now only support rev == 0, but get rev == 347, force set to 0!
+Jun 16 06:00:53 e2 edgecore[228775]: I0616 06:00:53.591293  228775 watcher.go:230] start watching, rev:0
+Jun 16 06:00:53 e2 edgecore[228775]: I0616 06:00:53.591309  228775 imitator.go:176] /v1, Resource=services,,
+Jun 16 06:00:53 e2 edgecore[228775]: W0616 06:00:53.591812  228775 watcher.go:188] get 6 obj in key /core/v1/services/null/null
+Jun 16 06:00:53 e2 edgecore[228775]: I0616 06:00:53.592272  228775 watcher.go:200] get storage revision:310705

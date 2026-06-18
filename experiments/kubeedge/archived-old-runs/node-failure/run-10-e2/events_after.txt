@@ -1,0 +1,18 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                         OBJECT                                MESSAGE
+default       4h25m       Normal    NodeNotReady                   node/e1                               Node e1 status is now: NodeNotReady
+kubeedge      4h25m       Warning   NodeNotReady                   pod/edge-eclipse-mosquitto-szthb      Node is not ready
+kubeedge      4h25m       Warning   NodeNotReady                   pod/edgemesh-agent-x8vtd              Node is not ready
+testapp       4h25m       Warning   NodeNotReady                   pod/nginx-testapp-5c8f4cb9d7-2hs8b    Node is not ready
+testapp       3h1m        Normal    TaintManagerEviction           pod/nginx-testapp-5c8f4cb9d7-2hs8b    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-2hs8b
+default       63m         Normal    NodeNotReady                   node/e2                               Node e2 status is now: NodeNotReady
+testapp       63m         Warning   NodeNotReady                   pod/nginx-testapp-5c8f4cb9d7-w99cg    Node is not ready
+testapp       63m         Warning   NodeNotReady                   pod/nginx-testapp-5c8f4cb9d7-v6974    Node is not ready
+kubeedge      63m         Warning   NodeNotReady                   pod/edge-eclipse-mosquitto-7l5gz      Node is not ready
+kubeedge      63m         Warning   NodeNotReady                   pod/edgemesh-agent-wmrc8              Node is not ready
+testapp       16m         Normal    TaintManagerEviction           pod/nginx-testapp-5c8f4cb9d7-v6974    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-v6974
+testapp       16m         Normal    TaintManagerEviction           pod/nginx-testapp-5c8f4cb9d7-w99cg    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-w99cg
+testapp       63m         Warning   FailedToUpdateEndpoint         endpoints/nginx-testapp               Failed to update endpoint testapp/nginx-testapp: Unauthorized
+testapp       63m         Warning   FailedToUpdateEndpointSlices   service/nginx-testapp                 Error updating Endpoint Slices for Service testapp/nginx-testapp: failed to update nginx-testapp-bf62d EndpointSlice for Service testapp/nginx-testapp: Unauthorized
+kube-system   10m         Warning   Unhealthy                      pod/metrics-server-786d997795-4t8gj   Liveness probe failed: Get "https://10.42.0.9:10250/livez": context deadline exceeded
+kube-system   10m         Warning   Unhealthy                      pod/metrics-server-786d997795-4t8gj   Readiness probe failed: Get "https://10.42.0.9:10250/readyz": context deadline exceeded
+kube-system   10m         Warning   Unhealthy                      pod/coredns-8db54c48d-7v8ss           Readiness probe failed: Get "http://10.42.0.10:8181/ready": context deadline exceeded (Client.Timeout exceeded while awaiting headers)

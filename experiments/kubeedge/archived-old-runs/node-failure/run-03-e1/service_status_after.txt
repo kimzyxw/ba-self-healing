@@ -1,0 +1,21 @@
+● edgecore.service
+     Loaded: loaded (/etc/systemd/system/edgecore.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-06-15 16:20:05 UTC; 3min 1s ago
+ Invocation: 23e40bcdf834482db1509ac72e494f16
+   Main PID: 212023 (edgecore)
+      Tasks: 11 (limit: 951)
+     Memory: 50.2M (peak: 50.5M)
+        CPU: 1.880s
+     CGroup: /system.slice/edgecore.service
+             └─212023 /usr/local/bin/edgecore
+
+Jun 15 16:20:42 e1 edgecore[212023]: W0615 16:20:42.304110  212023 watcher.go:93] base storage now only support rev == 0, but get rev == 303, force set to 0!
+Jun 15 16:20:42 e1 edgecore[212023]: I0615 16:20:42.304249  212023 watcher.go:230] start watching, rev:0
+Jun 15 16:20:42 e1 edgecore[212023]: I0615 16:20:42.304260  212023 imitator.go:176] /v1, Resource=services,,
+Jun 15 16:20:42 e1 edgecore[212023]: W0615 16:20:42.304600  212023 watcher.go:188] get 6 obj in key /core/v1/services/null/null
+Jun 15 16:20:42 e1 edgecore[212023]: I0615 16:20:42.305055  212023 watcher.go:200] get storage revision:291823
+Jun 15 16:20:43 e1 edgecore[212023]: I0615 16:20:43.057544  212023 storage.go:233] [metaserver/reststorage] successfully apply for a watch listener (/apis/networking.istio.io/v1alpha3/destinationrules) through cloud
+Jun 15 16:20:43 e1 edgecore[212023]: W0615 16:20:43.057615  212023 watcher.go:93] base storage now only support rev == 0, but get rev == 143158, force set to 0!
+Jun 15 16:20:43 e1 edgecore[212023]: I0615 16:20:43.057939  212023 watcher.go:230] start watching, rev:0
+Jun 15 16:20:43 e1 edgecore[212023]: I0615 16:20:43.057960  212023 imitator.go:176] networking.istio.io/v1alpha3, Resource=destinationrules,,
+Jun 15 16:20:43 e1 edgecore[212023]: I0615 16:20:43.058412  212023 watcher.go:200] get storage revision:291823
