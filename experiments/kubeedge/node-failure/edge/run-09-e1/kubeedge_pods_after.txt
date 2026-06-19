@@ -1,0 +1,11 @@
+NAME                           READY   STATUS    RESTARTS            AGE     IP             NODE   NOMINATED NODE   READINESS GATES
+cloud-iptables-manager-l7lpb   1/1     Running   0                   80m     10.10.10.135   c3     <none>           <none>
+cloud-iptables-manager-mnh8d   1/1     Running   0                   80m     10.10.10.134   c2     <none>           <none>
+cloud-iptables-manager-nw279   1/1     Running   0                   80m     10.10.10.133   c1     <none>           <none>
+cloudcore-589789b9fc-9c2tv     1/1     Running   0                   5d21h   10.10.10.134   c2     <none>           <none>
+cloudcore-589789b9fc-bphz8     1/1     Running   0                   5d20h   10.10.10.133   c1     <none>           <none>
+cloudcore-589789b9fc-qfdtb     1/1     Running   0                   5d20h   10.10.10.135   c3     <none>           <none>
+edge-eclipse-mosquitto-7l5gz   1/1     Running   5 (<invalid> ago)   6d20h   10.10.20.132   e2     <none>           <none>
+edge-eclipse-mosquitto-szthb   1/1     Running   6 (<invalid> ago)   6d20h   10.10.20.131   e1     <none>           <none>
+edgemesh-agent-l2n4z           1/1     Running   5 (<invalid> ago)   81m     10.10.20.131   e1     <none>           <none>
+edgemesh-agent-qf7pk           1/1     Running   4 (<invalid> ago)   81m     10.10.20.132   e2     <none>           <none>

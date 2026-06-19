@@ -1,0 +1,17 @@
+
+===== c1 routes =====
+default via 172.16.41.2 dev ens160 proto dhcp src 172.16.41.143 metric 1024 
+10.10.10.0/24 dev ens256 proto kernel scope link src 10.10.10.133 metric 1024 
+10.10.10.1 dev ens256 proto dhcp scope link src 10.10.10.133 metric 1024 
+10.10.20.0/24 via 10.10.10.136 dev ens256 
+10.42.0.0/24 dev cni0 proto kernel scope link src 10.42.0.1 
+10.42.1.0/24 via 10.42.1.0 dev flannel.1 onlink 
+10.42.3.0/24 via 10.42.3.0 dev flannel.1 onlink 
+172.16.41.0/24 dev ens160 proto kernel scope link src 172.16.41.143 metric 1024 
+172.16.41.2 dev ens160 proto dhcp scope link src 172.16.41.143 metric 1024 
+
+===== c1 route get edge nodes =====
+10.10.20.131 via 10.10.10.136 dev ens256 src 10.10.10.133 uid 1000 
+    cache 
+10.10.20.132 via 10.10.10.136 dev ens256 src 10.10.10.133 uid 1000 
+    cache 

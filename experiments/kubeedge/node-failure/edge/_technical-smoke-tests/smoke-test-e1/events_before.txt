@@ -1,0 +1,28 @@
+NAMESPACE     LAST SEEN   TYPE     REASON                OBJECT                                                      MESSAGE
+default       60m         Normal   ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-c2-1781860763-f7b079   Snapshot etcd-snapshot-c2-1781860763 saved on c2
+default       60m         Normal   ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-c1-1781860770-45bb8c   Snapshot etcd-snapshot-c1-1781860770 saved on c1
+testapp       59m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-b7lkb
+testapp       59m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-b7lkb                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-b7lkb to e2
+testapp       57m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-rfvpj                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-rfvpj to e1
+testapp       25m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         (combined from similar events): Created pod: nginx-testapp-5c8f4cb9d7-dz97l
+testapp       56m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-wrb59                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-wrb59 to e2
+testapp       41m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-r5kx6
+testapp       41m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-r5kx6                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-r5kx6 to e1
+testapp       39m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-z9m8s
+testapp       39m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-z9m8s                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-z9m8s to e2
+testapp       38m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-pzzl5
+testapp       38m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-pzzl5                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-pzzl5 to e1
+testapp       36m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-khqpw                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-khqpw to e2
+testapp       36m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-khqpw
+testapp       34m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-gms9j                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-gms9j to e1
+testapp       34m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-gms9j
+testapp       32m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-f5dz6
+testapp       32m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-f5dz6                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-f5dz6 to e2
+testapp       31m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-98g4h                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-98g4h to e1
+testapp       31m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-98g4h
+testapp       29m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-fbhwx                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-fbhwx to e2
+testapp       29m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-fbhwx
+testapp       27m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-ptrf6                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-ptrf6 to e1
+testapp       27m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-ptrf6
+testapp       25m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-dz97l                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-dz97l to e2
+kube-system   15m         Normal   UpdatedLoadBalancer   service/traefik                                             Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.134 10.10.10.135]

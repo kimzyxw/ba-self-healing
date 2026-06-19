@@ -1,0 +1,23 @@
+NAMESPACE     NAME                                      READY   STATUS      RESTARTS        AGE     IP             NODE   NOMINATED NODE   READINESS GATES
+kube-system   coredns-8db54c48d-7v8ss                   1/1     Running     1 (6d17h ago)   6d21h   10.42.0.10     c1     <none>           <none>
+kube-system   helm-install-traefik-crd-25k64            0/1     Completed   0               6d21h   <none>         c1     <none>           <none>
+kube-system   helm-install-traefik-qpplw                0/1     Completed   2               6d21h   <none>         c1     <none>           <none>
+kube-system   local-path-provisioner-5d9d9885bc-w6fh6   1/1     Running     1 (6d17h ago)   6d21h   10.42.0.11     c1     <none>           <none>
+kube-system   metrics-server-786d997795-4t8gj           1/1     Running     1 (6d17h ago)   6d21h   10.42.0.9      c1     <none>           <none>
+kube-system   svclb-traefik-7ab09d61-8zxqj              2/2     Running     0               6d16h   10.42.1.4      c2     <none>           <none>
+kube-system   svclb-traefik-7ab09d61-bp9cn              2/2     Running     0               6d16h   10.42.0.15     c1     <none>           <none>
+kube-system   svclb-traefik-7ab09d61-x5cmh              2/2     Running     0               6d16h   10.42.3.4      c3     <none>           <none>
+kube-system   traefik-9bcdbbd9-m82d7                    1/1     Running     1 (6d17h ago)   6d21h   10.42.0.12     c1     <none>           <none>
+kubeedge      cloud-iptables-manager-frq8w              1/1     Running     0               6d17h   10.10.10.133   c1     <none>           <none>
+kubeedge      cloud-iptables-manager-klf4n              1/1     Running     0               6d17h   10.10.10.135   c3     <none>           <none>
+kubeedge      cloud-iptables-manager-q5lgx              1/1     Running     0               6d17h   10.10.10.134   c2     <none>           <none>
+kubeedge      cloudcore-589789b9fc-9c2tv                1/1     Running     0               5d17h   10.10.10.134   c2     <none>           <none>
+kubeedge      cloudcore-589789b9fc-bphz8                1/1     Running     0               5d17h   10.10.10.133   c1     <none>           <none>
+kubeedge      cloudcore-589789b9fc-qfdtb                1/1     Running     0               5d17h   10.10.10.135   c3     <none>           <none>
+kubeedge      edge-eclipse-mosquitto-7l5gz              1/1     Running     0               6d16h   10.10.20.132   e2     <none>           <none>
+kubeedge      edge-eclipse-mosquitto-szthb              1/1     Running     0               6d16h   10.10.20.131   e1     <none>           <none>
+kubeedge      edgemesh-agent-wmrc8                      1/1     Running     0               5d16h   10.10.20.132   e2     <none>           <none>
+kubeedge      edgemesh-agent-x8vtd                      1/1     Running     0               5d16h   10.10.20.131   e1     <none>           <none>
+testapp       nginx-testapp-5c8f4cb9d7-dz97l            1/1     Running     0               25m     10.88.2.16     e2     <none>           <none>
+testapp       nginx-testapp-5c8f4cb9d7-z9m8s            1/1     Running     0               39m     10.88.2.12     e2     <none>           <none>
+testapp       nginx-testapp-5c8f4cb9d7-zd4sz            1/1     Running     0               70m     10.88.1.18     e1     <none>           <none>

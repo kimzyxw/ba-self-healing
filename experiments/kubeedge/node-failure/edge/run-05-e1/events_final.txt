@@ -1,0 +1,43 @@
+NAMESPACE   LAST SEEN   TYPE      REASON                 OBJECT                                                      MESSAGE
+kubeedge    19m         Warning   NodeNotReady           pod/edge-eclipse-mosquitto-7l5gz                            Node is not ready
+default     19m         Normal    NodeNotReady           node/e2                                                     Node e2 status is now: NodeNotReady
+testapp     19m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-z9m8s                          Node is not ready
+testapp     19m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-dz97l                          Node is not ready
+testapp     18m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-z9m8s                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-z9m8s
+testapp     18m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-dz97l                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-dz97l
+kubeedge    60m         Normal    SuccessfulCreate       daemonset/edgemesh-agent                                    Created pod: edgemesh-agent-qf7pk
+kubeedge    60m         Normal    SuccessfulDelete       daemonset/edgemesh-agent                                    Deleted pod: edgemesh-agent-wmrc8
+kubeedge    60m         Normal    Scheduled              pod/edgemesh-agent-qf7pk                                    Successfully assigned kubeedge/edgemesh-agent-qf7pk to e2
+kubeedge    60m         Normal    SuccessfulCreate       daemonset/edgemesh-agent                                    Created pod: edgemesh-agent-l2n4z
+kubeedge    60m         Normal    SuccessfulDelete       daemonset/edgemesh-agent                                    Deleted pod: edgemesh-agent-x8vtd
+kubeedge    60m         Normal    Scheduled              pod/edgemesh-agent-l2n4z                                    Successfully assigned kubeedge/edgemesh-agent-l2n4z to e1
+kubeedge    59m         Normal    SuccessfulDelete       daemonset/cloud-iptables-manager                            Deleted pod: cloud-iptables-manager-frq8w
+kubeedge    59m         Normal    SuccessfulCreate       daemonset/cloud-iptables-manager                            Created pod: cloud-iptables-manager-nw279
+kubeedge    59m         Normal    Killing                pod/cloud-iptables-manager-frq8w                            Stopping container iptables-manager
+kubeedge    59m         Normal    Scheduled              pod/cloud-iptables-manager-nw279                            Successfully assigned kubeedge/cloud-iptables-manager-nw279 to c1
+kubeedge    59m         Normal    SuccessfulCreate       daemonset/cloud-iptables-manager                            Created pod: cloud-iptables-manager-l7lpb
+kubeedge    59m         Normal    Killing                pod/cloud-iptables-manager-klf4n                            Stopping container iptables-manager
+kubeedge    59m         Normal    Started                pod/cloud-iptables-manager-nw279                            Container started
+kubeedge    59m         Normal    Created                pod/cloud-iptables-manager-nw279                            Container created
+kubeedge    59m         Normal    Scheduled              pod/cloud-iptables-manager-l7lpb                            Successfully assigned kubeedge/cloud-iptables-manager-l7lpb to c3
+kubeedge    59m         Normal    Pulled                 pod/cloud-iptables-manager-nw279                            Container image "kubeedge/iptables-manager:v1.21.0" already present on machine and can be accessed by the pod
+kubeedge    59m         Normal    SuccessfulDelete       daemonset/cloud-iptables-manager                            Deleted pod: cloud-iptables-manager-klf4n
+kubeedge    59m         Normal    SuccessfulDelete       daemonset/cloud-iptables-manager                            Deleted pod: cloud-iptables-manager-q5lgx
+kubeedge    59m         Normal    SuccessfulCreate       daemonset/cloud-iptables-manager                            Created pod: cloud-iptables-manager-mnh8d
+kubeedge    59m         Normal    Scheduled              pod/cloud-iptables-manager-mnh8d                            Successfully assigned kubeedge/cloud-iptables-manager-mnh8d to c2
+kubeedge    59m         Normal    Killing                pod/cloud-iptables-manager-q5lgx                            Stopping container iptables-manager
+kubeedge    59m         Normal    Started                pod/cloud-iptables-manager-l7lpb                            Container started
+kubeedge    59m         Normal    Created                pod/cloud-iptables-manager-l7lpb                            Container created
+kubeedge    59m         Normal    Pulled                 pod/cloud-iptables-manager-l7lpb                            Container image "kubeedge/iptables-manager:v1.21.0" already present on machine and can be accessed by the pod
+kubeedge    59m         Normal    Created                pod/cloud-iptables-manager-mnh8d                            Container created
+kubeedge    59m         Normal    Pulled                 pod/cloud-iptables-manager-mnh8d                            Container image "kubeedge/iptables-manager:v1.21.0" already present on machine and can be accessed by the pod
+kubeedge    59m         Normal    Started                pod/cloud-iptables-manager-mnh8d                            Container started
+kubeedge    19m         Warning   NodeNotReady           pod/edgemesh-agent-qf7pk                                    Node is not ready
+default     2m38s       Normal    NodeNotReady           node/e1                                                     Node e1 status is now: NodeNotReady
+kubeedge    2m38s       Warning   NodeNotReady           pod/edgemesh-agent-l2n4z                                    Node is not ready
+kubeedge    2m38s       Warning   NodeNotReady           pod/edge-eclipse-mosquitto-szthb                            Node is not ready
+testapp     2m38s       Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-zd4sz                          Node is not ready
+testapp     58s         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-zd4sz                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-zd4sz
+default     16m         Normal    ETCDSnapshotCreated    etcdsnapshotfile/local-etcd-snapshot-c3-1781875446-b87bb0   Snapshot etcd-snapshot-c3-1781875446 saved on c3
+default     16m         Normal    ETCDSnapshotCreated    etcdsnapshotfile/local-etcd-snapshot-c2-1781875447-a50ab7   Snapshot etcd-snapshot-c2-1781875447 saved on c2
+default     16m         Normal    ETCDSnapshotCreated    etcdsnapshotfile/local-etcd-snapshot-c1-1781875450-eff4f4   Snapshot etcd-snapshot-c1-1781875450 saved on c1

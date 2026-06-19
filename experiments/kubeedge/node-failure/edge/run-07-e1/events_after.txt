@@ -1,0 +1,16 @@
+NAMESPACE   LAST SEEN   TYPE      REASON                 OBJECT                                                      MESSAGE
+default     7m18s       Normal    NodeNotReady           node/e2                                                     Node e2 status is now: NodeNotReady
+testapp     7m18s       Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-z9m8s                          Node is not ready
+kubeedge    7m18s       Warning   NodeNotReady           pod/edge-eclipse-mosquitto-7l5gz                            Node is not ready
+testapp     7m18s       Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-dz97l                          Node is not ready
+testapp     5m33s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-z9m8s                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-z9m8s
+testapp     5m33s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-dz97l                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-dz97l
+kubeedge    7m18s       Warning   NodeNotReady           pod/edgemesh-agent-qf7pk                                    Node is not ready
+kubeedge    107s        Warning   NodeNotReady           pod/edge-eclipse-mosquitto-szthb                            Node is not ready
+kubeedge    107s        Warning   NodeNotReady           pod/edgemesh-agent-l2n4z                                    Node is not ready
+default     107s        Normal    NodeNotReady           node/e1                                                     Node e1 status is now: NodeNotReady
+testapp     107s        Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-zd4sz                          Node is not ready
+testapp     2s          Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-zd4sz                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-zd4sz
+default     26m         Normal    ETCDSnapshotCreated    etcdsnapshotfile/local-etcd-snapshot-c3-1781875446-b87bb0   Snapshot etcd-snapshot-c3-1781875446 saved on c3
+default     26m         Normal    ETCDSnapshotCreated    etcdsnapshotfile/local-etcd-snapshot-c2-1781875447-a50ab7   Snapshot etcd-snapshot-c2-1781875447 saved on c2
+default     26m         Normal    ETCDSnapshotCreated    etcdsnapshotfile/local-etcd-snapshot-c1-1781875450-eff4f4   Snapshot etcd-snapshot-c1-1781875450 saved on c1
