@@ -1,0 +1,212 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ "$#" -lt 2 ]; then
+  echo "Usage: $0 <url> <run_dir>"
+  echo "Example: $0 http://10.10.20.131:30080/ experiments/kubeedge/pod-failure/run-01"
+  exit 1
+fi
+
+URL="$1"
+RUN_DIR="$2"
+
+NAMESPACE="${NAMESPACE:-testapp}"
+DEPLOYMENT="${DEPLOYMENT:-nginx-testapp}"
+LABEL_SELECTOR="${LABEL_SELECTOR:-app=nginx-testapp}"
+EXPECTED_REPLICAS="${EXPECTED_REPLICAS:-3}"
+
+PRE_SECONDS="${PRE_SECONDS:-30}"
+POST_SECONDS="${POST_SECONDS:-60}"
+INTERVAL="${INTERVAL:-1}"
+TIMEOUT="${TIMEOUT:-2}"
+RECOVERY_TIMEOUT_SECONDS="${RECOVERY_TIMEOUT_SECONDS:-180}"
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+MONITOR="${MONITOR:-$SCRIPT_DIR/request_monitor.py}"
+
+mkdir -p "$RUN_DIR"
+
+MONITOR_PID=""
+
+cleanup() {
+  if [ -n "${MONITOR_PID:-}" ] && kill -0 "$MONITOR_PID" 2>/dev/null; then
+    echo "Stopping request monitor PID $MONITOR_PID ..."
+    kill -TERM "$MONITOR_PID" 2>/dev/null || true
+
+    for _ in {1..5}; do
+      if ! kill -0 "$MONITOR_PID" 2>/dev/null; then
+        break
+      fi
+      sleep 1
+    done
+
+    if kill -0 "$MONITOR_PID" 2>/dev/null; then
+      echo "Request monitor did not stop after TERM, sending KILL ..."
+      kill -KILL "$MONITOR_PID" 2>/dev/null || true
+    fi
+
+    wait "$MONITOR_PID" 2>/dev/null || true
+  fi
+}
+trap cleanup EXIT
+
+ready_pod_count() {
+  kubectl get pods -n "$NAMESPACE" -l "$LABEL_SELECTOR" --no-headers 2>/dev/null \
+    | awk '$2 ~ /^1\/1$/ && $3 == "Running" {count++} END {print count+0}'
+}
+
+echo "===== KubeEdge Pod Failure Test ====="
+echo "URL: $URL"
+echo "Run dir: $RUN_DIR"
+echo "Namespace: $NAMESPACE"
+echo "Deployment: $DEPLOYMENT"
+echo "Label selector: $LABEL_SELECTOR"
+echo "Expected replicas: $EXPECTED_REPLICAS"
+echo "PRE_SECONDS: $PRE_SECONDS"
+echo "POST_SECONDS: $POST_SECONDS"
+echo "INTERVAL: $INTERVAL"
+echo "TIMEOUT: $TIMEOUT"
+echo
+
+echo "$URL" > "$RUN_DIR/url.txt"
+echo "$PRE_SECONDS" > "$RUN_DIR/pre_seconds.txt"
+echo "$POST_SECONDS" > "$RUN_DIR/post_seconds.txt"
+echo "$INTERVAL" > "$RUN_DIR/interval_seconds.txt"
+echo "$TIMEOUT" > "$RUN_DIR/timeout_seconds.txt"
+echo "$NAMESPACE" > "$RUN_DIR/namespace.txt"
+echo "$DEPLOYMENT" > "$RUN_DIR/deployment.txt"
+echo "$LABEL_SELECTOR" > "$RUN_DIR/label_selector.txt"
+echo "$EXPECTED_REPLICAS" > "$RUN_DIR/expected_replicas.txt"
+
+date -Is | tee "$RUN_DIR/test_start_time.txt"
+
+kubectl get nodes -o wide > "$RUN_DIR/nodes_before.txt"
+kubectl get pods -n "$NAMESPACE" -o wide > "$RUN_DIR/pods_before.txt"
+kubectl get deploy -n "$NAMESPACE" -o wide > "$RUN_DIR/deployment_before.txt"
+kubectl get svc -n "$NAMESPACE" -o wide > "$RUN_DIR/service_before.txt"
+kubectl get events -A --sort-by=.metadata.creationTimestamp > "$RUN_DIR/events_before.txt"
+kubectl get pods -n kubeedge -o wide > "$RUN_DIR/kubeedge_pods_before.txt" 2>/dev/null || true
+
+echo "Starting request monitor..."
+python3 "$MONITOR" \
+  --url "$URL" \
+  --output "$RUN_DIR/requests.csv" \
+  --interval "$INTERVAL" \
+  --timeout "$TIMEOUT" &
+MONITOR_PID="$!"
+
+echo "Monitor PID: $MONITOR_PID" | tee "$RUN_DIR/monitor_pid.txt"
+
+echo "Baseline phase: ${PRE_SECONDS}s"
+sleep "$PRE_SECONDS"
+
+POD_TO_DELETE="$(kubectl get pods -n "$NAMESPACE" -l "$LABEL_SELECTOR" \
+  --field-selector=status.phase=Running \
+  -o jsonpath='{.items[0].metadata.name}')"
+
+if [ -z "$POD_TO_DELETE" ]; then
+  echo "ERROR: No running pod found for selector $LABEL_SELECTOR in namespace $NAMESPACE" | tee "$RUN_DIR/error.txt"
+  exit 1
+fi
+
+POD_NODE="$(kubectl get pod -n "$NAMESPACE" "$POD_TO_DELETE" -o jsonpath='{.spec.nodeName}')"
+
+echo "$POD_TO_DELETE" | tee "$RUN_DIR/deleted_pod.txt"
+echo "$POD_NODE" | tee "$RUN_DIR/deleted_pod_node.txt"
+
+date -Is | tee "$RUN_DIR/fault_time.txt"
+
+echo "Deleting pod $POD_TO_DELETE on node $POD_NODE ..."
+kubectl delete pod -n "$NAMESPACE" "$POD_TO_DELETE" --wait=false | tee "$RUN_DIR/delete_command_output.txt"
+
+echo "Waiting for recovery: $EXPECTED_REPLICAS ready Running pods..."
+RECOVERY_START_EPOCH="$(date +%s)"
+RECOVERED="false"
+
+while true; do
+  CURRENT_READY="$(ready_pod_count)"
+  echo "$(date -Is) ready_pods=$CURRENT_READY/$EXPECTED_REPLICAS" | tee -a "$RUN_DIR/recovery_poll.log"
+
+  if [ "$CURRENT_READY" -ge "$EXPECTED_REPLICAS" ]; then
+    date -Is | tee "$RUN_DIR/recovery_time.txt"
+    RECOVERED="true"
+    break
+  fi
+
+  NOW_EPOCH="$(date +%s)"
+  ELAPSED="$((NOW_EPOCH - RECOVERY_START_EPOCH))"
+
+  if [ "$ELAPSED" -ge "$RECOVERY_TIMEOUT_SECONDS" ]; then
+    echo "WARNING: Recovery timeout after ${RECOVERY_TIMEOUT_SECONDS}s" | tee "$RUN_DIR/recovery_timeout.txt"
+    break
+  fi
+
+  sleep 1
+done
+
+echo "Post phase: ${POST_SECONDS}s"
+sleep "$POST_SECONDS"
+
+kubectl get nodes -o wide > "$RUN_DIR/nodes_after.txt"
+kubectl get pods -n "$NAMESPACE" -o wide > "$RUN_DIR/pods_after.txt"
+kubectl get deploy -n "$NAMESPACE" -o wide > "$RUN_DIR/deployment_after.txt"
+kubectl get svc -n "$NAMESPACE" -o wide > "$RUN_DIR/service_after.txt"
+kubectl get events -A --sort-by=.metadata.creationTimestamp > "$RUN_DIR/events_after.txt"
+kubectl get pods -n kubeedge -o wide > "$RUN_DIR/kubeedge_pods_after.txt" 2>/dev/null || true
+
+date -Is | tee "$RUN_DIR/test_end_time.txt"
+
+cleanup
+trap - EXIT
+
+TOTAL_REQUESTS="$(awk -F',' 'NR>1 {total++} END {print total+0}' "$RUN_DIR/requests.csv")"
+OK_REQUESTS="$(awk -F',' 'NR>1 && $3=="200" && $5=="True" {ok++} END {print ok+0}' "$RUN_DIR/requests.csv")"
+FAILED_REQUESTS="$(awk -F',' 'NR>1 && !($3=="200" && $5=="True") {fail++} END {print fail+0}' "$RUN_DIR/requests.csv")"
+
+if [ "$TOTAL_REQUESTS" -gt 0 ]; then
+  SUCCESS_RATE="$(awk -v ok="$OK_REQUESTS" -v total="$TOTAL_REQUESTS" 'BEGIN {printf "%.2f", (ok/total)*100}')"
+else
+  SUCCESS_RATE="0.00"
+fi
+
+RECOVERY_SECONDS=""
+if [ -f "$RUN_DIR/fault_time.txt" ] && [ -f "$RUN_DIR/recovery_time.txt" ]; then
+  RECOVERY_SECONDS="$(python3 - "$RUN_DIR/fault_time.txt" "$RUN_DIR/recovery_time.txt" <<'PY'
+import sys
+from datetime import datetime
+with open(sys.argv[1]) as f:
+    fault = datetime.fromisoformat(f.read().strip())
+with open(sys.argv[2]) as f:
+    recovery = datetime.fromisoformat(f.read().strip())
+print(round((recovery - fault).total_seconds(), 2))
+PY
+)"
+fi
+
+cat > "$RUN_DIR/summary.txt" <<SUMMARY
+scenario=pod-failure
+system=kubeedge
+url=$URL
+namespace=$NAMESPACE
+deployment=$DEPLOYMENT
+label_selector=$LABEL_SELECTOR
+expected_replicas=$EXPECTED_REPLICAS
+pre_seconds=$PRE_SECONDS
+post_seconds=$POST_SECONDS
+interval_seconds=$INTERVAL
+timeout_seconds=$TIMEOUT
+deleted_pod=$POD_TO_DELETE
+deleted_pod_node=$POD_NODE
+recovered=$RECOVERED
+recovery_seconds=$RECOVERY_SECONDS
+total_requests=$TOTAL_REQUESTS
+ok_requests=$OK_REQUESTS
+failed_requests=$FAILED_REQUESTS
+success_rate_percent=$SUCCESS_RATE
+SUMMARY
+
+echo
+echo "===== SUMMARY ====="
+cat "$RUN_DIR/summary.txt"
+echo
+echo "Run completed: $RUN_DIR"

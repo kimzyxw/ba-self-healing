@@ -1,0 +1,9 @@
+NAMESPACE   LAST SEEN   TYPE     REASON             OBJECT                                MESSAGE
+testapp     18m         Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-qmcgh    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-qmcgh to e1
+testapp     18m         Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-qmcgh
+testapp     6m54s       Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-ljfpv    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-ljfpv to e1
+testapp     6m54s       Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-ljfpv
+testapp     3m47s       Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-xfj5q    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-xfj5q to e2
+testapp     3m48s       Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-xfj5q
+testapp     65s         Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-zd4sz    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-zd4sz to e1
+testapp     65s         Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-zd4sz

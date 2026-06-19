@@ -1,0 +1,24 @@
+NAMESPACE   LAST SEEN   TYPE     REASON                OBJECT                                                      MESSAGE
+testapp     29m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-qmcgh
+testapp     29m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-qmcgh                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-qmcgh to e1
+testapp     17m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-ljfpv                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-ljfpv to e1
+testapp     17m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-ljfpv
+testapp     14m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-xfj5q
+testapp     14m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-xfj5q                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-xfj5q to e2
+testapp     11m         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-zd4sz
+testapp     11m         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-zd4sz                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-zd4sz to e1
+testapp     9m49s       Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-lsc8d                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-lsc8d to e1
+testapp     9m50s       Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-lsc8d
+testapp     8m3s        Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-tkw2m                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-tkw2m to e2
+testapp     8m4s        Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-tkw2m
+testapp     6m20s       Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-lmdvl                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-lmdvl to e1
+testapp     6m21s       Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-lmdvl
+testapp     4m33s       Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-xrtv8                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-xrtv8 to e2
+testapp     4m34s       Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-xrtv8
+testapp     2m48s       Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-mbp8l                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-mbp8l to e1
+testapp     2m49s       Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-mbp8l
+default     2m9s        Normal   ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-c2-1781860763-f7b079   Snapshot etcd-snapshot-c2-1781860763 saved on c2
+default     2m3s        Normal   ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-c1-1781860770-45bb8c   Snapshot etcd-snapshot-c1-1781860770 saved on c1
+default     116s        Normal   ETCDSnapshotCreated   etcdsnapshotfile/local-etcd-snapshot-c3-1781860776-7ff64c   Snapshot etcd-snapshot-c3-1781860776 saved on c3
+testapp     63s         Normal   Scheduled             pod/nginx-testapp-5c8f4cb9d7-b7lkb                          Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-b7lkb to e2
+testapp     64s         Normal   SuccessfulCreate      replicaset/nginx-testapp-5c8f4cb9d7                         Created pod: nginx-testapp-5c8f4cb9d7-b7lkb

@@ -1,0 +1,17 @@
+NAMESPACE   LAST SEEN   TYPE     REASON             OBJECT                                MESSAGE
+testapp     26m         Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-qmcgh
+testapp     26m         Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-qmcgh    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-qmcgh to e1
+testapp     13m         Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-ljfpv    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-ljfpv to e1
+testapp     13m         Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-ljfpv
+testapp     10m         Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-xfj5q
+testapp     10m         Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-xfj5q    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-xfj5q to e2
+testapp     8m6s        Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-zd4sz
+testapp     8m6s        Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-zd4sz    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-zd4sz to e1
+testapp     6m19s       Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-lsc8d
+testapp     6m19s       Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-lsc8d    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-lsc8d to e1
+testapp     4m33s       Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-tkw2m    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-tkw2m to e2
+testapp     4m33s       Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-tkw2m
+testapp     2m50s       Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-lmdvl    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-lmdvl to e1
+testapp     2m50s       Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-lmdvl
+testapp     63s         Normal   Scheduled          pod/nginx-testapp-5c8f4cb9d7-xrtv8    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-xrtv8 to e2
+testapp     63s         Normal   SuccessfulCreate   replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-xrtv8

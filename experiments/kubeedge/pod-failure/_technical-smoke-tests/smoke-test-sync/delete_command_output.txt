@@ -1,1 +1,1 @@
-pod "nginx-testapp-5c8f4cb9d7-w99cg" deleted from testapp namespace
+pod "nginx-testapp-5c8f4cb9d7-644rv" deleted from testapp namespace

@@ -1,0 +1,19 @@
+# KubeEdge Pod Failure Aggregate
+
+runs=10
+all_recovered=true
+
+request_success_rate_mean_percent=100.0
+request_success_rate_min_percent=100.0
+error_rate_mean_percent=0.0
+error_rate_max_percent=0.0
+
+recovery_seconds_median=3.0
+recovery_seconds_mean=3.5
+recovery_seconds_min=1.0
+recovery_seconds_max=5.0
+
+p95_latency_ms_median=10.98
+max_latency_ms_max=83.9
+
+
