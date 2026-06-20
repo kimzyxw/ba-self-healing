@@ -1,0 +1,17 @@
+Hinweis zu run-02-c3:
+
+Der Cloud-Knoten c3 wurde im Rahmen des Versuchslaufs manuell über VMware Fusion ausgeschaltet und nach der geplanten Ausfallphase wieder gestartet.
+
+Nach dem Neustart der VM wurde c3 innerhalb des im Skript definierten automatischen Recovery-Timeouts von 600 Sekunden nicht wieder als Ready erkannt. Der Knoten blieb im Clusterzustand Unknown bzw. NotReady.
+
+Daraufhin wurde der im Skript vorgesehene Prompt für einen möglichen manuellen Eingriff erreicht. Zu diesem Zeitpunkt zeigte eine zusätzliche Prüfung mit kubectl get nodes -o wide, dass c3 weiterhin NotReady war.
+
+Die Eingabe "sudo systemctl restart k3s" wurde jedoch nicht auf c3 ausgeführt, sondern in einem anderen Terminal auf c1. Damit wurde kein bestätigter manueller k3s-Neustart auf dem betroffenen Cloud-Knoten durchgeführt.
+
+Dieser Lauf darf daher nicht als bestätigter manueller k3s-Neustart auf c3 interpretiert werden.
+
+Nach dem Prompt wurde c3 wieder als Ready erkannt und der Versuchslauf konnte regulär abgeschlossen werden.
+
+Die automatische Reintegration von c3 war innerhalb des 600s-Timeouts nicht erfolgreich. Ob die spätere Wiederherstellung ohne Eingriff auf c3 oder durch indirekte Effekte erfolgte, kann aus diesem Lauf nicht eindeutig abgeleitet werden.
+
+Die Anwendungsverfügbarkeit blieb während des gesamten Laufs bei 100 Prozent. Es wurden 927 von 927 HTTP-Requests erfolgreich beantwortet.

@@ -1,0 +1,43 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                                                      MESSAGE
+kubeedge      31m         Warning   NodeNotReady              pod/edge-eclipse-mosquitto-7l5gz                            Node is not ready
+default       31m         Normal    NodeNotReady              node/e2                                                     Node e2 status is now: NodeNotReady
+testapp       31m         Warning   NodeNotReady              pod/nginx-testapp-5c8f4cb9d7-z9m8s                          Node is not ready
+testapp       31m         Warning   NodeNotReady              pod/nginx-testapp-5c8f4cb9d7-dz97l                          Node is not ready
+testapp       30m         Normal    TaintManagerEviction      pod/nginx-testapp-5c8f4cb9d7-z9m8s                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-z9m8s
+testapp       30m         Normal    TaintManagerEviction      pod/nginx-testapp-5c8f4cb9d7-dz97l                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-dz97l
+kubeedge      31m         Warning   NodeNotReady              pod/edgemesh-agent-qf7pk                                    Node is not ready
+kubeedge      36m         Warning   NodeNotReady              pod/edgemesh-agent-l2n4z                                    Node is not ready
+kubeedge      36m         Warning   NodeNotReady              pod/edge-eclipse-mosquitto-szthb                            Node is not ready
+default       36m         Normal    NodeNotReady              node/e1                                                     Node e1 status is now: NodeNotReady
+testapp       36m         Warning   NodeNotReady              pod/nginx-testapp-5c8f4cb9d7-zd4sz                          Node is not ready
+testapp       34m         Normal    TaintManagerEviction      pod/nginx-testapp-5c8f4cb9d7-zd4sz                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-zd4sz
+default       72m         Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-c3-1781875446-b87bb0   Snapshot etcd-snapshot-c3-1781875446 saved on c3
+default       72m         Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-c2-1781875447-a50ab7   Snapshot etcd-snapshot-c2-1781875447 saved on c2
+default       72m         Normal    ETCDSnapshotCreated       etcdsnapshotfile/local-etcd-snapshot-c1-1781875450-eff4f4   Snapshot etcd-snapshot-c1-1781875450 saved on c1
+kube-system   17m         Normal    UpdatedLoadBalancer       service/traefik                                             Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.134 10.10.10.135]
+kube-system   17m         Normal    LeaderElection            lease/k3s-cloud-controller-manager                          c1_4306f827-59c6-4974-b896-11f38f74be74 became leader
+kube-system   17m         Normal    EnsuringLoadBalancer      service/traefik                                             Ensuring load balancer
+kube-system   17m         Normal    AppliedDaemonSet          service/traefik                                             Applied LoadBalancer DaemonSet kube-system/svclb-traefik-7ab09d61
+kube-system   16m         Warning   NodeNotReady              pod/svclb-traefik-7ab09d61-8zxqj                            Node is not ready
+default       16m         Normal    NodeNotReady              node/c2                                                     Node c2 status is now: NodeNotReady
+kube-system   16m         Normal    UpdatedLoadBalancer       service/traefik                                             Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.135]
+kubeedge      16m         Warning   NodeNotReady              pod/cloud-iptables-manager-mnh8d                            Node is not ready
+kubeedge      16m         Warning   NodeNotReady              pod/cloudcore-589789b9fc-9c2tv                              Node is not ready
+kubeedge      11m         Warning   FailedScheduling          pod/cloudcore-589789b9fc-vrgqq                              0/5 nodes are available: 1 node(s) had untolerated taint(s), 2 node(s) didn't have free ports for the requested pod ports, 2 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 2 No preemption victims found for incoming pod, 3 Preemption is not helpful for scheduling.
+kubeedge      11m         Normal    TaintManagerEviction      pod/cloudcore-589789b9fc-9c2tv                              Marking for deletion Pod kubeedge/cloudcore-589789b9fc-9c2tv
+kubeedge      11m         Normal    SuccessfulCreate          replicaset/cloudcore-589789b9fc                             Created pod: cloudcore-589789b9fc-vrgqq
+kubeedge      106s        Warning   FailedScheduling          pod/cloudcore-589789b9fc-vrgqq                              0/5 nodes are available: 1 node(s) had untolerated taint(s), 2 node(s) didn't have free ports for the requested pod ports, 2 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 2 No preemption victims found for incoming pod, 3 Preemption is not helpful for scheduling.
+kubeedge      0s          Normal    Scheduled                 pod/cloudcore-589789b9fc-vrgqq                              Successfully assigned kubeedge/cloudcore-589789b9fc-vrgqq to c2
+default       <invalid>   Normal    NodeHasNoDiskPressure     node/c2                                                     Node c2 status is now: NodeHasNoDiskPressure
+default       <invalid>   Normal    CertificateExpirationOK   node/c2                                                     Node and Certificate Authority certificates managed by k3s are OK
+default       <invalid>   Normal    Starting                  node/c2                                                     Starting kubelet.
+default       <invalid>   Normal    NodeHasSufficientMemory   node/c2                                                     Node c2 status is now: NodeHasSufficientMemory
+kube-system   <invalid>   Normal    SandboxChanged            pod/svclb-traefik-7ab09d61-8zxqj                            Pod sandbox changed, it will be killed and re-created.
+default       <invalid>   Normal    NodeAllocatableEnforced   node/c2                                                     Updated Node Allocatable limit across pods
+default       <invalid>   Warning   Rebooted                  node/c2                                                     Node c2 has been rebooted, boot id: beb17206-5696-4a8f-90fe-1888f1d251a8
+default       <invalid>   Normal    Starting                  node/c2                                                     
+default       <invalid>   Normal    NodeHasSufficientPID      node/c2                                                     Node c2 status is now: NodeHasSufficientPID
+default       <invalid>   Normal    NodeReady                 node/c2                                                     Node c2 status is now: NodeReady
+kubeedge      <invalid>   Warning   FailedMount               pod/cloudcore-589789b9fc-9c2tv                              MountVolume.SetUp failed for volume "conf" : object "kubeedge"/"cloudcore" not registered
+kubeedge      <invalid>   Warning   FailedMount               pod/cloudcore-589789b9fc-9c2tv                              MountVolume.SetUp failed for volume "certs" : object "kubeedge"/"cloudcore" not registered
+kube-system   <invalid>   Warning   FailedCreatePodSandBox    pod/svclb-traefik-7ab09d61-8zxqj                            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "bb83c060a4717351ecfe86f785757106ece533d30d8d121ed3ce598ff2d22597": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.

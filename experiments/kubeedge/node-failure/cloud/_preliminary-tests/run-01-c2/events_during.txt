@@ -1,0 +1,25 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                 OBJECT                                                      MESSAGE
+testapp       14m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-dz97l                          Node is not ready
+default       14m         Normal    NodeNotReady           node/e2                                                     Node e2 status is now: NodeNotReady
+kubeedge      14m         Warning   NodeNotReady           pod/edge-eclipse-mosquitto-7l5gz                            Node is not ready
+testapp       14m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-z9m8s                          Node is not ready
+testapp       13m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-z9m8s                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-z9m8s
+testapp       13m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-dz97l                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-dz97l
+kubeedge      14m         Warning   NodeNotReady           pod/edgemesh-agent-qf7pk                                    Node is not ready
+default       19m         Normal    NodeNotReady           node/e1                                                     Node e1 status is now: NodeNotReady
+kubeedge      19m         Warning   NodeNotReady           pod/edgemesh-agent-l2n4z                                    Node is not ready
+kubeedge      19m         Warning   NodeNotReady           pod/edge-eclipse-mosquitto-szthb                            Node is not ready
+testapp       19m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-zd4sz                          Node is not ready
+testapp       17m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-zd4sz                          Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-zd4sz
+default       55m         Normal    ETCDSnapshotCreated    etcdsnapshotfile/local-etcd-snapshot-c3-1781875446-b87bb0   Snapshot etcd-snapshot-c3-1781875446 saved on c3
+default       55m         Normal    ETCDSnapshotCreated    etcdsnapshotfile/local-etcd-snapshot-c2-1781875447-a50ab7   Snapshot etcd-snapshot-c2-1781875447 saved on c2
+default       55m         Normal    ETCDSnapshotCreated    etcdsnapshotfile/local-etcd-snapshot-c1-1781875450-eff4f4   Snapshot etcd-snapshot-c1-1781875450 saved on c1
+kube-system   27s         Normal    LeaderElection         lease/k3s-cloud-controller-manager                          c1_4306f827-59c6-4974-b896-11f38f74be74 became leader
+kube-system   27s         Normal    UpdatedLoadBalancer    service/traefik                                             Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.134 10.10.10.135]
+kube-system   26s         Normal    AppliedDaemonSet       service/traefik                                             Applied LoadBalancer DaemonSet kube-system/svclb-traefik-7ab09d61
+kube-system   26s         Normal    EnsuringLoadBalancer   service/traefik                                             Ensuring load balancer
+kubeedge      2s          Warning   NodeNotReady           pod/cloudcore-589789b9fc-9c2tv                              Node is not ready
+kubeedge      2s          Warning   NodeNotReady           pod/cloud-iptables-manager-mnh8d                            Node is not ready
+kube-system   2s          Normal    UpdatedLoadBalancer    service/traefik                                             Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.135]
+kube-system   2s          Warning   NodeNotReady           pod/svclb-traefik-7ab09d61-8zxqj                            Node is not ready
+default       2s          Normal    NodeNotReady           node/c2                                                     Node c2 status is now: NodeNotReady

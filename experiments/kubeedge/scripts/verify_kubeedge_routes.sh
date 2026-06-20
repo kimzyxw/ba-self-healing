@@ -15,6 +15,9 @@ C1_EDGE_IFACE="ens256"
 E1_MGMT="172.16.41.146"
 E2_MGMT="172.16.41.147"
 
+C2_CLOUD="10.10.10.134"
+C3_CLOUD="10.10.10.135"
+
 E1_EDGE="10.10.20.131"
 E2_EDGE="10.10.20.132"
 
@@ -27,8 +30,10 @@ E2_EDGE="10.10.20.132"
   echo
 } | tee "$OUT_DIR/preflight.log"
 
-echo "===== Set route on c1: Cloud -> Edge =====" | tee -a "$OUT_DIR/preflight.log"
+echo "===== Set route on cloud nodes: Cloud -> Edge =====" | tee -a "$OUT_DIR/preflight.log"
 sudo -n /usr/sbin/ip route replace 10.10.20.0/24 via "$CLOUD_ROUTER_IP" dev "$C1_EDGE_IFACE"
+ssh "kim@$C2_CLOUD" "sudo -n /usr/sbin/ip route replace 10.10.20.0/24 via $CLOUD_ROUTER_IP dev ens256"
+ssh "kim@$C3_CLOUD" "sudo -n /usr/sbin/ip route replace 10.10.20.0/24 via $CLOUD_ROUTER_IP dev ens256"
 
 {
   echo
@@ -38,7 +43,15 @@ sudo -n /usr/sbin/ip route replace 10.10.20.0/24 via "$CLOUD_ROUTER_IP" dev "$C1
   echo "===== c1 route get edge nodes ====="
   ip route get "$E1_EDGE"
   ip route get "$E2_EDGE"
-} | tee "$OUT_DIR/c1_routes.txt"
+
+  echo
+  echo "===== c2 route get edge nodes ====="
+  ssh "kim@$C2_CLOUD" "hostname; ip route get $E1_EDGE; ip route get $E2_EDGE"
+
+  echo
+  echo "===== c3 route get edge nodes ====="
+  ssh "kim@$C3_CLOUD" "hostname; ip route get $E1_EDGE; ip route get $E2_EDGE"
+} | tee "$OUT_DIR/cloud_routes.txt"
 
 echo "===== Set route on e1: Edge -> Cloud =====" | tee -a "$OUT_DIR/preflight.log"
 ssh "kim@$E1_MGMT" "sudo -n /usr/sbin/ip route replace 10.10.10.0/24 via $EDGE_ROUTER_IP dev ens256"

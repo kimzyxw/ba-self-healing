@@ -1,0 +1,13 @@
+Hinweis zu run-01-c2:
+
+Der Cloud-Knoten c2 wurde nach dem Neustart der VM innerhalb des im Skript definierten automatischen Recovery-Timeouts von 600 Sekunden nicht wieder als Ready erkannt.
+
+Daraufhin wurde der im Skript vorgesehene Prompt für einen möglichen manuellen Eingriff erreicht.
+
+Die Eingabe "sudo systemctl restart k3s" wurde versehentlich in das laufende Skript-Terminal auf c1 geschrieben. Der Befehl wurde dadurch nicht auf c2 ausgeführt, sondern lediglich als Eingabe für den Skript-Prompt verarbeitet.
+
+Dieser Lauf darf daher nicht als bestätigter manueller k3s-Neustart auf c2 interpretiert werden.
+
+Nach dem Prompt wurde c2 wieder als Ready erkannt.
+
+Die Anwendungsverfügbarkeit blieb während des gesamten Laufs bei 100 Prozent.

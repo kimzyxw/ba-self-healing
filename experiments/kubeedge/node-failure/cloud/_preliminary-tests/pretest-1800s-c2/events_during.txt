@@ -1,0 +1,13 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                OBJECT                             MESSAGE
+kube-system   53s         Normal    LeaderElection        lease/kube-scheduler               c3_86f8e97f-dcfa-42db-97e2-8f5c35c918c5 became leader
+kube-system   51s         Normal    LeaderElection        lease/kube-controller-manager      c1_5517f458-422a-4a74-a823-48ffdb013275 became leader
+default       50s         Normal    RegisteredNode        node/c1                            Node c1 event: Registered Node c1 in Controller
+default       50s         Normal    RegisteredNode        node/c2                            Node c2 event: Registered Node c2 in Controller
+default       50s         Normal    RegisteredNode        node/c3                            Node c3 event: Registered Node c3 in Controller
+default       50s         Normal    RegisteredNode        node/e1                            Node e1 event: Registered Node e1 in Controller
+default       50s         Normal    RegisteredNode        node/e2                            Node e2 event: Registered Node e2 in Controller
+default       0s          Normal    NodeNotReady          node/c2                            Node c2 status is now: NodeNotReady
+kube-system   0s          Warning   NodeNotReady          pod/svclb-traefik-7ab09d61-8zxqj   Node is not ready
+kube-system   0s          Normal    UpdatedLoadBalancer   service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.135]
+kubeedge      0s          Warning   NodeNotReady          pod/cloud-iptables-manager-mnh8d   Node is not ready
+kubeedge      0s          Warning   NodeNotReady          pod/cloudcore-589789b9fc-vrgqq     Node is not ready

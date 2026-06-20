@@ -1,0 +1,2 @@
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES         SELECTOR
+nginx-testapp   3/3     3            3           6d20h   nginx        nginx:stable   app=nginx-testapp

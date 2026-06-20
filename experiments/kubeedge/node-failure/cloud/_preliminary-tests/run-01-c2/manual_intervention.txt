@@ -1,0 +1,6 @@
+manueller_eingriff=unklar
+knoten=c2
+aktion=kein_bestaetigter_eingriff
+bestaetigt=false
+grund=c2 wurde innerhalb des automatischen Recovery-Timeouts von 600 Sekunden nicht wieder als Ready erkannt und der Prompt für einen möglichen manuellen Eingriff wurde erreicht
+hinweis=Die Eingabe "sudo systemctl restart k3s" wurde versehentlich in das laufende Skript-Terminal auf c1 geschrieben und nicht in einem separaten Tab ausgeführt. Dieser Lauf darf daher nicht als bestätigter manueller k3s-Neustart interpretiert werden.

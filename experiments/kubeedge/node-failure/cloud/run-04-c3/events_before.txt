@@ -1,0 +1,131 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                           OBJECT                             MESSAGE
+default       24m         Normal    NodeNotReady                     node/c2                            Node c2 status is now: NodeNotReady
+kube-system   24m         Warning   NodeNotReady                     pod/svclb-traefik-7ab09d61-8zxqj   Node is not ready
+kube-system   24m         Normal    UpdatedLoadBalancer              service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.135]
+kubeedge      24m         Warning   NodeNotReady                     pod/cloud-iptables-manager-mnh8d   Node is not ready
+kube-system   7m37s       Normal    UpdatedLoadBalancer              service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.135] -> [10.10.10.133 10.10.10.134 10.10.10.135]
+kubeedge      4h45m       Warning   FailedScheduling                 pod/cloudcore-589789b9fc-9bt6x     0/5 nodes are available: 1 node(s) had untolerated taint(s), 2 node(s) didn't have free ports for the requested pod ports, 2 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 2 No preemption victims found for incoming pod, 3 Preemption is not helpful for scheduling.
+kube-system   4h35m       Normal    LeaderElection                   lease/kube-scheduler               c1_3e3f8059-eb8b-4d1e-b17a-9053f8ee9ec7 became leader
+kube-system   4h35m       Normal    UpdatedLoadBalancer              service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.134]
+kubeedge      4h35m       Warning   NodeNotReady                     pod/cloud-iptables-manager-l7lpb   Node is not ready
+kube-system   4h35m       Warning   NodeNotReady                     pod/svclb-traefik-7ab09d61-x5cmh   Node is not ready
+kubeedge      4h35m       Warning   NodeNotReady                     pod/cloudcore-589789b9fc-8xlxv     Node is not ready
+default       4h35m       Normal    NodeNotReady                     node/c3                            Node c3 status is now: NodeNotReady
+kubeedge      4h30m       Normal    TaintManagerEviction             pod/cloudcore-589789b9fc-8xlxv     Marking for deletion Pod kubeedge/cloudcore-589789b9fc-8xlxv
+kubeedge      4h30m       Warning   FailedScheduling                 pod/cloudcore-589789b9fc-5c7b7     0/5 nodes are available: 1 node(s) had untolerated taint(s), 2 node(s) didn't have free ports for the requested pod ports, 2 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 2 No preemption victims found for incoming pod, 3 Preemption is not helpful for scheduling.
+kubeedge      4h30m       Normal    SuccessfulCreate                 replicaset/cloudcore-589789b9fc    Created pod: cloudcore-589789b9fc-5c7b7
+kubeedge      4h14m       Warning   FailedScheduling                 pod/cloudcore-589789b9fc-5c7b7     0/5 nodes are available: 1 node(s) had untolerated taint(s), 2 node(s) didn't have free ports for the requested pod ports, 2 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 2 No preemption victims found for incoming pod, 3 Preemption is not helpful for scheduling.
+default       4h14m       Normal    NodeAllocatableEnforced          node/c3                            Updated Node Allocatable limit across pods
+default       4h14m       Normal    CertificateExpirationOK          node/c3                            Node and Certificate Authority certificates managed by k3s are OK
+default       4h14m       Normal    NodeHasSufficientPID             node/c3                            Node c3 status is now: NodeHasSufficientPID
+default       4h14m       Warning   Rebooted                         node/c3                            Node c3 has been rebooted, boot id: eb189054-ba35-4311-a147-36198a17810b
+default       4h14m       Normal    NodeReady                        node/c3                            Node c3 status is now: NodeReady
+default       4h14m       Normal    NodeHasNoDiskPressure            node/c3                            Node c3 status is now: NodeHasNoDiskPressure
+default       4h14m       Normal    NodeHasSufficientMemory          node/c3                            Node c3 status is now: NodeHasSufficientMemory
+default       4h14m       Normal    Starting                         node/c3                            
+default       4h14m       Normal    Starting                         node/c3                            Starting kubelet.
+kube-system   4h14m       Normal    SandboxChanged                   pod/svclb-traefik-7ab09d61-x5cmh   Pod sandbox changed, it will be killed and re-created.
+kube-system   4h14m       Warning   FailedCreatePodSandBox           pod/svclb-traefik-7ab09d61-x5cmh   Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "004e8145ddb9238dc55749afa8bfc2889b7cf26a44340cca569712924b66009b": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.
+kubeedge      4h14m       Normal    Scheduled                        pod/cloudcore-589789b9fc-5c7b7     Successfully assigned kubeedge/cloudcore-589789b9fc-5c7b7 to c3
+kubeedge      4h14m       Normal    Pulled                           pod/cloud-iptables-manager-l7lpb   Container image "kubeedge/iptables-manager:v1.21.0" already present on machine and can be accessed by the pod
+kubeedge      4h14m       Normal    SandboxChanged                   pod/cloud-iptables-manager-l7lpb   Pod sandbox changed, it will be killed and re-created.
+kube-system   4h14m       Normal    ApplyingManifest                 addon/coredns                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/metrics-server-service       Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/auth-reader                  Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kubeedge      4h14m       Normal    Started                          pod/cloudcore-589789b9fc-5c7b7     Container started
+kube-system   4h14m       Normal    ApplyingManifest                 addon/ccm                          Applying manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/ccm                          Applied manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kubeedge      4h14m       Normal    Created                          pod/cloudcore-589789b9fc-5c7b7     Container created
+kubeedge      4h14m       Normal    Pulled                           pod/cloudcore-589789b9fc-5c7b7     Container image "kubeedge/cloudcore:v1.21.0" already present on machine and can be accessed by the pod
+kube-system   4h14m       Normal    AppliedManifest                  addon/runtimes                     Applied manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/coredns                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/auth-delegator               Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/auth-delegator               Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/aggregated-metrics-reader    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/local-storage                Applying manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/local-storage                Applied manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/aggregated-metrics-reader    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/runtimes                     Applying manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/metrics-apiservice           Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/metrics-apiservice           Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kubeedge      4h14m       Normal    Started                          pod/cloud-iptables-manager-l7lpb   Container started
+kubeedge      4h14m       Normal    Created                          pod/cloud-iptables-manager-l7lpb   Container created
+kube-system   4h14m       Normal    ApplyingManifest                 addon/metrics-server-deployment    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/metrics-server-deployment    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/rolebindings                 Applied manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/rolebindings                 Applying manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/auth-reader                  Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/metrics-server-service       Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/traefik                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/resource-reader              Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   4h14m       Normal    ApplyingManifest                 addon/resource-reader              Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   4h14m       Normal    AppliedManifest                  addon/traefik                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kubeedge      4h14m       Normal    TaintManagerEviction             pod/cloudcore-589789b9fc-5c7b7     Cancelling deletion of Pod kubeedge/cloudcore-589789b9fc-5c7b7
+default       4h14m       Normal    NodePasswordValidationComplete   node/c3                            Deferred node password secret validation complete
+kube-system   4h14m       Normal    Created                          pod/svclb-traefik-7ab09d61-x5cmh   Container created
+kube-system   4h14m       Normal    Pulled                           pod/svclb-traefik-7ab09d61-x5cmh   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   4h14m       Normal    Pulled                           pod/svclb-traefik-7ab09d61-x5cmh   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   4h14m       Normal    Created                          pod/svclb-traefik-7ab09d61-x5cmh   Container created
+kube-system   4h14m       Normal    Started                          pod/svclb-traefik-7ab09d61-x5cmh   Container started
+kube-system   4h14m       Normal    UpdatedLoadBalancer              service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134] -> [10.10.10.133 10.10.10.134 10.10.10.135]
+kube-system   4h14m       Normal    Started                          pod/svclb-traefik-7ab09d61-x5cmh   Container started
+kubeedge      24m         Warning   FailedToUpdateEndpointSlices     service/cloudcore                  Error updating Endpoint Slices for Service kubeedge/cloudcore: failed to update cloudcore-zk54t EndpointSlice for Service kubeedge/cloudcore: Unauthorized
+kubeedge      24m         Warning   FailedToUpdateEndpoint           endpoints/cloudcore                Failed to update endpoint kubeedge/cloudcore: Unauthorized
+kubeedge      24m         Warning   NodeNotReady                     pod/cloudcore-589789b9fc-9bt6x     Node is not ready
+kubeedge      19m         Warning   FailedScheduling                 pod/cloudcore-589789b9fc-whsst     0/5 nodes are available: 1 node(s) had untolerated taint(s), 2 node(s) didn't have free ports for the requested pod ports, 2 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 2 No preemption victims found for incoming pod, 3 Preemption is not helpful for scheduling.
+kubeedge      19m         Normal    TaintManagerEviction             pod/cloudcore-589789b9fc-9bt6x     Marking for deletion Pod kubeedge/cloudcore-589789b9fc-9bt6x
+kubeedge      19m         Normal    SuccessfulCreate                 replicaset/cloudcore-589789b9fc    Created pod: cloudcore-589789b9fc-whsst
+kubeedge      9m17s       Warning   FailedScheduling                 pod/cloudcore-589789b9fc-whsst     0/5 nodes are available: 1 node(s) had untolerated taint(s), 2 node(s) didn't have free ports for the requested pod ports, 2 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 2 No preemption victims found for incoming pod, 3 Preemption is not helpful for scheduling.
+default       7m52s       Normal    Starting                         node/c2                            Starting kubelet.
+default       7m52s       Normal    CertificateExpirationOK          node/c2                            Node and Certificate Authority certificates managed by k3s are OK
+kube-system   7m51s       Normal    ApplyingManifest                 addon/auth-reader                  Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   7m51s       Normal    ApplyingManifest                 addon/auth-delegator               Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+default       7m51s       Normal    NodeHasSufficientMemory          node/c2                            Node c2 status is now: NodeHasSufficientMemory
+default       7m51s       Normal    NodeHasNoDiskPressure            node/c2                            Node c2 status is now: NodeHasNoDiskPressure
+default       7m51s       Normal    NodeHasSufficientPID             node/c2                            Node c2 status is now: NodeHasSufficientPID
+default       7m51s       Normal    Starting                         node/c2                            
+kubeedge      7m50s       Warning   FailedScheduling                 pod/cloudcore-589789b9fc-whsst     0/5 nodes are available: 2 node(s) didn't match Pod's node affinity/selector, 3 node(s) didn't have free ports for the requested pod ports. no new claims to deallocate, preemption: 0/5 nodes are available: 2 Preemption is not helpful for scheduling, 3 No preemption victims found for incoming pod.
+default       7m51s       Normal    NodeAllocatableEnforced          node/c2                            Updated Node Allocatable limit across pods
+kube-system   7m37s       Normal    SandboxChanged                   pod/svclb-traefik-7ab09d61-8zxqj   Pod sandbox changed, it will be killed and re-created.
+default       7m51s       Warning   Rebooted                         node/c2                            Node c2 has been rebooted, boot id: fc69f2ef-cfb5-48aa-b29d-75c972f81392
+default       7m51s       Normal    NodeReady                        node/c2                            Node c2 status is now: NodeReady
+kube-system   7m51s       Normal    ApplyingManifest                 addon/aggregated-metrics-reader    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   7m51s       Normal    AppliedManifest                  addon/aggregated-metrics-reader    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/aggregated-metrics-reader.yaml"
+kube-system   7m51s       Normal    ApplyingManifest                 addon/local-storage                Applying manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   7m51s       Normal    ApplyingManifest                 addon/resource-reader              Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kube-system   7m51s       Normal    AppliedManifest                  addon/metrics-server-service       Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   7m51s       Normal    AppliedManifest                  addon/auth-delegator               Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-delegator.yaml"
+kube-system   7m51s       Normal    AppliedManifest                  addon/auth-reader                  Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/auth-reader.yaml"
+kube-system   7m51s       Normal    ApplyingManifest                 addon/metrics-server-service       Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-service.yaml"
+kube-system   7m51s       Normal    AppliedManifest                  addon/metrics-server-deployment    Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   7m51s       Normal    ApplyingManifest                 addon/metrics-server-deployment    Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-server-deployment.yaml"
+kube-system   7m51s       Normal    AppliedManifest                  addon/metrics-apiservice           Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   7m51s       Normal    ApplyingManifest                 addon/metrics-apiservice           Applying manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/metrics-apiservice.yaml"
+kube-system   7m51s       Normal    AppliedManifest                  addon/local-storage                Applied manifest at "/var/lib/rancher/k3s/server/manifests/local-storage.yaml"
+kube-system   7m51s       Normal    ApplyingManifest                 addon/ccm                          Applying manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   7m51s       Normal    AppliedManifest                  addon/ccm                          Applied manifest at "/var/lib/rancher/k3s/server/manifests/ccm.yaml"
+kube-system   7m51s       Normal    ApplyingManifest                 addon/coredns                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   7m51s       Normal    AppliedManifest                  addon/coredns                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/coredns.yaml"
+kube-system   7m50s       Normal    ApplyingManifest                 addon/rolebindings                 Applying manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+kube-system   7m50s       Normal    ApplyingManifest                 addon/runtimes                     Applying manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kubeedge      7m50s       Normal    Created                          pod/cloud-iptables-manager-mnh8d   Container created
+kubeedge      7m50s       Normal    Pulled                           pod/cloud-iptables-manager-mnh8d   Container image "kubeedge/iptables-manager:v1.21.0" already present on machine and can be accessed by the pod
+kubeedge      7m50s       Normal    SandboxChanged                   pod/cloud-iptables-manager-mnh8d   Pod sandbox changed, it will be killed and re-created.
+kubeedge      7m50s       Normal    Started                          pod/cloudcore-589789b9fc-whsst     Container started
+kube-system   7m50s       Normal    ApplyingManifest                 addon/traefik                      Applying manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   7m50s       Normal    AppliedManifest                  addon/resource-reader              Applied manifest at "/var/lib/rancher/k3s/server/manifests/metrics-server/resource-reader.yaml"
+kubeedge      7m50s       Normal    Created                          pod/cloudcore-589789b9fc-whsst     Container created
+kube-system   7m50s       Normal    AppliedManifest                  addon/rolebindings                 Applied manifest at "/var/lib/rancher/k3s/server/manifests/rolebindings.yaml"
+default       7m50s       Normal    NodePasswordValidationComplete   node/c2                            Deferred node password secret validation complete
+kubeedge      7m50s       Normal    Started                          pod/cloud-iptables-manager-mnh8d   Container started
+kube-system   7m50s       Normal    AppliedManifest                  addon/runtimes                     Applied manifest at "/var/lib/rancher/k3s/server/manifests/runtimes.yaml"
+kube-system   7m50s       Warning   FailedCreatePodSandBox           pod/svclb-traefik-7ab09d61-8zxqj   Failed to create pod sandbox: rpc error: code = Unknown desc = failed to setup network for sandbox "f959462613f46590b6bfedf3c8720c390f8703045fb6c3ab908e6ebcfcb53d2a": plugin type="flannel" failed (add): failed to load flannel 'subnet.env' file: open /run/flannel/subnet.env: no such file or directory. Check the flannel pod log for this node.
+kubeedge      7m50s       Normal    Pulled                           pod/cloudcore-589789b9fc-whsst     Container image "kubeedge/cloudcore:v1.21.0" already present on machine and can be accessed by the pod
+kubeedge      7m50s       Normal    Scheduled                        pod/cloudcore-589789b9fc-whsst     Successfully assigned kubeedge/cloudcore-589789b9fc-whsst to c2
+kube-system   7m49s       Normal    AppliedManifest                  addon/traefik                      Applied manifest at "/var/lib/rancher/k3s/server/manifests/traefik.yaml"
+kube-system   7m37s       Normal    Pulled                           pod/svclb-traefik-7ab09d61-8zxqj   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   7m37s       Normal    Started                          pod/svclb-traefik-7ab09d61-8zxqj   Container started
+kube-system   7m37s       Normal    Created                          pod/svclb-traefik-7ab09d61-8zxqj   Container created
+kube-system   7m37s       Normal    Started                          pod/svclb-traefik-7ab09d61-8zxqj   Container started
+kube-system   7m37s       Normal    Pulled                           pod/svclb-traefik-7ab09d61-8zxqj   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   7m37s       Normal    Created                          pod/svclb-traefik-7ab09d61-8zxqj   Container created
