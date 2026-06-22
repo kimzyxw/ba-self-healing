@@ -1,0 +1,76 @@
+=== Run summary ===
+system=kubeedge
+scenario=latency-1s-async-limited
+run=run-03-router
+url=http://10.10.20.131:30080/
+delay=1s
+router_ifaces=ens161 ens256
+fault_time=2026-06-20T15:23:07+00:00
+recovery_time=2026-06-20T15:28:08+00:00
+
+--- overall ---
+requests_total=2
+success=2
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.38
+median_ms=2.38
+p95_ms=2.71
+p99_ms=2.71
+min_ms=2.04
+max_ms=2.71
+outliers_gt_10s=0
+outliers_gt_60s=0
+outliers_gt_120s=0
+outliers_gt_300s=0
+success_median_ms=2.38
+success_p95_ms=2.71
+errors=none
+
+--- baseline ---
+requests_total=2
+success=2
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2.38
+median_ms=2.38
+p95_ms=2.71
+p99_ms=2.71
+min_ms=2.04
+max_ms=2.71
+outliers_gt_10s=0
+outliers_gt_60s=0
+outliers_gt_120s=0
+outliers_gt_300s=0
+success_median_ms=2.38
+success_p95_ms=2.71
+errors=none
+
+--- fault ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+errors=none
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+errors=none
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+tc_active=yes
+tc_cleanup_documented=yes
+fault_median_ms=NA
+latency_applied=check

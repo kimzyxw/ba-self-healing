@@ -1,0 +1,8 @@
+Diese Messreihe wird nicht für die finale Auswertung verwendet.
+
+Grund:
+Mehrere Läufe zeigten unplausible Laufzeiten, deutlich zu wenige HTTP-Requests und fehlende Fault- oder After-Phasen. Erwartet waren bei 180s Vorlauf, 300s Störphase, 180s Nachlauf und 1s Request-Intervall ungefähr 660 Requests pro Lauf. In mehreren Läufen wurden jedoch nur sehr wenige Requests aufgezeichnet oder extreme Einzelwerte im Bereich mehrerer hundert Sekunden beobachtet.
+
+Die tc/netem-Konfiguration sowie die Route-Preflights waren formal erfolgreich, die Messreihe ist jedoch wegen Laufzeit-/Monitor-Artefakten nicht methodisch auswertbar. Wahrscheinlich wurde die VM- oder Host-Umgebung während der Messreihe pausiert, eingefroren oder stark gedrosselt.
+
+Die Reihe wird daher als technischer Fehlversuch archiviert.

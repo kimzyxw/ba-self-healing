@@ -1,0 +1,17 @@
+===== Connectivity from c1 to edge nodes =====
+PING 10.10.20.131 (10.10.20.131) 56(84) bytes of data.
+64 bytes from 10.10.20.131: icmp_seq=1 ttl=63 time=0.351 ms
+64 bytes from 10.10.20.131: icmp_seq=2 ttl=63 time=0.384 ms
+64 bytes from 10.10.20.131: icmp_seq=3 ttl=63 time=0.272 ms
+
+--- 10.10.20.131 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2067ms
+rtt min/avg/max/mdev = 0.272/0.335/0.384/0.047 ms
+PING 10.10.20.132 (10.10.20.132) 56(84) bytes of data.
+64 bytes from 10.10.20.132: icmp_seq=1 ttl=63 time=0.316 ms
+64 bytes from 10.10.20.132: icmp_seq=2 ttl=63 time=1.10 ms
+64 bytes from 10.10.20.132: icmp_seq=3 ttl=63 time=0.339 ms
+
+--- 10.10.20.132 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2024ms
+rtt min/avg/max/mdev = 0.316/0.583/1.096/0.362 ms
