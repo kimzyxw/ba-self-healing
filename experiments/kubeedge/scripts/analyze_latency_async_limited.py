@@ -167,7 +167,7 @@ fields = [
     "preflight_before_ok", "preflight_after_ok", "router_path_valid", "tc_active", "tc_cleanup",
     "overall_total", "overall_success_rate", "overall_error_rate", "overall_median_ms", "overall_p95_ms", "overall_max_ms",
     "baseline_success_rate", "baseline_median_ms", "baseline_p95_ms",
-    "fault_total", "fault_success_rate", "fault_error_rate", "fault_median_ms", "fault_p95_ms", "fault_p99_ms", "fault_max_ms",
+    "fault_total", "fault_success_rate", "fault_error_rate", "fault_median_ms", "fault_p95_ms", "fault_p99_ms", "fault_max_ms", "fault_success_median_ms", "fault_success_p95_ms", "fault_fail_median_ms",
     "fault_gt_10s", "fault_gt_60s", "fault_gt_120s", "fault_gt_300s",
     "after_success_rate", "after_median_ms", "after_p95_ms",
     "recovery_latency_s",
@@ -210,6 +210,9 @@ with OUT_CSV.open("w", newline="") as f:
             "fault_p95_ms": fmt(r["fault"]["p95"]),
             "fault_p99_ms": fmt(r["fault"]["p99"]),
             "fault_max_ms": fmt(r["fault"]["max"]),
+            "fault_success_median_ms": fmt(r["fault"]["success_median"]),
+            "fault_success_p95_ms": fmt(r["fault"]["success_p95"]),
+            "fault_fail_median_ms": fmt(r["fault"]["fail_median"]),
             "fault_gt_10s": r["fault"]["gt_10s"],
             "fault_gt_60s": r["fault"]["gt_60s"],
             "fault_gt_120s": r["fault"]["gt_120s"],
@@ -279,6 +282,9 @@ lines.extend(stat_line("fault_median_ms", nums("fault", "median")))
 lines.extend(stat_line("fault_p95_ms", nums("fault", "p95")))
 lines.extend(stat_line("fault_p99_ms", nums("fault", "p99")))
 lines.extend(stat_line("fault_max_ms", nums("fault", "max")))
+lines.extend(stat_line("fault_success_median_ms", nums("fault", "success_median")))
+lines.extend(stat_line("fault_success_p95_ms", nums("fault", "success_p95")))
+lines.extend(stat_line("fault_fail_median_ms", nums("fault", "fail_median")))
 lines.append("")
 lines.extend(stat_line("after_median_ms", nums("after", "median")))
 lines.extend(stat_line("recovery_latency_s", nums_top("recovery_latency")))
