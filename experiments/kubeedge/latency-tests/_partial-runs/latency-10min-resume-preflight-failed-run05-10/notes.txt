@@ -1,0 +1,11 @@
+Dieser Resume-Lauf wird nicht für die finale Auswertung verwendet.
+
+Run 04 wurde vollständig gemessen, der After-Preflight schlug jedoch fehl.
+Run 05 bis Run 10 wurden anschließend zu früh gestartet und scheiterten bereits im Before-Preflight, weil der NodePort nach der vorherigen 10min-Latenzstörung noch nicht stabil erreichbar war.
+
+Der Cluster war danach wieder stabil:
+- alle Nodes Ready
+- Testapp-Pods Running
+- NodePort code=200
+
+Für die finale Auswertung werden run-04 bis run-10 erneut durchgeführt, jedoch mit einer zusätzlichen Stabilitäts-Wartephase vor jedem Run.

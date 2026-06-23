@@ -106,8 +106,13 @@ date -Is | tee "$BASE/test_end_time.txt"
 wait "$MONITOR_PID" || true
 
 echo "[RUN $RUN] Route-Preflight nach dem Lauf"
-~/ba-self-healing/experiments/kubeedge/scripts/verify_kubeedge_routes.sh \
-  "$BASE/route_preflight_after"
+if ~/ba-self-healing/experiments/kubeedge/scripts/verify_kubeedge_routes.sh \
+  "$BASE/route_preflight_after"; then
+  echo "after_preflight_ok=yes" > "$BASE/after_preflight_status.txt"
+else
+  echo "WARNING: after preflight failed; continuing so summary and scenario can finish" | tee "$BASE/after_preflight_warning.txt"
+  echo "after_preflight_ok=no" > "$BASE/after_preflight_status.txt"
+fi
 
 echo "[RUN $RUN] Berechne Zusammenfassung"
 

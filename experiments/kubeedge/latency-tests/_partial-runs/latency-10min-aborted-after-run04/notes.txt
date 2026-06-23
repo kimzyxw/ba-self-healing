@@ -1,0 +1,8 @@
+Diese Daten gehören zu einem abgebrochenen 10min-Latenztest.
+
+Run 01 bis Run 03 wurden vollständig und valide abgeschlossen.
+Run 04 erreichte zwar test_end_time.txt und enthält requests.csv, tc_after.txt, nodes_after.txt, pods_after.txt und events_after.txt, der abschließende Preflight schlug jedoch mit folgendem Fehler fehl:
+
+curl: (56) Recv failure: Connection reset by peer
+
+Dadurch brach die Szenarioausführung ab. Run 04 wird deshalb nicht für die finale 10er-Auswertung verwendet. Die Läufe 01 bis 03 bleiben als valide Läufe erhalten; Run 04 wird als partieller technischer Lauf archiviert.

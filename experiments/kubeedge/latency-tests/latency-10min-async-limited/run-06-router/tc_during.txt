@@ -1,0 +1,4 @@
+===== ens161 =====
+qdisc netem 804e: root refcnt 2 limit 1000 delay 600s seed 17348155769033916287
+===== ens256 =====
+qdisc netem 804f: root refcnt 2 limit 1000 delay 600s seed 3655725721880430077
