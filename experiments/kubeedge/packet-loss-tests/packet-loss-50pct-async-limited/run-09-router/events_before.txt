@@ -1,0 +1,28 @@
+NAMESPACE   LAST SEEN   TYPE      REASON                 OBJECT                                MESSAGE
+default     9m18s       Normal    NodeNotReady           node/e1                               Node e1 status is now: NodeNotReady
+kubeedge    9m18s       Warning   NodeNotReady           pod/edge-eclipse-mosquitto-szthb      Node is not ready
+kubeedge    11m         Warning   NodeNotReady           pod/edgemesh-agent-l2n4z              Node is not ready
+default     8m8s        Normal    NodeNotReady           node/e2                               Node e2 status is now: NodeNotReady
+kubeedge    8m8s        Warning   NodeNotReady           pod/edge-eclipse-mosquitto-7l5gz      Node is not ready
+kubeedge    8m8s        Warning   NodeNotReady           pod/edgemesh-agent-qf7pk              Node is not ready
+testapp     33m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-8lfvq    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-8lfvq
+testapp     33m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-dvhbs    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-dvhbs
+testapp     33m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-prm5c    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-prm5c
+testapp     37m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-8lfvq    Node is not ready
+testapp     35m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-prm5c    Node is not ready
+testapp     37m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-dvhbs    Node is not ready
+testapp     27m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-nnvjs    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-nnvjs to e1
+testapp     27m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-xwggw    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-xwggw to e1
+testapp     27m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-w42f4
+testapp     27m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-dvhbs    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-dvhbs
+testapp     27m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-8lfvq    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-8lfvq
+testapp     27m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-prm5c    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-prm5c
+testapp     27m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-w42f4    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-w42f4 to e1
+testapp     27m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-nnvjs
+testapp     27m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-xwggw
+testapp     9m18s       Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-w42f4    Node is not ready
+testapp     9m18s       Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-xwggw    Node is not ready
+testapp     11m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-nnvjs    Node is not ready
+testapp     7m38s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-xwggw    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-xwggw
+testapp     7m38s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-w42f4    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-w42f4
+testapp     7m38s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-nnvjs    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-nnvjs
