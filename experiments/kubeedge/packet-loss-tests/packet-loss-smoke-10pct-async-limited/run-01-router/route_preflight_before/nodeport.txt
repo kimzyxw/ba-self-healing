@@ -1,0 +1,15 @@
+===== NodePort from c1 =====
+
+----- http://10.10.20.131:30080/ -----
+code=200 time=0.001765
+code=200 time=0.001137
+code=200 time=0.000946
+code=200 time=0.000637
+code=200 time=0.000597
+
+----- http://10.10.20.132:30080/ -----
+code=200 time=0.005182
+code=200 time=0.002133
+code=200 time=0.001587
+code=200 time=0.001474
+code=200 time=0.001373

@@ -1,0 +1,2 @@
+NAMESPACE     LAST SEEN   TYPE     REASON                OBJECT            MESSAGE
+kube-system   7m39s       Normal   UpdatedLoadBalancer   service/traefik   Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.134 10.10.10.135]
