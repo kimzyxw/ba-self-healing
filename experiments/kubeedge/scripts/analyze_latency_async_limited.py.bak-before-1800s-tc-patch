@@ -150,7 +150,7 @@ for run_dir in sorted(SCENARIO.glob("run-*-router")):
         "router_ifaces": read_file(run_dir / "affected_interface.txt"),
         "run_duration_s": (end - start).total_seconds(),
         "valid_router": "10.10.10.136" in traceroute,
-        "valid_tc": "netem" in tc_during and (read_file(run_dir / "delay.txt") in tc_during or (read_file(run_dir / "delay.txt") == "1800s" and "delay 1.8e+03s" in tc_during)),
+        "valid_tc": "netem" in tc_during and read_file(run_dir / "delay.txt") in tc_during,
         "valid_cleanup": "netem" not in tc_after,
         "preflight_before_ok": preflight_ok(run_dir, "before"),
         "preflight_after_ok": preflight_ok(run_dir, "after"),

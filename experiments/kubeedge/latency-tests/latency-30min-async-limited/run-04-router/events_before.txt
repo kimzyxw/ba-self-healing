@@ -1,0 +1,10 @@
+NAMESPACE   LAST SEEN   TYPE      REASON                 OBJECT                               MESSAGE
+testapp     9m32s       Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-9hqgw   0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     9m32s       Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-x7kqz   0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     9m32s       Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-xcrk6   0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     8m48s       Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-9hqgw   Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-9hqgw to e1
+testapp     8m48s       Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-x7kqz   Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-x7kqz to e1
+testapp     8m48s       Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-xcrk6   Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-xcrk6 to e1
+testapp     8m46s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-9hqgw   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-9hqgw
+testapp     8m46s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-x7kqz   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-x7kqz
+testapp     8m46s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-xcrk6   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-xcrk6

@@ -1,0 +1,11 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                 OBJECT                               MESSAGE
+testapp       7m8s        Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-7zmpb   0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp       7m8s        Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-m2v79   0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp       7m8s        Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-w722c   0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+kube-system   44m         Normal    UpdatedLoadBalancer    service/traefik                      Updated LoadBalancer with new IPs: [10.10.10.133 10.10.10.134 10.10.10.135] -> [10.10.10.133 10.10.10.134 10.10.10.135]
+testapp       69s         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-7zmpb   Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-7zmpb to e1
+testapp       69s         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-m2v79   Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-m2v79 to e1
+testapp       69s         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-w722c   Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-w722c to e1
+testapp       65s         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-7zmpb   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-7zmpb
+testapp       65s         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-m2v79   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-m2v79
+testapp       65s         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-w722c   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-w722c

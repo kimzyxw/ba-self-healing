@@ -1,0 +1,1 @@
+WARNING: after preflight failed; continuing so summary and scenario can finish
