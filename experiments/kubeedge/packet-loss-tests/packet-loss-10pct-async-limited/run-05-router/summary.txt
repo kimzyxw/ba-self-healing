@@ -1,0 +1,87 @@
+=== Run summary ===
+scenario=packet-loss-10pct-async-limited
+run=run-05-router
+loss=10%
+duration_s=600
+baseline_s=180
+after_s=180
+timeout_s=300
+max_in_flight=10
+router_iface=ens161
+fault_time=2026-06-24T12:31:22+00:00
+recovery_time=2026-06-24T12:41:25+00:00
+
+--- overall ---
+requests_total=1019
+success=1019
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=17.11
+median_ms=1.20
+p95_ms=206.04
+p99_ms=210.31
+min_ms=0.65
+max_ms=416.80
+success_median_ms=1.20
+success_p95_ms=206.04
+errors=none
+timeouts=0
+
+--- baseline ---
+requests_total=179
+success=179
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=1.22
+median_ms=1.19
+p95_ms=1.62
+p99_ms=2.36
+min_ms=0.77
+max_ms=3.72
+success_median_ms=1.19
+success_p95_ms=1.62
+errors=none
+timeouts=0
+
+--- fault ---
+requests_total=602
+success=602
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=28.01
+median_ms=1.24
+p95_ms=208.36
+p99_ms=241.76
+min_ms=0.70
+max_ms=416.80
+success_median_ms=1.24
+success_p95_ms=208.36
+errors=none
+timeouts=0
+
+--- after ---
+requests_total=238
+success=238
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=1.48
+median_ms=1.12
+p95_ms=1.74
+p99_ms=2.64
+min_ms=0.65
+max_ms=68.26
+success_median_ms=1.12
+success_p95_ms=1.74
+errors=none
+timeouts=0
+
+--- recovery ---
+recovery_latency_s=0.161496
+--- validation ---
+router_path_valid=yes
+packet_loss_applied=yes
+tc_cleanup_documented=yes
