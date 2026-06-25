@@ -1,0 +1,23 @@
+===== e1 route get c1 =====
+e1
+10.10.10.133 via 10.10.20.133 dev ens256 src 10.10.20.131 uid 1000 
+    cache 
+default via 172.16.41.2 dev ens160 proto dhcp src 172.16.41.146 metric 1024 
+10.10.10.0/24 via 10.10.20.133 dev ens256 
+10.10.20.0/24 dev ens256 proto kernel scope link src 10.10.20.131 metric 1024 
+10.10.20.1 dev ens256 proto dhcp scope link src 10.10.20.131 metric 1024 
+10.88.1.0/24 dev edge-cni0 proto kernel scope link src 10.88.1.1 
+172.16.41.0/24 dev ens160 proto kernel scope link src 172.16.41.146 metric 1024 
+172.16.41.2 dev ens160 proto dhcp scope link src 172.16.41.146 metric 1024 
+
+===== e2 route get c1 =====
+e2
+10.10.10.133 via 10.10.20.133 dev ens256 src 10.10.20.132 uid 1000 
+    cache 
+default via 172.16.41.2 dev ens160 proto dhcp src 172.16.41.147 metric 1024 
+10.10.10.0/24 via 10.10.20.133 dev ens256 
+10.10.20.0/24 dev ens256 proto kernel scope link src 10.10.20.132 metric 1024 
+10.10.20.1 dev ens256 proto dhcp scope link src 10.10.20.132 metric 1024 
+10.88.2.0/24 dev edge-cni0 proto kernel scope link src 10.88.2.1 linkdown 
+172.16.41.0/24 dev ens160 proto kernel scope link src 172.16.41.147 metric 1024 
+172.16.41.2 dev ens160 proto dhcp scope link src 172.16.41.147 metric 1024 
