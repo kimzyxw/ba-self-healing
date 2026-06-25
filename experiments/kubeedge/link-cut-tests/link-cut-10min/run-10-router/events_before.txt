@@ -1,0 +1,61 @@
+NAMESPACE   LAST SEEN   TYPE      REASON                 OBJECT                                MESSAGE
+default     15m         Normal    NodeNotReady           node/e2                               Node e2 status is now: NodeNotReady
+kubeedge    15m         Warning   NodeNotReady           pod/edge-eclipse-mosquitto-7l5gz      Node is not ready
+kubeedge    15m         Warning   NodeNotReady           pod/edge-eclipse-mosquitto-szthb      Node is not ready
+kubeedge    15m         Warning   NodeNotReady           pod/edgemesh-agent-l2n4z              Node is not ready
+kubeedge    15m         Warning   NodeNotReady           pod/edgemesh-agent-qf7pk              Node is not ready
+default     15m         Normal    NodeNotReady           node/e1                               Node e1 status is now: NodeNotReady
+testapp     54m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-x6nv7    Node is not ready
+testapp     54m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-7ltsn    Node is not ready
+testapp     54m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-nzltl    Node is not ready
+testapp     49m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-8hdq9
+testapp     49m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-x6nv7    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-x6nv7
+testapp     49m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-qtwdq
+testapp     49m         Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-ws9mw    0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     49m         Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-qtwdq    0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     49m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-ws9mw
+testapp     49m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-7ltsn    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-7ltsn
+testapp     49m         Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-8hdq9    0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     49m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-nzltl    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-nzltl
+testapp     44m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-ws9mw    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-ws9mw to e1
+testapp     44m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-qtwdq    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-qtwdq to e1
+testapp     44m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-8hdq9    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-8hdq9 to e1
+testapp     44m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-ws9mw    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-ws9mw
+testapp     44m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-8hdq9    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-8hdq9
+testapp     44m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-qtwdq    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-qtwdq
+testapp     34m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-ws9mw    Node is not ready
+testapp     34m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-8hdq9    Node is not ready
+testapp     34m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-qtwdq    Node is not ready
+testapp     29m         Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-rwnm6    0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     29m         Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-6qhfd    0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     29m         Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-qn4l6    0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     29m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-8hdq9    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-8hdq9
+testapp     29m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-ws9mw    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-ws9mw
+testapp     29m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-qtwdq    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-qtwdq
+testapp     29m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-qn4l6
+testapp     29m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-rwnm6
+testapp     29m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-6qhfd
+testapp     25m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-rwnm6    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-rwnm6 to e1
+testapp     25m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-6qhfd    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-6qhfd to e1
+testapp     25m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-qn4l6    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-qn4l6 to e1
+testapp     25m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-qn4l6    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-qn4l6
+testapp     25m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-6qhfd    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-6qhfd
+testapp     25m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-rwnm6    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-rwnm6
+testapp     15m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-qn4l6    Node is not ready
+testapp     15m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-rwnm6    Node is not ready
+testapp     15m         Warning   NodeNotReady           pod/nginx-testapp-5c8f4cb9d7-6qhfd    Node is not ready
+testapp     10m         Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-pvq2m    0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     10m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-6qhfd    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-6qhfd
+testapp     10m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-rwnm6    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-rwnm6
+testapp     10m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-2dtfv
+testapp     10m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-nvgqn
+testapp     10m         Normal    SuccessfulCreate       replicaset/nginx-testapp-5c8f4cb9d7   Created pod: nginx-testapp-5c8f4cb9d7-pvq2m
+testapp     10m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-qn4l6    Marking for deletion Pod testapp/nginx-testapp-5c8f4cb9d7-qn4l6
+testapp     10m         Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-nvgqn    0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     10m         Warning   FailedScheduling       pod/nginx-testapp-5c8f4cb9d7-2dtfv    0/5 nodes are available: 2 node(s) had untolerated taint(s), 3 node(s) didn't match Pod's node affinity/selector. no new claims to deallocate, preemption: 0/5 nodes are available: 5 Preemption is not helpful for scheduling.
+testapp     5m51s       Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-2dtfv    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-2dtfv to e1
+testapp     5m51s       Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-pvq2m    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-pvq2m to e1
+testapp     5m51s       Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-nvgqn    Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-nvgqn to e1
+testapp     5m47s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-2dtfv    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-2dtfv
+testapp     5m47s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-pvq2m    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-pvq2m
+testapp     5m47s       Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-nvgqn    Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-nvgqn
