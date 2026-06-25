@@ -1,0 +1,122 @@
+===== KubeEdge Route Preflight =====
+2026-06-25T09:36:07+00:00
+out_dir=experiments/kubeedge/_route-preflight/20260625-093607
+cloud_router_ip=10.10.10.136
+edge_router_ip=10.10.20.133
+
+===== Set route on cloud nodes: Cloud -> Edge =====
+
+===== c1 routes =====
+default via 172.16.41.2 dev ens160 proto dhcp src 172.16.41.143 metric 1024 
+10.10.10.0/24 dev ens256 proto kernel scope link src 10.10.10.133 metric 1024 
+10.10.10.1 dev ens256 proto dhcp scope link src 10.10.10.133 metric 1024 
+10.10.20.0/24 via 10.10.10.136 dev ens256 
+10.42.0.0/24 dev cni0 proto kernel scope link src 10.42.0.1 
+10.42.1.0/24 via 10.42.1.0 dev flannel.1 onlink 
+10.42.3.0/24 via 10.42.3.0 dev flannel.1 onlink 
+172.16.41.0/24 dev ens160 proto kernel scope link src 172.16.41.143 metric 1024 
+172.16.41.2 dev ens160 proto dhcp scope link src 172.16.41.143 metric 1024 
+
+===== c1 route get edge nodes =====
+10.10.20.131 via 10.10.10.136 dev ens256 src 10.10.10.133 uid 1000 
+    cache 
+10.10.20.132 via 10.10.10.136 dev ens256 src 10.10.10.133 uid 1000 
+    cache 
+
+===== c2 route get edge nodes =====
+c2
+10.10.20.131 via 10.10.10.136 dev ens256 src 10.10.10.134 uid 1000 
+    cache 
+10.10.20.132 via 10.10.10.136 dev ens256 src 10.10.10.134 uid 1000 
+    cache 
+
+===== c3 route get edge nodes =====
+c3
+10.10.20.131 via 10.10.10.136 dev ens256 src 10.10.10.135 uid 1000 
+    cache 
+10.10.20.132 via 10.10.10.136 dev ens256 src 10.10.10.135 uid 1000 
+    cache 
+===== Set route on e1: Edge -> Cloud =====
+===== Set route on e2: Edge -> Cloud =====
+===== e1 route get c1 =====
+e1
+10.10.10.133 via 10.10.20.133 dev ens256 src 10.10.20.131 uid 1000 
+    cache 
+default via 172.16.41.2 dev ens160 proto dhcp src 172.16.41.146 metric 1024 
+10.10.10.0/24 via 10.10.20.133 dev ens256 
+10.10.20.0/24 dev ens256 proto kernel scope link src 10.10.20.131 metric 1024 
+10.10.20.1 dev ens256 proto dhcp scope link src 10.10.20.131 metric 1024 
+10.88.1.0/24 dev edge-cni0 proto kernel scope link src 10.88.1.1 
+172.16.41.0/24 dev ens160 proto kernel scope link src 172.16.41.146 metric 1024 
+172.16.41.2 dev ens160 proto dhcp scope link src 172.16.41.146 metric 1024 
+
+===== e2 route get c1 =====
+e2
+10.10.10.133 via 10.10.20.133 dev ens256 src 10.10.20.132 uid 1000 
+    cache 
+default via 172.16.41.2 dev ens160 proto dhcp src 172.16.41.147 metric 1024 
+10.10.10.0/24 via 10.10.20.133 dev ens256 
+10.10.20.0/24 dev ens256 proto kernel scope link src 10.10.20.132 metric 1024 
+10.10.20.1 dev ens256 proto dhcp scope link src 10.10.20.132 metric 1024 
+10.88.2.0/24 dev edge-cni0 proto kernel scope link src 10.88.2.1 linkdown 
+172.16.41.0/24 dev ens160 proto kernel scope link src 172.16.41.147 metric 1024 
+172.16.41.2 dev ens160 proto dhcp scope link src 172.16.41.147 metric 1024 
+===== Connectivity from c1 to edge nodes =====
+PING 10.10.20.131 (10.10.20.131) 56(84) bytes of data.
+64 bytes from 10.10.20.131: icmp_seq=1 ttl=63 time=0.417 ms
+64 bytes from 10.10.20.131: icmp_seq=2 ttl=63 time=0.460 ms
+64 bytes from 10.10.20.131: icmp_seq=3 ttl=63 time=0.413 ms
+
+--- 10.10.20.131 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2030ms
+rtt min/avg/max/mdev = 0.413/0.430/0.460/0.021 ms
+PING 10.10.20.132 (10.10.20.132) 56(84) bytes of data.
+64 bytes from 10.10.20.132: icmp_seq=1 ttl=63 time=0.388 ms
+64 bytes from 10.10.20.132: icmp_seq=2 ttl=63 time=0.415 ms
+64 bytes from 10.10.20.132: icmp_seq=3 ttl=63 time=0.508 ms
+
+--- 10.10.20.132 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2046ms
+rtt min/avg/max/mdev = 0.388/0.437/0.508/0.051 ms
+Connection to 10.10.20.131 22 port [tcp/ssh] succeeded!
+Connection to 10.10.20.132 22 port [tcp/ssh] succeeded!
+===== NodePort from c1 =====
+
+----- http://10.10.20.131:30080/ -----
+code=200 time=0.001539
+code=200 time=0.001080
+code=200 time=0.000964
+code=200 time=0.000927
+code=200 time=0.000698
+
+----- http://10.10.20.132:30080/ -----
+code=200 time=0.001747
+code=200 time=0.001484
+code=200 time=0.001373
+code=200 time=0.001249
+code=200 time=0.001250
+===== Kubernetes state =====
+NAME   STATUS   ROLES                AGE   VERSION                    INTERNAL-IP    EXTERNAL-IP   OS-IMAGE           KERNEL-VERSION     CONTAINER-RUNTIME
+c1     Ready    control-plane,etcd   12d   v1.35.5+k3s1               10.10.10.133   <none>        Ubuntu 26.04 LTS   7.0.0-22-generic   containerd://2.2.3-k3s1
+c2     Ready    control-plane,etcd   12d   v1.35.5+k3s1               10.10.10.134   <none>        Ubuntu 26.04 LTS   7.0.0-22-generic   containerd://2.2.3-k3s1
+c3     Ready    control-plane,etcd   12d   v1.35.5+k3s1               10.10.10.135   <none>        Ubuntu 26.04 LTS   7.0.0-22-generic   containerd://2.2.3-k3s1
+e1     Ready    agent,edge           12d   v1.30.7-kubeedge-v1.21.0   10.10.20.131   <none>        Ubuntu 26.04 LTS   7.0.0-22-generic   containerd://2.2.2
+e2     Ready    agent,edge           12d   v1.30.7-kubeedge-v1.21.0   10.10.20.132   <none>        Ubuntu 26.04 LTS   7.0.0-22-generic   containerd://2.2.2
+
+NAME                             READY   STATUS    RESTARTS   AGE    IP            NODE   NOMINATED NODE   READINESS GATES
+nginx-testapp-5c8f4cb9d7-dj67m   1/1     Running   0          113m   10.88.1.135   e1     <none>           <none>
+nginx-testapp-5c8f4cb9d7-dnm2w   1/1     Running   0          113m   10.88.1.133   e1     <none>           <none>
+nginx-testapp-5c8f4cb9d7-ww6hl   1/1     Running   0          113m   10.88.1.134   e1     <none>           <none>
+
+NAME                           READY   STATUS    RESTARTS        AGE     IP             NODE   NOMINATED NODE   READINESS GATES
+cloud-iptables-manager-l7lpb   1/1     Running   6 (4d18h ago)   5d20h   10.10.10.135   c3     <none>           <none>
+cloud-iptables-manager-mnh8d   1/1     Running   7 (4d18h ago)   5d20h   10.10.10.134   c2     <none>           <none>
+cloud-iptables-manager-nw279   1/1     Running   0               5d20h   10.10.10.133   c1     <none>           <none>
+cloudcore-589789b9fc-4qfvm     1/1     Running   0               4d20h   10.10.10.135   c3     <none>           <none>
+cloudcore-589789b9fc-8nqmw     1/1     Running   0               4d20h   10.10.10.134   c2     <none>           <none>
+cloudcore-589789b9fc-bphz8     1/1     Running   0               11d     10.10.10.133   c1     <none>           <none>
+edge-eclipse-mosquitto-7l5gz   1/1     Running   6 (5d17h ago)   12d     10.10.20.132   e2     <none>           <none>
+edge-eclipse-mosquitto-szthb   1/1     Running   6 (5d17h ago)   12d     10.10.20.131   e1     <none>           <none>
+edgemesh-agent-l2n4z           1/1     Running   5 (5d17h ago)   5d20h   10.10.20.131   e1     <none>           <none>
+edgemesh-agent-qf7pk           1/1     Running   5 (5d17h ago)   5d20h   10.10.20.132   e2     <none>           <none>
+Preflight OK

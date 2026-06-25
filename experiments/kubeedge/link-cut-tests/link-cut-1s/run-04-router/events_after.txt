@@ -1,0 +1,4 @@
+NAMESPACE   LAST SEEN   TYPE      REASON         OBJECT                             MESSAGE
+default     52m         Normal    NodeNotReady   node/e2                            Node e2 status is now: NodeNotReady
+kubeedge    52m         Warning   NodeNotReady   pod/edge-eclipse-mosquitto-7l5gz   Node is not ready
+kubeedge    52m         Warning   NodeNotReady   pod/edgemesh-agent-qf7pk           Node is not ready

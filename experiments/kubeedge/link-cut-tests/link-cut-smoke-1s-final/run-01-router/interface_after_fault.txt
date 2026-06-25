@@ -1,0 +1,4 @@
+3: ens161: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 00:0c:29:91:d9:b5 brd ff:ff:ff:ff:ff:ff
+    altname enp3s0
+    altname enx000c2991d9b5

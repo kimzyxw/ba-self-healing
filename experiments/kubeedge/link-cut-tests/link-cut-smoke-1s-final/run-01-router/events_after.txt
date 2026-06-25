@@ -1,0 +1,10 @@
+NAMESPACE   LAST SEEN   TYPE      REASON                 OBJECT                               MESSAGE
+default     14m         Normal    NodeNotReady           node/e2                              Node e2 status is now: NodeNotReady
+kubeedge    14m         Warning   NodeNotReady           pod/edge-eclipse-mosquitto-7l5gz     Node is not ready
+kubeedge    14m         Warning   NodeNotReady           pod/edgemesh-agent-qf7pk             Node is not ready
+testapp     59m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-dj67m   Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-dj67m to e1
+testapp     59m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-dnm2w   Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-dnm2w to e1
+testapp     59m         Normal    Scheduled              pod/nginx-testapp-5c8f4cb9d7-ww6hl   Successfully assigned testapp/nginx-testapp-5c8f4cb9d7-ww6hl to e1
+testapp     59m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-dj67m   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-dj67m
+testapp     59m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-dnm2w   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-dnm2w
+testapp     59m         Normal    TaintManagerEviction   pod/nginx-testapp-5c8f4cb9d7-ww6hl   Cancelling deletion of Pod testapp/nginx-testapp-5c8f4cb9d7-ww6hl
