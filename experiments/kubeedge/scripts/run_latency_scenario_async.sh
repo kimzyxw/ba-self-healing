@@ -71,7 +71,7 @@ wait_for_nodeport_stable() {
 
     echo "=== Starting ${SCENARIO} run-${i} at $(date -Iseconds) ==="
 
-    ROUTER_IFACES="${ROUTER_IFACES:-ens161 ens256}" \
+    ROUTER_IFACES="${ROUTER_IFACES:-ens161}" \
     URL="$URL" \
     ./experiments/kubeedge/scripts/run_latency_test_async.sh \
       "$SCENARIO" "$DELAY" "$DURATION" "$i" "$BASELINE" "$AFTER" "$TIMEOUT" "$MAX_IN_FLIGHT"

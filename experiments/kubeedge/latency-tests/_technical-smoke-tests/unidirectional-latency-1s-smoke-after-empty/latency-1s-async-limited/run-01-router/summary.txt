@@ -1,0 +1,87 @@
+=== Run summary ===
+system=kubeedge
+scenario=latency-1s-async-limited
+run=run-01-router
+url=http://10.10.20.131:30080/
+delay=1s
+router_ifaces=ens161
+fault_time=2026-06-26T08:44:11+00:00
+recovery_time=2026-06-26T09:08:54+00:00
+
+--- overall ---
+requests_total=596
+success=596
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=1413.53
+median_ms=1001.46
+p95_ms=1002.72
+p99_ms=1006.51
+min_ms=0.77
+max_ms=425176.32
+outliers_gt_10s=1
+outliers_gt_60s=1
+outliers_gt_120s=1
+outliers_gt_300s=1
+success_median_ms=1001.46
+success_p95_ms=1002.72
+errors=none
+
+--- baseline ---
+requests_total=179
+success=179
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=1.36
+median_ms=1.36
+p95_ms=2.03
+p99_ms=2.83
+min_ms=0.77
+max_ms=3.56
+outliers_gt_10s=0
+outliers_gt_60s=0
+outliers_gt_120s=0
+outliers_gt_300s=0
+success_median_ms=1.36
+success_p95_ms=2.03
+errors=none
+
+--- fault ---
+requests_total=417
+success=417
+failed=0
+success_rate=100.00%
+error_rate=0.00%
+avg_ms=2019.71
+median_ms=1001.79
+p95_ms=1003.18
+p99_ms=1007.28
+min_ms=0.97
+max_ms=425176.32
+outliers_gt_10s=1
+outliers_gt_60s=1
+outliers_gt_120s=1
+outliers_gt_300s=1
+success_median_ms=1001.79
+success_p95_ms=1003.18
+errors=none
+
+--- after ---
+requests_total=0
+success=0
+failed=0
+success_rate=NA
+error_rate=NA
+latency_values=NA
+errors=none
+
+--- recovery ---
+recovery_latency_s=NA
+--- validation ---
+router_path_valid=yes
+tc_active=yes
+tc_cleanup_documented=yes
+fault_median_ms=1001.79
+latency_applied=yes

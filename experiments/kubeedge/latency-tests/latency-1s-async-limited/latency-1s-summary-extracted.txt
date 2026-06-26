@@ -1,0 +1,47 @@
+# KubeEdge latency-1s extracted summary
+
+runs_found=10
+
+## Validation
+router_ifaces_values=['ens161']
+tc_active_values=['yes']
+tc_cleanup_documented_values=['yes']
+latency_applied_values=['yes']
+
+## Overall
+overall_success_rate_percent: n=10, min=100.00, median=100.00, mean=100.00, max=100.00
+overall_error_rate_percent: n=10, min=0.00, median=0.00, mean=0.00, max=0.00
+overall_median_ms: n=10, min=1001.35, median=1001.42, mean=1001.46, max=1001.64
+overall_p95_ms: n=10, min=1002.76, median=1002.95, mean=1003.02, max=1003.59
+overall_max_ms: n=10, min=2004.24, median=2005.72, mean=2006.36, max=2011.80
+
+## Baseline
+baseline_requests: n=10, min=179.00, median=180.00, mean=179.60, max=180.00
+baseline_success_rate_percent: n=10, min=100.00, median=100.00, mean=100.00, max=100.00
+baseline_median_ms: n=10, min=1.17, median=1.29, mean=1.33, max=1.51
+baseline_p95_ms: n=10, min=1.72, median=1.98, mean=2.26, max=3.38
+
+## Fault
+fault_requests: n=10, min=599.00, median=599.50, mean=599.60, max=601.00
+fault_success_rate_percent: n=10, min=100.00, median=100.00, mean=100.00, max=100.00
+fault_error_rate_percent: n=10, min=0.00, median=0.00, mean=0.00, max=0.00
+fault_median_ms: n=10, min=1001.81, median=1001.87, mean=1001.91, max=1002.10
+fault_p95_ms: n=10, min=1002.97, median=1003.15, mean=1003.28, max=1004.14
+fault_p99_ms: n=10, min=1004.13, median=1004.75, mean=1006.02, max=1013.53
+fault_max_ms: n=10, min=2004.24, median=2005.72, mean=2006.36, max=2011.80
+fault_outliers_gt_10s: n=10, min=0.00, median=0.00, mean=0.00, max=0.00
+fault_outliers_gt_60s: n=10, min=0.00, median=0.00, mean=0.00, max=0.00
+fault_outliers_gt_120s: n=10, min=0.00, median=0.00, mean=0.00, max=0.00
+fault_outliers_gt_300s: n=10, min=0.00, median=0.00, mean=0.00, max=0.00
+
+## After
+after_requests: n=10, min=179.00, median=180.00, mean=179.80, max=180.00
+after_success_rate_percent: n=10, min=100.00, median=100.00, mean=100.00, max=100.00
+after_error_rate_percent: n=10, min=0.00, median=0.00, mean=0.00, max=0.00
+after_median_ms: n=10, min=1.14, median=1.25, mean=1.26, max=1.40
+after_p95_ms: n=10, min=1.77, median=2.08, mean=2.22, max=3.05
+
+## Recovery
+recovery_latency_s: n=10, min=0.84, median=1.18, mean=1.23, max=1.63
+
+## Runs with after_requests=0
