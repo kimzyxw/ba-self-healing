@@ -12,7 +12,7 @@ Damit wurde die Latenz bei KubeEdge bidirektional beziehungsweise auf beiden Rou
 
 Die ursprünglichen KubeEdge-Latenztests wurden nicht gelöscht, sondern in folgendem Archivordner innerhalb dieses Verzeichnisses abgelegt:
 
-archived-bidirectional/
+_archived-bidirectional/
 
 Diese Daten bleiben zur Nachvollziehbarkeit erhalten, werden aber nicht als finale Vergleichsbasis für die Gegenüberstellung mit K3s verwendet.
 
