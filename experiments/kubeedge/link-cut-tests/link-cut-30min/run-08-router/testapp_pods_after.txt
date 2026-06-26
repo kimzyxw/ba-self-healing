@@ -1,0 +1,4 @@
+NAME                             READY   STATUS    RESTARTS   AGE   IP            NODE   NOMINATED NODE   READINESS GATES
+nginx-testapp-5c8f4cb9d7-7pt2m   1/1     Running   0          27m   10.88.1.187   e1     <none>           <none>
+nginx-testapp-5c8f4cb9d7-tzmjv   1/1     Running   0          27m   10.88.1.188   e1     <none>           <none>
+nginx-testapp-5c8f4cb9d7-wn62t   1/1     Running   0          27m   10.88.1.189   e1     <none>           <none>
