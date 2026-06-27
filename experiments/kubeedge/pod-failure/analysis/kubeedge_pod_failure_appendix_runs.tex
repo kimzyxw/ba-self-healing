@@ -1,0 +1,24 @@
+\begin{sidewaystable}[p]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{l l p{3.2cm} r r r r r r r r r r r r}
+\toprule
+Run & Störung & Ziel & Req. & OK & Fail & Succ. [\%] & Err. [\%] & Rec. [s] & Stab. [s] & Pod-Rest. & NodeNotReady & NotReady [s] & Final Ready & gültig \\
+\midrule
+run-01 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-wrb59 / e2 / neu:e1 & 96 & 96 & 0 & 100 & 0 & 5 & -- & 0 & 0 & 0 & ja & ja \\
+run-02 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-r5kx6 / e1 / neu:e2 & 94 & 94 & 0 & 100 & 0 & 3 & -- & 0 & 0 & 0 & ja & ja \\
+run-03 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-xrtv8 / e2 / neu:e1 & 95 & 95 & 0 & 100 & 0 & 5 & -- & 0 & 0 & 0 & ja & ja \\
+run-04 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-pzzl5 / e1 / neu:e2 & 93 & 93 & 0 & 100 & 0 & 3 & -- & 0 & 0 & 0 & ja & ja \\
+run-05 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-khqpw / e2 / neu:e1 & 94 & 94 & 0 & 100 & 0 & 4 & -- & 0 & 0 & 0 & ja & ja \\
+run-06 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-gms9j / e1 / neu:e2 & 94 & 94 & 0 & 100 & 0 & 3 & -- & 0 & 0 & 0 & ja & ja \\
+run-07 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-f5dz6 / e2 / neu:e1 & 94 & 94 & 0 & 100 & 0 & 3 & -- & 0 & 0 & 0 & ja & ja \\
+run-08 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-98g4h / e1 / neu:e2 & 94 & 94 & 0 & 100 & 0 & 3 & -- & 0 & 0 & 0 & ja & ja \\
+run-09 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-fbhwx / e2 / neu:e1 & 92 & 92 & 0 & 100 & 0 & 1 & -- & 0 & 0 & 0 & ja & ja \\
+run-10 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-ptrf6 / e1 / neu:e2 & 96 & 96 & 0 & 100 & 0 & 5 & -- & 0 & 0 & 0 & ja & ja \\
+\bottomrule
+\end{tabular}
+\caption{Einzelwerte der KubeEdge-Pod-Ausfalltests pro Versuchslauf.}
+\label{tab:appendix-kubeedge-pod-failure-runs}
+\end{sidewaystable}

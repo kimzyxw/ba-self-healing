@@ -1,0 +1,21 @@
+Run,Störung,Ziel,Req.,OK,Fail,Succ. [%],Err. [%],Rec. [s],Stab. [s],Pod-Rest.,NodeNotReady,NotReady [s],Final Ready,gültig
+run-01-e1,Node-Ausfall,edge:e1,241,220,21,91.29,8.71,155,155,1,ja,51,ja,ja
+run-02-e2,Node-Ausfall,edge:e2,244,220,24,90.16,9.84,160,160,2,ja,54,ja,ja
+run-03-e1,Node-Ausfall,edge:e1,231,209,22,90.48,9.52,155,155,1,ja,49,ja,ja
+run-04-e2,Node-Ausfall,edge:e2,221,194,27,87.78,12.22,150,150,2,ja,55,ja,ja
+run-05-e1,Node-Ausfall,edge:e1,274,249,25,90.88,9.12,152,152,1,ja,57,ja,ja
+run-06-e2,Node-Ausfall,edge:e2,270,246,24,91.11,8.89,156,156,2,ja,52,ja,ja
+run-07-e1,Node-Ausfall,edge:e1,272,251,21,92.28,7.72,154,154,1,ja,49,ja,ja
+run-08-e2,Node-Ausfall,edge:e2,273,249,24,91.21,8.79,165,165,2,ja,55,ja,ja
+run-09-e1,Node-Ausfall,edge:e1,244,222,22,90.98,9.02,153,153,1,ja,49,ja,ja
+run-10-e2,Node-Ausfall,edge:e2,219,195,24,89.04,10.96,150,150,2,ja,55,ja,ja
+run-01-c2,Node-Ausfall,cloud:c2,1154,1154,0,100,0,1055,1055,0,ja,56,ja,ja
+run-02-c3,Node-Ausfall,cloud:c3,1163,1163,0,100,0,1290,1290,0,ja,53,ja,ja
+run-03-c2,Node-Ausfall,cloud:c2,1155,1155,0,100,0,1062,1062,0,ja,54,ja,ja
+run-04-c3,Node-Ausfall,cloud:c3,1490,1490,0,100,0,1099,1099,0,ja,61,ja,ja
+run-05-c2,Node-Ausfall,cloud:c2,1154,1154,0,100,0,1055,1055,0,ja,57,ja,ja
+run-06-c3,Node-Ausfall,cloud:c3,1161,1161,0,100,0,1061,1061,0,ja,51,ja,ja
+run-07-c2,Node-Ausfall,cloud:c2,1155,1155,0,100,0,1057,1057,0,ja,49,ja,ja
+run-08-c3,Node-Ausfall,cloud:c3,1183,1183,0,100,0,1055,1055,0,ja,55,ja,ja
+run-09-c2,Node-Ausfall,cloud:c2,1150,1150,0,100,0,1055,1055,0,ja,47,ja,ja
+run-10-c3,Node-Ausfall,cloud:c3,1153,1153,0,100,0,1055,1055,0,ja,48,ja,ja
