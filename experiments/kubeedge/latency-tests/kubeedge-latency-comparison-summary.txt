@@ -1,0 +1,124 @@
+# kubeedge Latency Comparison Summary
+
+## Vergleichstabelle
+
+| Szenario | Runs | Fault Success Median [%] | Fault Error Median [%] | After Success Median [%] | Recovery Median [s] | Pod-Ersetzungen Runs | Stable After Snapshot | NodeNotReady Events Median |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1s | 10 | 100.00 | 0.00 | 100.00 | 1.18 | 0/10 | 10/10 | 4.00 |
+| 1min | 10 | 22.90 | 77.10 | 97.49 | 2.05 | 10/10 | 7/10 | 17.00 |
+| 10min | 10 | 2.62 | 97.38 | 98.31 | 3.41 | 10/10 | 8/10 | 17.00 |
+| 30min | 10 | 3.12 | 96.88 | 96.33 | 3.77 | 10/10 | 6/10 | 17.00 |
+
+## Detailvergleich
+
+### 1s (latency-1s-async-limited)
+
+- Runs: 10
+- Delay-Werte: 1s
+- Router-Interfaces: ens161
+- tc_active-Werte: yes
+- latency_applied-Werte: yes
+- Baseline Success Rate Median: 100.00 %
+- Fault Success Rate Median: 100.00 %
+- Fault Error Rate Median: 0.00 %
+- After Success Rate Median: 100.00 %
+- After Error Rate Median: 0.00 %
+- Fault Median Latency Median: 1001.87 ms
+- Fault p95 Latency Median: 1003.15 ms
+- After Median Latency Median: 1.25 ms
+- Recovery Latency Median: 1.18 s
+- Recovery Latency Mean: 1.23 s
+- Recovery Latency Max: 1.63 s
+- Runs mit after_requests=0: 0/10
+- Runs mit Pod-Ersetzungen: 0/10
+- Container-Restart-Delta Median: 0.00
+- Runs mit stabilen Testapp-Pods im After-Snapshot: 10/10
+- Runs mit allen Nodes Ready im After-Snapshot: 10/10
+- Runs mit stabilem After-Snapshot: 10/10
+- NodeNotReady-Event-Lines Median: 4.00
+- TaintManager Marking Lines Median: 0.00
+
+### 1min (latency-1min-async-limited)
+
+- Runs: 10
+- Delay-Werte: 60s
+- Router-Interfaces: ens161
+- tc_active-Werte: yes
+- latency_applied-Werte: yes
+- Baseline Success Rate Median: 100.00 %
+- Fault Success Rate Median: 22.90 %
+- Fault Error Rate Median: 77.10 %
+- After Success Rate Median: 97.49 %
+- After Error Rate Median: 2.51 %
+- Fault Median Latency Median: 9568.51 ms
+- Fault p95 Latency Median: 180930.93 ms
+- After Median Latency Median: 1.39 ms
+- Recovery Latency Median: 2.05 s
+- Recovery Latency Mean: 7.40 s
+- Recovery Latency Max: 27.41 s
+- Runs mit after_requests=0: 0/10
+- Runs mit Pod-Ersetzungen: 10/10
+- Container-Restart-Delta Median: 0.00
+- Runs mit stabilen Testapp-Pods im After-Snapshot: 10/10
+- Runs mit allen Nodes Ready im After-Snapshot: 7/10
+- Runs mit stabilem After-Snapshot: 7/10
+- NodeNotReady-Event-Lines Median: 17.00
+- TaintManager Marking Lines Median: 9.00
+
+### 10min (latency-10min-async-limited)
+
+- Runs: 10
+- Delay-Werte: 600s
+- Router-Interfaces: ens161
+- tc_active-Werte: yes
+- latency_applied-Werte: yes
+- Baseline Success Rate Median: 100.00 %
+- Fault Success Rate Median: 2.62 %
+- Fault Error Rate Median: 97.38 %
+- After Success Rate Median: 98.31 %
+- After Error Rate Median: 1.69 %
+- Fault Median Latency Median: 4106.44 ms
+- Fault p95 Latency Median: 135189.96 ms
+- After Median Latency Median: 1.49 ms
+- Recovery Latency Median: 3.41 s
+- Recovery Latency Mean: 8.62 s
+- Recovery Latency Max: 26.47 s
+- Runs mit after_requests=0: 0/10
+- Runs mit Pod-Ersetzungen: 10/10
+- Container-Restart-Delta Median: 0.00
+- Runs mit stabilen Testapp-Pods im After-Snapshot: 10/10
+- Runs mit allen Nodes Ready im After-Snapshot: 8/10
+- Runs mit stabilem After-Snapshot: 8/10
+- NodeNotReady-Event-Lines Median: 17.00
+- TaintManager Marking Lines Median: 9.00
+
+### 30min (latency-30min-async-limited)
+
+- Runs: 10
+- Delay-Werte: 1800s
+- Router-Interfaces: ens161
+- tc_active-Werte: no
+- latency_applied-Werte: yes
+- Baseline Success Rate Median: 100.00 %
+- Fault Success Rate Median: 3.12 %
+- Fault Error Rate Median: 96.88 %
+- After Success Rate Median: 96.33 %
+- After Error Rate Median: 3.67 %
+- Fault Median Latency Median: 4140.41 ms
+- Fault p95 Latency Median: 135275.17 ms
+- After Median Latency Median: 1.44 ms
+- Recovery Latency Median: 3.77 s
+- Recovery Latency Mean: 5.76 s
+- Recovery Latency Max: 16.24 s
+- Runs mit after_requests=0: 0/10
+- Runs mit Pod-Ersetzungen: 10/10
+- Container-Restart-Delta Median: 0.00
+- Runs mit stabilen Testapp-Pods im After-Snapshot: 10/10
+- Runs mit allen Nodes Ready im After-Snapshot: 6/10
+- Runs mit stabilem After-Snapshot: 6/10
+- NodeNotReady-Event-Lines Median: 17.00
+- TaintManager Marking Lines Median: 9.00
+
+## Hinweis
+
+Bei sehr großen Latenzwerten kann `tc` Werte in wissenschaftlicher Notation ausgeben, z. B. `1.8e+03s` statt `1800s`. Falls `tc_active=no` erscheint, obwohl `tc_during.txt` eine passende aktive netem-Regel zeigt und `latency_applied=yes` gesetzt ist, wird dies als Parsing-Artefakt der Validierung bewertet.
