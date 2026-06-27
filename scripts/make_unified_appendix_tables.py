@@ -89,6 +89,34 @@ OUTPUTS = [
         "label": "tab:appendix-kubeedge-latency-runs",
         "target": "cloud--edge",
     },
+    {
+        "name": "kubeedge_packet_loss",
+        "kind": "kubeedge_summary_glob",
+        "inputs_glob": "experiments/kubeedge/packet-loss-tests/*/packet-loss-summary.csv",
+        "out_dir": "experiments/kubeedge/packet-loss-tests/analysis",
+        "out_base": "kubeedge_packet_loss_appendix_runs",
+        "caption": "Einzelwerte der KubeEdge-Paketverlusttests pro Versuchslauf.",
+        "label": "tab:appendix-kubeedge-packet-loss-runs",
+        "target": "cloud--edge",
+        "scenario_source": "loss",
+        "scenario_prefix": "Paketverlust",
+        "applied_column": "packet_loss_applied",
+        "valid_columns": ["router_path_valid", "packet_loss_applied", "tc_cleanup_documented"],
+    },
+    {
+        "name": "kubeedge_link_cut",
+        "kind": "kubeedge_summary_glob",
+        "inputs_glob": "experiments/kubeedge/link-cut-tests/*/link-cut-summary.csv",
+        "out_dir": "experiments/kubeedge/link-cut-tests/analysis",
+        "out_base": "kubeedge_link_cut_appendix_runs",
+        "caption": "Einzelwerte der KubeEdge-Verbindungsabbruchtests pro Versuchslauf.",
+        "label": "tab:appendix-kubeedge-link-cut-runs",
+        "target": "cloud--edge",
+        "scenario_source": "scenario",
+        "scenario_prefix": "Link-Cut",
+        "applied_column": "link_cut_applied",
+        "valid_columns": ["router_path_valid", "link_cut_applied", "interface_recovered", "router_recovery_documented"],
+    },
 ]
 
 
@@ -145,6 +173,19 @@ def fmt_num(value: object, digits: int = 2) -> str:
     return f"{x:.{digits}f}"
 
 
+def clean_percent(value: object) -> str:
+    s = norm(value)
+    if s == "--":
+        return "--"
+    return s.replace("%", "")
+
+
+def fmt_percent(value: object) -> str:
+    return fmt_num(clean_percent(value), 2)
+
+
+
+
 def latex_escape(s: object) -> str:
     text = norm(s)
     repl = {
@@ -189,6 +230,11 @@ def scenario_label(raw: str) -> str:
         "link-cut-1min": "Link-Cut 1min",
         "link-cut-10min": "Link-Cut 10min",
         "link-cut-30min": "Link-Cut 30min",
+        "100%": "Paketverlust 100%",
+        "70%": "Paketverlust 70%",
+        "50%": "Paketverlust 50%",
+        "10%": "Paketverlust 10%",
+        "1%": "Paketverlust 1%",
         "1s": "Latenz 1s",
         "1min": "Latenz 1min",
         "10min": "Latenz 10min",
@@ -361,6 +407,62 @@ def map_kubeedge_latency(
     }
 
 
+def valid_from_columns(row: Dict[str, str], columns: Iterable[str]) -> str:
+    for c in columns:
+        v = first(row, [c])
+        if bool_de(v) == "nein":
+            return "nein"
+    return "ja"
+
+
+def derived_count(total: str, rate_percent: str) -> str:
+    total_s = norm(total)
+    rate_s = clean_percent(rate_percent)
+    if total_s == "--" or rate_s == "--":
+        return "--"
+    try:
+        total_f = float(total_s)
+        rate_f = float(rate_s)
+    except ValueError:
+        return "--"
+    return str(int(round(total_f * rate_f / 100.0)))
+
+
+def map_kubeedge_summary_glob(row: Dict[str, str], config: Dict[str, str]) -> Dict[str, str]:
+    scenario_raw = first(row, [config.get("scenario_source", "scenario")])
+    scenario = scenario_label(scenario_raw)
+
+    req = first(row, ["fault_requests_total"])
+    ok = first(row, ["fault_success"])
+    fail = first(row, ["fault_failed"])
+
+    # KubeEdge Packet-Loss enthält in der Summary keine fault_success/fault_failed-Spalten,
+    # sondern nur fault_requests_total sowie Success-/Error-Raten. Für die Appendix-Tabelle
+    # werden OK/Fail daraus abgeleitet.
+    if norm(ok) == "--":
+        ok = derived_count(req, first(row, ["fault_success_rate"]))
+    if norm(fail) == "--":
+        fail = derived_count(req, first(row, ["fault_error_rate"]))
+
+    return {
+        "Run": first(row, ["run"]),
+        "Störung": scenario,
+        "Ziel": config.get("target", "--"),
+        "Req.": fmt_num(req, 0),
+        "OK": fmt_num(ok, 0),
+        "Fail": fmt_num(fail, 0),
+        "Succ. [%]": fmt_percent(first(row, ["fault_success_rate"])),
+        "Err. [%]": fmt_percent(first(row, ["fault_error_rate"])),
+        "Rec. [s]": fmt_num(first(row, ["recovery_latency_s"]), 2),
+        "Stab. [s]": "--",
+        "Pod-Rest.": "--",
+        "NodeNotReady": "--",
+        "NotReady [s]": "--",
+        "Final Ready": latex_bool(first(row, ["after_preflight_ok", "interface_recovered"], "ja")),
+        "gültig": valid_from_columns(row, config.get("valid_columns", [])),
+    }
+
+
 def rows_for_config(config: Dict[str, str]) -> List[Dict[str, str]]:
     kind = config["kind"]
 
@@ -389,6 +491,13 @@ def rows_for_config(config: Dict[str, str]) -> List[Dict[str, str]]:
             count_row = optional_counts.get(key) or optional_counts.get((scenario_label(scenario), run)) or {}
             out.append(map_kubeedge_latency(r, cluster_by_key.get(key), count_row, config["target"]))
         return out
+
+    if kind == "kubeedge_summary_glob":
+        paths = sorted(ROOT.glob(config["inputs_glob"]))
+        rows: List[Dict[str, str]] = []
+        for path in paths:
+            rows.extend(read_csv(path))
+        return [map_kubeedge_summary_glob(r, config) for r in rows]
 
     raise ValueError(f"Unknown kind: {kind}")
 
@@ -444,6 +553,9 @@ def main() -> int:
             continue
         if "cluster_input" in config and not (ROOT / config["cluster_input"]).exists():
             print(f"SKIP {config['name']}: missing {config['cluster_input']}")
+            continue
+        if "inputs_glob" in config and not list(ROOT.glob(config["inputs_glob"])):
+            print(f"SKIP {config['name']}: no matches for {config['inputs_glob']}")
             continue
 
         rows = rows_for_config(config)
