@@ -1,0 +1,11 @@
+run,deleted_pod,deleted_pod_node,new_pod,new_pod_node,pod_recreated,rescheduled,recovered,recovery_seconds,total_requests,ok_requests,failed_requests,success_rate_percent,error_rate_percent,median_ms,p95_ms,max_ms,pod_restarts_before,pod_restarts_after,pod_restart_delta,node_final_all_ready,node_status_after
+run-01,nginx-testapp-5c8f4cb9d7-wrb59,e2,nginx-testapp-5c8f4cb9d7-r5kx6,e1,True,True,true,5.0,96,96,0,100.0,0.0,4.96,11.54,83.9,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
+run-02,nginx-testapp-5c8f4cb9d7-r5kx6,e1,nginx-testapp-5c8f4cb9d7-z9m8s,e2,True,True,true,3.0,94,94,0,100.0,0.0,3.9,9.93,66.35,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
+run-03,nginx-testapp-5c8f4cb9d7-xrtv8,e2,nginx-testapp-5c8f4cb9d7-pzzl5,e1,True,True,true,5.0,95,95,0,100.0,0.0,4.07,10.54,70.13,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
+run-04,nginx-testapp-5c8f4cb9d7-pzzl5,e1,nginx-testapp-5c8f4cb9d7-khqpw,e2,True,True,true,3.0,93,93,0,100.0,0.0,6.12,12.79,18.29,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
+run-05,nginx-testapp-5c8f4cb9d7-khqpw,e2,nginx-testapp-5c8f4cb9d7-gms9j,e1,True,True,true,4.0,94,94,0,100.0,0.0,5.35,13.33,21.48,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
+run-06,nginx-testapp-5c8f4cb9d7-gms9j,e1,nginx-testapp-5c8f4cb9d7-f5dz6,e2,True,True,true,3.0,94,94,0,100.0,0.0,3.85,9.34,13.12,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
+run-07,nginx-testapp-5c8f4cb9d7-f5dz6,e2,nginx-testapp-5c8f4cb9d7-98g4h,e1,True,True,true,3.0,94,94,0,100.0,0.0,3.83,11.86,17.86,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
+run-08,nginx-testapp-5c8f4cb9d7-98g4h,e1,nginx-testapp-5c8f4cb9d7-fbhwx,e2,True,True,true,3.0,94,94,0,100.0,0.0,4.95,9.84,13.05,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
+run-09,nginx-testapp-5c8f4cb9d7-fbhwx,e2,nginx-testapp-5c8f4cb9d7-ptrf6,e1,True,True,true,1.0,92,92,0,100.0,0.0,5.11,11.43,40.74,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
+run-10,nginx-testapp-5c8f4cb9d7-ptrf6,e1,nginx-testapp-5c8f4cb9d7-dz97l,e2,True,True,true,5.0,96,96,0,100.0,0.0,4.63,7.61,9.14,0,0,0,True,c1:Ready;c2:Ready;c3:Ready;e1:Ready;e2:Ready
