@@ -1,0 +1,54 @@
+\begin{sidewaystable}[p]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{l l p{3.2cm} r r r r r r r r r r r r}
+\toprule
+Run & Störung & Ziel & Req. & OK & Fail & Succ. [\%] & Err. [\%] & Rec. [s] & Stab. [s] & Pod-Rest. & NodeNotReady & NotReady [s] & Final Ready & gültig \\
+\midrule
+run-01-router & Link-Cut 1s & server--worker & 3 & 3 & 0 & 100 & 0 & 0.60 & 0 & 0 & 0 & -- & ja & ja \\
+run-02-router & Link-Cut 1s & server--worker & 3 & 3 & 0 & 100 & 0 & 0.51 & 0 & 0 & 0 & -- & ja & ja \\
+run-03-router & Link-Cut 1s & server--worker & 4 & 4 & 0 & 100 & 0 & 0.02 & 0 & 0 & 0 & -- & ja & ja \\
+run-04-router & Link-Cut 1s & server--worker & 0 & 0 & 0 & -- & -- & -- & 0 & 0 & 0 & -- & ja & nein \\
+run-05-router & Link-Cut 1s & server--worker & 3 & 3 & 0 & 100 & 0 & 0.47 & 0 & 0 & 0 & -- & ja & ja \\
+run-06-router & Link-Cut 1s & server--worker & 0 & 0 & 0 & -- & -- & -- & 0 & 0 & 0 & -- & ja & nein \\
+run-07-router & Link-Cut 1s & server--worker & 4 & 4 & 0 & 100 & 0 & 0.02 & 0 & 0 & 0 & -- & ja & ja \\
+run-08-router & Link-Cut 1s & server--worker & 0 & 0 & 0 & -- & -- & -- & 0 & 0 & 0 & -- & ja & nein \\
+run-09-router & Link-Cut 1s & server--worker & 4 & 4 & 0 & 100 & 0 & 0.74 & 0 & 0 & 0 & -- & ja & ja \\
+run-10-router & Link-Cut 1s & server--worker & 0 & 0 & 0 & -- & -- & -- & 0 & 0 & 0 & -- & ja & nein \\
+run-01-router & Link-Cut 1min & server--worker & 12 & 12 & 0 & 100 & 0 & 3.14 & 0 & 0 & 0 & -- & ja & ja \\
+run-02-router & Link-Cut 1min & server--worker & 12 & 12 & 0 & 100 & 0 & 3.08 & 0 & 0 & 0 & -- & ja & ja \\
+run-03-router & Link-Cut 1min & server--worker & 26 & 11 & 15 & 42.31 & 57.69 & 0.27 & 0 & 0 & 0 & -- & ja & ja \\
+run-04-router & Link-Cut 1min & server--worker & 11 & 11 & 0 & 100 & 0 & 2.63 & 0 & 0 & 0 & -- & ja & ja \\
+run-05-router & Link-Cut 1min & server--worker & 11 & 11 & 0 & 100 & 0 & 2.72 & 0 & 0 & 0 & -- & ja & ja \\
+run-06-router & Link-Cut 1min & server--worker & 30 & 9 & 21 & 30 & 70 & 0.76 & 0 & 0 & 0 & -- & ja & ja \\
+run-07-router & Link-Cut 1min & server--worker & 11 & 11 & 0 & 100 & 0 & 3.04 & 0 & 0 & 0 & -- & ja & ja \\
+run-08-router & Link-Cut 1min & server--worker & 12 & 12 & 0 & 100 & 0 & 3.14 & 0 & 0 & 0 & -- & ja & ja \\
+run-09-router & Link-Cut 1min & server--worker & 10 & 10 & 0 & 100 & 0 & 1.86 & 0 & 0 & 0 & -- & ja & ja \\
+run-10-router & Link-Cut 1min & server--worker & 10 & 10 & 0 & 100 & 0 & 1.80 & 0 & 0 & 0 & -- & ja & ja \\
+run-01-router & Link-Cut 10min & server--worker & 478 & 5 & 473 & 1.05 & 98.95 & 0.71 & 0 & 0 & 0 & -- & ja & ja \\
+run-02-router & Link-Cut 10min & server--worker & 540 & 6 & 534 & 1.11 & 98.89 & 0.83 & 0 & 0 & 0 & -- & ja & ja \\
+run-03-router & Link-Cut 10min & server--worker & 477 & 3 & 474 & 0.63 & 99.37 & 0.75 & 0 & 0 & 0 & -- & ja & ja \\
+run-04-router & Link-Cut 10min & server--worker & 476 & 5 & 471 & 1.05 & 98.95 & 0.57 & 0 & 0 & 0 & -- & ja & ja \\
+run-05-router & Link-Cut 10min & server--worker & 573 & 5 & 568 & 0.87 & 99.13 & 0.65 & 0 & 0 & 0 & -- & ja & ja \\
+run-06-router & Link-Cut 10min & server--worker & 540 & 3 & 537 & 0.56 & 99.44 & 0.03 & 0 & 0 & 0 & -- & ja & ja \\
+run-07-router & Link-Cut 10min & server--worker & 541 & 6 & 535 & 1.11 & 98.89 & 0.60 & 0 & 0 & 0 & -- & ja & ja \\
+run-08-router & Link-Cut 10min & server--worker & 475 & 5 & 470 & 1.05 & 98.95 & 0.15 & 0 & 0 & 0 & -- & ja & ja \\
+run-09-router & Link-Cut 10min & server--worker & 476 & 2 & 474 & 0.42 & 99.58 & 0.31 & 0 & 0 & 0 & -- & ja & ja \\
+run-10-router & Link-Cut 10min & server--worker & 475 & 6 & 469 & 1.26 & 98.74 & 0.35 & 0 & 0 & 0 & -- & ja & ja \\
+run-01-router & Link-Cut 30min & server--worker & 1735 & 3 & 1732 & 0.17 & 99.83 & 0.67 & 0 & 0 & 0 & -- & ja & ja \\
+run-02-router & Link-Cut 30min & server--worker & 1738 & 6 & 1732 & 0.35 & 99.65 & 0.62 & 0 & 0 & 0 & -- & ja & ja \\
+run-03-router & Link-Cut 30min & server--worker & 1673 & 1 & 1672 & 0.06 & 99.94 & 0.15 & 0 & 0 & 0 & -- & ja & ja \\
+run-04-router & Link-Cut 30min & server--worker & 1753 & 1 & 1752 & 0.06 & 99.94 & 0.41 & 0 & 0 & 0 & -- & ja & ja \\
+run-05-router & Link-Cut 30min & server--worker & 1674 & 3 & 1671 & 0.18 & 99.82 & 0.71 & 0 & 0 & 0 & -- & ja & ja \\
+run-06-router & Link-Cut 30min & server--worker & 1674 & 2 & 1672 & 0.12 & 99.88 & 0.86 & 0 & 0 & 0 & -- & ja & ja \\
+run-07-router & Link-Cut 30min & server--worker & 1738 & 6 & 1732 & 0.35 & 99.65 & 0.30 & 0 & 0 & 0 & -- & ja & ja \\
+run-08-router & Link-Cut 30min & server--worker & 1674 & 5 & 1669 & 0.30 & 99.70 & 0.38 & 0 & 0 & 0 & -- & ja & ja \\
+run-09-router & Link-Cut 30min & server--worker & 1736 & 2 & 1734 & 0.12 & 99.88 & 0.34 & 0 & 0 & 0 & -- & ja & ja \\
+run-10-router & Link-Cut 30min & server--worker & 1738 & 6 & 1732 & 0.35 & 99.65 & 0.15 & 0 & 0 & 0 & -- & ja & ja \\
+\bottomrule
+\end{tabular}
+\caption{Einzelwerte der K3s-Verbindungsabbruchtests pro Versuchslauf.}
+\label{tab:appendix-k3s-link-cut-runs}
+\end{sidewaystable}
