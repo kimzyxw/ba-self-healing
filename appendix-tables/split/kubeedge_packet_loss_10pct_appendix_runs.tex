@@ -1,0 +1,26 @@
+\begin{sidewaystable}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{0.9}
+\resizebox{\textheight}{!}{%
+\begin{tabular}{llrrrrrrrrrrrrr}
+\toprule
+Run & Störung & Ziel & Req. & OK & Fail & Succ. [\%] & Err. [\%] & Rec. [s] & Stab. [s] & Pod-Rest. & NodeNotReady & NotReady [s] & Final Ready & gültig \\
+\midrule
+run-01-router & Paketverlust 10\% & cloud--edge & 602 & 602 & 0 & 100 & 0 & 0.79 & -- & -- & -- & -- & ja & ja \\
+run-02-router & Paketverlust 10\% & cloud--edge & 601 & 601 & 0 & 100 & 0 & 0.30 & -- & -- & -- & -- & ja & ja \\
+run-03-router & Paketverlust 10\% & cloud--edge & 603 & 603 & 0 & 100 & 0 & 0.88 & -- & -- & -- & -- & ja & ja \\
+run-04-router & Paketverlust 10\% & cloud--edge & 602 & 602 & 0 & 100 & 0 & 0.56 & -- & -- & -- & -- & ja & ja \\
+run-05-router & Paketverlust 10\% & cloud--edge & 602 & 602 & 0 & 100 & 0 & 0.16 & -- & -- & -- & -- & ja & ja \\
+run-06-router & Paketverlust 10\% & cloud--edge & 602 & 602 & 0 & 100 & 0 & 0.77 & -- & -- & -- & -- & ja & ja \\
+run-07-router & Paketverlust 10\% & cloud--edge & 601 & 601 & 0 & 100 & 0 & 0.30 & -- & -- & -- & -- & ja & ja \\
+run-08-router & Paketverlust 10\% & cloud--edge & 603 & 603 & 0 & 100 & 0 & 0.91 & -- & -- & -- & -- & ja & ja \\
+run-09-router & Paketverlust 10\% & cloud--edge & 601 & 601 & 0 & 100 & 0 & 0.39 & -- & -- & -- & -- & ja & ja \\
+run-10-router & Paketverlust 10\% & cloud--edge & 601 & 601 & 0 & 100 & 0 & 0.20 & -- & -- & -- & -- & ja & ja \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Einzelwerte der KubeEdge-Paketverlusttests bei Paketverlust 10% pro Versuchslauf.}
+\label{tab:appendix-kubeedge-packet-loss-10pct-runs}
+\end{sidewaystable}

@@ -1,0 +1,26 @@
+\begin{sidewaystable}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{0.9}
+\resizebox{\textheight}{!}{%
+\begin{tabular}{llrrrrrrrrrrrrr}
+\toprule
+Run & Störung & Ziel & Req. & OK & Fail & Succ. [\%] & Err. [\%] & Rec. [s] & Stab. [s] & Pod-Rest. & NodeNotReady & NotReady [s] & Final Ready & gültig \\
+\midrule
+run-01-router & Paketverlust 100\% & server--worker & 462 & 2 & 460 & 0.43 & 99.57 & -- & 0 & 0 & 0 & -- & ja & ja \\
+run-02-router & Paketverlust 100\% & server--worker & 540 & 4 & 536 & 0.74 & 99.26 & 0.26 & 0 & 0 & 0 & -- & ja & ja \\
+run-03-router & Paketverlust 100\% & server--worker & 540 & 3 & 537 & 0.56 & 99.44 & 0.12 & 0 & 0 & 0 & -- & ja & ja \\
+run-04-router & Paketverlust 100\% & server--worker & 556 & 4 & 552 & 0.72 & 99.28 & 0.49 & 0 & 0 & 0 & -- & ja & ja \\
+run-05-router & Paketverlust 100\% & server--worker & 540 & 5 & 535 & 0.93 & 99.07 & 0.31 & 0 & 0 & 0 & -- & ja & ja \\
+run-06-router & Paketverlust 100\% & server--worker & 503 & 2 & 501 & 0.40 & 99.60 & -- & 0 & 0 & 0 & -- & ja & ja \\
+run-07-router & Paketverlust 100\% & server--worker & 539 & 5 & 534 & 0.93 & 99.07 & 0.94 & 0 & 0 & 0 & -- & ja & ja \\
+run-08-router & Paketverlust 100\% & server--worker & 556 & 4 & 552 & 0.72 & 99.28 & 0.30 & 0 & 0 & 0 & -- & ja & ja \\
+run-09-router & Paketverlust 100\% & server--worker & 247 & 1 & 246 & 0.40 & 99.60 & -- & 0 & 0 & 0 & -- & ja & ja \\
+run-10-router & Paketverlust 100\% & server--worker & 572 & 3 & 569 & 0.52 & 99.48 & 0.76 & 0 & 0 & 0 & -- & ja & ja \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Einzelwerte der K3s-Paketverlusttests bei Paketverlust 100% pro Versuchslauf.}
+\label{tab:appendix-k3s-packet-loss-100pct-runs}
+\end{sidewaystable}
