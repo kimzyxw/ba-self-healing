@@ -1,0 +1,2 @@
+===== ens161 =====
+qdisc netem 80c1: root refcnt 2 limit 1000 delay 1.8e+03s seed 2112104252447529858

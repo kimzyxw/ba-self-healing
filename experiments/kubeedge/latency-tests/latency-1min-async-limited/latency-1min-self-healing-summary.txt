@@ -1,0 +1,51 @@
+# Self-Healing Summary: latency-1min-async-limited
+
+runs_found=10
+
+## Methodische Validierung
+delay_values=['60s']
+router_ifaces_values=['ens161']
+tc_active_values=['yes']
+tc_cleanup_documented_values=['yes']
+latency_applied_values=['yes']
+
+## Request Success Rate / Fehlerrate
+overall_success_rate_percent: n=10, min=74.19, median=81.69, mean=80.98, max=88.05
+overall_error_rate_percent: n=10, min=11.95, median=18.31, mean=19.02, max=25.81
+baseline_success_rate_percent: n=10, min=100.00, median=100.00, mean=100.00, max=100.00
+baseline_error_rate_percent: n=10, min=0.00, median=0.00, mean=0.00, max=0.00
+fault_success_rate_percent: n=10, min=5.88, median=22.90, mean=22.87, max=37.66
+fault_error_rate_percent: n=10, min=62.34, median=77.10, mean=77.13, max=94.12
+after_success_rate_percent: n=10, min=89.89, median=97.49, mean=96.62, max=100.00
+after_error_rate_percent: n=10, min=0.00, median=2.51, mean=3.38, max=10.11
+
+## Latenz / Recovery
+baseline_median_ms: n=10, min=1.11, median=1.27, mean=1.29, max=1.43
+fault_median_ms: n=10, min=3095.83, median=9568.51, mean=33547.81, max=120008.05
+fault_p95_ms: n=10, min=180283.75, median=180930.93, mean=180794.49, max=180998.22
+fault_p99_ms: n=10, min=180437.32, median=180997.58, mean=180918.76, max=181018.04
+after_median_ms: n=10, min=1.06, median=1.39, mean=1.36, max=1.79
+recovery_latency_s: n=10, min=1.04, median=2.05, mean=7.40, max=27.41
+
+## Nachlauf
+after_requests: n=10, min=153.00, median=179.00, mean=175.20, max=180.00
+runs_with_after_requests_0=none
+
+## Pod-Restarts / Pod-Ersetzungen
+runs_with_pod_name_changes=10/10
+removed_testapp_pods: n=10, min=3.00, median=3.00, mean=3.00, max=3.00
+new_testapp_pods: n=10, min=3.00, median=3.00, mean=3.00, max=3.00
+container_restart_delta: n=10, min=0.00, median=0.00, mean=0.00, max=0.00
+runs_with_testapp_pods_after_running=10/10
+
+## Node-Status / Events
+runs_with_all_nodes_after_ready=7/10
+runs_with_stable_after_snapshot=7/10
+node_notready_event_lines: n=10, min=11.00, median=17.00, mean=16.40, max=20.00
+taintmanager_marking_lines: n=10, min=3.00, median=9.00, mean=8.10, max=9.00
+taintmanager_cancel_lines: n=10, min=3.00, median=9.00, mean=8.10, max=9.00
+
+## Runs mit NotReady im After-Snapshot
+run-02: e2
+run-03: e2
+run-10: e2
