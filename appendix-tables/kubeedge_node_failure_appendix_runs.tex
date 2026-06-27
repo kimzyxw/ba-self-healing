@@ -3,6 +3,7 @@
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.08}
+\resizebox{\textheight}{!}{%
 \begin{tabular}{l l p{3.2cm} r r r r r r r r r r r r}
 \toprule
 Run & Störung & Ziel & Req. & OK & Fail & Succ. [\%] & Err. [\%] & Rec. [s] & Stab. [s] & Pod-Rest. & NodeNotReady & NotReady [s] & Final Ready & gültig \\
@@ -28,7 +29,8 @@ run-08-c3 & Node-Ausfall & cloud:c3 & 1183 & 1183 & 0 & 100 & 0 & 1055 & 1055 & 
 run-09-c2 & Node-Ausfall & cloud:c2 & 1150 & 1150 & 0 & 100 & 0 & 1055 & 1055 & 0 & ja & 47 & ja & ja \\
 run-10-c3 & Node-Ausfall & cloud:c3 & 1153 & 1153 & 0 & 100 & 0 & 1055 & 1055 & 0 & ja & 48 & ja & ja \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \caption{Einzelwerte der KubeEdge-Node-Ausfalltests pro Versuchslauf.}
 \label{tab:appendix-kubeedge-node-failure-runs}
 \end{sidewaystable}

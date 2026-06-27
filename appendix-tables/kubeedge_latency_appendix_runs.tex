@@ -3,6 +3,7 @@
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.08}
+\resizebox{\textheight}{!}{%
 \begin{tabular}{l l p{3.2cm} r r r r r r r r r r r r}
 \toprule
 Run & Störung & Ziel & Req. & OK & Fail & Succ. [\%] & Err. [\%] & Rec. [s] & Stab. [s] & Pod-Rest. & NodeNotReady & NotReady [s] & Final Ready & gültig \\
@@ -48,7 +49,8 @@ run-08 & Latenz 30min & cloud--edge & 193 & 6 & 187 & 3.11 & 96.89 & 1.75 & -- &
 run-09 & Latenz 30min & cloud--edge & 202 & 5 & 197 & 2.48 & 97.52 & 2.85 & -- & 0 & 17 & -- & nein & ja \\
 run-10 & Latenz 30min & cloud--edge & 190 & 7 & 183 & 4.19 & 95.81 & 0.87 & -- & 0 & 17 & -- & ja & ja \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \caption{Einzelwerte der KubeEdge-Latenztests pro Versuchslauf.}
 \label{tab:appendix-kubeedge-latency-runs}
 \end{sidewaystable}

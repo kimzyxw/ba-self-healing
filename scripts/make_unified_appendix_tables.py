@@ -405,6 +405,7 @@ def latex_table(path: Path, rows: List[Dict[str, str]], caption: str, label: str
         r"\scriptsize",
         r"\setlength{\tabcolsep}{3pt}",
         r"\renewcommand{\arraystretch}{1.08}",
+        r"\resizebox{\textheight}{!}{%",
         rf"\begin{{tabular}}{{{align}}}",
         r"\toprule",
         header,
@@ -418,7 +419,8 @@ def latex_table(path: Path, rows: List[Dict[str, str]], caption: str, label: str
     lines.extend(
         [
             r"\bottomrule",
-            r"\end{tabular}",
+            r"\end{tabular}%",
+            r"}",
             rf"\caption{{{latex_escape(caption)}}}",
             rf"\label{{{latex_escape(label)}}}",
             r"\end{sidewaystable}",

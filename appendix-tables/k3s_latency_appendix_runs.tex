@@ -3,6 +3,7 @@
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.08}
+\resizebox{\textheight}{!}{%
 \begin{tabular}{l l p{3.2cm} r r r r r r r r r r r r}
 \toprule
 Run & Störung & Ziel & Req. & OK & Fail & Succ. [\%] & Err. [\%] & Rec. [s] & Stab. [s] & Pod-Rest. & NodeNotReady & NotReady [s] & Final Ready & gültig \\
@@ -48,7 +49,8 @@ run-08-router & Latenz 30min & server--worker & 1418 & 1 & 1417 & 0.07 & 99.93 &
 run-09-router & Latenz 30min & server--worker & 1739 & 1 & 1738 & 0.06 & 99.94 & -- & 0 & 0 & 0 & -- & ja & ja \\
 run-10-router & Latenz 30min & server--worker & 932 & 1 & 931 & 0.11 & 99.89 & -- & 0 & 0 & 0 & -- & ja & ja \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \caption{Einzelwerte der K3s-Latenztests pro Versuchslauf.}
 \label{tab:appendix-k3s-latency-runs}
 \end{sidewaystable}

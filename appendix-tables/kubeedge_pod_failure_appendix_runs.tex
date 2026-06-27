@@ -3,6 +3,7 @@
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.08}
+\resizebox{\textheight}{!}{%
 \begin{tabular}{l l p{3.2cm} r r r r r r r r r r r r}
 \toprule
 Run & Störung & Ziel & Req. & OK & Fail & Succ. [\%] & Err. [\%] & Rec. [s] & Stab. [s] & Pod-Rest. & NodeNotReady & NotReady [s] & Final Ready & gültig \\
@@ -18,7 +19,8 @@ run-08 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-98g4h / e1 / neu:e2 & 94 & 94 & 
 run-09 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-fbhwx / e2 / neu:e1 & 92 & 92 & 0 & 100 & 0 & 1 & -- & 0 & 0 & 0 & ja & ja \\
 run-10 & Pod-Ausfall & nginx-testapp-5c8f4cb9d7-ptrf6 / e1 / neu:e2 & 96 & 96 & 0 & 100 & 0 & 5 & -- & 0 & 0 & 0 & ja & ja \\
 \bottomrule
-\end{tabular}
+\end{tabular}%
+}
 \caption{Einzelwerte der KubeEdge-Pod-Ausfalltests pro Versuchslauf.}
 \label{tab:appendix-kubeedge-pod-failure-runs}
 \end{sidewaystable}
