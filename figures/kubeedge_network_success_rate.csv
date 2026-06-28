@@ -1,0 +1,14 @@
+Gruppe,Störung,gültige Runs,Mittelwert Succ. [%],Std Succ. [pp]
+Erhöhte Latenz,Latenz 1s,10,100.0000,0.0000
+Erhöhte Latenz,Latenz 1min,10,22.8730,11.8499
+Erhöhte Latenz,Latenz 10min,10,2.7350,1.4715
+Erhöhte Latenz,Latenz 30min,10,2.8970,1.3445
+Paketverlust,Paketverlust 1%,10,100.0000,0.0000
+Paketverlust,Paketverlust 10%,10,100.0000,0.0000
+Paketverlust,Paketverlust 50%,10,99.2350,1.2427
+Paketverlust,Paketverlust 70%,10,79.2700,23.4799
+Paketverlust,Paketverlust 100%,10,3.2320,1.6476
+Verbindungsabbruch,Link-Cut 1s,10,100.0000,0.0000
+Verbindungsabbruch,Link-Cut 1min,10,100.0000,0.0000
+Verbindungsabbruch,Link-Cut 10min,10,100.0000,0.0000
+Verbindungsabbruch,Link-Cut 30min,10,100.0000,0.0000
