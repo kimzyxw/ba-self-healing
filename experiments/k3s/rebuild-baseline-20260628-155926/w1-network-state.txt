@@ -1,0 +1,21 @@
+k3s-w1
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens160           UP             172.16.41.133/24 metric 1024 fe80::20c:29ff:fe73:7c82/64 
+ens256           UP             10.10.20.129/24 metric 1024 fe80::20c:29ff:fe73:7c8c/64 
+flannel.1        UNKNOWN        10.42.3.0/32 fe80::4d2:71ff:fe8f:7232/64 
+cni0             UP             10.42.3.1/24 fe80::e022:c1ff:fe68:6278/64 
+vethccb625d0@if2 UP             fe80::f044:ffff:fec4:ffdc/64 
+veth47114422@if2 UP             fe80::9c33:65ff:fe25:41ee/64 
+default via 172.16.41.2 dev ens160 proto dhcp src 172.16.41.133 metric 1024 
+10.10.10.0/24 via 10.10.20.133 dev ens256 
+10.10.20.0/24 dev ens256 proto kernel scope link src 10.10.20.129 metric 1024 
+10.10.20.1 dev ens256 proto dhcp scope link src 10.10.20.129 metric 1024 
+10.42.0.0/24 via 10.42.0.0 dev flannel.1 onlink 
+10.42.1.0/24 via 10.42.1.0 dev flannel.1 onlink 
+10.42.2.0/24 via 10.42.2.0 dev flannel.1 onlink 
+10.42.3.0/24 dev cni0 proto kernel scope link src 10.42.3.1 
+10.42.4.0/24 via 10.42.4.0 dev flannel.1 onlink 
+172.16.41.0/24 dev ens160 proto kernel scope link src 172.16.41.133 metric 1024 
+172.16.41.2 dev ens160 proto dhcp scope link src 172.16.41.133 metric 1024 
+inactive
+active

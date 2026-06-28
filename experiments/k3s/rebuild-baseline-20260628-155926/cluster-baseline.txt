@@ -1,0 +1,78 @@
+===== kubectl version =====
+Client Version: v1.35.5+k3s1
+Kustomize Version: v5.7.1
+Server Version: v1.35.5+k3s1
+\n===== nodes =====
+NAME     STATUS   ROLES                AGE     VERSION        INTERNAL-IP    EXTERNAL-IP   OS-IMAGE           KERNEL-VERSION     CONTAINER-RUNTIME
+k3s-s1   Ready    control-plane,etcd   15m     v1.35.5+k3s1   10.10.10.129   <none>        Ubuntu 26.04 LTS   7.0.0-15-generic   containerd://2.2.3-k3s1
+k3s-s2   Ready    control-plane,etcd   7m35s   v1.35.5+k3s1   10.10.10.130   <none>        Ubuntu 26.04 LTS   7.0.0-15-generic   containerd://2.2.3-k3s1
+k3s-s3   Ready    control-plane,etcd   6m13s   v1.35.5+k3s1   10.10.10.131   <none>        Ubuntu 26.04 LTS   7.0.0-15-generic   containerd://2.2.3-k3s1
+k3s-w1   Ready    <none>               4m41s   v1.35.5+k3s1   10.10.20.129   <none>        Ubuntu 26.04 LTS   7.0.0-15-generic   containerd://2.2.3-k3s1
+k3s-w2   Ready    <none>               4m4s    v1.35.5+k3s1   10.10.20.130   <none>        Ubuntu 26.04 LTS   7.0.0-15-generic   containerd://2.2.3-k3s1
+\n===== pods all namespaces =====
+NAMESPACE     NAME                                      READY   STATUS      RESTARTS   AGE     IP          NODE     NOMINATED NODE   READINESS GATES
+kube-system   coredns-8db54c48d-ttklw                   1/1     Running     0          15m     10.42.0.6   k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-95xnt                0/1     Completed   1          15m     10.42.0.2   k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-crd-q4nph            0/1     Completed   0          15m     10.42.0.3   k3s-s1   <none>           <none>
+kube-system   local-path-provisioner-5d9d9885bc-n44cf   1/1     Running     0          15m     10.42.0.5   k3s-s1   <none>           <none>
+kube-system   metrics-server-786d997795-vq8kx           1/1     Running     0          15m     10.42.0.4   k3s-s1   <none>           <none>
+kube-system   svclb-traefik-81700cf5-d7tm7              2/2     Running     0          7m35s   10.42.1.2   k3s-s2   <none>           <none>
+kube-system   svclb-traefik-81700cf5-dgcdr              2/2     Running     0          15m     10.42.0.7   k3s-s1   <none>           <none>
+kube-system   svclb-traefik-81700cf5-hpwrg              2/2     Running     0          6m13s   10.42.2.2   k3s-s3   <none>           <none>
+kube-system   svclb-traefik-81700cf5-hxppm              2/2     Running     0          4m40s   10.42.3.2   k3s-w1   <none>           <none>
+kube-system   svclb-traefik-81700cf5-k9nm5              2/2     Running     0          4m4s    10.42.4.2   k3s-w2   <none>           <none>
+kube-system   traefik-9bcdbbd9-gfpv5                    1/1     Running     0          15m     10.42.0.8   k3s-s1   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-jd9fj                1/1     Running     0          2m30s   10.42.2.3   k3s-s3   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-q7lrd                1/1     Running     0          2m30s   10.42.3.3   k3s-w1   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-qgfvn                1/1     Running     0          2m30s   10.42.4.3   k3s-w2   <none>           <none>
+\n===== testapp =====
+NAME                         READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES         SELECTOR
+deployment.apps/nginx-test   3/3     3            3           2m30s   nginx        nginx:stable   app=nginx-test
+
+NAME                             READY   STATUS    RESTARTS   AGE     IP          NODE     NOMINATED NODE   READINESS GATES
+pod/nginx-test-f8f6dcbc6-jd9fj   1/1     Running   0          2m30s   10.42.2.3   k3s-s3   <none>           <none>
+pod/nginx-test-f8f6dcbc6-q7lrd   1/1     Running   0          2m30s   10.42.3.3   k3s-w1   <none>           <none>
+pod/nginx-test-f8f6dcbc6-qgfvn   1/1     Running   0          2m30s   10.42.4.3   k3s-w2   <none>           <none>
+
+NAME                 TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE     SELECTOR
+service/nginx-test   NodePort   10.43.118.207   <none>        80:30080/TCP   2m30s   app=nginx-test
+
+NAME                   ENDPOINTS                                AGE
+endpoints/nginx-test   10.42.2.3:80,10.42.3.3:80,10.42.4.3:80   2m30s
+\n===== readyz =====
+[+]ping ok
+[+]log ok
+[+]etcd ok
+[+]etcd-readiness ok
+[+]informer-sync ok
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+[+]shutdown ok
+readyz check passed

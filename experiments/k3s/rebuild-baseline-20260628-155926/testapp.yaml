@@ -1,0 +1,507 @@
+apiVersion: v1
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"nginx-test","namespace":"testapp"},"spec":{"replicas":3,"selector":{"matchLabels":{"app":"nginx-test"}},"template":{"metadata":{"labels":{"app":"nginx-test"}},"spec":{"containers":[{"image":"nginx:stable","name":"nginx","ports":[{"containerPort":80}]}]}}}}
+    creationTimestamp: "2026-06-28T15:56:56Z"
+    generation: 1
+    name: nginx-test
+    namespace: testapp
+    resourceVersion: "3605"
+    uid: 496be05d-ad75-448e-b1e8-f0e418b193de
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: nginx-test
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        labels:
+          app: nginx-test
+      spec:
+        containers:
+        - image: nginx:stable
+          imagePullPolicy: IfNotPresent
+          name: nginx
+          ports:
+          - containerPort: 80
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2026-06-28T15:57:28Z"
+      lastUpdateTime: "2026-06-28T15:57:28Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2026-06-28T15:56:56Z"
+      lastUpdateTime: "2026-06-28T15:57:28Z"
+      message: ReplicaSet "nginx-test-f8f6dcbc6" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    terminatingReplicas: 0
+    updatedReplicas: 3
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-06-28T15:56:56Z"
+    generateName: nginx-test-f8f6dcbc6-
+    generation: 1
+    labels:
+      app: nginx-test
+      pod-template-hash: f8f6dcbc6
+    name: nginx-test-f8f6dcbc6-jd9fj
+    namespace: testapp
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: nginx-test-f8f6dcbc6
+      uid: 8be47863-b3d7-4d88-826b-6c36e95799fa
+    resourceVersion: "3520"
+    uid: 58f67d3b-9e75-46c3-9bd7-df5384d62e58
+  spec:
+    containers:
+    - image: nginx:stable
+      imagePullPolicy: IfNotPresent
+      name: nginx
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-478s8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: k3s-s3
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-478s8
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:57:10Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:56:56Z"
+      observedGeneration: 1
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:57:10Z"
+      observedGeneration: 1
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:57:10Z"
+      observedGeneration: 1
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:56:56Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://0b2c6c3eab82b8e3062a51f51ceaa78fff9f559dcc566931baa1e0d944396df6
+      image: docker.io/library/nginx:stable
+      imageID: docker.io/library/nginx@sha256:5825bde471b86b270298e80ba1f0f3e515a73da1a17a982632f1c262689f1144
+      lastState: {}
+      name: nginx
+      ready: true
+      resources: {}
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-06-28T15:57:09Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-478s8
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.10.10.131
+    hostIPs:
+    - ip: 10.10.10.131
+    observedGeneration: 1
+    phase: Running
+    podIP: 10.42.2.3
+    podIPs:
+    - ip: 10.42.2.3
+    qosClass: BestEffort
+    startTime: "2026-06-28T15:56:56Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-06-28T15:56:56Z"
+    generateName: nginx-test-f8f6dcbc6-
+    generation: 1
+    labels:
+      app: nginx-test
+      pod-template-hash: f8f6dcbc6
+    name: nginx-test-f8f6dcbc6-q7lrd
+    namespace: testapp
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: nginx-test-f8f6dcbc6
+      uid: 8be47863-b3d7-4d88-826b-6c36e95799fa
+    resourceVersion: "3530"
+    uid: a053020c-69dd-443b-97d4-87cd4cdab85e
+  spec:
+    containers:
+    - image: nginx:stable
+      imagePullPolicy: IfNotPresent
+      name: nginx
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-sjlnb
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: k3s-w1
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-sjlnb
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:57:11Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:56:56Z"
+      observedGeneration: 1
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:57:11Z"
+      observedGeneration: 1
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:57:11Z"
+      observedGeneration: 1
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:56:56Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://a37711159608f4e35f0064520c5165323456c32c717e6eb23c362c58158e89bf
+      image: docker.io/library/nginx:stable
+      imageID: docker.io/library/nginx@sha256:5825bde471b86b270298e80ba1f0f3e515a73da1a17a982632f1c262689f1144
+      lastState: {}
+      name: nginx
+      ready: true
+      resources: {}
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-06-28T15:57:10Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-sjlnb
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.10.20.129
+    hostIPs:
+    - ip: 10.10.20.129
+    observedGeneration: 1
+    phase: Running
+    podIP: 10.42.3.3
+    podIPs:
+    - ip: 10.42.3.3
+    qosClass: BestEffort
+    startTime: "2026-06-28T15:56:56Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-06-28T15:56:56Z"
+    generateName: nginx-test-f8f6dcbc6-
+    generation: 1
+    labels:
+      app: nginx-test
+      pod-template-hash: f8f6dcbc6
+    name: nginx-test-f8f6dcbc6-qgfvn
+    namespace: testapp
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: nginx-test-f8f6dcbc6
+      uid: 8be47863-b3d7-4d88-826b-6c36e95799fa
+    resourceVersion: "3601"
+    uid: c4762be6-53ce-4fd7-8f48-4616f749e4b1
+  spec:
+    containers:
+    - image: nginx:stable
+      imagePullPolicy: IfNotPresent
+      name: nginx
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-j26wf
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: k3s-w2
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-j26wf
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:57:28Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:56:56Z"
+      observedGeneration: 1
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:57:28Z"
+      observedGeneration: 1
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:57:28Z"
+      observedGeneration: 1
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-06-28T15:56:56Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://3836ec07d2668540c1e8aacb7ce27cbf2639007b84a4fee065632c45552bf2d5
+      image: docker.io/library/nginx:stable
+      imageID: docker.io/library/nginx@sha256:5825bde471b86b270298e80ba1f0f3e515a73da1a17a982632f1c262689f1144
+      lastState: {}
+      name: nginx
+      ready: true
+      resources: {}
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-06-28T15:57:27Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 0
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-j26wf
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.10.20.130
+    hostIPs:
+    - ip: 10.10.20.130
+    observedGeneration: 1
+    phase: Running
+    podIP: 10.42.4.3
+    podIPs:
+    - ip: 10.42.4.3
+    qosClass: BestEffort
+    startTime: "2026-06-28T15:56:56Z"
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"nginx-test","namespace":"testapp"},"spec":{"ports":[{"name":"http","nodePort":30080,"port":80,"targetPort":80}],"selector":{"app":"nginx-test"},"type":"NodePort"}}
+    creationTimestamp: "2026-06-28T15:56:56Z"
+    name: nginx-test
+    namespace: testapp
+    resourceVersion: "3449"
+    uid: 2fd93f5f-3fcb-41fe-8eba-1ff5ca6abf06
+  spec:
+    clusterIP: 10.43.118.207
+    clusterIPs:
+    - 10.43.118.207
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      nodePort: 30080
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: nginx-test
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
