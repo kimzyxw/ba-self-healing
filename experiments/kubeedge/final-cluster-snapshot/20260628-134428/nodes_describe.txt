@@ -1,0 +1,460 @@
+Name:               c1
+Roles:              control-plane,etcd
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=c1
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/control-plane=true
+                    node-role.kubernetes.io/etcd=true
+                    node.kubernetes.io/instance-type=k3s
+                    svccontroller.k3s.cattle.io/enablelb=true
+Annotations:        alpha.kubernetes.io/provided-node-ip: 10.10.10.133
+                    etcd.k3s.cattle.io/local-snapshots-timestamp: 2026-06-28T13:37:17Z
+                    etcd.k3s.cattle.io/node-address: 10.10.10.133
+                    etcd.k3s.cattle.io/node-name: c1-deb7c37f
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"ee:3b:e3:13:d8:54"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 10.10.10.133
+                    k3s.io/hostname: c1
+                    k3s.io/internal-ip: 10.10.10.133
+                    k3s.io/node-args:
+                      ["server","--cluster-init","--node-ip","10.10.10.133","--advertise-address","10.10.10.133","--flannel-iface","ens256","--tls-san","10.10.1...
+                    k3s.io/node-config-hash: HNB46XKJE2GTEI3PVGLU4GLBXDAUE3RKLB6O7UIICPTTE4IHYIOA====
+                    k3s.io/node-env: {}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Fri, 12 Jun 2026 13:14:34 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  c1
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 28 Jun 2026 13:44:23 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  EtcdIsVoter      True    Sun, 28 Jun 2026 13:41:53 +0000   Fri, 12 Jun 2026 13:14:45 +0000   MemberNotLearner             Node is a voting member of the etcd cluster
+  MemoryPressure   False   Sun, 28 Jun 2026 13:42:42 +0000   Fri, 12 Jun 2026 13:14:34 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 28 Jun 2026 13:42:42 +0000   Fri, 12 Jun 2026 13:14:34 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 28 Jun 2026 13:42:42 +0000   Fri, 12 Jun 2026 13:14:34 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 28 Jun 2026 13:42:42 +0000   Fri, 12 Jun 2026 13:14:34 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  10.10.10.133
+  Hostname:    c1
+Capacity:
+  cpu:                2
+  ephemeral-storage:  10218772Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665464Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  9940821394
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665464Ki
+  pods:               110
+System Info:
+  Machine ID:                 56959b75255c4db4a3adbd79a31001b7
+  System UUID:                9ff84d56-9296-7494-abbc-9c3c9c4b17fa
+  Boot ID:                    f3ce867e-ef95-48a2-8dc8-acbb2d3b6c52
+  Kernel Version:             7.0.0-22-generic
+  OS Image:                   Ubuntu 26.04 LTS
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  containerd://2.2.3-k3s1
+  Kubelet Version:            v1.35.5+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.0.0/24
+PodCIDRs:                     10.42.0.0/24
+ProviderID:                   k3s://c1
+Non-terminated Pods:          (7 in total)
+  Namespace                   Name                                       CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                       ------------  ----------  ---------------  -------------  ---
+  kube-system                 coredns-8db54c48d-7v8ss                    100m (5%)     0 (0%)      70Mi (4%)        170Mi (10%)    16d
+  kube-system                 local-path-provisioner-5d9d9885bc-w6fh6    0 (0%)        0 (0%)      0 (0%)           0 (0%)         16d
+  kube-system                 metrics-server-786d997795-4t8gj            100m (5%)     0 (0%)      70Mi (4%)        0 (0%)         16d
+  kube-system                 svclb-traefik-7ab09d61-bp9cn               0 (0%)        0 (0%)      0 (0%)           0 (0%)         15d
+  kube-system                 traefik-9bcdbbd9-m82d7                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         16d
+  kubeedge                    cloud-iptables-manager-nw279               100m (5%)     200m (10%)  25Mi (1%)        50Mi (3%)      9d
+  kubeedge                    cloudcore-589789b9fc-bphz8                 100m (5%)     200m (10%)  512Mi (31%)      1Gi (62%)      14d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests     Limits
+  --------           --------     ------
+  cpu                400m (20%)   400m (20%)
+  memory             677Mi (41%)  1244Mi (76%)
+  ephemeral-storage  0 (0%)       0 (0%)
+  hugepages-1Gi      0 (0%)       0 (0%)
+  hugepages-2Mi      0 (0%)       0 (0%)
+  hugepages-32Mi     0 (0%)       0 (0%)
+  hugepages-64Ki     0 (0%)       0 (0%)
+Events:              <none>
+
+
+Name:               c2
+Roles:              control-plane,etcd
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=c2
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/control-plane=true
+                    node-role.kubernetes.io/etcd=true
+                    node.kubernetes.io/instance-type=k3s
+                    svccontroller.k3s.cattle.io/enablelb=true
+Annotations:        alpha.kubernetes.io/provided-node-ip: 10.10.10.134
+                    etcd.k3s.cattle.io/local-snapshots-timestamp: 2026-06-28T13:38:05Z
+                    etcd.k3s.cattle.io/node-address: 10.10.10.134
+                    etcd.k3s.cattle.io/node-name: c2-be85f8a3
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"2a:72:98:23:c9:b0"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 10.10.10.134
+                    k3s.io/hostname: c2
+                    k3s.io/internal-ip: 10.10.10.134
+                    k3s.io/node-args:
+                      ["server","--server","https://10.10.10.133:6443","--node-ip","10.10.10.134","--advertise-address","10.10.10.134","--flannel-iface","ens256...
+                    k3s.io/node-config-hash: RD3MWKL7GDSKKGZ74SF47VZ2YCXFOW4NUKNL6BKCWWA52X2HT6PA====
+                    k3s.io/node-env: {"K3S_TOKEN":"********"}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Fri, 12 Jun 2026 13:20:58 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  c2
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 28 Jun 2026 13:44:25 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  EtcdIsVoter      True    Sun, 28 Jun 2026 13:41:53 +0000   Fri, 12 Jun 2026 13:21:00 +0000   MemberNotLearner             Node is a voting member of the etcd cluster
+  MemoryPressure   False   Sun, 28 Jun 2026 13:42:54 +0000   Sat, 20 Jun 2026 13:06:38 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 28 Jun 2026 13:42:54 +0000   Sat, 20 Jun 2026 13:06:38 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 28 Jun 2026 13:42:54 +0000   Sat, 20 Jun 2026 13:06:38 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 28 Jun 2026 13:42:54 +0000   Sat, 20 Jun 2026 13:06:38 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  10.10.10.134
+  Hostname:    c2
+Capacity:
+  cpu:                2
+  ephemeral-storage:  10218772Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665464Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  9940821394
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665464Ki
+  pods:               110
+System Info:
+  Machine ID:                 015d24a96b6444f8938062c6c786efa7
+  System UUID:                f27a4d56-5a27-a967-7f0a-5d10a633a13b
+  Boot ID:                    65db61b7-70b6-494a-9d2e-6c1dfc022609
+  Kernel Version:             7.0.0-22-generic
+  OS Image:                   Ubuntu 26.04 LTS
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  containerd://2.2.3-k3s1
+  Kubelet Version:            v1.35.5+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.1.0/24
+PodCIDRs:                     10.42.1.0/24
+ProviderID:                   k3s://c2
+Non-terminated Pods:          (3 in total)
+  Namespace                   Name                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                            ------------  ----------  ---------------  -------------  ---
+  kube-system                 svclb-traefik-7ab09d61-8zxqj    0 (0%)        0 (0%)      0 (0%)           0 (0%)         15d
+  kubeedge                    cloud-iptables-manager-mnh8d    100m (5%)     200m (10%)  25Mi (1%)        50Mi (3%)      9d
+  kubeedge                    cloudcore-589789b9fc-8nqmw      100m (5%)     200m (10%)  512Mi (31%)      1Gi (62%)      8d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests     Limits
+  --------           --------     ------
+  cpu                200m (10%)   400m (20%)
+  memory             537Mi (33%)  1074Mi (66%)
+  ephemeral-storage  0 (0%)       0 (0%)
+  hugepages-1Gi      0 (0%)       0 (0%)
+  hugepages-2Mi      0 (0%)       0 (0%)
+  hugepages-32Mi     0 (0%)       0 (0%)
+  hugepages-64Ki     0 (0%)       0 (0%)
+Events:              <none>
+
+
+Name:               c3
+Roles:              control-plane,etcd
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/instance-type=k3s
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=c3
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/control-plane=true
+                    node-role.kubernetes.io/etcd=true
+                    node.kubernetes.io/instance-type=k3s
+                    svccontroller.k3s.cattle.io/enablelb=true
+Annotations:        alpha.kubernetes.io/provided-node-ip: 10.10.10.135
+                    etcd.k3s.cattle.io/local-snapshots-timestamp: 2026-06-28T13:43:21Z
+                    etcd.k3s.cattle.io/node-address: 10.10.10.135
+                    etcd.k3s.cattle.io/node-name: c3-ca017bf7
+                    flannel.alpha.coreos.com/backend-data: {"VNI":1,"VtepMAC":"2e:94:b0:a2:40:74"}
+                    flannel.alpha.coreos.com/backend-type: vxlan
+                    flannel.alpha.coreos.com/kube-subnet-manager: true
+                    flannel.alpha.coreos.com/public-ip: 10.10.10.135
+                    k3s.io/hostname: c3
+                    k3s.io/internal-ip: 10.10.10.135
+                    k3s.io/node-args:
+                      ["server","--server","https://10.10.10.133:6443","--node-ip","10.10.10.135","--advertise-address","10.10.10.135","--flannel-iface","ens256...
+                    k3s.io/node-config-hash: X5PXSMKBBCNPO3XTZ6BNZM5DK5QXMB3PLCHGZN6JLGSXSA3XDTEA====
+                    k3s.io/node-env: {"K3S_TOKEN":"********"}
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Fri, 12 Jun 2026 13:22:38 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  c3
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 28 Jun 2026 13:44:26 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  EtcdIsVoter      True    Sun, 28 Jun 2026 13:41:53 +0000   Fri, 12 Jun 2026 13:22:45 +0000   MemberNotLearner             Node is a voting member of the etcd cluster
+  MemoryPressure   False   Sun, 28 Jun 2026 13:43:49 +0000   Sat, 20 Jun 2026 13:26:52 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 28 Jun 2026 13:43:49 +0000   Sat, 20 Jun 2026 13:26:52 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 28 Jun 2026 13:43:49 +0000   Sat, 20 Jun 2026 13:26:52 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 28 Jun 2026 13:43:49 +0000   Sat, 20 Jun 2026 13:26:52 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  10.10.10.135
+  Hostname:    c3
+Capacity:
+  cpu:                2
+  ephemeral-storage:  10218772Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665464Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  9940821394
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665464Ki
+  pods:               110
+System Info:
+  Machine ID:                 432b2765fe1d47668d5ee2d7c302de6d
+  System UUID:                d5674d56-a377-2ca3-f141-1f5d1dc8415b
+  Boot ID:                    a37b536b-4471-4ed2-a381-ccb7429d68e8
+  Kernel Version:             7.0.0-22-generic
+  OS Image:                   Ubuntu 26.04 LTS
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  containerd://2.2.3-k3s1
+  Kubelet Version:            v1.35.5+k3s1
+  Kube-Proxy Version:         
+PodCIDR:                      10.42.3.0/24
+PodCIDRs:                     10.42.3.0/24
+ProviderID:                   k3s://c3
+Non-terminated Pods:          (3 in total)
+  Namespace                   Name                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                            ------------  ----------  ---------------  -------------  ---
+  kube-system                 svclb-traefik-7ab09d61-x5cmh    0 (0%)        0 (0%)      0 (0%)           0 (0%)         15d
+  kubeedge                    cloud-iptables-manager-l7lpb    100m (5%)     200m (10%)  25Mi (1%)        50Mi (3%)      9d
+  kubeedge                    cloudcore-589789b9fc-4qfvm      100m (5%)     200m (10%)  512Mi (31%)      1Gi (62%)      8d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests     Limits
+  --------           --------     ------
+  cpu                200m (10%)   400m (20%)
+  memory             537Mi (33%)  1074Mi (66%)
+  ephemeral-storage  0 (0%)       0 (0%)
+  hugepages-1Gi      0 (0%)       0 (0%)
+  hugepages-2Mi      0 (0%)       0 (0%)
+  hugepages-32Mi     0 (0%)       0 (0%)
+  hugepages-64Ki     0 (0%)       0 (0%)
+Events:              <none>
+
+
+Name:               e1
+Roles:              agent,edge
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=e1
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/agent=
+                    node-role.kubernetes.io/edge=
+Annotations:        cloudcore: 172.16.41.143
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Fri, 12 Jun 2026 17:19:56 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  e1
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 28 Jun 2026 13:43:59 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Sun, 28 Jun 2026 13:40:05 +0000   Sat, 27 Jun 2026 01:18:12 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 28 Jun 2026 13:40:05 +0000   Sat, 27 Jun 2026 01:18:12 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 28 Jun 2026 13:40:05 +0000   Sat, 27 Jun 2026 01:18:12 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 28 Jun 2026 13:40:05 +0000   Sat, 27 Jun 2026 01:18:12 +0000   EdgeReady                    edge is posting ready status
+Addresses:
+  InternalIP:  10.10.20.131
+  Hostname:    e1
+Capacity:
+  cpu:                2
+  ephemeral-storage:  10218772Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665464Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  9417620260
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1563064Ki
+  pods:               110
+System Info:
+  Machine ID:                 1a6baf64acdc4afcbd811d12324a9481
+  System UUID:                154d4d56-1a3f-6fef-f861-6e3ad49200ac
+  Boot ID:                    5788afac-9336-43a2-8926-1e0bc90af541
+  Kernel Version:             7.0.0-22-generic
+  OS Image:                   Ubuntu 26.04 LTS
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  containerd://2.2.2
+  Kubelet Version:            v1.30.7-kubeedge-v1.21.0
+  Kube-Proxy Version:         v0.0.0-master+$Format:%H$
+PodCIDR:                      10.42.2.0/24
+PodCIDRs:                     10.42.2.0/24
+Non-terminated Pods:          (5 in total)
+  Namespace                   Name                              CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                              ------------  ----------  ---------------  -------------  ---
+  kubeedge                    edge-eclipse-mosquitto-szthb      100m (5%)     200m (10%)  50Mi (3%)        100Mi (6%)     15d
+  kubeedge                    edgemesh-agent-l2n4z              100m (5%)     200m (10%)  128Mi (8%)       256Mi (16%)    9d
+  testapp                     nginx-testapp-5c8f4cb9d7-6lw7f    0 (0%)        0 (0%)      0 (0%)           0 (0%)         36h
+  testapp                     nginx-testapp-5c8f4cb9d7-h7qbz    0 (0%)        0 (0%)      0 (0%)           0 (0%)         36h
+  testapp                     nginx-testapp-5c8f4cb9d7-pwppn    0 (0%)        0 (0%)      0 (0%)           0 (0%)         36h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests     Limits
+  --------           --------     ------
+  cpu                200m (10%)   400m (20%)
+  memory             178Mi (11%)  356Mi (23%)
+  ephemeral-storage  0 (0%)       0 (0%)
+  hugepages-1Gi      0 (0%)       0 (0%)
+  hugepages-2Mi      0 (0%)       0 (0%)
+  hugepages-32Mi     0 (0%)       0 (0%)
+  hugepages-64Ki     0 (0%)       0 (0%)
+Events:              <none>
+
+
+Name:               e2
+Roles:              agent,edge
+Labels:             beta.kubernetes.io/arch=arm64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=arm64
+                    kubernetes.io/hostname=e2
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/agent=
+                    node-role.kubernetes.io/edge=
+Annotations:        cloudcore: 172.16.41.143
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Fri, 12 Jun 2026 17:39:23 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  e2
+  AcquireTime:     <unset>
+  RenewTime:       Sun, 28 Jun 2026 13:42:59 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Sun, 28 Jun 2026 13:43:11 +0000   Sun, 28 Jun 2026 13:43:11 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Sun, 28 Jun 2026 13:43:11 +0000   Sun, 28 Jun 2026 13:43:11 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Sun, 28 Jun 2026 13:43:11 +0000   Sun, 28 Jun 2026 13:43:11 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Sun, 28 Jun 2026 13:43:11 +0000   Sun, 28 Jun 2026 13:43:11 +0000   EdgeReady                    edge is posting ready status
+Addresses:
+  InternalIP:  10.10.20.132
+  Hostname:    e2
+Capacity:
+  cpu:                2
+  ephemeral-storage:  10218772Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1665464Ki
+  pods:               110
+Allocatable:
+  cpu:                2
+  ephemeral-storage:  9417620260
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  hugepages-32Mi:     0
+  hugepages-64Ki:     0
+  memory:             1563064Ki
+  pods:               110
+System Info:
+  Machine ID:                 411614c3fd6c4a3dbcd3d933d0c1e475
+  System UUID:                f7c84d56-f063-f1d4-730e-f29844430f54
+  Boot ID:                    e384e940-8d9d-4548-8b44-8e23a1215fe4
+  Kernel Version:             7.0.0-22-generic
+  OS Image:                   Ubuntu 26.04 LTS
+  Operating System:           linux
+  Architecture:               arm64
+  Container Runtime Version:  containerd://2.2.2
+  Kubelet Version:            v1.30.7-kubeedge-v1.21.0
+  Kube-Proxy Version:         v0.0.0-master+$Format:%H$
+PodCIDR:                      10.42.4.0/24
+PodCIDRs:                     10.42.4.0/24
+Non-terminated Pods:          (2 in total)
+  Namespace                   Name                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                            ------------  ----------  ---------------  -------------  ---
+  kubeedge                    edge-eclipse-mosquitto-7l5gz    100m (5%)     200m (10%)  50Mi (3%)        100Mi (6%)     15d
+  kubeedge                    edgemesh-agent-qf7pk            100m (5%)     200m (10%)  128Mi (8%)       256Mi (16%)    9d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests     Limits
+  --------           --------     ------
+  cpu                200m (10%)   400m (20%)
+  memory             178Mi (11%)  356Mi (23%)
+  ephemeral-storage  0 (0%)       0 (0%)
+  hugepages-1Gi      0 (0%)       0 (0%)
+  hugepages-2Mi      0 (0%)       0 (0%)
+  hugepages-32Mi     0 (0%)       0 (0%)
+  hugepages-64Ki     0 (0%)       0 (0%)
+Events:
+  Type    Reason        Age                    From             Message
+  ----    ------        ----                   ----             -------
+  Normal  NodeNotReady  103s (x761 over 6d5h)  node-controller  Node e2 status is now: NodeNotReady

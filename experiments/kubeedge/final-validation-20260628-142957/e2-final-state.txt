@@ -1,0 +1,14 @@
+e2
+active
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens160           UP             172.16.41.147/24 metric 1024 fe80::20c:29ff:fe43:f54/64 
+ens256           UP             10.10.20.132/24 metric 1024 fe80::20c:29ff:fe43:f5e/64 
+edge-cni0        DOWN           10.88.2.1/24 fe80::18a0:e0ff:fe97:167/64 
+edgemesh0        DOWN           169.254.96.16/32 fe80::5403:52ff:fedf:5217/64 
+default via 172.16.41.2 dev ens160 proto dhcp src 172.16.41.147 metric 1024 
+10.10.10.0/24 via 10.10.20.133 dev ens256 
+10.10.20.0/24 dev ens256 proto kernel scope link src 10.10.20.132 metric 1024 
+10.10.20.1 dev ens256 proto dhcp scope link src 10.10.20.132 metric 1024 
+10.88.2.0/24 dev edge-cni0 proto kernel scope link src 10.88.2.1 linkdown 
+172.16.41.0/24 dev ens160 proto kernel scope link src 172.16.41.147 metric 1024 
+172.16.41.2 dev ens160 proto dhcp scope link src 172.16.41.147 metric 1024 

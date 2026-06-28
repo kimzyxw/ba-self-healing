@@ -1,0 +1,17 @@
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                       SELECTOR
+deployment.apps/cloudcore   3/3     3            3           15d   cloudcore    kubeedge/cloudcore:v1.21.0   k8s-app=kubeedge,kubeedge=cloudcore
+
+NAME                               READY   STATUS    RESTARTS        AGE   IP             NODE   NOMINATED NODE   READINESS GATES
+pod/cloud-iptables-manager-l7lpb   1/1     Running   6 (7d23h ago)   9d    10.10.10.135   c3     <none>           <none>
+pod/cloud-iptables-manager-mnh8d   1/1     Running   7 (7d23h ago)   9d    10.10.10.134   c2     <none>           <none>
+pod/cloud-iptables-manager-nw279   1/1     Running   0               9d    10.10.10.133   c1     <none>           <none>
+pod/cloudcore-589789b9fc-4qfvm     1/1     Running   0               8d    10.10.10.135   c3     <none>           <none>
+pod/cloudcore-589789b9fc-8nqmw     1/1     Running   0               8d    10.10.10.134   c2     <none>           <none>
+pod/cloudcore-589789b9fc-bphz8     1/1     Running   0               14d   10.10.10.133   c1     <none>           <none>
+pod/edge-eclipse-mosquitto-7l5gz   1/1     Running   6 (8d ago)      15d   10.10.20.132   e2     <none>           <none>
+pod/edge-eclipse-mosquitto-szthb   1/1     Running   6 (8d ago)      15d   10.10.20.131   e1     <none>           <none>
+pod/edgemesh-agent-l2n4z           1/1     Running   5 (8d ago)      9d    10.10.20.131   e1     <none>           <none>
+pod/edgemesh-agent-qf7pk           1/1     Running   5 (8d ago)      9d    10.10.20.132   e2     <none>           <none>
+
+NAME                TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                                             AGE   SELECTOR
+service/cloudcore   ClusterIP   10.43.247.69   <none>        10000/TCP,10001/UDP,10002/TCP,10003/TCP,10004/TCP   15d   k8s-app=kubeedge,kubeedge=cloudcore

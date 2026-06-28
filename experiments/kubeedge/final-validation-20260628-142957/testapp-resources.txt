@@ -1,0 +1,16 @@
+NAME                            READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES         SELECTOR
+deployment.apps/nginx-testapp   3/3     3            3           15d   nginx        nginx:stable   app=nginx-testapp
+
+NAME                                       DESIRED   CURRENT   READY   AGE   CONTAINERS   IMAGES         SELECTOR
+replicaset.apps/nginx-testapp-5c8f4cb9d7   3         3         3       15d   nginx        nginx:stable   app=nginx-testapp,pod-template-hash=5c8f4cb9d7
+
+NAME                                 READY   STATUS    RESTARTS   AGE   IP           NODE   NOMINATED NODE   READINESS GATES
+pod/nginx-testapp-5c8f4cb9d7-6lw7f   1/1     Running   0          37h   10.88.1.32   e1     <none>           <none>
+pod/nginx-testapp-5c8f4cb9d7-h7qbz   1/1     Running   0          37h   10.88.1.30   e1     <none>           <none>
+pod/nginx-testapp-5c8f4cb9d7-pwppn   1/1     Running   0          37h   10.88.1.31   e1     <none>           <none>
+
+NAME                    TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE   SELECTOR
+service/nginx-testapp   NodePort   10.43.89.147   <none>        80:30080/TCP   15d   app=nginx-testapp
+
+NAME                      ENDPOINTS                                   AGE
+endpoints/nginx-testapp   10.88.1.30:80,10.88.1.31:80,10.88.1.32:80   15d

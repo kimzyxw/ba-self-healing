@@ -1,0 +1,7 @@
+NAMESPACE     NAME             TYPE           CLUSTER-IP     EXTERNAL-IP                              PORT(S)                                             AGE   SELECTOR
+default       kubernetes       ClusterIP      10.43.0.1      <none>                                   443/TCP                                             16d   <none>
+kube-system   kube-dns         ClusterIP      10.43.0.10     <none>                                   53/UDP,53/TCP,9153/TCP                              16d   k8s-app=kube-dns
+kube-system   metrics-server   ClusterIP      10.43.234.33   <none>                                   443/TCP                                             16d   k8s-app=metrics-server
+kube-system   traefik          LoadBalancer   10.43.114.55   10.10.10.133,10.10.10.134,10.10.10.135   80:30577/TCP,443:32473/TCP                          16d   app.kubernetes.io/instance=traefik-kube-system,app.kubernetes.io/name=traefik
+kubeedge      cloudcore        ClusterIP      10.43.247.69   <none>                                   10000/TCP,10001/UDP,10002/TCP,10003/TCP,10004/TCP   15d   k8s-app=kubeedge,kubeedge=cloudcore
+testapp       nginx-testapp    NodePort       10.43.89.147   <none>                                   80:30080/TCP                                        15d   app=nginx-testapp
