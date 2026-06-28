@@ -37,6 +37,9 @@ OUTPUTS = [
         "caption": "Einzelwerte der K3s-Latenztests pro Versuchslauf.",
         "label": "tab:appendix-k3s-latency-runs",
         "target": "server--worker",
+        "replace_scenarios": {
+            "latency-1min-short": "experiments/k3s/latency-tests/analysis/k3s_latency_60s_async_limited_override.csv",
+        },
     },
     {
         "name": "k3s_packet_loss",
@@ -219,6 +222,7 @@ def scenario_label(raw: str) -> str:
     replacements = {
         "latency-1s": "Latenz 1s",
         "latency-1min": "Latenz 1min",
+        "latency-60s-async-limited": "Latenz 1min",
         "latency-10min": "Latenz 10min",
         "latency-30min": "Latenz 30min",
         "packet-loss-1pct": "Paketverlust 1%",
@@ -468,6 +472,24 @@ def rows_for_config(config: Dict[str, str]) -> List[Dict[str, str]]:
 
     if kind == "k3s_network":
         rows = read_csv(ROOT / config["input"])
+
+        replace = config.get("replace_scenarios", {})
+        if replace:
+            remove_names = set(replace.keys())
+            rows = [r for r in rows if r.get("scenario") not in remove_names]
+            for replacement_path in replace.values():
+                rows.extend(read_csv(ROOT / replacement_path))
+
+        order = {
+            "latency-1s-short": 1,
+            "latency-60s-async-limited": 2,
+            "latency-1min-short": 2,
+            "latency-10min-async-limited": 3,
+            "latency-30min-async-limited": 4,
+        }
+
+        rows = sorted(rows, key=lambda r: (order.get(r.get("scenario"), 99), r.get("run", "")))
+
         return [map_k3s_network(r, config["target"]) for r in rows]
 
     if kind == "kubeedge_pod_failure":

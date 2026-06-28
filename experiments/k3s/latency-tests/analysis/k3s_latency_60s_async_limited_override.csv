@@ -1,0 +1,11 @@
+scenario,run,fault_requests_total,fault_success,fault_failed,fault_success_rate_percent,fault_error_rate_percent,recovery_time_s,cluster_stabilization_time_s,testapp_pod_restart_delta,node_notready_new_events,node_final_all_ready,valid_for_fault_metrics
+latency-60s-async-limited,run-01-router,585,143,442,24.44,75.56,--,0,0,4,ja,ja
+latency-60s-async-limited,run-02-router,600,186,414,31,69,1.17,0,0,4,ja,ja
+latency-60s-async-limited,run-03-router,600,76,524,12.67,87.33,1.14,0,0,4,ja,ja
+latency-60s-async-limited,run-04-router,573,226,347,39.44,60.56,--,0,0,4,ja,ja
+latency-60s-async-limited,run-05-router,269,5,264,1.86,98.14,--,0,0,4,ja,ja
+latency-60s-async-limited,run-06-router,90,2,88,2.22,97.78,--,0,0,4,ja,ja
+latency-60s-async-limited,run-07-router,383,56,327,14.62,85.38,--,0,0,4,ja,ja
+latency-60s-async-limited,run-08-router,201,5,196,2.49,97.51,--,0,0,4,ja,ja
+latency-60s-async-limited,run-09-router,0,0,0,--,--,--,0,0,4,ja,nein
+latency-60s-async-limited,run-10-router,553,44,509,7.96,92.04,--,0,0,4,ja,ja
