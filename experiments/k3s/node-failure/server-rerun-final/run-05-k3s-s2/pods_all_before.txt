@@ -1,0 +1,15 @@
+NAMESPACE     NAME                                      READY   STATUS      RESTARTS            AGE     IP           NODE     NOMINATED NODE   READINESS GATES
+kube-system   coredns-8db54c48d-ttklw                   1/1     Running     0                   19h     10.42.0.6    k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-95xnt                0/1     Completed   1                   19h     10.42.0.2    k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-crd-q4nph            0/1     Completed   0                   19h     10.42.0.3    k3s-s1   <none>           <none>
+kube-system   local-path-provisioner-5d9d9885bc-n44cf   1/1     Running     0                   19h     10.42.0.5    k3s-s1   <none>           <none>
+kube-system   metrics-server-786d997795-vq8kx           1/1     Running     0                   19h     10.42.0.4    k3s-s1   <none>           <none>
+kube-system   svclb-traefik-81700cf5-d7tm7              2/2     Running     6 (<invalid> ago)   19h     10.42.1.9    k3s-s2   <none>           <none>
+kube-system   svclb-traefik-81700cf5-dgcdr              2/2     Running     0                   19h     10.42.0.7    k3s-s1   <none>           <none>
+kube-system   svclb-traefik-81700cf5-hpwrg              2/2     Running     4 (<invalid> ago)   19h     10.42.2.12   k3s-s3   <none>           <none>
+kube-system   svclb-traefik-81700cf5-hxppm              2/2     Running     14 (8m30s ago)      19h     10.42.3.14   k3s-w1   <none>           <none>
+kube-system   svclb-traefik-81700cf5-k9nm5              2/2     Running     10 (3m50s ago)      19h     10.42.4.14   k3s-w2   <none>           <none>
+kube-system   traefik-9bcdbbd9-gfpv5                    1/1     Running     0                   19h     10.42.0.8    k3s-s1   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-clpvx                1/1     Running     0                   92m     10.42.3.15   k3s-w1   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-svp4f                1/1     Running     0                   14m     10.42.1.10   k3s-s2   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-vlpfn                1/1     Running     5 (3m50s ago)       3h28m   10.42.4.15   k3s-w2   <none>           <none>

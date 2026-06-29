@@ -1,0 +1,4 @@
+NAME                         READY   STATUS    RESTARTS      AGE     IP           NODE     NOMINATED NODE   READINESS GATES
+nginx-test-f8f6dcbc6-clpvx   1/1     Running   0             162m    10.42.3.15   k3s-w1   <none>           <none>
+nginx-test-f8f6dcbc6-dcknz   1/1     Running   0             18m     10.42.2.15   k3s-s3   <none>           <none>
+nginx-test-f8f6dcbc6-vlpfn   1/1     Running   5 (73m ago)   4h38m   10.42.4.15   k3s-w2   <none>           <none>

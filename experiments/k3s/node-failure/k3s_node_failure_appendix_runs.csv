@@ -1,0 +1,21 @@
+Run,Störung,Ziel,Req.,OK,Fail,Succ. [%],Err. [%],Rec. [s],Stab. [s],Pod-Rest.,NodeNotReady,NotReady [s],Final Ready,gültig
+run-01-k3s-w1,Worker-Node-Ausfall,k3s-w1,263,263,0,100,0,142,142,0,1,86,ja,ja
+run-02-k3s-w2,Worker-Node-Ausfall,k3s-w2,241,230,11,95.44,4.56,142,142,1,1,85,ja,ja
+run-03-k3s-w1,Worker-Node-Ausfall,k3s-w1,346,346,0,100,0,148,148,0,1,99,ja,ja
+run-04-k3s-w2,Worker-Node-Ausfall,k3s-w2,276,263,13,95.29,4.71,156,158,1,1,103,ja,ja
+run-05-k3s-w1,Worker-Node-Ausfall,k3s-w1,266,266,0,100,0,144,144,0,1,88,ja,ja
+run-06-k3s-w2,Worker-Node-Ausfall,k3s-w2,272,256,16,94.12,5.88,144,146,1,1,86,ja,ja
+run-07-k3s-w1,Worker-Node-Ausfall,k3s-w1,259,259,0,100,0,153,153,0,1,101,ja,ja
+run-08-k3s-w2,Worker-Node-Ausfall,k3s-w2,238,225,13,94.54,5.46,146,148,1,1,97,ja,ja
+run-09-k3s-w1,Worker-Node-Ausfall,k3s-w1,249,249,0,100,0,146,147,0,1,95,ja,ja
+run-10-k3s-w2,Worker-Node-Ausfall,k3s-w2,243,231,12,95.06,4.94,149,151,1,1,96,ja,ja
+run-01-k3s-s2,Server-Node-Ausfall,k3s-s2,1164,1164,0,100,0,1061,1061,0,1,1009,ja,ja
+run-02-k3s-s3,Server-Node-Ausfall,k3s-s3,1166,1154,12,98.97,1.03,1062,1062,0,1,1010,ja,ja
+run-03-k3s-s2,Server-Node-Ausfall,k3s-s2,1151,1137,14,98.78,1.22,1054,1055,0,1,998,ja,ja
+run-04-k3s-s3,Server-Node-Ausfall,k3s-s3,1191,1180,11,99.08,0.92,1094,1094,0,1,1048,ja,ja
+run-05-k3s-s2,Server-Node-Ausfall,k3s-s2,1163,1151,12,98.97,1.03,1066,1066,0,1,1016,ja,ja
+run-06-k3s-s3,Server-Node-Ausfall,k3s-s3,1159,1143,16,98.62,1.38,1053,1053,0,1,999,ja,ja
+run-07-k3s-s2,Server-Node-Ausfall,k3s-s2,1643,1629,14,99.15,0.85,1253,1254,0,1,1203,ja,ja
+run-08-k3s-s3,Server-Node-Ausfall,k3s-s3,1254,1241,13,98.96,1.04,1130,1130,0,1,1084,ja,ja
+run-09-k3s-s2,Server-Node-Ausfall,k3s-s2,1336,1325,11,99.18,0.82,1095,1095,0,1,1043,ja,ja
+run-10-k3s-s3,Server-Node-Ausfall,k3s-s3,1414,1401,13,99.08,0.92,1064,1064,0,1,1014,ja,ja

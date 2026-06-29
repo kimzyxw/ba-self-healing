@@ -1,0 +1,8 @@
+role=worker
+failed_node=k3s-w1
+url=http://10.10.10.129:30080/
+pre_seconds=10
+fault_seconds=30
+post_seconds=20
+interval_seconds=1
+timeout_seconds=2

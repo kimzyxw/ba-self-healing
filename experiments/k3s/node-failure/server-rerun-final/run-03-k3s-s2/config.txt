@@ -1,0 +1,8 @@
+role=server
+failed_node=k3s-s2
+url=http://10.10.10.129:30080/
+pre_seconds=30
+fault_seconds=120
+post_seconds=60
+interval_seconds=1
+timeout_seconds=2

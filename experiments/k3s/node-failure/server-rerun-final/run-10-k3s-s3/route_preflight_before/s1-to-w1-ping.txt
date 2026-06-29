@@ -1,0 +1,7 @@
+PING 10.10.20.129 (10.10.20.129) 56(84) bytes of data.
+64 bytes from 10.10.20.129: icmp_seq=1 ttl=63 time=0.420 ms
+64 bytes from 10.10.20.129: icmp_seq=2 ttl=63 time=1.06 ms
+
+--- 10.10.20.129 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1037ms
+rtt min/avg/max/mdev = 0.420/0.740/1.060/0.320 ms

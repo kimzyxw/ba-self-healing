@@ -1,0 +1,15 @@
+NAMESPACE     NAME                                      READY   STATUS      RESTARTS            AGE   IP          NODE     NOMINATED NODE   READINESS GATES
+kube-system   coredns-8db54c48d-ttklw                   1/1     Running     0                   16h   10.42.0.6   k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-95xnt                0/1     Completed   1                   16h   10.42.0.2   k3s-s1   <none>           <none>
+kube-system   helm-install-traefik-crd-q4nph            0/1     Completed   0                   16h   10.42.0.3   k3s-s1   <none>           <none>
+kube-system   local-path-provisioner-5d9d9885bc-n44cf   1/1     Running     0                   16h   10.42.0.5   k3s-s1   <none>           <none>
+kube-system   metrics-server-786d997795-vq8kx           1/1     Running     0                   16h   10.42.0.4   k3s-s1   <none>           <none>
+kube-system   svclb-traefik-81700cf5-d7tm7              2/2     Running     0                   16h   10.42.1.2   k3s-s2   <none>           <none>
+kube-system   svclb-traefik-81700cf5-dgcdr              2/2     Running     0                   16h   10.42.0.7   k3s-s1   <none>           <none>
+kube-system   svclb-traefik-81700cf5-hpwrg              2/2     Running     0                   16h   10.42.2.2   k3s-s3   <none>           <none>
+kube-system   svclb-traefik-81700cf5-hxppm              2/2     Running     4 (<invalid> ago)   16h   10.42.3.9   k3s-w1   <none>           <none>
+kube-system   svclb-traefik-81700cf5-k9nm5              2/2     Running     0                   16h   10.42.4.2   k3s-w2   <none>           <none>
+kube-system   traefik-9bcdbbd9-gfpv5                    1/1     Running     0                   16h   10.42.0.8   k3s-s1   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-tnqn8                1/1     Running     0                   32m   10.42.2.9   k3s-s3   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-vlpfn                1/1     Running     0                   37m   10.42.4.5   k3s-w2   <none>           <none>
+testapp       nginx-test-f8f6dcbc6-zxmtt                1/1     Running     0                   54m   10.42.1.5   k3s-s2   <none>           <none>
