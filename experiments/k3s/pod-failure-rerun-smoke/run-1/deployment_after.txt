@@ -1,0 +1,2 @@
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES         SELECTOR
+nginx-test   3/3     3            3           14h   nginx        nginx:stable   app=nginx-test

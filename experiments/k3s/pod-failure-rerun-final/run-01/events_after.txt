@@ -1,0 +1,71 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                         OBJECT                             MESSAGE
+testapp       37m         Warning   FailedMount                    pod/nginx-test-f8f6dcbc6-q7lrd     MountVolume.SetUp failed for volume "kube-api-access-sjlnb" : failed to fetch token: Post "https://127.0.0.1:6444/api/v1/namespaces/testapp/serviceaccounts/default/token": unexpected EOF
+testapp       36m         Normal    Killing                        pod/nginx-test-f8f6dcbc6-jd9fj     Stopping container nginx
+testapp       36m         Warning   FailedToUpdateEndpoint         endpoints/nginx-test               Failed to update endpoint testapp/nginx-test: Unauthorized
+testapp       36m         Warning   FailedToUpdateEndpointSlices   service/nginx-test                 Error updating Endpoint Slices for Service testapp/nginx-test: failed to update nginx-test-xvrhr EndpointSlice for Service testapp/nginx-test: Unauthorized
+testapp       36m         Warning   FailedCreate                   replicaset/nginx-test-f8f6dcbc6    Error creating: Unauthorized
+testapp       36m         Normal    Scheduled                      pod/nginx-test-f8f6dcbc6-2w2d6     Successfully assigned testapp/nginx-test-f8f6dcbc6-2w2d6 to k3s-s2
+testapp       36m         Normal    SuccessfulCreate               replicaset/nginx-test-f8f6dcbc6    Created pod: nginx-test-f8f6dcbc6-2w2d6
+testapp       36m         Normal    Pulling                        pod/nginx-test-f8f6dcbc6-2w2d6     Pulling image "nginx:stable"
+testapp       36m         Normal    Started                        pod/nginx-test-f8f6dcbc6-2w2d6     Container started
+testapp       36m         Normal    Created                        pod/nginx-test-f8f6dcbc6-2w2d6     Container created
+testapp       36m         Normal    Pulled                         pod/nginx-test-f8f6dcbc6-2w2d6     Successfully pulled image "nginx:stable" in 7.889s (7.889s including waiting). Image size: 61420178 bytes.
+default       35m         Normal    NodeNotReady                   node/k3s-w1                        Node k3s-w1 status is now: NodeNotReady
+kube-system   35m         Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130]
+kube-system   35m         Warning   NodeNotReady                   pod/svclb-traefik-81700cf5-hxppm   Node is not ready
+testapp       35m         Warning   NodeNotReady                   pod/nginx-test-f8f6dcbc6-q7lrd     Node is not ready
+testapp       31m         Normal    Started                        pod/nginx-test-f8f6dcbc6-hxc4p     Container started
+testapp       31m         Normal    Created                        pod/nginx-test-f8f6dcbc6-hxc4p     Container created
+testapp       31m         Normal    Pulled                         pod/nginx-test-f8f6dcbc6-hxc4p     Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       31m         Normal    Scheduled                      pod/nginx-test-f8f6dcbc6-hxc4p     Successfully assigned testapp/nginx-test-f8f6dcbc6-hxc4p to k3s-s3
+testapp       31m         Normal    Killing                        pod/nginx-test-f8f6dcbc6-2w2d6     Stopping container nginx
+testapp       31m         Normal    SuccessfulCreate               replicaset/nginx-test-f8f6dcbc6    Created pod: nginx-test-f8f6dcbc6-hxc4p
+testapp       30m         Normal    Pulled                         pod/nginx-test-f8f6dcbc6-67cz5     Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       30m         Normal    Scheduled                      pod/nginx-test-f8f6dcbc6-67cz5     Successfully assigned testapp/nginx-test-f8f6dcbc6-67cz5 to k3s-s2
+testapp       30m         Normal    SuccessfulCreate               replicaset/nginx-test-f8f6dcbc6    Created pod: nginx-test-f8f6dcbc6-67cz5
+testapp       30m         Normal    Started                        pod/nginx-test-f8f6dcbc6-67cz5     Container started
+testapp       30m         Normal    Created                        pod/nginx-test-f8f6dcbc6-67cz5     Container created
+testapp       30m         Normal    TaintManagerEviction           pod/nginx-test-f8f6dcbc6-q7lrd     Marking for deletion Pod testapp/nginx-test-f8f6dcbc6-q7lrd
+default       16m         Normal    Starting                       node/k3s-w1                        
+default       16m         Normal    CertificateExpirationOK        node/k3s-w1                        Node and Certificate Authority certificates managed by k3s are OK
+default       16m         Warning   Rebooted                       node/k3s-w1                        Node k3s-w1 has been rebooted, boot id: 118f44a0-d5a6-4a4c-8210-84ec72ad6e24
+default       16m         Normal    NodeHasSufficientMemory        node/k3s-w1                        Node k3s-w1 status is now: NodeHasSufficientMemory
+default       16m         Normal    Starting                       node/k3s-w1                        Starting kubelet.
+default       16m         Normal    NodeReady                      node/k3s-w1                        Node k3s-w1 status is now: NodeReady
+default       16m         Normal    NodeHasSufficientPID           node/k3s-w1                        Node k3s-w1 status is now: NodeHasSufficientPID
+default       16m         Normal    NodeAllocatableEnforced        node/k3s-w1                        Updated Node Allocatable limit across pods
+default       16m         Normal    NodeHasNoDiskPressure          node/k3s-w1                        Node k3s-w1 status is now: NodeHasNoDiskPressure
+kube-system   16m         Normal    Pulled                         pod/svclb-traefik-81700cf5-hxppm   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   16m         Normal    Created                        pod/svclb-traefik-81700cf5-hxppm   Container created
+kube-system   16m         Normal    SandboxChanged                 pod/svclb-traefik-81700cf5-hxppm   Pod sandbox changed, it will be killed and re-created.
+testapp       16m         Warning   FailedMount                    pod/nginx-test-f8f6dcbc6-q7lrd     MountVolume.SetUp failed for volume "kube-api-access-sjlnb" : object "testapp"/"kube-root-ca.crt" not registered
+kube-system   16m         Normal    Started                        pod/svclb-traefik-81700cf5-hxppm   Container started
+kube-system   16m         Normal    Started                        pod/svclb-traefik-81700cf5-hxppm   Container started
+kube-system   16m         Normal    Created                        pod/svclb-traefik-81700cf5-hxppm   Container created
+kube-system   16m         Normal    Pulled                         pod/svclb-traefik-81700cf5-hxppm   Container image "rancher/klipper-lb:v0.4.17" already present on machine and can be accessed by the pod
+kube-system   16m         Normal    UpdatedLoadBalancer            service/traefik                    Updated LoadBalancer with new IPs: [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.130] -> [10.10.10.129 10.10.10.130 10.10.10.131 10.10.20.129 10.10.20.130]
+default       16m         Normal    CertificateExpirationOK        node/k3s-w1                        Node and Certificate Authority certificates managed by k3s are OK
+default       16m         Normal    Starting                       node/k3s-w1                        
+default       16m         Normal    NodeHasNoDiskPressure          node/k3s-w1                        Node k3s-w1 status is now: NodeHasNoDiskPressure
+default       16m         Normal    Starting                       node/k3s-w1                        Starting kubelet.
+default       16m         Normal    NodeAllocatableEnforced        node/k3s-w1                        Updated Node Allocatable limit across pods
+default       16m         Normal    NodeHasSufficientMemory        node/k3s-w1                        Node k3s-w1 status is now: NodeHasSufficientMemory
+default       16m         Normal    NodeHasSufficientPID           node/k3s-w1                        Node k3s-w1 status is now: NodeHasSufficientPID
+testapp       9m18s       Normal    SuccessfulCreate               replicaset/nginx-test-f8f6dcbc6    Created pod: nginx-test-f8f6dcbc6-b9jbb
+testapp       9m18s       Normal    Started                        pod/nginx-test-f8f6dcbc6-b9jbb     Container started
+testapp       9m18s       Normal    Created                        pod/nginx-test-f8f6dcbc6-b9jbb     Container created
+testapp       9m18s       Normal    Pulled                         pod/nginx-test-f8f6dcbc6-b9jbb     Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       9m18s       Normal    Scheduled                      pod/nginx-test-f8f6dcbc6-b9jbb     Successfully assigned testapp/nginx-test-f8f6dcbc6-b9jbb to k3s-w1
+testapp       9m18s       Normal    Killing                        pod/nginx-test-f8f6dcbc6-67cz5     Stopping container nginx
+testapp       6m27s       Normal    Pulled                         pod/nginx-test-f8f6dcbc6-zxmtt     Container image "nginx:stable" already present on machine and can be accessed by the pod
+testapp       6m27s       Normal    Created                        pod/nginx-test-f8f6dcbc6-zxmtt     Container created
+testapp       6m27s       Normal    Started                        pod/nginx-test-f8f6dcbc6-zxmtt     Container started
+testapp       6m27s       Normal    Scheduled                      pod/nginx-test-f8f6dcbc6-zxmtt     Successfully assigned testapp/nginx-test-f8f6dcbc6-zxmtt to k3s-s2
+testapp       6m27s       Normal    SuccessfulCreate               replicaset/nginx-test-f8f6dcbc6    Created pod: nginx-test-f8f6dcbc6-zxmtt
+testapp       6m27s       Normal    Killing                        pod/nginx-test-f8f6dcbc6-b9jbb     Stopping container nginx
+testapp       62s         Normal    Killing                        pod/nginx-test-f8f6dcbc6-hxc4p     Stopping container nginx
+testapp       62s         Normal    SuccessfulCreate               replicaset/nginx-test-f8f6dcbc6    Created pod: nginx-test-f8f6dcbc6-c89t4
+testapp       61s         Normal    Scheduled                      pod/nginx-test-f8f6dcbc6-c89t4     Successfully assigned testapp/nginx-test-f8f6dcbc6-c89t4 to k3s-w1
+testapp       61s         Normal    Started                        pod/nginx-test-f8f6dcbc6-c89t4     Container started
+testapp       61s         Normal    Created                        pod/nginx-test-f8f6dcbc6-c89t4     Container created
+testapp       61s         Normal    Pulled                         pod/nginx-test-f8f6dcbc6-c89t4     Container image "nginx:stable" already present on machine and can be accessed by the pod

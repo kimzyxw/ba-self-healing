@@ -1,0 +1,1 @@
+pod "nginx-test-f8f6dcbc6-67cz5" deleted from testapp namespace

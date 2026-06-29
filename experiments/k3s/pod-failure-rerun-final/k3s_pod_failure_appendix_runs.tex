@@ -1,0 +1,26 @@
+\begin{sidewaystable}[p]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\resizebox{\textheight}{!}{%
+\begin{tabular}{l l p{3.2cm} r r r r r r r r r r r r}
+\toprule
+Run & Störung & Ziel & Req. & OK & Fail & Succ. [\%] & Err. [\%] & Rec. [s] & Stab. [s] & Pod-Rest. & NodeNotReady & NotReady [s] & Final Ready & gültig \\
+\midrule
+run-01 & Pod-Ausfall & nginx-test-f8f6dcbc6-hxc4p / k3s-s3 / neu:k3s-w1 & 92 & 92 & 0 & 100 & 0 & 1 & 2 & 0 & 0 & 0 & ja & ja \\
+run-02 & Pod-Ausfall & nginx-test-f8f6dcbc6-c89t4 / k3s-w1 / neu:k3s-s3 & 94 & 94 & 0 & 100 & 0 & 2 & 2 & 0 & 0 & 0 & ja & ja \\
+run-03 & Pod-Ausfall & nginx-test-f8f6dcbc6-9tlg8 / k3s-s3 / neu:k3s-w1 & 92 & 92 & 0 & 100 & 0 & 1 & 1 & 0 & 0 & 0 & ja & ja \\
+run-04 & Pod-Ausfall & nginx-test-f8f6dcbc6-qgfvn / k3s-w2 / neu:k3s-s3 & 93 & 93 & 0 & 100 & 0 & 1 & 1 & 0 & 0 & 0 & ja & ja \\
+run-05 & Pod-Ausfall & nginx-test-f8f6dcbc6-qgcsq / k3s-s3 / neu:k3s-w2 & 92 & 92 & 0 & 100 & 0 & 1 & 1 & 0 & 0 & 0 & ja & ja \\
+run-06 & Pod-Ausfall & nginx-test-f8f6dcbc6-lts55 / k3s-w2 / neu:k3s-s3 & 93 & 93 & 0 & 100 & 0 & 1 & 2 & 0 & 0 & 0 & ja & ja \\
+run-07 & Pod-Ausfall & nginx-test-f8f6dcbc6-nfjp6 / k3s-s3 / neu:k3s-w2 & 92 & 92 & 0 & 100 & 0 & 1 & 2 & 0 & 0 & 0 & ja & ja \\
+run-08 & Pod-Ausfall & nginx-test-f8f6dcbc6-v2tm8 / k3s-w1 / neu:k3s-s3 & 92 & 92 & 0 & 100 & 0 & 1 & 2 & 0 & 0 & 0 & ja & ja \\
+run-09 & Pod-Ausfall & nginx-test-f8f6dcbc6-gvpqn / k3s-s3 / neu:k3s-w1 & 93 & 93 & 0 & 100 & 0 & 2 & 3 & 0 & 0 & 0 & ja & ja \\
+run-10 & Pod-Ausfall & nginx-test-f8f6dcbc6-t6mxq / k3s-w1 / neu:k3s-s3 & 94 & 94 & 0 & 100 & 0 & 2 & 3 & 0 & 0 & 0 & ja & ja \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Einzelwerte der K3s-Pod-Ausfalltests pro Versuchslauf.}
+\label{tab:appendix-k3s-pod-failure-runs}
+\end{sidewaystable}
